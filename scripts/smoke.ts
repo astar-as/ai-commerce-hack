@@ -1,5 +1,5 @@
 // Pre-demo check against the live ZooWork agent, through the same path as /api/delegate.
-//   npm run agent:smoke            # pickup + profile + receipt + delivery
+//   npm run agent:smoke            # dish + pickup + profile + receipt + delivery
 //   npm run agent:smoke pickup     # one flow
 // Resets the demo profile before each flow and after the run, so the live demo starts clean.
 import { emptyOrder } from "../lib/order";
@@ -10,6 +10,16 @@ import { say } from "./chat";
 type Flow = { name: string; turns: string[]; check: (order: OrderState) => string | undefined };
 
 const FLOWS: Flow[] = [
+  {
+    name: "dish",
+    turns: ["I want to make chicken tikka masala for 4.", "I already have salt, oil and the spices. Add the rest."],
+    check: (o) =>
+      o.items.length < 3
+        ? `only ${o.items.length} items added`
+        : o.items.some((i) => i.product.allergens.includes("milk"))
+          ? "a milk product was added despite the milk allergy"
+          : undefined,
+  },
   {
     name: "pickup",
     turns: ["I want to make pasta night for four tonight. I'll pick it up at the store.", "That's everything, please place the order."],
