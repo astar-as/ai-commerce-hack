@@ -8,7 +8,7 @@ import { OrderList } from "@/components/basket/order-list";
 import { SwapCard } from "@/components/basket/swap-card";
 import { VoiceOrb } from "@/components/basket/voice-orb";
 import { useLiveVoice } from "@/hooks/use-live-voice";
-import { applyAction, emptyOrder } from "@/lib/order";
+import { emptyOrder, setFulfillment, STORE, swapInOrder } from "@/lib/order-core";
 import type { FulfillmentMode, OrderState, SearchResult } from "@/lib/types";
 import { cn } from "@/lib/utils";
 
@@ -20,7 +20,7 @@ const MODE_LABEL: Record<FulfillmentMode, string> = {
 
 const MODE_LINE: Record<FulfillmentMode, [string, string]> = {
   instacart_delivery: ["Delivery today.", "Through Instacart, arriving 5–6 PM."],
-  store_pickup: ["Pickup today.", "Ready at the Market St store at 5:30 PM."],
+  store_pickup: ["Pickup today.", `Ready at ${STORE.name} at 5:30 PM.`],
   in_store: ["Shopping in store.", "Sorted by aisle. Say it if something’s not on the shelf."],
 };
 
@@ -51,17 +51,17 @@ export function BasketApp() {
   const pickSwap = (option: SearchResult) => {
     if (!order.pending) return;
     const missing = order.pending.missing;
-    setOrder((o) => applyAction(o, { type: "swap_item", product_id: missing.id, substitute_product_id: option.product.id }));
+    setOrder((o) => swapInOrder(o, missing, option.product));
     if (live) voice.say(`The shopper tapped to swap ${missing.name} for ${option.product.name}. Confirm it in a few words.`);
   };
 
   const dismissSwap = () => {
-    setOrder((o) => applyAction(o, { type: "dismiss_swap" }));
+    setOrder((o) => ({ ...o, pending: undefined }));
     if (live) voice.note("The shopper skipped the substitute.");
   };
 
   const setMode = (mode: FulfillmentMode) => {
-    setOrder((o) => applyAction(o, { type: "set_fulfillment", mode }));
+    setOrder((o) => setFulfillment(o, mode));
     if (live) voice.note(`The shopper switched the order to ${MODE_LABEL[mode]}.`);
   };
 

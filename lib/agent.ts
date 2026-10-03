@@ -8,31 +8,70 @@ import { zooworkDelegate, zooworkEnabled } from "@/lib/zoowork/delegate";
 
 const MODEL = process.env.OPENAI_AGENT_MODEL ?? "gpt-6-luna";
 
-const catalogLines = () =>
-  CATALOG.map(
-    (p) =>
-      `${p.id} | ${p.name} | ${p.brand}${p.store_brand ? " (store brand)" : ""} | ${p.size} | $${p.price.toFixed(2)} | aisle ${p.aisle} | ${p.department} | ${p.diet_tags.join(",") || "-"}${OUT_OF_STOCK.has(p.id) ? " | OUT OF STOCK" : ""}`,
-  ).join("\n");
+const tokens = (s: string) =>
+  s
+    .toLowerCase()
+    .replace(/oatmilk/g, "oat milk")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .split(/[^a-z0-9]+/)
+    .filter((t) => t.length > 1);
 
-const substituteLines = () =>
-  CATALOG.filter((p) => OUT_OF_STOCK.has(p.id))
-    .map(
-      (p) =>
-        `${p.id} ${p.name} → ${findSubstitutes(p)
-          .map((s) => `${s.product.id} ${s.product.name} $${s.product.price.toFixed(2)} (${s.price_diff! < 0 ? "−" : "+"}$${Math.abs(s.price_diff!).toFixed(2)})`)
-          .join("; ")}`,
-    )
-    .join("\n");
+function searchStore(query: string, limit = 6) {
+  const q = tokens(query);
+  return CATALOG.map((p) => {
+    const hay = tokens(`${p.name} ${p.brand} ${p.department} ${p.aisle}`);
+    let s = 0;
+    for (const t of q) {
+      if (hay.includes(t)) s += 1;
+      else if (hay.some((h) => h.startsWith(t) || t.startsWith(h))) s += 0.6;
+    }
+    return { p, s: q.length ? s / q.length + (p.store_brand ? 0.02 : 0) : 0 };
+  })
+    .filter((r) => r.s >= 0.5)
+    .sort((a, b) => b.s - a.s)
+    .slice(0, limit)
+    .map(({ p }) => {
+      const oos = OUT_OF_STOCK.has(p.id);
+      const best = oos ? findSubstitutes(p, 1)[0] : undefined;
+      return {
+        id: p.id,
+        name: p.name,
+        brand: p.brand,
+        store_brand: p.store_brand,
+        size: p.size,
+        price: p.price,
+        aisle: p.aisle,
+        out_of_stock: oos,
+        ...(best && {
+          best_substitute: { id: best.product.id, name: best.product.name, price: best.product.price, price_diff: best.price_diff },
+        }),
+      };
+    });
+}
 
-const INSTRUCTIONS =`You are Basket, the grocery agent of a Safeway-style demo store. You run behind a live voice assistant: the shopper talks, you decide what changes in their order, and you return one short sentence the voice will say.
+const searchCatalogFn = {
+  type: "function" as const,
+  name: "search_catalog",
+  description:
+    "Search this store's real product catalog (name, brand, size, price, aisle, stock). Call it for every product the shopper mentions before adding it; use short product words. Out-of-stock hits include best_substitute.",
+  parameters: {
+    type: "object",
+    properties: { query: { type: "string" }, limit: { type: "integer", minimum: 1, maximum: 10 } },
+    required: ["query"],
+  },
+  strict: false,
+};
+
+const INSTRUCTIONS =`You are Basket, the grocery agent of the Kroger On the Rhine store (Cincinnati). You run behind a live voice assistant: the shopper talks, you decide what changes in their order, and you return one short sentence the voice will say.
 
 Rules:
-- Only use product ids from the catalog. If the shopper wants something that isn't in the catalog, say this demo store doesn't carry it.
-- Adding an item that is OUT OF STOCK, or the shopper saying an item is missing/empty/out: emit propose_swap for that item and, in "say", offer the best option (store brand first, then closest price) with the price difference, and ask to confirm.
+- Find products with search_catalog and only use ids it returned. Pick the plainest match for what they asked (store brand is fine). If nothing fits, say the store doesn't carry it.
+- An item that is out_of_stock, or the shopper saying an item is missing/empty/out: emit propose_swap for that item and, in "say", offer its best_substitute with the price difference, and ask to confirm.
 - Never emit swap_item unless the shopper has just confirmed a pending swap. "Yes", "sure", "do it" picks the first option; naming a product picks that option. A no emits dismiss_swap.
 - Delivery / Instacart → set_fulfillment instacart_delivery. Pickup → store_pickup. "I'm in the store" / shopping now → in_store.
 - If the shopper mentions allergies, never promise an item is safe; tell them to check the label.
-- When the shopper refers to something they bought before ("that bread from two weeks ago", "my usual", "same as last time"), call search_order_history first, then add the matching product by its id and mention when they bought it, e.g. "the Acme Pain au Levain you got two weeks ago". If several match, pick the closest in time or ask.
+- When the shopper refers to something they bought before ("that bread from two weeks ago", "my usual", "same as last time"), call search_order_history first, then add the matching product by its id and mention when they bought it, e.g. "the izzio sourdough you got two weeks ago". If several match, pick the closest in time or ask.
 - "say" is spoken aloud: one or two short, warm sentences, no lists, no markdown, no ids.`;
 
 const SCHEMA = {
@@ -136,6 +175,7 @@ async function runInterimTurn(input: DelegateInput): Promise<DelegateOutput> {
     .join("\n");
 
   const tools = [
+    searchCatalogFn,
     {
       type: "function" as const,
       name: searchOrderHistoryTool.name,
@@ -149,20 +189,24 @@ async function runInterimTurn(input: DelegateInput): Promise<DelegateOutput> {
   let response = await client.responses.create({
     model: MODEL,
     instructions: INSTRUCTIONS,
-    input: `CATALOG\n${catalogLines()}\n\nRANKED SUBSTITUTES FOR OUT-OF-STOCK ITEMS (offer the first one)\n${substituteLines()}\n\nORDER (fulfillment: ${order.fulfillment.mode})\n${orderLines}\n\n${pending}\n\nCONVERSATION\n${convo}`,
+    input: `ORDER (fulfillment: ${order.fulfillment.mode})\n${orderLines}\n\n${pending}\n\nCONVERSATION\n${convo}`,
     tools,
     text: { format },
   });
 
   const historyHits = new Map<string, number>();
-  for (let round = 0; round < 3; round++) {
+  for (let round = 0; round < 5; round++) {
     const calls = response.output.filter((o) => o.type === "function_call");
     if (!calls.length) break;
     const outputs = await Promise.all(
       calls.map(async (c) => ({
         type: "function_call_output" as const,
         call_id: c.call_id,
-        output: JSON.stringify(await runHistoryTool(c.name, c.arguments, historyHits)),
+        output: JSON.stringify(
+          c.name === searchCatalogFn.name
+            ? { results: searchStore(JSON.parse(c.arguments || "{}").query ?? "", JSON.parse(c.arguments || "{}").limit) }
+            : await runHistoryTool(c.name, c.arguments, historyHits),
+        ),
       })),
     );
     response = await client.responses.create({
