@@ -1,0 +1,30 @@
+{
+  "store_id": "safeway-sf-01",
+  "items": [
+    {
+      "store_id": "safeway-sf-01",
+      "product_id": "sw-000069",
+      "in_stock": false,
+      "qty": 0,
+      "aisle_number": "11",
+      "price": 4.88
+    },
+    {
+      "store_id": "safeway-sf-01",
+      "product_id": "sw-000072",
+      "in_stock": true,
+      "qty": 8,
+      "aisle_number": "11",
+      "price": 4.66
+    },
+    {
+      "store_id": "safeway-sf-01",
+      "product_id": "sw-000233",
+      "in_stock": true,
+      "qty": 28,
+      "aisle_number": "8",
+      "price": 4.55
+    }
+  ],
+  "unknown_ids": []
+}

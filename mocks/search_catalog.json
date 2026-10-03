@@ -1,0 +1,100 @@
+{
+  "results": [
+    {
+      "product": {
+        "id": "sw-000072",
+        "name": "Signature Select Oat Milk Barista Edition",
+        "brand": "Signature Select",
+        "store_brand": true,
+        "department": "dairy eggs",
+        "aisle": "Dairy Alternatives",
+        "size": "32 fl oz",
+        "price": 4.49,
+        "diet_tags": [
+          "dairy_free",
+          "kosher",
+          "nut_free",
+          "vegan",
+          "vegetarian"
+        ],
+        "allergens": []
+      },
+      "score": 1,
+      "stock": {
+        "store_id": "safeway-sf-01",
+        "product_id": "sw-000072",
+        "in_stock": true,
+        "qty": 8,
+        "aisle_number": "11",
+        "price": 4.66
+      },
+      "price_diff": -0.22,
+      "reason": "Store brand · same aisle (11) · vegan · nut-free"
+    },
+    {
+      "product": {
+        "id": "sw-000065",
+        "name": "O Organics Oat Milk Original",
+        "brand": "O Organics",
+        "store_brand": true,
+        "department": "dairy eggs",
+        "aisle": "Dairy Alternatives",
+        "size": "64 fl oz",
+        "price": 4.99,
+        "diet_tags": [
+          "dairy_free",
+          "kosher",
+          "nut_free",
+          "organic",
+          "vegan",
+          "vegetarian"
+        ],
+        "allergens": []
+      },
+      "score": 0.5,
+      "stock": {
+        "store_id": "safeway-sf-01",
+        "product_id": "sw-000065",
+        "in_stock": true,
+        "qty": 11,
+        "aisle_number": "11",
+        "price": 4.85
+      },
+      "price_diff": -0.03,
+      "reason": "Store brand · same aisle (11) · vegan · nut-free"
+    },
+    {
+      "product": {
+        "id": "sw-000070",
+        "name": "Califia Farms Oat Milk Barista Edition",
+        "brand": "Califia Farms",
+        "store_brand": false,
+        "department": "dairy eggs",
+        "aisle": "Dairy Alternatives",
+        "size": "32 fl oz",
+        "price": 5.99,
+        "diet_tags": [
+          "dairy_free",
+          "kosher",
+          "nut_free",
+          "vegan",
+          "vegetarian"
+        ],
+        "allergens": []
+      },
+      "score": 1,
+      "stock": {
+        "store_id": "safeway-sf-01",
+        "product_id": "sw-000070",
+        "in_stock": true,
+        "qty": 2,
+        "aisle_number": "11",
+        "price": 5.84
+      },
+      "price_diff": 0.96,
+      "reason": "same aisle (11) · vegan · nut-free"
+    }
+  ],
+  "took_ms": 0.7,
+  "engine": "local"
+}

@@ -1,0 +1,17 @@
+[
+ {
+  "id": "safeway-sf-01",
+  "name": "Safeway Market St",
+  "neighborhood": "Castro / Duboce Triangle"
+ },
+ {
+  "id": "safeway-sf-02",
+  "name": "Safeway Marina",
+  "neighborhood": "Marina"
+ },
+ {
+  "id": "safeway-sf-03",
+  "name": "Safeway Mission",
+  "neighborhood": "Bernal Heights / Mission"
+ }
+]

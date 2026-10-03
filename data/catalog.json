@@ -1,0 +1,9708 @@
+[
+ {
+  "id": "sw-000001",
+  "name": "Signature Farms Bananas",
+  "brand": "Signature Farms",
+  "store_brand": true,
+  "department": "produce",
+  "aisle": "Fresh Fruits",
+  "size": "1 lb",
+  "price": 0.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000002",
+  "name": "Dole Bananas",
+  "brand": "Dole",
+  "store_brand": false,
+  "department": "produce",
+  "aisle": "Fresh Fruits",
+  "size": "1 lb",
+  "price": 0.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000003",
+  "name": "O Organics Bananas",
+  "brand": "O Organics",
+  "store_brand": true,
+  "department": "produce",
+  "aisle": "Fresh Fruits",
+  "size": "1 lb",
+  "price": 0.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "organic",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000004",
+  "name": "Signature Farms Honeycrisp Apples",
+  "brand": "Signature Farms",
+  "store_brand": true,
+  "department": "produce",
+  "aisle": "Fresh Fruits",
+  "size": "3 lb bag",
+  "price": 5.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000005",
+  "name": "O Organics Honeycrisp Apples",
+  "brand": "O Organics",
+  "store_brand": true,
+  "department": "produce",
+  "aisle": "Fresh Fruits",
+  "size": "3 lb bag",
+  "price": 7.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "organic",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000006",
+  "name": "Signature Farms Hass Avocados",
+  "brand": "Signature Farms",
+  "store_brand": true,
+  "department": "produce",
+  "aisle": "Fresh Fruits",
+  "size": "4 ct bag",
+  "price": 4.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000007",
+  "name": "O Organics Hass Avocados",
+  "brand": "O Organics",
+  "store_brand": true,
+  "department": "produce",
+  "aisle": "Fresh Fruits",
+  "size": "4 ct bag",
+  "price": 6.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "organic",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000008",
+  "name": "Mission Hass Avocados",
+  "brand": "Mission",
+  "store_brand": false,
+  "department": "produce",
+  "aisle": "Fresh Fruits",
+  "size": "4 ct bag",
+  "price": 7.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000009",
+  "name": "Driscoll's Strawberries",
+  "brand": "Driscoll's",
+  "store_brand": false,
+  "department": "produce",
+  "aisle": "Fresh Fruits",
+  "size": "1 lb",
+  "price": 5.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000010",
+  "name": "O Organics Strawberries",
+  "brand": "O Organics",
+  "store_brand": true,
+  "department": "produce",
+  "aisle": "Fresh Fruits",
+  "size": "1 lb",
+  "price": 4.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "organic",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000011",
+  "name": "Driscoll's Blueberries",
+  "brand": "Driscoll's",
+  "store_brand": false,
+  "department": "produce",
+  "aisle": "Fresh Fruits",
+  "size": "6 oz",
+  "price": 5.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000012",
+  "name": "O Organics Blueberries",
+  "brand": "O Organics",
+  "store_brand": true,
+  "department": "produce",
+  "aisle": "Fresh Fruits",
+  "size": "6 oz",
+  "price": 4.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "organic",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000013",
+  "name": "Sunkist Lemons",
+  "brand": "Sunkist",
+  "store_brand": false,
+  "department": "produce",
+  "aisle": "Fresh Fruits",
+  "size": "2 lb bag",
+  "price": 5.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000014",
+  "name": "O Organics Lemons",
+  "brand": "O Organics",
+  "store_brand": true,
+  "department": "produce",
+  "aisle": "Fresh Fruits",
+  "size": "2 lb bag",
+  "price": 4.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "organic",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000015",
+  "name": "Signature Farms Limes",
+  "brand": "Signature Farms",
+  "store_brand": true,
+  "department": "produce",
+  "aisle": "Fresh Fruits",
+  "size": "1 lb bag",
+  "price": 2.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000016",
+  "name": "O Organics Baby Spinach",
+  "brand": "O Organics",
+  "store_brand": true,
+  "department": "produce",
+  "aisle": "Fresh Vegetables",
+  "size": "5 oz",
+  "price": 3.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "organic",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000017",
+  "name": "Earthbound Farm Baby Spinach",
+  "brand": "Earthbound Farm",
+  "store_brand": false,
+  "department": "produce",
+  "aisle": "Fresh Vegetables",
+  "size": "5 oz",
+  "price": 4.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000018",
+  "name": "Taylor Farms Baby Spinach",
+  "brand": "Taylor Farms",
+  "store_brand": false,
+  "department": "produce",
+  "aisle": "Fresh Vegetables",
+  "size": "5 oz",
+  "price": 4.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000019",
+  "name": "Signature Farms Romaine Hearts",
+  "brand": "Signature Farms",
+  "store_brand": true,
+  "department": "produce",
+  "aisle": "Fresh Vegetables",
+  "size": "3 ct",
+  "price": 3.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000020",
+  "name": "Tanimura & Antle Romaine Hearts",
+  "brand": "Tanimura & Antle",
+  "store_brand": false,
+  "department": "produce",
+  "aisle": "Fresh Vegetables",
+  "size": "3 ct",
+  "price": 3.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000021",
+  "name": "O Organics Romaine Hearts",
+  "brand": "O Organics",
+  "store_brand": true,
+  "department": "produce",
+  "aisle": "Fresh Vegetables",
+  "size": "3 ct",
+  "price": 3.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "organic",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000022",
+  "name": "Signature Farms Yellow Onions",
+  "brand": "Signature Farms",
+  "store_brand": true,
+  "department": "produce",
+  "aisle": "Fresh Vegetables",
+  "size": "3 lb bag",
+  "price": 2.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000023",
+  "name": "O Organics Yellow Onions",
+  "brand": "O Organics",
+  "store_brand": true,
+  "department": "produce",
+  "aisle": "Fresh Vegetables",
+  "size": "3 lb bag",
+  "price": 3.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "organic",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000024",
+  "name": "Signature Farms Garlic",
+  "brand": "Signature Farms",
+  "store_brand": true,
+  "department": "produce",
+  "aisle": "Fresh Vegetables",
+  "size": "3 ct",
+  "price": 1.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000025",
+  "name": "Christopher Ranch Garlic",
+  "brand": "Christopher Ranch",
+  "store_brand": false,
+  "department": "produce",
+  "aisle": "Fresh Vegetables",
+  "size": "3 ct",
+  "price": 2.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000026",
+  "name": "Signature Farms Roma Tomatoes",
+  "brand": "Signature Farms",
+  "store_brand": true,
+  "department": "produce",
+  "aisle": "Fresh Vegetables",
+  "size": "1 lb",
+  "price": 1.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000027",
+  "name": "O Organics Roma Tomatoes",
+  "brand": "O Organics",
+  "store_brand": true,
+  "department": "produce",
+  "aisle": "Fresh Vegetables",
+  "size": "1 lb",
+  "price": 2.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "organic",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000028",
+  "name": "Signature Farms Russet Potatoes",
+  "brand": "Signature Farms",
+  "store_brand": true,
+  "department": "produce",
+  "aisle": "Fresh Vegetables",
+  "size": "5 lb bag",
+  "price": 4.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000029",
+  "name": "O Organics Russet Potatoes",
+  "brand": "O Organics",
+  "store_brand": true,
+  "department": "produce",
+  "aisle": "Fresh Vegetables",
+  "size": "5 lb bag",
+  "price": 4.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "organic",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000030",
+  "name": "Grimmway Farms Carrots",
+  "brand": "Grimmway Farms",
+  "store_brand": false,
+  "department": "produce",
+  "aisle": "Fresh Vegetables",
+  "size": "2 lb bag",
+  "price": 2.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000031",
+  "name": "O Organics Carrots",
+  "brand": "O Organics",
+  "store_brand": true,
+  "department": "produce",
+  "aisle": "Fresh Vegetables",
+  "size": "2 lb bag",
+  "price": 2.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "organic",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000032",
+  "name": "Bolthouse Farms Carrots",
+  "brand": "Bolthouse Farms",
+  "store_brand": false,
+  "department": "produce",
+  "aisle": "Fresh Vegetables",
+  "size": "2 lb bag",
+  "price": 2.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000033",
+  "name": "Signature Farms Broccoli Crowns",
+  "brand": "Signature Farms",
+  "store_brand": true,
+  "department": "produce",
+  "aisle": "Fresh Vegetables",
+  "size": "1 lb",
+  "price": 2.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000034",
+  "name": "O Organics Broccoli Crowns",
+  "brand": "O Organics",
+  "store_brand": true,
+  "department": "produce",
+  "aisle": "Fresh Vegetables",
+  "size": "1 lb",
+  "price": 2.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "organic",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000035",
+  "name": "Signature Farms Red Bell Peppers",
+  "brand": "Signature Farms",
+  "store_brand": true,
+  "department": "produce",
+  "aisle": "Fresh Vegetables",
+  "size": "3 ct",
+  "price": 3.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000036",
+  "name": "O Organics Red Bell Peppers",
+  "brand": "O Organics",
+  "store_brand": true,
+  "department": "produce",
+  "aisle": "Fresh Vegetables",
+  "size": "3 ct",
+  "price": 5.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "organic",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000037",
+  "name": "Signature Farms Cilantro",
+  "brand": "Signature Farms",
+  "store_brand": true,
+  "department": "produce",
+  "aisle": "Fresh Vegetables",
+  "size": "1 bunch",
+  "price": 0.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000038",
+  "name": "O Organics Cilantro",
+  "brand": "O Organics",
+  "store_brand": true,
+  "department": "produce",
+  "aisle": "Fresh Vegetables",
+  "size": "1 bunch",
+  "price": 1.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "organic",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000039",
+  "name": "Signature Farms Sweet Potatoes",
+  "brand": "Signature Farms",
+  "store_brand": true,
+  "department": "produce",
+  "aisle": "Fresh Vegetables",
+  "size": "3 lb bag",
+  "price": 3.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000040",
+  "name": "O Organics Sweet Potatoes",
+  "brand": "O Organics",
+  "store_brand": true,
+  "department": "produce",
+  "aisle": "Fresh Vegetables",
+  "size": "3 lb bag",
+  "price": 4.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "organic",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000041",
+  "name": "Signature Farms Zucchini",
+  "brand": "Signature Farms",
+  "store_brand": true,
+  "department": "produce",
+  "aisle": "Fresh Vegetables",
+  "size": "1 lb",
+  "price": 1.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000042",
+  "name": "O Organics Zucchini",
+  "brand": "O Organics",
+  "store_brand": true,
+  "department": "produce",
+  "aisle": "Fresh Vegetables",
+  "size": "1 lb",
+  "price": 2.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "organic",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000043",
+  "name": "O Organics Spring Mix Salad",
+  "brand": "O Organics",
+  "store_brand": true,
+  "department": "produce",
+  "aisle": "Fresh Herbs & Salads",
+  "size": "5 oz",
+  "price": 4.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "organic",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000044",
+  "name": "Earthbound Farm Spring Mix Salad",
+  "brand": "Earthbound Farm",
+  "store_brand": false,
+  "department": "produce",
+  "aisle": "Fresh Herbs & Salads",
+  "size": "5 oz",
+  "price": 4.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000045",
+  "name": "Fresh Express Spring Mix Salad",
+  "brand": "Fresh Express",
+  "store_brand": false,
+  "department": "produce",
+  "aisle": "Fresh Herbs & Salads",
+  "size": "5 oz",
+  "price": 4.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000046",
+  "name": "Signature Farms Caesar Salad Kit",
+  "brand": "Signature Farms",
+  "store_brand": true,
+  "department": "produce",
+  "aisle": "Fresh Herbs & Salads",
+  "size": "10 oz",
+  "price": 4.49,
+  "diet_tags": [
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk",
+   "eggs",
+   "wheat",
+   "fish"
+  ]
+ },
+ {
+  "id": "sw-000047",
+  "name": "Taylor Farms Caesar Salad Kit",
+  "brand": "Taylor Farms",
+  "store_brand": false,
+  "department": "produce",
+  "aisle": "Fresh Herbs & Salads",
+  "size": "10 oz",
+  "price": 6.49,
+  "diet_tags": [
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk",
+   "eggs",
+   "wheat",
+   "fish"
+  ]
+ },
+ {
+  "id": "sw-000048",
+  "name": "Fresh Express Caesar Salad Kit",
+  "brand": "Fresh Express",
+  "store_brand": false,
+  "department": "produce",
+  "aisle": "Fresh Herbs & Salads",
+  "size": "10 oz",
+  "price": 5.49,
+  "diet_tags": [
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk",
+   "eggs",
+   "wheat",
+   "fish"
+  ]
+ },
+ {
+  "id": "sw-000049",
+  "name": "O Organics Extra Firm Tofu",
+  "brand": "O Organics",
+  "store_brand": true,
+  "department": "produce",
+  "aisle": "Packaged Produce",
+  "size": "14 oz",
+  "price": 3.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "organic",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [
+   "soy"
+  ]
+ },
+ {
+  "id": "sw-000050",
+  "name": "Hodo Extra Firm Tofu",
+  "brand": "Hodo",
+  "store_brand": false,
+  "department": "produce",
+  "aisle": "Packaged Produce",
+  "size": "14 oz",
+  "price": 3.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [
+   "soy"
+  ]
+ },
+ {
+  "id": "sw-000051",
+  "name": "Nasoya Extra Firm Tofu",
+  "brand": "Nasoya",
+  "store_brand": false,
+  "department": "produce",
+  "aisle": "Packaged Produce",
+  "size": "14 oz",
+  "price": 3.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [
+   "soy"
+  ]
+ },
+ {
+  "id": "sw-000052",
+  "name": "House Foods Extra Firm Tofu",
+  "brand": "House Foods",
+  "store_brand": false,
+  "department": "produce",
+  "aisle": "Packaged Produce",
+  "size": "14 oz",
+  "price": 3.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [
+   "soy"
+  ]
+ },
+ {
+  "id": "sw-000053",
+  "name": "Lucerne Whole Milk",
+  "brand": "Lucerne",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Milk",
+  "size": "1 gal",
+  "price": 4.99,
+  "diet_tags": [
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ]
+ },
+ {
+  "id": "sw-000054",
+  "name": "O Organics Whole Milk",
+  "brand": "O Organics",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Milk",
+  "size": "1 gal",
+  "price": 5.49,
+  "diet_tags": [
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "organic",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ]
+ },
+ {
+  "id": "sw-000055",
+  "name": "Clover Sonoma Whole Milk",
+  "brand": "Clover Sonoma",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Milk",
+  "size": "1 gal",
+  "price": 6.49,
+  "diet_tags": [
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ]
+ },
+ {
+  "id": "sw-000056",
+  "name": "Horizon Organic Whole Milk",
+  "brand": "Horizon Organic",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Milk",
+  "size": "1 gal",
+  "price": 5.99,
+  "diet_tags": [
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "organic",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ]
+ },
+ {
+  "id": "sw-000057",
+  "name": "Lucerne 2% Reduced Fat Milk",
+  "brand": "Lucerne",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Milk",
+  "size": "1 gal",
+  "price": 4.49,
+  "diet_tags": [
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ]
+ },
+ {
+  "id": "sw-000058",
+  "name": "O Organics 2% Reduced Fat Milk",
+  "brand": "O Organics",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Milk",
+  "size": "1 gal",
+  "price": 5.49,
+  "diet_tags": [
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "organic",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ]
+ },
+ {
+  "id": "sw-000059",
+  "name": "Clover Sonoma 2% Reduced Fat Milk",
+  "brand": "Clover Sonoma",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Milk",
+  "size": "1 gal",
+  "price": 5.49,
+  "diet_tags": [
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ]
+ },
+ {
+  "id": "sw-000060",
+  "name": "Horizon Organic 2% Reduced Fat Milk",
+  "brand": "Horizon Organic",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Milk",
+  "size": "1 gal",
+  "price": 5.99,
+  "diet_tags": [
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "organic",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ]
+ },
+ {
+  "id": "sw-000061",
+  "name": "Lactaid Lactose Free 2% Milk",
+  "brand": "Lactaid",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Milk",
+  "size": "half gal",
+  "price": 5.49,
+  "diet_tags": [
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ]
+ },
+ {
+  "id": "sw-000062",
+  "name": "Lucerne Lactose Free 2% Milk",
+  "brand": "Lucerne",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Milk",
+  "size": "half gal",
+  "price": 4.49,
+  "diet_tags": [
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ]
+ },
+ {
+  "id": "sw-000063",
+  "name": "Fairlife Ultra-Filtered Whole Milk",
+  "brand": "fairlife",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Milk",
+  "size": "52 fl oz",
+  "price": 6.99,
+  "diet_tags": [
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ]
+ },
+ {
+  "id": "sw-000064",
+  "name": "Oatly Oat Milk Original",
+  "brand": "Oatly",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Dairy Alternatives",
+  "size": "64 fl oz",
+  "price": 5.49,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000065",
+  "name": "O Organics Oat Milk Original",
+  "brand": "O Organics",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Dairy Alternatives",
+  "size": "64 fl oz",
+  "price": 4.99,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "nut_free",
+   "organic",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000066",
+  "name": "Califia Farms Oat Milk Original",
+  "brand": "Califia Farms",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Dairy Alternatives",
+  "size": "64 fl oz",
+  "price": 5.99,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000067",
+  "name": "Planet Oat Oat Milk Original",
+  "brand": "Planet Oat",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Dairy Alternatives",
+  "size": "64 fl oz",
+  "price": 4.99,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000068",
+  "name": "Chobani Oat Milk Original",
+  "brand": "Chobani",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Dairy Alternatives",
+  "size": "64 fl oz",
+  "price": 4.99,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000069",
+  "name": "Oatly Oat Milk Barista Edition",
+  "brand": "Oatly",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Dairy Alternatives",
+  "size": "32 fl oz",
+  "price": 4.99,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000070",
+  "name": "Califia Farms Oat Milk Barista Edition",
+  "brand": "Califia Farms",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Dairy Alternatives",
+  "size": "32 fl oz",
+  "price": 5.99,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000071",
+  "name": "Minor Figures Oat Milk Barista Edition",
+  "brand": "Minor Figures",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Dairy Alternatives",
+  "size": "32 fl oz",
+  "price": 6.49,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000072",
+  "name": "Signature Select Oat Milk Barista Edition",
+  "brand": "Signature Select",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Dairy Alternatives",
+  "size": "32 fl oz",
+  "price": 4.49,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000073",
+  "name": "Almond Breeze Unsweetened Almond Milk",
+  "brand": "Almond Breeze",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Dairy Alternatives",
+  "size": "64 fl oz",
+  "price": 5.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [
+   "tree_nuts"
+  ]
+ },
+ {
+  "id": "sw-000074",
+  "name": "Silk Unsweetened Almond Milk",
+  "brand": "Silk",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Dairy Alternatives",
+  "size": "64 fl oz",
+  "price": 3.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [
+   "tree_nuts"
+  ]
+ },
+ {
+  "id": "sw-000075",
+  "name": "O Organics Unsweetened Almond Milk",
+  "brand": "O Organics",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Dairy Alternatives",
+  "size": "64 fl oz",
+  "price": 3.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "organic",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [
+   "tree_nuts"
+  ]
+ },
+ {
+  "id": "sw-000076",
+  "name": "Califia Farms Unsweetened Almond Milk",
+  "brand": "Califia Farms",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Dairy Alternatives",
+  "size": "64 fl oz",
+  "price": 4.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [
+   "tree_nuts"
+  ]
+ },
+ {
+  "id": "sw-000077",
+  "name": "Silk Original Soy Milk",
+  "brand": "Silk",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Dairy Alternatives",
+  "size": "64 fl oz",
+  "price": 4.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [
+   "soy"
+  ]
+ },
+ {
+  "id": "sw-000078",
+  "name": "O Organics Original Soy Milk",
+  "brand": "O Organics",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Dairy Alternatives",
+  "size": "64 fl oz",
+  "price": 4.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "organic",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [
+   "soy"
+  ]
+ },
+ {
+  "id": "sw-000079",
+  "name": "Westsoy Original Soy Milk",
+  "brand": "Westsoy",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Dairy Alternatives",
+  "size": "64 fl oz",
+  "price": 3.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [
+   "soy"
+  ]
+ },
+ {
+  "id": "sw-000080",
+  "name": "So Delicious Coconut Milk Beverage Unsweetened",
+  "brand": "So Delicious",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Dairy Alternatives",
+  "size": "64 fl oz",
+  "price": 3.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000081",
+  "name": "Silk Coconut Milk Beverage Unsweetened",
+  "brand": "Silk",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Dairy Alternatives",
+  "size": "64 fl oz",
+  "price": 4.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000082",
+  "name": "Signature Select Coconut Milk Beverage Unsweetened",
+  "brand": "Signature Select",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Dairy Alternatives",
+  "size": "64 fl oz",
+  "price": 3.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000083",
+  "name": "Oatly Oat Creamer Vanilla",
+  "brand": "Oatly",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Dairy Alternatives",
+  "size": "25.4 fl oz",
+  "price": 5.99,
+  "diet_tags": [
+   "dairy_free",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000084",
+  "name": "Califia Farms Oat Creamer Vanilla",
+  "brand": "Califia Farms",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Dairy Alternatives",
+  "size": "25.4 fl oz",
+  "price": 5.99,
+  "diet_tags": [
+   "dairy_free",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000085",
+  "name": "Nutpods Oat Creamer Vanilla",
+  "brand": "Nutpods",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Dairy Alternatives",
+  "size": "25.4 fl oz",
+  "price": 6.99,
+  "diet_tags": [
+   "dairy_free",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000086",
+  "name": "Signature Select Oat Creamer Vanilla",
+  "brand": "Signature Select",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Dairy Alternatives",
+  "size": "25.4 fl oz",
+  "price": 4.99,
+  "diet_tags": [
+   "dairy_free",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000087",
+  "name": "Lucerne Large Grade AA Eggs",
+  "brand": "Lucerne",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Eggs",
+  "size": "12 ct",
+  "price": 3.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "eggs"
+  ]
+ },
+ {
+  "id": "sw-000088",
+  "name": "Vital Farms Large Grade AA Eggs",
+  "brand": "Vital Farms",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Eggs",
+  "size": "12 ct",
+  "price": 4.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "eggs"
+  ]
+ },
+ {
+  "id": "sw-000089",
+  "name": "Pete and Gerry's Large Grade AA Eggs",
+  "brand": "Pete and Gerry's",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Eggs",
+  "size": "12 ct",
+  "price": 4.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "eggs"
+  ]
+ },
+ {
+  "id": "sw-000090",
+  "name": "O Organics Large Grade AA Eggs",
+  "brand": "O Organics",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Eggs",
+  "size": "12 ct",
+  "price": 4.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "organic",
+   "vegetarian"
+  ],
+  "allergens": [
+   "eggs"
+  ]
+ },
+ {
+  "id": "sw-000091",
+  "name": "Lucerne Cage Free Brown Eggs",
+  "brand": "Lucerne",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Eggs",
+  "size": "18 ct",
+  "price": 5.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "eggs"
+  ]
+ },
+ {
+  "id": "sw-000092",
+  "name": "Vital Farms Cage Free Brown Eggs",
+  "brand": "Vital Farms",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Eggs",
+  "size": "18 ct",
+  "price": 9.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "eggs"
+  ]
+ },
+ {
+  "id": "sw-000093",
+  "name": "O Organics Cage Free Brown Eggs",
+  "brand": "O Organics",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Eggs",
+  "size": "18 ct",
+  "price": 6.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "organic",
+   "vegetarian"
+  ],
+  "allergens": [
+   "eggs"
+  ]
+ },
+ {
+  "id": "sw-000094",
+  "name": "Chobani Greek Yogurt Plain Nonfat",
+  "brand": "Chobani",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Yogurt",
+  "size": "32 oz",
+  "price": 7.49,
+  "diet_tags": [
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ]
+ },
+ {
+  "id": "sw-000095",
+  "name": "Fage Greek Yogurt Plain Nonfat",
+  "brand": "Fage",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Yogurt",
+  "size": "32 oz",
+  "price": 7.49,
+  "diet_tags": [
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ]
+ },
+ {
+  "id": "sw-000096",
+  "name": "Lucerne Greek Yogurt Plain Nonfat",
+  "brand": "Lucerne",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Yogurt",
+  "size": "32 oz",
+  "price": 5.49,
+  "diet_tags": [
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ]
+ },
+ {
+  "id": "sw-000097",
+  "name": "O Organics Greek Yogurt Plain Nonfat",
+  "brand": "O Organics",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Yogurt",
+  "size": "32 oz",
+  "price": 5.99,
+  "diet_tags": [
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "organic",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ]
+ },
+ {
+  "id": "sw-000098",
+  "name": "Chobani Greek Yogurt Strawberry",
+  "brand": "Chobani",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Yogurt",
+  "size": "5.3 oz",
+  "price": 1.99,
+  "diet_tags": [
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ]
+ },
+ {
+  "id": "sw-000099",
+  "name": "Oikos Greek Yogurt Strawberry",
+  "brand": "Oikos",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Yogurt",
+  "size": "5.3 oz",
+  "price": 1.99,
+  "diet_tags": [
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ]
+ },
+ {
+  "id": "sw-000100",
+  "name": "Lucerne Greek Yogurt Strawberry",
+  "brand": "Lucerne",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Yogurt",
+  "size": "5.3 oz",
+  "price": 1.49,
+  "diet_tags": [
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ]
+ },
+ {
+  "id": "sw-000101",
+  "name": "Oatly Oat Milk Yogurt Plain",
+  "brand": "Oatly",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Yogurt",
+  "size": "24 oz",
+  "price": 7.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000102",
+  "name": "Silk Oat Milk Yogurt Plain",
+  "brand": "Silk",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Yogurt",
+  "size": "24 oz",
+  "price": 5.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000103",
+  "name": "Kite Hill Oat Milk Yogurt Plain",
+  "brand": "Kite Hill",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Yogurt",
+  "size": "24 oz",
+  "price": 7.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000104",
+  "name": "Go-Gurt Kids Yogurt Tubes",
+  "brand": "Go-Gurt",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Yogurt",
+  "size": "8 ct",
+  "price": 4.99,
+  "diet_tags": [
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ]
+ },
+ {
+  "id": "sw-000105",
+  "name": "Stonyfield Organic Kids Yogurt Tubes",
+  "brand": "Stonyfield Organic",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Yogurt",
+  "size": "8 ct",
+  "price": 4.49,
+  "diet_tags": [
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "organic",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ]
+ },
+ {
+  "id": "sw-000106",
+  "name": "Lucerne Kids Yogurt Tubes",
+  "brand": "Lucerne",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Yogurt",
+  "size": "8 ct",
+  "price": 3.49,
+  "diet_tags": [
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ]
+ },
+ {
+  "id": "sw-000107",
+  "name": "Lucerne Salted Butter",
+  "brand": "Lucerne",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Butter",
+  "size": "16 oz",
+  "price": 4.99,
+  "diet_tags": [
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ]
+ },
+ {
+  "id": "sw-000108",
+  "name": "Tillamook Salted Butter",
+  "brand": "Tillamook",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Butter",
+  "size": "16 oz",
+  "price": 5.99,
+  "diet_tags": [
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ]
+ },
+ {
+  "id": "sw-000109",
+  "name": "Kerrygold Salted Butter",
+  "brand": "Kerrygold",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Butter",
+  "size": "16 oz",
+  "price": 6.99,
+  "diet_tags": [
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ]
+ },
+ {
+  "id": "sw-000110",
+  "name": "Challenge Salted Butter",
+  "brand": "Challenge",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Butter",
+  "size": "16 oz",
+  "price": 6.99,
+  "diet_tags": [
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ]
+ },
+ {
+  "id": "sw-000111",
+  "name": "Country Crock Plant Butter Plant Butter Sticks",
+  "brand": "Country Crock Plant Butter",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Butter",
+  "size": "16 oz",
+  "price": 5.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000112",
+  "name": "Miyoko's Plant Butter Sticks",
+  "brand": "Miyoko's",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Butter",
+  "size": "16 oz",
+  "price": 6.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000113",
+  "name": "Earth Balance Plant Butter Sticks",
+  "brand": "Earth Balance",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Butter",
+  "size": "16 oz",
+  "price": 6.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000114",
+  "name": "Tillamook Sharp Cheddar Cheese Block",
+  "brand": "Tillamook",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "8 oz",
+  "price": 4.99,
+  "diet_tags": [
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ]
+ },
+ {
+  "id": "sw-000115",
+  "name": "Lucerne Sharp Cheddar Cheese Block",
+  "brand": "Lucerne",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "8 oz",
+  "price": 3.49,
+  "diet_tags": [
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ]
+ },
+ {
+  "id": "sw-000116",
+  "name": "Cabot Sharp Cheddar Cheese Block",
+  "brand": "Cabot",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "8 oz",
+  "price": 3.99,
+  "diet_tags": [
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ]
+ },
+ {
+  "id": "sw-000117",
+  "name": "O Organics Sharp Cheddar Cheese Block",
+  "brand": "O Organics",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "8 oz",
+  "price": 3.99,
+  "diet_tags": [
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "organic",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ]
+ },
+ {
+  "id": "sw-000118",
+  "name": "Lucerne Shredded Mexican Blend Cheese",
+  "brand": "Lucerne",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "8 oz",
+  "price": 2.99,
+  "diet_tags": [
+   "gluten_free",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ]
+ },
+ {
+  "id": "sw-000119",
+  "name": "Tillamook Shredded Mexican Blend Cheese",
+  "brand": "Tillamook",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "8 oz",
+  "price": 4.49,
+  "diet_tags": [
+   "gluten_free",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ]
+ },
+ {
+  "id": "sw-000120",
+  "name": "Sargento Shredded Mexican Blend Cheese",
+  "brand": "Sargento",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "8 oz",
+  "price": 4.49,
+  "diet_tags": [
+   "gluten_free",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ]
+ },
+ {
+  "id": "sw-000121",
+  "name": "Lucerne Shredded Mozzarella",
+  "brand": "Lucerne",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "16 oz",
+  "price": 4.49,
+  "diet_tags": [
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ]
+ },
+ {
+  "id": "sw-000122",
+  "name": "Galbani Shredded Mozzarella",
+  "brand": "Galbani",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "16 oz",
+  "price": 5.49,
+  "diet_tags": [
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ]
+ },
+ {
+  "id": "sw-000123",
+  "name": "Sargento Shredded Mozzarella",
+  "brand": "Sargento",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "16 oz",
+  "price": 6.99,
+  "diet_tags": [
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ]
+ },
+ {
+  "id": "sw-000124",
+  "name": "Kraft Grated Parmesan",
+  "brand": "Kraft",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "8 oz",
+  "price": 5.49,
+  "diet_tags": [
+   "gluten_free",
+   "nut_free"
+  ],
+  "allergens": [
+   "milk"
+  ]
+ },
+ {
+  "id": "sw-000125",
+  "name": "Signature Select Grated Parmesan",
+  "brand": "Signature Select",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "8 oz",
+  "price": 4.49,
+  "diet_tags": [
+   "gluten_free",
+   "nut_free"
+  ],
+  "allergens": [
+   "milk"
+  ]
+ },
+ {
+  "id": "sw-000126",
+  "name": "BelGioioso Grated Parmesan",
+  "brand": "BelGioioso",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "8 oz",
+  "price": 5.99,
+  "diet_tags": [
+   "gluten_free",
+   "nut_free"
+  ],
+  "allergens": [
+   "milk"
+  ]
+ },
+ {
+  "id": "sw-000127",
+  "name": "Violife Dairy-Free Cheddar Shreds",
+  "brand": "Violife",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "7.1 oz",
+  "price": 6.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000128",
+  "name": "Daiya Dairy-Free Cheddar Shreds",
+  "brand": "Daiya",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "7.1 oz",
+  "price": 5.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000129",
+  "name": "Follow Your Heart Dairy-Free Cheddar Shreds",
+  "brand": "Follow Your Heart",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "7.1 oz",
+  "price": 6.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000130",
+  "name": "Athenos Feta Crumbles",
+  "brand": "Athenos",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "6 oz",
+  "price": 5.49,
+  "diet_tags": [
+   "gluten_free",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ]
+ },
+ {
+  "id": "sw-000131",
+  "name": "Lucerne Feta Crumbles",
+  "brand": "Lucerne",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "6 oz",
+  "price": 3.99,
+  "diet_tags": [
+   "gluten_free",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ]
+ },
+ {
+  "id": "sw-000132",
+  "name": "President Feta Crumbles",
+  "brand": "President",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "6 oz",
+  "price": 5.49,
+  "diet_tags": [
+   "gluten_free",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ]
+ },
+ {
+  "id": "sw-000133",
+  "name": "Lucerne Heavy Whipping Cream",
+  "brand": "Lucerne",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Cream",
+  "size": "16 fl oz",
+  "price": 3.99,
+  "diet_tags": [
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ]
+ },
+ {
+  "id": "sw-000134",
+  "name": "Clover Sonoma Heavy Whipping Cream",
+  "brand": "Clover Sonoma",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cream",
+  "size": "16 fl oz",
+  "price": 4.49,
+  "diet_tags": [
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ]
+ },
+ {
+  "id": "sw-000135",
+  "name": "O Organics Heavy Whipping Cream",
+  "brand": "O Organics",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Cream",
+  "size": "16 fl oz",
+  "price": 4.99,
+  "diet_tags": [
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "organic",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ]
+ },
+ {
+  "id": "sw-000136",
+  "name": "Lucerne Sour Cream",
+  "brand": "Lucerne",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Cream",
+  "size": "16 oz",
+  "price": 2.49,
+  "diet_tags": [
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ]
+ },
+ {
+  "id": "sw-000137",
+  "name": "Daisy Sour Cream",
+  "brand": "Daisy",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cream",
+  "size": "16 oz",
+  "price": 3.49,
+  "diet_tags": [
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ]
+ },
+ {
+  "id": "sw-000138",
+  "name": "Tillamook Sour Cream",
+  "brand": "Tillamook",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cream",
+  "size": "16 oz",
+  "price": 3.99,
+  "diet_tags": [
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ]
+ },
+ {
+  "id": "sw-000139",
+  "name": "Lucerne Half and Half",
+  "brand": "Lucerne",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Cream",
+  "size": "32 fl oz",
+  "price": 3.49,
+  "diet_tags": [
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ]
+ },
+ {
+  "id": "sw-000140",
+  "name": "Clover Sonoma Half and Half",
+  "brand": "Clover Sonoma",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cream",
+  "size": "32 fl oz",
+  "price": 4.99,
+  "diet_tags": [
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ]
+ },
+ {
+  "id": "sw-000141",
+  "name": "O Organics Half and Half",
+  "brand": "O Organics",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Cream",
+  "size": "32 fl oz",
+  "price": 4.49,
+  "diet_tags": [
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "organic",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ]
+ },
+ {
+  "id": "sw-000142",
+  "name": "Dave's Killer Bread Whole Wheat Sandwich Bread",
+  "brand": "Dave's Killer Bread",
+  "store_brand": false,
+  "department": "bakery",
+  "aisle": "Bread",
+  "size": "24 oz",
+  "price": 4.49,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [
+   "wheat"
+  ]
+ },
+ {
+  "id": "sw-000143",
+  "name": "Oroweat Whole Wheat Sandwich Bread",
+  "brand": "Oroweat",
+  "store_brand": false,
+  "department": "bakery",
+  "aisle": "Bread",
+  "size": "24 oz",
+  "price": 4.49,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [
+   "wheat"
+  ]
+ },
+ {
+  "id": "sw-000144",
+  "name": "Signature Select Whole Wheat Sandwich Bread",
+  "brand": "Signature Select",
+  "store_brand": true,
+  "department": "bakery",
+  "aisle": "Bread",
+  "size": "24 oz",
+  "price": 3.49,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [
+   "wheat"
+  ]
+ },
+ {
+  "id": "sw-000145",
+  "name": "Nature's Own Whole Wheat Sandwich Bread",
+  "brand": "Nature's Own",
+  "store_brand": false,
+  "department": "bakery",
+  "aisle": "Bread",
+  "size": "24 oz",
+  "price": 4.49,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [
+   "wheat"
+  ]
+ },
+ {
+  "id": "sw-000146",
+  "name": "Boudin Sourdough Bread",
+  "brand": "Boudin",
+  "store_brand": false,
+  "department": "bakery",
+  "aisle": "Bread",
+  "size": "24 oz",
+  "price": 6.49,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [
+   "wheat"
+  ]
+ },
+ {
+  "id": "sw-000147",
+  "name": "Signature Select Sourdough Bread",
+  "brand": "Signature Select",
+  "store_brand": true,
+  "department": "bakery",
+  "aisle": "Bread",
+  "size": "24 oz",
+  "price": 3.99,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [
+   "wheat"
+  ]
+ },
+ {
+  "id": "sw-000148",
+  "name": "Acme Bread Sourdough Bread",
+  "brand": "Acme Bread",
+  "store_brand": false,
+  "department": "bakery",
+  "aisle": "Bread",
+  "size": "24 oz",
+  "price": 6.49,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [
+   "wheat"
+  ]
+ },
+ {
+  "id": "sw-000149",
+  "name": "Canyon Bakehouse Gluten Free Sandwich Bread",
+  "brand": "Canyon Bakehouse",
+  "store_brand": false,
+  "department": "bakery",
+  "aisle": "Bread",
+  "size": "18 oz",
+  "price": 6.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000150",
+  "name": "Schar Gluten Free Sandwich Bread",
+  "brand": "Schar",
+  "store_brand": false,
+  "department": "bakery",
+  "aisle": "Bread",
+  "size": "18 oz",
+  "price": 8.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000151",
+  "name": "Open Nature Gluten Free Sandwich Bread",
+  "brand": "Open Nature",
+  "store_brand": true,
+  "department": "bakery",
+  "aisle": "Bread",
+  "size": "18 oz",
+  "price": 5.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000152",
+  "name": "Signature Select Hamburger Buns",
+  "brand": "Signature Select",
+  "store_brand": true,
+  "department": "bakery",
+  "aisle": "Bread",
+  "size": "8 ct",
+  "price": 2.99,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [
+   "wheat"
+  ]
+ },
+ {
+  "id": "sw-000153",
+  "name": "Martin's Hamburger Buns",
+  "brand": "Martin's",
+  "store_brand": false,
+  "department": "bakery",
+  "aisle": "Bread",
+  "size": "8 ct",
+  "price": 3.99,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [
+   "wheat"
+  ]
+ },
+ {
+  "id": "sw-000154",
+  "name": "Franz Hamburger Buns",
+  "brand": "Franz",
+  "store_brand": false,
+  "department": "bakery",
+  "aisle": "Bread",
+  "size": "8 ct",
+  "price": 3.49,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [
+   "wheat"
+  ]
+ },
+ {
+  "id": "sw-000155",
+  "name": "Mission Flour Tortillas",
+  "brand": "Mission",
+  "store_brand": false,
+  "department": "bakery",
+  "aisle": "Tortillas",
+  "size": "10 ct",
+  "price": 4.49,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [
+   "wheat"
+  ]
+ },
+ {
+  "id": "sw-000156",
+  "name": "Guerrero Flour Tortillas",
+  "brand": "Guerrero",
+  "store_brand": false,
+  "department": "bakery",
+  "aisle": "Tortillas",
+  "size": "10 ct",
+  "price": 3.99,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [
+   "wheat"
+  ]
+ },
+ {
+  "id": "sw-000157",
+  "name": "Signature Select Flour Tortillas",
+  "brand": "Signature Select",
+  "store_brand": true,
+  "department": "bakery",
+  "aisle": "Tortillas",
+  "size": "10 ct",
+  "price": 2.99,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [
+   "wheat"
+  ]
+ },
+ {
+  "id": "sw-000158",
+  "name": "Mission Corn Tortillas",
+  "brand": "Mission",
+  "store_brand": false,
+  "department": "bakery",
+  "aisle": "Tortillas",
+  "size": "30 ct",
+  "price": 3.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000159",
+  "name": "Guerrero Corn Tortillas",
+  "brand": "Guerrero",
+  "store_brand": false,
+  "department": "bakery",
+  "aisle": "Tortillas",
+  "size": "30 ct",
+  "price": 2.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000160",
+  "name": "La Tortilla Factory Corn Tortillas",
+  "brand": "La Tortilla Factory",
+  "store_brand": false,
+  "department": "bakery",
+  "aisle": "Tortillas",
+  "size": "30 ct",
+  "price": 3.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000161",
+  "name": "Signature Select Corn Tortillas",
+  "brand": "Signature Select",
+  "store_brand": true,
+  "department": "bakery",
+  "aisle": "Tortillas",
+  "size": "30 ct",
+  "price": 2.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000162",
+  "name": "Old El Paso Taco Shells",
+  "brand": "Old El Paso",
+  "store_brand": false,
+  "department": "bakery",
+  "aisle": "Tortillas",
+  "size": "12 ct",
+  "price": 2.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000163",
+  "name": "Ortega Taco Shells",
+  "brand": "Ortega",
+  "store_brand": false,
+  "department": "bakery",
+  "aisle": "Tortillas",
+  "size": "12 ct",
+  "price": 3.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000164",
+  "name": "Signature Select Taco Shells",
+  "brand": "Signature Select",
+  "store_brand": true,
+  "department": "bakery",
+  "aisle": "Tortillas",
+  "size": "12 ct",
+  "price": 2.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000165",
+  "name": "Thomas' Plain Bagels",
+  "brand": "Thomas'",
+  "store_brand": false,
+  "department": "bakery",
+  "aisle": "Bagels & Muffins",
+  "size": "6 ct",
+  "price": 4.99,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [
+   "wheat"
+  ]
+ },
+ {
+  "id": "sw-000166",
+  "name": "Signature Select Plain Bagels",
+  "brand": "Signature Select",
+  "store_brand": true,
+  "department": "bakery",
+  "aisle": "Bagels & Muffins",
+  "size": "6 ct",
+  "price": 3.49,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [
+   "wheat"
+  ]
+ },
+ {
+  "id": "sw-000167",
+  "name": "Dave's Killer Bread Plain Bagels",
+  "brand": "Dave's Killer Bread",
+  "store_brand": false,
+  "department": "bakery",
+  "aisle": "Bagels & Muffins",
+  "size": "6 ct",
+  "price": 4.99,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [
+   "wheat"
+  ]
+ },
+ {
+  "id": "sw-000168",
+  "name": "Thomas' English Muffins",
+  "brand": "Thomas'",
+  "store_brand": false,
+  "department": "bakery",
+  "aisle": "Bagels & Muffins",
+  "size": "6 ct",
+  "price": 4.99,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [
+   "wheat"
+  ]
+ },
+ {
+  "id": "sw-000169",
+  "name": "Signature Select English Muffins",
+  "brand": "Signature Select",
+  "store_brand": true,
+  "department": "bakery",
+  "aisle": "Bagels & Muffins",
+  "size": "6 ct",
+  "price": 3.49,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [
+   "wheat"
+  ]
+ },
+ {
+  "id": "sw-000170",
+  "name": "Foster Farms Boneless Skinless Chicken Breasts",
+  "brand": "Foster Farms",
+  "store_brand": false,
+  "department": "meat seafood",
+  "aisle": "Chicken",
+  "size": "1.5 lb",
+  "price": 9.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000171",
+  "name": "Signature Farms Boneless Skinless Chicken Breasts",
+  "brand": "Signature Farms",
+  "store_brand": true,
+  "department": "meat seafood",
+  "aisle": "Chicken",
+  "size": "1.5 lb",
+  "price": 7.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000172",
+  "name": "O Organics Boneless Skinless Chicken Breasts",
+  "brand": "O Organics",
+  "store_brand": true,
+  "department": "meat seafood",
+  "aisle": "Chicken",
+  "size": "1.5 lb",
+  "price": 9.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free",
+   "organic"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000173",
+  "name": "Mary's Boneless Skinless Chicken Breasts",
+  "brand": "Mary's",
+  "store_brand": false,
+  "department": "meat seafood",
+  "aisle": "Chicken",
+  "size": "1.5 lb",
+  "price": 10.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000174",
+  "name": "Foster Farms Boneless Skinless Chicken Thighs",
+  "brand": "Foster Farms",
+  "store_brand": false,
+  "department": "meat seafood",
+  "aisle": "Chicken",
+  "size": "1.5 lb",
+  "price": 9.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000175",
+  "name": "Signature Farms Boneless Skinless Chicken Thighs",
+  "brand": "Signature Farms",
+  "store_brand": true,
+  "department": "meat seafood",
+  "aisle": "Chicken",
+  "size": "1.5 lb",
+  "price": 6.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000176",
+  "name": "O Organics Boneless Skinless Chicken Thighs",
+  "brand": "O Organics",
+  "store_brand": true,
+  "department": "meat seafood",
+  "aisle": "Chicken",
+  "size": "1.5 lb",
+  "price": 7.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free",
+   "organic"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000177",
+  "name": "Signature Farms Ground Beef 85% Lean",
+  "brand": "Signature Farms",
+  "store_brand": true,
+  "department": "meat seafood",
+  "aisle": "Beef",
+  "size": "1 lb",
+  "price": 6.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000178",
+  "name": "O Organics Ground Beef 85% Lean",
+  "brand": "O Organics",
+  "store_brand": true,
+  "department": "meat seafood",
+  "aisle": "Beef",
+  "size": "1 lb",
+  "price": 6.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free",
+   "organic"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000179",
+  "name": "Open Nature Ground Beef 85% Lean",
+  "brand": "Open Nature",
+  "store_brand": true,
+  "department": "meat seafood",
+  "aisle": "Beef",
+  "size": "1 lb",
+  "price": 6.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000180",
+  "name": "Signature Farms Ribeye Steak",
+  "brand": "Signature Farms",
+  "store_brand": true,
+  "department": "meat seafood",
+  "aisle": "Beef",
+  "size": "1 lb",
+  "price": 13.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000181",
+  "name": "Certified Angus Beef Ribeye Steak",
+  "brand": "Certified Angus Beef",
+  "store_brand": false,
+  "department": "meat seafood",
+  "aisle": "Beef",
+  "size": "1 lb",
+  "price": 15.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000182",
+  "name": "Oscar Mayer Thick Cut Bacon",
+  "brand": "Oscar Mayer",
+  "store_brand": false,
+  "department": "meat seafood",
+  "aisle": "Pork",
+  "size": "16 oz",
+  "price": 7.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000183",
+  "name": "Signature Select Thick Cut Bacon",
+  "brand": "Signature Select",
+  "store_brand": true,
+  "department": "meat seafood",
+  "aisle": "Pork",
+  "size": "16 oz",
+  "price": 6.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000184",
+  "name": "Applegate Thick Cut Bacon",
+  "brand": "Applegate",
+  "store_brand": false,
+  "department": "meat seafood",
+  "aisle": "Pork",
+  "size": "16 oz",
+  "price": 10.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000185",
+  "name": "Wright Thick Cut Bacon",
+  "brand": "Wright",
+  "store_brand": false,
+  "department": "meat seafood",
+  "aisle": "Pork",
+  "size": "16 oz",
+  "price": 8.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000186",
+  "name": "Jennie-O Ground Turkey 93% Lean",
+  "brand": "Jennie-O",
+  "store_brand": false,
+  "department": "meat seafood",
+  "aisle": "Turkey",
+  "size": "1 lb",
+  "price": 6.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000187",
+  "name": "Foster Farms Ground Turkey 93% Lean",
+  "brand": "Foster Farms",
+  "store_brand": false,
+  "department": "meat seafood",
+  "aisle": "Turkey",
+  "size": "1 lb",
+  "price": 7.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000188",
+  "name": "O Organics Ground Turkey 93% Lean",
+  "brand": "O Organics",
+  "store_brand": true,
+  "department": "meat seafood",
+  "aisle": "Turkey",
+  "size": "1 lb",
+  "price": 5.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free",
+   "organic"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000189",
+  "name": "Waterfront Bistro Atlantic Salmon Fillet",
+  "brand": "Waterfront Bistro",
+  "store_brand": true,
+  "department": "meat seafood",
+  "aisle": "Seafood",
+  "size": "1 lb",
+  "price": 9.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free"
+  ],
+  "allergens": [
+   "fish"
+  ]
+ },
+ {
+  "id": "sw-000190",
+  "name": "Kvaroy Arctic Atlantic Salmon Fillet",
+  "brand": "Kvaroy Arctic",
+  "store_brand": false,
+  "department": "meat seafood",
+  "aisle": "Seafood",
+  "size": "1 lb",
+  "price": 12.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free"
+  ],
+  "allergens": [
+   "fish"
+  ]
+ },
+ {
+  "id": "sw-000191",
+  "name": "Waterfront Bistro Raw Shrimp Peeled & Deveined",
+  "brand": "Waterfront Bistro",
+  "store_brand": true,
+  "department": "meat seafood",
+  "aisle": "Seafood",
+  "size": "1 lb",
+  "price": 8.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free"
+  ],
+  "allergens": [
+   "shellfish"
+  ]
+ },
+ {
+  "id": "sw-000192",
+  "name": "SeaPak Raw Shrimp Peeled & Deveined",
+  "brand": "SeaPak",
+  "store_brand": false,
+  "department": "meat seafood",
+  "aisle": "Seafood",
+  "size": "1 lb",
+  "price": 9.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free"
+  ],
+  "allergens": [
+   "shellfish"
+  ]
+ },
+ {
+  "id": "sw-000193",
+  "name": "Beyond Meat Plant-Based Ground",
+  "brand": "Beyond Meat",
+  "store_brand": false,
+  "department": "meat seafood",
+  "aisle": "Plant-Based Meat",
+  "size": "16 oz",
+  "price": 9.49,
+  "diet_tags": [
+   "dairy_free",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [
+   "soy"
+  ]
+ },
+ {
+  "id": "sw-000194",
+  "name": "Impossible Plant-Based Ground",
+  "brand": "Impossible",
+  "store_brand": false,
+  "department": "meat seafood",
+  "aisle": "Plant-Based Meat",
+  "size": "16 oz",
+  "price": 9.49,
+  "diet_tags": [
+   "dairy_free",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [
+   "soy"
+  ]
+ },
+ {
+  "id": "sw-000195",
+  "name": "Open Nature Plant-Based Ground",
+  "brand": "Open Nature",
+  "store_brand": true,
+  "department": "meat seafood",
+  "aisle": "Plant-Based Meat",
+  "size": "16 oz",
+  "price": 7.99,
+  "diet_tags": [
+   "dairy_free",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [
+   "soy"
+  ]
+ },
+ {
+  "id": "sw-000196",
+  "name": "Beyond Meat Plant-Based Burger Patties",
+  "brand": "Beyond Meat",
+  "store_brand": false,
+  "department": "meat seafood",
+  "aisle": "Plant-Based Meat",
+  "size": "2 ct",
+  "price": 8.49,
+  "diet_tags": [
+   "dairy_free",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000197",
+  "name": "Impossible Plant-Based Burger Patties",
+  "brand": "Impossible",
+  "store_brand": false,
+  "department": "meat seafood",
+  "aisle": "Plant-Based Meat",
+  "size": "2 ct",
+  "price": 7.49,
+  "diet_tags": [
+   "dairy_free",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000198",
+  "name": "Johnsonville Italian Sausage",
+  "brand": "Johnsonville",
+  "store_brand": false,
+  "department": "meat seafood",
+  "aisle": "Sausage",
+  "size": "19 oz",
+  "price": 6.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000199",
+  "name": "Signature Farms Italian Sausage",
+  "brand": "Signature Farms",
+  "store_brand": true,
+  "department": "meat seafood",
+  "aisle": "Sausage",
+  "size": "19 oz",
+  "price": 5.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000200",
+  "name": "Aidells Italian Sausage",
+  "brand": "Aidells",
+  "store_brand": false,
+  "department": "meat seafood",
+  "aisle": "Sausage",
+  "size": "19 oz",
+  "price": 7.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000201",
+  "name": "Primo Taglio Oven Roasted Turkey Breast",
+  "brand": "Primo Taglio",
+  "store_brand": true,
+  "department": "deli",
+  "aisle": "Lunch Meat",
+  "size": "8 oz",
+  "price": 4.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000202",
+  "name": "Oscar Mayer Oven Roasted Turkey Breast",
+  "brand": "Oscar Mayer",
+  "store_brand": false,
+  "department": "deli",
+  "aisle": "Lunch Meat",
+  "size": "8 oz",
+  "price": 7.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000203",
+  "name": "Applegate Oven Roasted Turkey Breast",
+  "brand": "Applegate",
+  "store_brand": false,
+  "department": "deli",
+  "aisle": "Lunch Meat",
+  "size": "8 oz",
+  "price": 5.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000204",
+  "name": "Hillshire Farm Oven Roasted Turkey Breast",
+  "brand": "Hillshire Farm",
+  "store_brand": false,
+  "department": "deli",
+  "aisle": "Lunch Meat",
+  "size": "8 oz",
+  "price": 5.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000205",
+  "name": "Primo Taglio Black Forest Ham",
+  "brand": "Primo Taglio",
+  "store_brand": true,
+  "department": "deli",
+  "aisle": "Lunch Meat",
+  "size": "8 oz",
+  "price": 4.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000206",
+  "name": "Hillshire Farm Black Forest Ham",
+  "brand": "Hillshire Farm",
+  "store_brand": false,
+  "department": "deli",
+  "aisle": "Lunch Meat",
+  "size": "8 oz",
+  "price": 5.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000207",
+  "name": "Sabra Classic Hummus",
+  "brand": "Sabra",
+  "store_brand": false,
+  "department": "deli",
+  "aisle": "Hummus & Dips",
+  "size": "10 oz",
+  "price": 4.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [
+   "sesame"
+  ]
+ },
+ {
+  "id": "sw-000208",
+  "name": "Signature Cafe Classic Hummus",
+  "brand": "Signature Cafe",
+  "store_brand": true,
+  "department": "deli",
+  "aisle": "Hummus & Dips",
+  "size": "10 oz",
+  "price": 3.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [
+   "sesame"
+  ]
+ },
+ {
+  "id": "sw-000209",
+  "name": "Cedar's Classic Hummus",
+  "brand": "Cedar's",
+  "store_brand": false,
+  "department": "deli",
+  "aisle": "Hummus & Dips",
+  "size": "10 oz",
+  "price": 5.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [
+   "sesame"
+  ]
+ },
+ {
+  "id": "sw-000210",
+  "name": "O Organics Classic Hummus",
+  "brand": "O Organics",
+  "store_brand": true,
+  "department": "deli",
+  "aisle": "Hummus & Dips",
+  "size": "10 oz",
+  "price": 3.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "organic",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [
+   "sesame"
+  ]
+ },
+ {
+  "id": "sw-000211",
+  "name": "Wholly Guacamole Guacamole",
+  "brand": "Wholly Guacamole",
+  "store_brand": false,
+  "department": "deli",
+  "aisle": "Hummus & Dips",
+  "size": "8 oz",
+  "price": 5.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000212",
+  "name": "Signature Cafe Guacamole",
+  "brand": "Signature Cafe",
+  "store_brand": true,
+  "department": "deli",
+  "aisle": "Hummus & Dips",
+  "size": "8 oz",
+  "price": 3.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000213",
+  "name": "Good Foods Guacamole",
+  "brand": "Good Foods",
+  "store_brand": false,
+  "department": "deli",
+  "aisle": "Hummus & Dips",
+  "size": "8 oz",
+  "price": 4.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000214",
+  "name": "Signature Cafe Fresh Salsa Medium",
+  "brand": "Signature Cafe",
+  "store_brand": true,
+  "department": "deli",
+  "aisle": "Hummus & Dips",
+  "size": "16 oz",
+  "price": 3.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000215",
+  "name": "Garden Fresh Gourmet Fresh Salsa Medium",
+  "brand": "Garden Fresh Gourmet",
+  "store_brand": false,
+  "department": "deli",
+  "aisle": "Hummus & Dips",
+  "size": "16 oz",
+  "price": 5.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000216",
+  "name": "Calavo Fresh Salsa Medium",
+  "brand": "Calavo",
+  "store_brand": false,
+  "department": "deli",
+  "aisle": "Hummus & Dips",
+  "size": "16 oz",
+  "price": 5.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000217",
+  "name": "Signature Cafe Rotisserie Chicken",
+  "brand": "Signature Cafe",
+  "store_brand": true,
+  "department": "deli",
+  "aisle": "Prepared Meals",
+  "size": "each",
+  "price": 7.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000218",
+  "name": "Barilla Spaghetti",
+  "brand": "Barilla",
+  "store_brand": false,
+  "department": "dry goods pasta",
+  "aisle": "Pasta",
+  "size": "16 oz",
+  "price": 1.99,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [
+   "wheat"
+  ]
+ },
+ {
+  "id": "sw-000219",
+  "name": "Signature Select Spaghetti",
+  "brand": "Signature Select",
+  "store_brand": true,
+  "department": "dry goods pasta",
+  "aisle": "Pasta",
+  "size": "16 oz",
+  "price": 1.49,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [
+   "wheat"
+  ]
+ },
+ {
+  "id": "sw-000220",
+  "name": "O Organics Spaghetti",
+  "brand": "O Organics",
+  "store_brand": true,
+  "department": "dry goods pasta",
+  "aisle": "Pasta",
+  "size": "16 oz",
+  "price": 1.99,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "nut_free",
+   "organic",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [
+   "wheat"
+  ]
+ },
+ {
+  "id": "sw-000221",
+  "name": "De Cecco Spaghetti",
+  "brand": "De Cecco",
+  "store_brand": false,
+  "department": "dry goods pasta",
+  "aisle": "Pasta",
+  "size": "16 oz",
+  "price": 2.49,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [
+   "wheat"
+  ]
+ },
+ {
+  "id": "sw-000222",
+  "name": "Barilla Penne Rigate",
+  "brand": "Barilla",
+  "store_brand": false,
+  "department": "dry goods pasta",
+  "aisle": "Pasta",
+  "size": "16 oz",
+  "price": 2.49,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [
+   "wheat"
+  ]
+ },
+ {
+  "id": "sw-000223",
+  "name": "Signature Select Penne Rigate",
+  "brand": "Signature Select",
+  "store_brand": true,
+  "department": "dry goods pasta",
+  "aisle": "Pasta",
+  "size": "16 oz",
+  "price": 1.49,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [
+   "wheat"
+  ]
+ },
+ {
+  "id": "sw-000224",
+  "name": "O Organics Penne Rigate",
+  "brand": "O Organics",
+  "store_brand": true,
+  "department": "dry goods pasta",
+  "aisle": "Pasta",
+  "size": "16 oz",
+  "price": 1.99,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "nut_free",
+   "organic",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [
+   "wheat"
+  ]
+ },
+ {
+  "id": "sw-000225",
+  "name": "De Cecco Penne Rigate",
+  "brand": "De Cecco",
+  "store_brand": false,
+  "department": "dry goods pasta",
+  "aisle": "Pasta",
+  "size": "16 oz",
+  "price": 2.49,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [
+   "wheat"
+  ]
+ },
+ {
+  "id": "sw-000226",
+  "name": "Barilla Gluten Free Penne",
+  "brand": "Barilla",
+  "store_brand": false,
+  "department": "dry goods pasta",
+  "aisle": "Pasta",
+  "size": "12 oz",
+  "price": 4.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000227",
+  "name": "Banza Gluten Free Penne",
+  "brand": "Banza",
+  "store_brand": false,
+  "department": "dry goods pasta",
+  "aisle": "Pasta",
+  "size": "12 oz",
+  "price": 3.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000228",
+  "name": "Jovial Gluten Free Penne",
+  "brand": "Jovial",
+  "store_brand": false,
+  "department": "dry goods pasta",
+  "aisle": "Pasta",
+  "size": "12 oz",
+  "price": 3.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000229",
+  "name": "Open Nature Gluten Free Penne",
+  "brand": "Open Nature",
+  "store_brand": true,
+  "department": "dry goods pasta",
+  "aisle": "Pasta",
+  "size": "12 oz",
+  "price": 2.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000230",
+  "name": "Banza Chickpea Rotini",
+  "brand": "Banza",
+  "store_brand": false,
+  "department": "dry goods pasta",
+  "aisle": "Pasta",
+  "size": "8 oz",
+  "price": 4.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000231",
+  "name": "Open Nature Chickpea Rotini",
+  "brand": "Open Nature",
+  "store_brand": true,
+  "department": "dry goods pasta",
+  "aisle": "Pasta",
+  "size": "8 oz",
+  "price": 3.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000232",
+  "name": "Rao's Homemade Marinara Sauce",
+  "brand": "Rao's Homemade",
+  "store_brand": false,
+  "department": "dry goods pasta",
+  "aisle": "Pasta Sauce",
+  "size": "24 oz",
+  "price": 4.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000233",
+  "name": "Prego Marinara Sauce",
+  "brand": "Prego",
+  "store_brand": false,
+  "department": "dry goods pasta",
+  "aisle": "Pasta Sauce",
+  "size": "24 oz",
+  "price": 4.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000234",
+  "name": "Barilla Marinara Sauce",
+  "brand": "Barilla",
+  "store_brand": false,
+  "department": "dry goods pasta",
+  "aisle": "Pasta Sauce",
+  "size": "24 oz",
+  "price": 4.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000235",
+  "name": "Signature Select Marinara Sauce",
+  "brand": "Signature Select",
+  "store_brand": true,
+  "department": "dry goods pasta",
+  "aisle": "Pasta Sauce",
+  "size": "24 oz",
+  "price": 3.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000236",
+  "name": "O Organics Marinara Sauce",
+  "brand": "O Organics",
+  "store_brand": true,
+  "department": "dry goods pasta",
+  "aisle": "Pasta Sauce",
+  "size": "24 oz",
+  "price": 4.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "organic",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000237",
+  "name": "Barilla Basil Pesto",
+  "brand": "Barilla",
+  "store_brand": false,
+  "department": "dry goods pasta",
+  "aisle": "Pasta Sauce",
+  "size": "6.7 oz",
+  "price": 6.49,
+  "diet_tags": [
+   "gluten_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk",
+   "tree_nuts"
+  ]
+ },
+ {
+  "id": "sw-000238",
+  "name": "Signature Select Basil Pesto",
+  "brand": "Signature Select",
+  "store_brand": true,
+  "department": "dry goods pasta",
+  "aisle": "Pasta Sauce",
+  "size": "6.7 oz",
+  "price": 4.49,
+  "diet_tags": [
+   "gluten_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk",
+   "tree_nuts"
+  ]
+ },
+ {
+  "id": "sw-000239",
+  "name": "Buitoni Basil Pesto",
+  "brand": "Buitoni",
+  "store_brand": false,
+  "department": "dry goods pasta",
+  "aisle": "Pasta Sauce",
+  "size": "6.7 oz",
+  "price": 5.49,
+  "diet_tags": [
+   "gluten_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk",
+   "tree_nuts"
+  ]
+ },
+ {
+  "id": "sw-000240",
+  "name": "Mahatma Jasmine Rice",
+  "brand": "Mahatma",
+  "store_brand": false,
+  "department": "dry goods pasta",
+  "aisle": "Rice & Grains",
+  "size": "5 lb",
+  "price": 7.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000241",
+  "name": "Signature Select Jasmine Rice",
+  "brand": "Signature Select",
+  "store_brand": true,
+  "department": "dry goods pasta",
+  "aisle": "Rice & Grains",
+  "size": "5 lb",
+  "price": 6.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000242",
+  "name": "Lundberg Jasmine Rice",
+  "brand": "Lundberg",
+  "store_brand": false,
+  "department": "dry goods pasta",
+  "aisle": "Rice & Grains",
+  "size": "5 lb",
+  "price": 8.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000243",
+  "name": "Signature Select Brown Rice",
+  "brand": "Signature Select",
+  "store_brand": true,
+  "department": "dry goods pasta",
+  "aisle": "Rice & Grains",
+  "size": "2 lb",
+  "price": 2.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000244",
+  "name": "Lundberg Brown Rice",
+  "brand": "Lundberg",
+  "store_brand": false,
+  "department": "dry goods pasta",
+  "aisle": "Rice & Grains",
+  "size": "2 lb",
+  "price": 3.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000245",
+  "name": "O Organics Brown Rice",
+  "brand": "O Organics",
+  "store_brand": true,
+  "department": "dry goods pasta",
+  "aisle": "Rice & Grains",
+  "size": "2 lb",
+  "price": 3.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "organic",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000246",
+  "name": "O Organics Quinoa",
+  "brand": "O Organics",
+  "store_brand": true,
+  "department": "dry goods pasta",
+  "aisle": "Rice & Grains",
+  "size": "16 oz",
+  "price": 5.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "organic",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000247",
+  "name": "Ancient Harvest Quinoa",
+  "brand": "Ancient Harvest",
+  "store_brand": false,
+  "department": "dry goods pasta",
+  "aisle": "Rice & Grains",
+  "size": "16 oz",
+  "price": 5.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000248",
+  "name": "Bob's Red Mill Quinoa",
+  "brand": "Bob's Red Mill",
+  "store_brand": false,
+  "department": "dry goods pasta",
+  "aisle": "Rice & Grains",
+  "size": "16 oz",
+  "price": 7.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000249",
+  "name": "Nissin Instant Ramen Noodles",
+  "brand": "Nissin",
+  "store_brand": false,
+  "department": "dry goods pasta",
+  "aisle": "Rice & Grains",
+  "size": "6 ct",
+  "price": 4.49,
+  "diet_tags": [
+   "dairy_free",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [
+   "wheat",
+   "soy"
+  ]
+ },
+ {
+  "id": "sw-000250",
+  "name": "Maruchan Instant Ramen Noodles",
+  "brand": "Maruchan",
+  "store_brand": false,
+  "department": "dry goods pasta",
+  "aisle": "Rice & Grains",
+  "size": "6 ct",
+  "price": 4.49,
+  "diet_tags": [
+   "dairy_free",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [
+   "wheat",
+   "soy"
+  ]
+ },
+ {
+  "id": "sw-000251",
+  "name": "Immi Instant Ramen Noodles",
+  "brand": "Immi",
+  "store_brand": false,
+  "department": "dry goods pasta",
+  "aisle": "Rice & Grains",
+  "size": "6 ct",
+  "price": 4.99,
+  "diet_tags": [
+   "dairy_free",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [
+   "wheat",
+   "soy"
+  ]
+ },
+ {
+  "id": "sw-000252",
+  "name": "Bush's Black Beans",
+  "brand": "Bush's",
+  "store_brand": false,
+  "department": "canned goods",
+  "aisle": "Canned Beans",
+  "size": "15 oz",
+  "price": 1.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000253",
+  "name": "Signature Select Black Beans",
+  "brand": "Signature Select",
+  "store_brand": true,
+  "department": "canned goods",
+  "aisle": "Canned Beans",
+  "size": "15 oz",
+  "price": 1.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000254",
+  "name": "O Organics Black Beans",
+  "brand": "O Organics",
+  "store_brand": true,
+  "department": "canned goods",
+  "aisle": "Canned Beans",
+  "size": "15 oz",
+  "price": 1.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "organic",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000255",
+  "name": "S&W Black Beans",
+  "brand": "S&W",
+  "store_brand": false,
+  "department": "canned goods",
+  "aisle": "Canned Beans",
+  "size": "15 oz",
+  "price": 1.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000256",
+  "name": "Bush's Pinto Beans",
+  "brand": "Bush's",
+  "store_brand": false,
+  "department": "canned goods",
+  "aisle": "Canned Beans",
+  "size": "15 oz",
+  "price": 1.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000257",
+  "name": "Signature Select Pinto Beans",
+  "brand": "Signature Select",
+  "store_brand": true,
+  "department": "canned goods",
+  "aisle": "Canned Beans",
+  "size": "15 oz",
+  "price": 1.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000258",
+  "name": "O Organics Pinto Beans",
+  "brand": "O Organics",
+  "store_brand": true,
+  "department": "canned goods",
+  "aisle": "Canned Beans",
+  "size": "15 oz",
+  "price": 1.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "organic",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000259",
+  "name": "Goya Garbanzo Beans",
+  "brand": "Goya",
+  "store_brand": false,
+  "department": "canned goods",
+  "aisle": "Canned Beans",
+  "size": "15 oz",
+  "price": 1.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000260",
+  "name": "Signature Select Garbanzo Beans",
+  "brand": "Signature Select",
+  "store_brand": true,
+  "department": "canned goods",
+  "aisle": "Canned Beans",
+  "size": "15 oz",
+  "price": 1.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000261",
+  "name": "O Organics Garbanzo Beans",
+  "brand": "O Organics",
+  "store_brand": true,
+  "department": "canned goods",
+  "aisle": "Canned Beans",
+  "size": "15 oz",
+  "price": 1.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "organic",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000262",
+  "name": "Rosarita Refried Beans",
+  "brand": "Rosarita",
+  "store_brand": false,
+  "department": "canned goods",
+  "aisle": "Canned Beans",
+  "size": "16 oz",
+  "price": 2.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000263",
+  "name": "Old El Paso Refried Beans",
+  "brand": "Old El Paso",
+  "store_brand": false,
+  "department": "canned goods",
+  "aisle": "Canned Beans",
+  "size": "16 oz",
+  "price": 1.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000264",
+  "name": "Signature Select Refried Beans",
+  "brand": "Signature Select",
+  "store_brand": true,
+  "department": "canned goods",
+  "aisle": "Canned Beans",
+  "size": "16 oz",
+  "price": 1.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000265",
+  "name": "Hunt's Diced Tomatoes",
+  "brand": "Hunt's",
+  "store_brand": false,
+  "department": "canned goods",
+  "aisle": "Canned Tomatoes",
+  "size": "14.5 oz",
+  "price": 1.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000266",
+  "name": "Muir Glen Diced Tomatoes",
+  "brand": "Muir Glen",
+  "store_brand": false,
+  "department": "canned goods",
+  "aisle": "Canned Tomatoes",
+  "size": "14.5 oz",
+  "price": 1.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000267",
+  "name": "Signature Select Diced Tomatoes",
+  "brand": "Signature Select",
+  "store_brand": true,
+  "department": "canned goods",
+  "aisle": "Canned Tomatoes",
+  "size": "14.5 oz",
+  "price": 1.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000268",
+  "name": "O Organics Diced Tomatoes",
+  "brand": "O Organics",
+  "store_brand": true,
+  "department": "canned goods",
+  "aisle": "Canned Tomatoes",
+  "size": "14.5 oz",
+  "price": 1.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "organic",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000269",
+  "name": "Hunt's Tomato Paste",
+  "brand": "Hunt's",
+  "store_brand": false,
+  "department": "canned goods",
+  "aisle": "Canned Tomatoes",
+  "size": "6 oz",
+  "price": 1.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000270",
+  "name": "Contadina Tomato Paste",
+  "brand": "Contadina",
+  "store_brand": false,
+  "department": "canned goods",
+  "aisle": "Canned Tomatoes",
+  "size": "6 oz",
+  "price": 1.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000271",
+  "name": "Signature Select Tomato Paste",
+  "brand": "Signature Select",
+  "store_brand": true,
+  "department": "canned goods",
+  "aisle": "Canned Tomatoes",
+  "size": "6 oz",
+  "price": 0.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000272",
+  "name": "Swanson Chicken Broth Low Sodium",
+  "brand": "Swanson",
+  "store_brand": false,
+  "department": "canned goods",
+  "aisle": "Soup & Broth",
+  "size": "32 oz",
+  "price": 3.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000273",
+  "name": "Pacific Foods Chicken Broth Low Sodium",
+  "brand": "Pacific Foods",
+  "store_brand": false,
+  "department": "canned goods",
+  "aisle": "Soup & Broth",
+  "size": "32 oz",
+  "price": 3.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000274",
+  "name": "Signature Select Chicken Broth Low Sodium",
+  "brand": "Signature Select",
+  "store_brand": true,
+  "department": "canned goods",
+  "aisle": "Soup & Broth",
+  "size": "32 oz",
+  "price": 2.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000275",
+  "name": "O Organics Chicken Broth Low Sodium",
+  "brand": "O Organics",
+  "store_brand": true,
+  "department": "canned goods",
+  "aisle": "Soup & Broth",
+  "size": "32 oz",
+  "price": 3.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free",
+   "organic"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000276",
+  "name": "Swanson Vegetable Broth",
+  "brand": "Swanson",
+  "store_brand": false,
+  "department": "canned goods",
+  "aisle": "Soup & Broth",
+  "size": "32 oz",
+  "price": 3.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000277",
+  "name": "Pacific Foods Vegetable Broth",
+  "brand": "Pacific Foods",
+  "store_brand": false,
+  "department": "canned goods",
+  "aisle": "Soup & Broth",
+  "size": "32 oz",
+  "price": 3.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000278",
+  "name": "Signature Select Vegetable Broth",
+  "brand": "Signature Select",
+  "store_brand": true,
+  "department": "canned goods",
+  "aisle": "Soup & Broth",
+  "size": "32 oz",
+  "price": 2.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000279",
+  "name": "O Organics Vegetable Broth",
+  "brand": "O Organics",
+  "store_brand": true,
+  "department": "canned goods",
+  "aisle": "Soup & Broth",
+  "size": "32 oz",
+  "price": 3.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "organic",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000280",
+  "name": "Progresso Tomato Soup",
+  "brand": "Progresso",
+  "store_brand": false,
+  "department": "canned goods",
+  "aisle": "Soup & Broth",
+  "size": "18.3 oz",
+  "price": 3.49,
+  "diet_tags": [
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ]
+ },
+ {
+  "id": "sw-000281",
+  "name": "Campbell's Tomato Soup",
+  "brand": "Campbell's",
+  "store_brand": false,
+  "department": "canned goods",
+  "aisle": "Soup & Broth",
+  "size": "18.3 oz",
+  "price": 3.99,
+  "diet_tags": [
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ]
+ },
+ {
+  "id": "sw-000282",
+  "name": "Signature Select Tomato Soup",
+  "brand": "Signature Select",
+  "store_brand": true,
+  "department": "canned goods",
+  "aisle": "Soup & Broth",
+  "size": "18.3 oz",
+  "price": 2.49,
+  "diet_tags": [
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ]
+ },
+ {
+  "id": "sw-000283",
+  "name": "Pacific Foods Tomato Soup",
+  "brand": "Pacific Foods",
+  "store_brand": false,
+  "department": "canned goods",
+  "aisle": "Soup & Broth",
+  "size": "18.3 oz",
+  "price": 3.49,
+  "diet_tags": [
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ]
+ },
+ {
+  "id": "sw-000284",
+  "name": "StarKist Chunk Light Tuna in Water",
+  "brand": "StarKist",
+  "store_brand": false,
+  "department": "canned goods",
+  "aisle": "Canned Fish",
+  "size": "5 oz",
+  "price": 1.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free"
+  ],
+  "allergens": [
+   "fish"
+  ]
+ },
+ {
+  "id": "sw-000285",
+  "name": "Bumble Bee Chunk Light Tuna in Water",
+  "brand": "Bumble Bee",
+  "store_brand": false,
+  "department": "canned goods",
+  "aisle": "Canned Fish",
+  "size": "5 oz",
+  "price": 1.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free"
+  ],
+  "allergens": [
+   "fish"
+  ]
+ },
+ {
+  "id": "sw-000286",
+  "name": "Waterfront Bistro Chunk Light Tuna in Water",
+  "brand": "Waterfront Bistro",
+  "store_brand": true,
+  "department": "canned goods",
+  "aisle": "Canned Fish",
+  "size": "5 oz",
+  "price": 1.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free"
+  ],
+  "allergens": [
+   "fish"
+  ]
+ },
+ {
+  "id": "sw-000287",
+  "name": "Wild Planet Chunk Light Tuna in Water",
+  "brand": "Wild Planet",
+  "store_brand": false,
+  "department": "canned goods",
+  "aisle": "Canned Fish",
+  "size": "5 oz",
+  "price": 1.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free"
+  ],
+  "allergens": [
+   "fish"
+  ]
+ },
+ {
+  "id": "sw-000288",
+  "name": "Thai Kitchen Coconut Milk",
+  "brand": "Thai Kitchen",
+  "store_brand": false,
+  "department": "canned goods",
+  "aisle": "Canned Vegetables",
+  "size": "13.5 oz",
+  "price": 2.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000289",
+  "name": "Signature Select Coconut Milk",
+  "brand": "Signature Select",
+  "store_brand": true,
+  "department": "canned goods",
+  "aisle": "Canned Vegetables",
+  "size": "13.5 oz",
+  "price": 1.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000290",
+  "name": "Native Forest Coconut Milk",
+  "brand": "Native Forest",
+  "store_brand": false,
+  "department": "canned goods",
+  "aisle": "Canned Vegetables",
+  "size": "13.5 oz",
+  "price": 2.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000291",
+  "name": "Gold Medal All Purpose Flour",
+  "brand": "Gold Medal",
+  "store_brand": false,
+  "department": "pantry",
+  "aisle": "Baking",
+  "size": "5 lb",
+  "price": 4.99,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [
+   "wheat"
+  ]
+ },
+ {
+  "id": "sw-000292",
+  "name": "King Arthur All Purpose Flour",
+  "brand": "King Arthur",
+  "store_brand": false,
+  "department": "pantry",
+  "aisle": "Baking",
+  "size": "5 lb",
+  "price": 5.49,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [
+   "wheat"
+  ]
+ },
+ {
+  "id": "sw-000293",
+  "name": "Signature Select All Purpose Flour",
+  "brand": "Signature Select",
+  "store_brand": true,
+  "department": "pantry",
+  "aisle": "Baking",
+  "size": "5 lb",
+  "price": 3.99,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [
+   "wheat"
+  ]
+ },
+ {
+  "id": "sw-000294",
+  "name": "C&H Granulated Sugar",
+  "brand": "C&H",
+  "store_brand": false,
+  "department": "pantry",
+  "aisle": "Baking",
+  "size": "4 lb",
+  "price": 3.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000295",
+  "name": "Signature Select Granulated Sugar",
+  "brand": "Signature Select",
+  "store_brand": true,
+  "department": "pantry",
+  "aisle": "Baking",
+  "size": "4 lb",
+  "price": 3.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000296",
+  "name": "Nestle Toll House Semi-Sweet Chocolate Chips",
+  "brand": "Nestle Toll House",
+  "store_brand": false,
+  "department": "pantry",
+  "aisle": "Baking",
+  "size": "12 oz",
+  "price": 4.99,
+  "diet_tags": [
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk",
+   "soy"
+  ]
+ },
+ {
+  "id": "sw-000297",
+  "name": "Ghirardelli Semi-Sweet Chocolate Chips",
+  "brand": "Ghirardelli",
+  "store_brand": false,
+  "department": "pantry",
+  "aisle": "Baking",
+  "size": "12 oz",
+  "price": 4.49,
+  "diet_tags": [
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk",
+   "soy"
+  ]
+ },
+ {
+  "id": "sw-000298",
+  "name": "Signature Select Semi-Sweet Chocolate Chips",
+  "brand": "Signature Select",
+  "store_brand": true,
+  "department": "pantry",
+  "aisle": "Baking",
+  "size": "12 oz",
+  "price": 3.99,
+  "diet_tags": [
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk",
+   "soy"
+  ]
+ },
+ {
+  "id": "sw-000299",
+  "name": "Enjoy Life Semi-Sweet Chocolate Chips",
+  "brand": "Enjoy Life",
+  "store_brand": false,
+  "department": "pantry",
+  "aisle": "Baking",
+  "size": "12 oz",
+  "price": 3.99,
+  "diet_tags": [
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk",
+   "soy"
+  ]
+ },
+ {
+  "id": "sw-000300",
+  "name": "California Olive Ranch Extra Virgin Olive Oil",
+  "brand": "California Olive Ranch",
+  "store_brand": false,
+  "department": "pantry",
+  "aisle": "Oils & Vinegars",
+  "size": "16.9 fl oz",
+  "price": 11.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000301",
+  "name": "Bertolli Extra Virgin Olive Oil",
+  "brand": "Bertolli",
+  "store_brand": false,
+  "department": "pantry",
+  "aisle": "Oils & Vinegars",
+  "size": "16.9 fl oz",
+  "price": 10.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000302",
+  "name": "Signature Select Extra Virgin Olive Oil",
+  "brand": "Signature Select",
+  "store_brand": true,
+  "department": "pantry",
+  "aisle": "Oils & Vinegars",
+  "size": "16.9 fl oz",
+  "price": 7.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000303",
+  "name": "O Organics Extra Virgin Olive Oil",
+  "brand": "O Organics",
+  "store_brand": true,
+  "department": "pantry",
+  "aisle": "Oils & Vinegars",
+  "size": "16.9 fl oz",
+  "price": 8.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "organic",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000304",
+  "name": "Chosen Foods Avocado Oil",
+  "brand": "Chosen Foods",
+  "store_brand": false,
+  "department": "pantry",
+  "aisle": "Oils & Vinegars",
+  "size": "16.9 fl oz",
+  "price": 11.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000305",
+  "name": "Signature Select Avocado Oil",
+  "brand": "Signature Select",
+  "store_brand": true,
+  "department": "pantry",
+  "aisle": "Oils & Vinegars",
+  "size": "16.9 fl oz",
+  "price": 8.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000306",
+  "name": "Pompeian Balsamic Vinegar",
+  "brand": "Pompeian",
+  "store_brand": false,
+  "department": "pantry",
+  "aisle": "Oils & Vinegars",
+  "size": "16.9 fl oz",
+  "price": 5.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000307",
+  "name": "Signature Select Balsamic Vinegar",
+  "brand": "Signature Select",
+  "store_brand": true,
+  "department": "pantry",
+  "aisle": "Oils & Vinegars",
+  "size": "16.9 fl oz",
+  "price": 4.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000308",
+  "name": "O Organics Balsamic Vinegar",
+  "brand": "O Organics",
+  "store_brand": true,
+  "department": "pantry",
+  "aisle": "Oils & Vinegars",
+  "size": "16.9 fl oz",
+  "price": 5.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "organic",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000309",
+  "name": "Old El Paso Taco Seasoning Mix",
+  "brand": "Old El Paso",
+  "store_brand": false,
+  "department": "pantry",
+  "aisle": "Spices & Seasonings",
+  "size": "1 oz",
+  "price": 1.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000310",
+  "name": "McCormick Taco Seasoning Mix",
+  "brand": "McCormick",
+  "store_brand": false,
+  "department": "pantry",
+  "aisle": "Spices & Seasonings",
+  "size": "1 oz",
+  "price": 1.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000311",
+  "name": "Signature Select Taco Seasoning Mix",
+  "brand": "Signature Select",
+  "store_brand": true,
+  "department": "pantry",
+  "aisle": "Spices & Seasonings",
+  "size": "1 oz",
+  "price": 1.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000312",
+  "name": "McCormick Ground Cumin",
+  "brand": "McCormick",
+  "store_brand": false,
+  "department": "pantry",
+  "aisle": "Spices & Seasonings",
+  "size": "1.5 oz",
+  "price": 3.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000313",
+  "name": "Simply Organic Ground Cumin",
+  "brand": "Simply Organic",
+  "store_brand": false,
+  "department": "pantry",
+  "aisle": "Spices & Seasonings",
+  "size": "1.5 oz",
+  "price": 3.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "organic",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000314",
+  "name": "Signature Select Ground Cumin",
+  "brand": "Signature Select",
+  "store_brand": true,
+  "department": "pantry",
+  "aisle": "Spices & Seasonings",
+  "size": "1.5 oz",
+  "price": 2.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000315",
+  "name": "Diamond Crystal Kosher Salt",
+  "brand": "Diamond Crystal",
+  "store_brand": false,
+  "department": "pantry",
+  "aisle": "Spices & Seasonings",
+  "size": "3 lb",
+  "price": 4.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000316",
+  "name": "Morton Kosher Salt",
+  "brand": "Morton",
+  "store_brand": false,
+  "department": "pantry",
+  "aisle": "Spices & Seasonings",
+  "size": "3 lb",
+  "price": 4.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000317",
+  "name": "Signature Select Kosher Salt",
+  "brand": "Signature Select",
+  "store_brand": true,
+  "department": "pantry",
+  "aisle": "Spices & Seasonings",
+  "size": "3 lb",
+  "price": 3.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000318",
+  "name": "Best Foods Mayonnaise",
+  "brand": "Best Foods",
+  "store_brand": false,
+  "department": "pantry",
+  "aisle": "Condiments",
+  "size": "30 fl oz",
+  "price": 6.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free"
+  ],
+  "allergens": [
+   "eggs"
+  ]
+ },
+ {
+  "id": "sw-000319",
+  "name": "Sir Kensington's Mayonnaise",
+  "brand": "Sir Kensington's",
+  "store_brand": false,
+  "department": "pantry",
+  "aisle": "Condiments",
+  "size": "30 fl oz",
+  "price": 7.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free"
+  ],
+  "allergens": [
+   "eggs"
+  ]
+ },
+ {
+  "id": "sw-000320",
+  "name": "Signature Select Mayonnaise",
+  "brand": "Signature Select",
+  "store_brand": true,
+  "department": "pantry",
+  "aisle": "Condiments",
+  "size": "30 fl oz",
+  "price": 5.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free"
+  ],
+  "allergens": [
+   "eggs"
+  ]
+ },
+ {
+  "id": "sw-000321",
+  "name": "Hellmann's Vegan Vegan Mayo",
+  "brand": "Hellmann's Vegan",
+  "store_brand": false,
+  "department": "pantry",
+  "aisle": "Condiments",
+  "size": "24 fl oz",
+  "price": 6.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000322",
+  "name": "Follow Your Heart Vegan Mayo",
+  "brand": "Follow Your Heart",
+  "store_brand": false,
+  "department": "pantry",
+  "aisle": "Condiments",
+  "size": "24 fl oz",
+  "price": 6.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000323",
+  "name": "Sir Kensington's Vegan Mayo",
+  "brand": "Sir Kensington's",
+  "store_brand": false,
+  "department": "pantry",
+  "aisle": "Condiments",
+  "size": "24 fl oz",
+  "price": 6.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000324",
+  "name": "Heinz Ketchup",
+  "brand": "Heinz",
+  "store_brand": false,
+  "department": "pantry",
+  "aisle": "Condiments",
+  "size": "32 oz",
+  "price": 3.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000325",
+  "name": "Signature Select Ketchup",
+  "brand": "Signature Select",
+  "store_brand": true,
+  "department": "pantry",
+  "aisle": "Condiments",
+  "size": "32 oz",
+  "price": 3.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000326",
+  "name": "O Organics Ketchup",
+  "brand": "O Organics",
+  "store_brand": true,
+  "department": "pantry",
+  "aisle": "Condiments",
+  "size": "32 oz",
+  "price": 3.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "organic",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000327",
+  "name": "Grey Poupon Dijon Mustard",
+  "brand": "Grey Poupon",
+  "store_brand": false,
+  "department": "pantry",
+  "aisle": "Condiments",
+  "size": "12 oz",
+  "price": 3.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000328",
+  "name": "Maille Dijon Mustard",
+  "brand": "Maille",
+  "store_brand": false,
+  "department": "pantry",
+  "aisle": "Condiments",
+  "size": "12 oz",
+  "price": 4.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000329",
+  "name": "Signature Select Dijon Mustard",
+  "brand": "Signature Select",
+  "store_brand": true,
+  "department": "pantry",
+  "aisle": "Condiments",
+  "size": "12 oz",
+  "price": 3.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000330",
+  "name": "Kikkoman Soy Sauce",
+  "brand": "Kikkoman",
+  "store_brand": false,
+  "department": "pantry",
+  "aisle": "Condiments",
+  "size": "15 fl oz",
+  "price": 4.49,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [
+   "soy",
+   "wheat"
+  ]
+ },
+ {
+  "id": "sw-000331",
+  "name": "Signature Select Soy Sauce",
+  "brand": "Signature Select",
+  "store_brand": true,
+  "department": "pantry",
+  "aisle": "Condiments",
+  "size": "15 fl oz",
+  "price": 2.99,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [
+   "soy",
+   "wheat"
+  ]
+ },
+ {
+  "id": "sw-000332",
+  "name": "San-J Soy Sauce",
+  "brand": "San-J",
+  "store_brand": false,
+  "department": "pantry",
+  "aisle": "Condiments",
+  "size": "15 fl oz",
+  "price": 3.99,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [
+   "soy",
+   "wheat"
+  ]
+ },
+ {
+  "id": "sw-000333",
+  "name": "San-J Tamari Gluten Free Soy Sauce",
+  "brand": "San-J",
+  "store_brand": false,
+  "department": "pantry",
+  "aisle": "Condiments",
+  "size": "10 fl oz",
+  "price": 4.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [
+   "soy"
+  ]
+ },
+ {
+  "id": "sw-000334",
+  "name": "Kikkoman Tamari Gluten Free Soy Sauce",
+  "brand": "Kikkoman",
+  "store_brand": false,
+  "department": "pantry",
+  "aisle": "Condiments",
+  "size": "10 fl oz",
+  "price": 4.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [
+   "soy"
+  ]
+ },
+ {
+  "id": "sw-000335",
+  "name": "Huy Fong Sriracha Hot Sauce",
+  "brand": "Huy Fong",
+  "store_brand": false,
+  "department": "pantry",
+  "aisle": "Condiments",
+  "size": "17 oz",
+  "price": 5.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000336",
+  "name": "Signature Select Sriracha Hot Sauce",
+  "brand": "Signature Select",
+  "store_brand": true,
+  "department": "pantry",
+  "aisle": "Condiments",
+  "size": "17 oz",
+  "price": 3.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000337",
+  "name": "Flying Goose Sriracha Hot Sauce",
+  "brand": "Flying Goose",
+  "store_brand": false,
+  "department": "pantry",
+  "aisle": "Condiments",
+  "size": "17 oz",
+  "price": 5.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000338",
+  "name": "Jif Creamy Peanut Butter",
+  "brand": "Jif",
+  "store_brand": false,
+  "department": "pantry",
+  "aisle": "Spreads",
+  "size": "16 oz",
+  "price": 4.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [
+   "peanuts"
+  ]
+ },
+ {
+  "id": "sw-000339",
+  "name": "Skippy Creamy Peanut Butter",
+  "brand": "Skippy",
+  "store_brand": false,
+  "department": "pantry",
+  "aisle": "Spreads",
+  "size": "16 oz",
+  "price": 3.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [
+   "peanuts"
+  ]
+ },
+ {
+  "id": "sw-000340",
+  "name": "Signature Select Creamy Peanut Butter",
+  "brand": "Signature Select",
+  "store_brand": true,
+  "department": "pantry",
+  "aisle": "Spreads",
+  "size": "16 oz",
+  "price": 2.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [
+   "peanuts"
+  ]
+ },
+ {
+  "id": "sw-000341",
+  "name": "O Organics Creamy Peanut Butter",
+  "brand": "O Organics",
+  "store_brand": true,
+  "department": "pantry",
+  "aisle": "Spreads",
+  "size": "16 oz",
+  "price": 3.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "organic",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [
+   "peanuts"
+  ]
+ },
+ {
+  "id": "sw-000342",
+  "name": "Adams Creamy Peanut Butter",
+  "brand": "Adams",
+  "store_brand": false,
+  "department": "pantry",
+  "aisle": "Spreads",
+  "size": "16 oz",
+  "price": 4.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [
+   "peanuts"
+  ]
+ },
+ {
+  "id": "sw-000343",
+  "name": "Justin's Almond Butter",
+  "brand": "Justin's",
+  "store_brand": false,
+  "department": "pantry",
+  "aisle": "Spreads",
+  "size": "12 oz",
+  "price": 9.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [
+   "tree_nuts"
+  ]
+ },
+ {
+  "id": "sw-000344",
+  "name": "Barney Butter Almond Butter",
+  "brand": "Barney Butter",
+  "store_brand": false,
+  "department": "pantry",
+  "aisle": "Spreads",
+  "size": "12 oz",
+  "price": 7.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [
+   "tree_nuts"
+  ]
+ },
+ {
+  "id": "sw-000345",
+  "name": "O Organics Almond Butter",
+  "brand": "O Organics",
+  "store_brand": true,
+  "department": "pantry",
+  "aisle": "Spreads",
+  "size": "12 oz",
+  "price": 8.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "organic",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [
+   "tree_nuts"
+  ]
+ },
+ {
+  "id": "sw-000346",
+  "name": "SunButter Sunflower Seed Butter",
+  "brand": "SunButter",
+  "store_brand": false,
+  "department": "pantry",
+  "aisle": "Spreads",
+  "size": "16 oz",
+  "price": 7.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000347",
+  "name": "Open Nature Sunflower Seed Butter",
+  "brand": "Open Nature",
+  "store_brand": true,
+  "department": "pantry",
+  "aisle": "Spreads",
+  "size": "16 oz",
+  "price": 5.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000348",
+  "name": "Smucker's Strawberry Preserves",
+  "brand": "Smucker's",
+  "store_brand": false,
+  "department": "pantry",
+  "aisle": "Spreads",
+  "size": "18 oz",
+  "price": 4.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000349",
+  "name": "Bonne Maman Strawberry Preserves",
+  "brand": "Bonne Maman",
+  "store_brand": false,
+  "department": "pantry",
+  "aisle": "Spreads",
+  "size": "18 oz",
+  "price": 4.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000350",
+  "name": "Signature Select Strawberry Preserves",
+  "brand": "Signature Select",
+  "store_brand": true,
+  "department": "pantry",
+  "aisle": "Spreads",
+  "size": "18 oz",
+  "price": 3.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000351",
+  "name": "Nature Nate's Honey",
+  "brand": "Nature Nate's",
+  "store_brand": false,
+  "department": "pantry",
+  "aisle": "Spreads",
+  "size": "12 oz",
+  "price": 6.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000352",
+  "name": "Sue Bee Honey",
+  "brand": "Sue Bee",
+  "store_brand": false,
+  "department": "pantry",
+  "aisle": "Spreads",
+  "size": "12 oz",
+  "price": 5.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000353",
+  "name": "O Organics Honey",
+  "brand": "O Organics",
+  "store_brand": true,
+  "department": "pantry",
+  "aisle": "Spreads",
+  "size": "12 oz",
+  "price": 5.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "organic",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000354",
+  "name": "General Mills Honey Nut Cheerios",
+  "brand": "General Mills",
+  "store_brand": false,
+  "department": "breakfast",
+  "aisle": "Cereal",
+  "size": "10.8 oz",
+  "price": 6.49,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000355",
+  "name": "Signature Select Toasted Oats Cereal",
+  "brand": "Signature Select",
+  "store_brand": true,
+  "department": "breakfast",
+  "aisle": "Cereal",
+  "size": "12 oz",
+  "price": 2.99,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000356",
+  "name": "O Organics Toasted Oats Cereal",
+  "brand": "O Organics",
+  "store_brand": true,
+  "department": "breakfast",
+  "aisle": "Cereal",
+  "size": "12 oz",
+  "price": 3.49,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "nut_free",
+   "organic",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000357",
+  "name": "Cheerios Toasted Oats Cereal",
+  "brand": "Cheerios",
+  "store_brand": false,
+  "department": "breakfast",
+  "aisle": "Cereal",
+  "size": "12 oz",
+  "price": 3.99,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000358",
+  "name": "Nature's Path Granola Honey Almond",
+  "brand": "Nature's Path",
+  "store_brand": false,
+  "department": "breakfast",
+  "aisle": "Cereal",
+  "size": "12 oz",
+  "price": 5.49,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "vegetarian"
+  ],
+  "allergens": [
+   "tree_nuts"
+  ]
+ },
+ {
+  "id": "sw-000359",
+  "name": "Bear Naked Granola Honey Almond",
+  "brand": "Bear Naked",
+  "store_brand": false,
+  "department": "breakfast",
+  "aisle": "Cereal",
+  "size": "12 oz",
+  "price": 5.99,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "vegetarian"
+  ],
+  "allergens": [
+   "tree_nuts"
+  ]
+ },
+ {
+  "id": "sw-000360",
+  "name": "O Organics Granola Honey Almond",
+  "brand": "O Organics",
+  "store_brand": true,
+  "department": "breakfast",
+  "aisle": "Cereal",
+  "size": "12 oz",
+  "price": 4.99,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "organic",
+   "vegetarian"
+  ],
+  "allergens": [
+   "tree_nuts"
+  ]
+ },
+ {
+  "id": "sw-000361",
+  "name": "Open Nature Granola Honey Almond",
+  "brand": "Open Nature",
+  "store_brand": true,
+  "department": "breakfast",
+  "aisle": "Cereal",
+  "size": "12 oz",
+  "price": 4.49,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "vegetarian"
+  ],
+  "allergens": [
+   "tree_nuts"
+  ]
+ },
+ {
+  "id": "sw-000362",
+  "name": "Purely Elizabeth Gluten Free Granola",
+  "brand": "Purely Elizabeth",
+  "store_brand": false,
+  "department": "breakfast",
+  "aisle": "Cereal",
+  "size": "11 oz",
+  "price": 7.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000363",
+  "name": "Open Nature Gluten Free Granola",
+  "brand": "Open Nature",
+  "store_brand": true,
+  "department": "breakfast",
+  "aisle": "Cereal",
+  "size": "11 oz",
+  "price": 5.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000364",
+  "name": "Bob's Red Mill Gluten Free Granola",
+  "brand": "Bob's Red Mill",
+  "store_brand": false,
+  "department": "breakfast",
+  "aisle": "Cereal",
+  "size": "11 oz",
+  "price": 6.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000365",
+  "name": "Quaker Old Fashioned Rolled Oats",
+  "brand": "Quaker",
+  "store_brand": false,
+  "department": "breakfast",
+  "aisle": "Oatmeal",
+  "size": "42 oz",
+  "price": 5.99,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000366",
+  "name": "Signature Select Old Fashioned Rolled Oats",
+  "brand": "Signature Select",
+  "store_brand": true,
+  "department": "breakfast",
+  "aisle": "Oatmeal",
+  "size": "42 oz",
+  "price": 4.99,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000367",
+  "name": "O Organics Old Fashioned Rolled Oats",
+  "brand": "O Organics",
+  "store_brand": true,
+  "department": "breakfast",
+  "aisle": "Oatmeal",
+  "size": "42 oz",
+  "price": 5.49,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "nut_free",
+   "organic",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000368",
+  "name": "Bob's Red Mill Old Fashioned Rolled Oats",
+  "brand": "Bob's Red Mill",
+  "store_brand": false,
+  "department": "breakfast",
+  "aisle": "Oatmeal",
+  "size": "42 oz",
+  "price": 6.49,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000369",
+  "name": "Quaker Instant Oatmeal Maple Brown Sugar",
+  "brand": "Quaker",
+  "store_brand": false,
+  "department": "breakfast",
+  "aisle": "Oatmeal",
+  "size": "10 ct",
+  "price": 4.99,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000370",
+  "name": "Signature Select Instant Oatmeal Maple Brown Sugar",
+  "brand": "Signature Select",
+  "store_brand": true,
+  "department": "breakfast",
+  "aisle": "Oatmeal",
+  "size": "10 ct",
+  "price": 3.49,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000371",
+  "name": "O Organics Instant Oatmeal Maple Brown Sugar",
+  "brand": "O Organics",
+  "store_brand": true,
+  "department": "breakfast",
+  "aisle": "Oatmeal",
+  "size": "10 ct",
+  "price": 3.99,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "nut_free",
+   "organic",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000372",
+  "name": "Krusteaz Buttermilk Pancake Mix",
+  "brand": "Krusteaz",
+  "store_brand": false,
+  "department": "breakfast",
+  "aisle": "Pancake Mix",
+  "size": "32 oz",
+  "price": 5.49,
+  "diet_tags": [
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "wheat",
+   "milk"
+  ]
+ },
+ {
+  "id": "sw-000373",
+  "name": "Bisquick Buttermilk Pancake Mix",
+  "brand": "Bisquick",
+  "store_brand": false,
+  "department": "breakfast",
+  "aisle": "Pancake Mix",
+  "size": "32 oz",
+  "price": 4.49,
+  "diet_tags": [
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "wheat",
+   "milk"
+  ]
+ },
+ {
+  "id": "sw-000374",
+  "name": "Signature Select Buttermilk Pancake Mix",
+  "brand": "Signature Select",
+  "store_brand": true,
+  "department": "breakfast",
+  "aisle": "Pancake Mix",
+  "size": "32 oz",
+  "price": 3.49,
+  "diet_tags": [
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "wheat",
+   "milk"
+  ]
+ },
+ {
+  "id": "sw-000375",
+  "name": "Coombs Family Farms Pure Maple Syrup",
+  "brand": "Coombs Family Farms",
+  "store_brand": false,
+  "department": "breakfast",
+  "aisle": "Pancake Mix",
+  "size": "12.5 fl oz",
+  "price": 8.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000376",
+  "name": "O Organics Pure Maple Syrup",
+  "brand": "O Organics",
+  "store_brand": true,
+  "department": "breakfast",
+  "aisle": "Pancake Mix",
+  "size": "12.5 fl oz",
+  "price": 9.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "organic",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000377",
+  "name": "Signature Select Pure Maple Syrup",
+  "brand": "Signature Select",
+  "store_brand": true,
+  "department": "breakfast",
+  "aisle": "Pancake Mix",
+  "size": "12.5 fl oz",
+  "price": 7.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000378",
+  "name": "Tostitos Tortilla Chips",
+  "brand": "Tostitos",
+  "store_brand": false,
+  "department": "snacks",
+  "aisle": "Chips",
+  "size": "13 oz",
+  "price": 5.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000379",
+  "name": "Late July Tortilla Chips",
+  "brand": "Late July",
+  "store_brand": false,
+  "department": "snacks",
+  "aisle": "Chips",
+  "size": "13 oz",
+  "price": 5.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000380",
+  "name": "Signature Select Tortilla Chips",
+  "brand": "Signature Select",
+  "store_brand": true,
+  "department": "snacks",
+  "aisle": "Chips",
+  "size": "13 oz",
+  "price": 3.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000381",
+  "name": "Siete Tortilla Chips",
+  "brand": "Siete",
+  "store_brand": false,
+  "department": "snacks",
+  "aisle": "Chips",
+  "size": "13 oz",
+  "price": 5.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000382",
+  "name": "Kettle Brand Potato Chips Sea Salt",
+  "brand": "Kettle Brand",
+  "store_brand": false,
+  "department": "snacks",
+  "aisle": "Chips",
+  "size": "8 oz",
+  "price": 4.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000383",
+  "name": "Lay's Potato Chips Sea Salt",
+  "brand": "Lay's",
+  "store_brand": false,
+  "department": "snacks",
+  "aisle": "Chips",
+  "size": "8 oz",
+  "price": 4.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000384",
+  "name": "Signature Select Potato Chips Sea Salt",
+  "brand": "Signature Select",
+  "store_brand": true,
+  "department": "snacks",
+  "aisle": "Chips",
+  "size": "8 oz",
+  "price": 3.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000385",
+  "name": "Cape Cod Potato Chips Sea Salt",
+  "brand": "Cape Cod",
+  "store_brand": false,
+  "department": "snacks",
+  "aisle": "Chips",
+  "size": "8 oz",
+  "price": 4.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000386",
+  "name": "Triscuit Whole Wheat Crackers",
+  "brand": "Triscuit",
+  "store_brand": false,
+  "department": "snacks",
+  "aisle": "Crackers",
+  "size": "8.5 oz",
+  "price": 5.49,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [
+   "wheat"
+  ]
+ },
+ {
+  "id": "sw-000387",
+  "name": "Signature Select Whole Wheat Crackers",
+  "brand": "Signature Select",
+  "store_brand": true,
+  "department": "snacks",
+  "aisle": "Crackers",
+  "size": "8.5 oz",
+  "price": 3.49,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [
+   "wheat"
+  ]
+ },
+ {
+  "id": "sw-000388",
+  "name": "Mary's Gone Crackers Whole Wheat Crackers",
+  "brand": "Mary's Gone Crackers",
+  "store_brand": false,
+  "department": "snacks",
+  "aisle": "Crackers",
+  "size": "8.5 oz",
+  "price": 3.99,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [
+   "wheat"
+  ]
+ },
+ {
+  "id": "sw-000389",
+  "name": "Annie's Cheddar Bunnies",
+  "brand": "Annie's",
+  "store_brand": false,
+  "department": "snacks",
+  "aisle": "Crackers",
+  "size": "7.5 oz",
+  "price": 5.49,
+  "diet_tags": [
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "wheat",
+   "milk"
+  ]
+ },
+ {
+  "id": "sw-000390",
+  "name": "Goldfish Cheddar Bunnies",
+  "brand": "Goldfish",
+  "store_brand": false,
+  "department": "snacks",
+  "aisle": "Crackers",
+  "size": "7.5 oz",
+  "price": 4.49,
+  "diet_tags": [
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "wheat",
+   "milk"
+  ]
+ },
+ {
+  "id": "sw-000391",
+  "name": "O Organics Cheddar Bunnies",
+  "brand": "O Organics",
+  "store_brand": true,
+  "department": "snacks",
+  "aisle": "Crackers",
+  "size": "7.5 oz",
+  "price": 3.99,
+  "diet_tags": [
+   "kosher",
+   "nut_free",
+   "organic",
+   "vegetarian"
+  ],
+  "allergens": [
+   "wheat",
+   "milk"
+  ]
+ },
+ {
+  "id": "sw-000392",
+  "name": "Nature Valley Chewy Granola Bars",
+  "brand": "Nature Valley",
+  "store_brand": false,
+  "department": "snacks",
+  "aisle": "Bars",
+  "size": "8 ct",
+  "price": 5.49,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000393",
+  "name": "Quaker Chewy Granola Bars",
+  "brand": "Quaker",
+  "store_brand": false,
+  "department": "snacks",
+  "aisle": "Bars",
+  "size": "8 ct",
+  "price": 3.99,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000394",
+  "name": "Signature Select Chewy Granola Bars",
+  "brand": "Signature Select",
+  "store_brand": true,
+  "department": "snacks",
+  "aisle": "Bars",
+  "size": "8 ct",
+  "price": 3.49,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000395",
+  "name": "O Organics Chewy Granola Bars",
+  "brand": "O Organics",
+  "store_brand": true,
+  "department": "snacks",
+  "aisle": "Bars",
+  "size": "8 ct",
+  "price": 3.99,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "nut_free",
+   "organic",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000396",
+  "name": "Clif Builders Protein Bars Chocolate Peanut Butter",
+  "brand": "Clif Builders",
+  "store_brand": false,
+  "department": "snacks",
+  "aisle": "Bars",
+  "size": "4 ct",
+  "price": 7.99,
+  "diet_tags": [
+   "gluten_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "peanuts",
+   "milk",
+   "soy"
+  ]
+ },
+ {
+  "id": "sw-000397",
+  "name": "RXBAR Protein Bars Chocolate Peanut Butter",
+  "brand": "RXBAR",
+  "store_brand": false,
+  "department": "snacks",
+  "aisle": "Bars",
+  "size": "4 ct",
+  "price": 9.99,
+  "diet_tags": [
+   "gluten_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "peanuts",
+   "milk",
+   "soy"
+  ]
+ },
+ {
+  "id": "sw-000398",
+  "name": "Kind Protein Bars Chocolate Peanut Butter",
+  "brand": "Kind",
+  "store_brand": false,
+  "department": "snacks",
+  "aisle": "Bars",
+  "size": "4 ct",
+  "price": 7.99,
+  "diet_tags": [
+   "gluten_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "peanuts",
+   "milk",
+   "soy"
+  ]
+ },
+ {
+  "id": "sw-000399",
+  "name": "Blue Diamond Roasted Almonds",
+  "brand": "Blue Diamond",
+  "store_brand": false,
+  "department": "snacks",
+  "aisle": "Nuts & Trail Mix",
+  "size": "16 oz",
+  "price": 9.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [
+   "tree_nuts"
+  ]
+ },
+ {
+  "id": "sw-000400",
+  "name": "Signature Select Roasted Almonds",
+  "brand": "Signature Select",
+  "store_brand": true,
+  "department": "snacks",
+  "aisle": "Nuts & Trail Mix",
+  "size": "16 oz",
+  "price": 6.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [
+   "tree_nuts"
+  ]
+ },
+ {
+  "id": "sw-000401",
+  "name": "Wonderful Roasted Almonds",
+  "brand": "Wonderful",
+  "store_brand": false,
+  "department": "snacks",
+  "aisle": "Nuts & Trail Mix",
+  "size": "16 oz",
+  "price": 8.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [
+   "tree_nuts"
+  ]
+ },
+ {
+  "id": "sw-000402",
+  "name": "Signature Select Trail Mix",
+  "brand": "Signature Select",
+  "store_brand": true,
+  "department": "snacks",
+  "aisle": "Nuts & Trail Mix",
+  "size": "26 oz",
+  "price": 7.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "peanuts",
+   "tree_nuts"
+  ]
+ },
+ {
+  "id": "sw-000403",
+  "name": "Kirkland Signature Trail Mix",
+  "brand": "Kirkland Signature",
+  "store_brand": false,
+  "department": "snacks",
+  "aisle": "Nuts & Trail Mix",
+  "size": "26 oz",
+  "price": 9.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "peanuts",
+   "tree_nuts"
+  ]
+ },
+ {
+  "id": "sw-000404",
+  "name": "Planters Trail Mix",
+  "brand": "Planters",
+  "store_brand": false,
+  "department": "snacks",
+  "aisle": "Nuts & Trail Mix",
+  "size": "26 oz",
+  "price": 8.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "peanuts",
+   "tree_nuts"
+  ]
+ },
+ {
+  "id": "sw-000405",
+  "name": "SkinnyPop Sea Salt Popcorn",
+  "brand": "SkinnyPop",
+  "store_brand": false,
+  "department": "snacks",
+  "aisle": "Popcorn",
+  "size": "4.4 oz",
+  "price": 4.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000406",
+  "name": "Boom Chicka Pop Sea Salt Popcorn",
+  "brand": "Boom Chicka Pop",
+  "store_brand": false,
+  "department": "snacks",
+  "aisle": "Popcorn",
+  "size": "4.4 oz",
+  "price": 3.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000407",
+  "name": "Signature Select Sea Salt Popcorn",
+  "brand": "Signature Select",
+  "store_brand": true,
+  "department": "snacks",
+  "aisle": "Popcorn",
+  "size": "4.4 oz",
+  "price": 2.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000408",
+  "name": "Annie's Fruit Snacks",
+  "brand": "Annie's",
+  "store_brand": false,
+  "department": "snacks",
+  "aisle": "Fruit Snacks",
+  "size": "10 ct",
+  "price": 3.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000409",
+  "name": "Welch's Fruit Snacks",
+  "brand": "Welch's",
+  "store_brand": false,
+  "department": "snacks",
+  "aisle": "Fruit Snacks",
+  "size": "10 ct",
+  "price": 3.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000410",
+  "name": "Signature Select Fruit Snacks",
+  "brand": "Signature Select",
+  "store_brand": true,
+  "department": "snacks",
+  "aisle": "Fruit Snacks",
+  "size": "10 ct",
+  "price": 3.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000411",
+  "name": "O Organics Fruit Snacks",
+  "brand": "O Organics",
+  "store_brand": true,
+  "department": "snacks",
+  "aisle": "Fruit Snacks",
+  "size": "10 ct",
+  "price": 3.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free",
+   "organic"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000412",
+  "name": "Oreo Chocolate Sandwich Cookies",
+  "brand": "Oreo",
+  "store_brand": false,
+  "department": "snacks",
+  "aisle": "Cookies",
+  "size": "14.3 oz",
+  "price": 5.49,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [
+   "wheat",
+   "soy"
+  ]
+ },
+ {
+  "id": "sw-000413",
+  "name": "Signature Select Chocolate Sandwich Cookies",
+  "brand": "Signature Select",
+  "store_brand": true,
+  "department": "snacks",
+  "aisle": "Cookies",
+  "size": "14.3 oz",
+  "price": 3.99,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [
+   "wheat",
+   "soy"
+  ]
+ },
+ {
+  "id": "sw-000414",
+  "name": "Newman's Own Chocolate Sandwich Cookies",
+  "brand": "Newman's Own",
+  "store_brand": false,
+  "department": "snacks",
+  "aisle": "Cookies",
+  "size": "14.3 oz",
+  "price": 5.99,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [
+   "wheat",
+   "soy"
+  ]
+ },
+ {
+  "id": "sw-000415",
+  "name": "Peet's Coffee Medium Roast Ground Coffee",
+  "brand": "Peet's Coffee",
+  "store_brand": false,
+  "department": "beverages",
+  "aisle": "Coffee",
+  "size": "12 oz",
+  "price": 10.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000416",
+  "name": "Philz Coffee Medium Roast Ground Coffee",
+  "brand": "Philz Coffee",
+  "store_brand": false,
+  "department": "beverages",
+  "aisle": "Coffee",
+  "size": "12 oz",
+  "price": 11.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000417",
+  "name": "Signature Select Medium Roast Ground Coffee",
+  "brand": "Signature Select",
+  "store_brand": true,
+  "department": "beverages",
+  "aisle": "Coffee",
+  "size": "12 oz",
+  "price": 8.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000418",
+  "name": "O Organics Medium Roast Ground Coffee",
+  "brand": "O Organics",
+  "store_brand": true,
+  "department": "beverages",
+  "aisle": "Coffee",
+  "size": "12 oz",
+  "price": 9.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "organic",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000419",
+  "name": "Starbucks Medium Roast Ground Coffee",
+  "brand": "Starbucks",
+  "store_brand": false,
+  "department": "beverages",
+  "aisle": "Coffee",
+  "size": "12 oz",
+  "price": 12.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000420",
+  "name": "Stumptown Cold Brew Coffee",
+  "brand": "Stumptown",
+  "store_brand": false,
+  "department": "beverages",
+  "aisle": "Coffee",
+  "size": "48 fl oz",
+  "price": 7.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000421",
+  "name": "Chameleon Cold Brew Coffee",
+  "brand": "Chameleon",
+  "store_brand": false,
+  "department": "beverages",
+  "aisle": "Coffee",
+  "size": "48 fl oz",
+  "price": 7.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000422",
+  "name": "Signature Select Cold Brew Coffee",
+  "brand": "Signature Select",
+  "store_brand": true,
+  "department": "beverages",
+  "aisle": "Coffee",
+  "size": "48 fl oz",
+  "price": 5.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000423",
+  "name": "Bigelow Green Tea Bags",
+  "brand": "Bigelow",
+  "store_brand": false,
+  "department": "beverages",
+  "aisle": "Tea",
+  "size": "20 ct",
+  "price": 3.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000424",
+  "name": "Tazo Green Tea Bags",
+  "brand": "Tazo",
+  "store_brand": false,
+  "department": "beverages",
+  "aisle": "Tea",
+  "size": "20 ct",
+  "price": 4.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000425",
+  "name": "O Organics Green Tea Bags",
+  "brand": "O Organics",
+  "store_brand": true,
+  "department": "beverages",
+  "aisle": "Tea",
+  "size": "20 ct",
+  "price": 4.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "organic",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000426",
+  "name": "Tropicana Orange Juice No Pulp",
+  "brand": "Tropicana",
+  "store_brand": false,
+  "department": "beverages",
+  "aisle": "Juice",
+  "size": "52 fl oz",
+  "price": 5.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000427",
+  "name": "Simply Orange Orange Juice No Pulp",
+  "brand": "Simply Orange",
+  "store_brand": false,
+  "department": "beverages",
+  "aisle": "Juice",
+  "size": "52 fl oz",
+  "price": 5.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000428",
+  "name": "Signature Select Orange Juice No Pulp",
+  "brand": "Signature Select",
+  "store_brand": true,
+  "department": "beverages",
+  "aisle": "Juice",
+  "size": "52 fl oz",
+  "price": 4.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000429",
+  "name": "O Organics Orange Juice No Pulp",
+  "brand": "O Organics",
+  "store_brand": true,
+  "department": "beverages",
+  "aisle": "Juice",
+  "size": "52 fl oz",
+  "price": 4.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "organic",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000430",
+  "name": "Martinelli's Apple Juice",
+  "brand": "Martinelli's",
+  "store_brand": false,
+  "department": "beverages",
+  "aisle": "Juice",
+  "size": "64 fl oz",
+  "price": 4.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000431",
+  "name": "Signature Select Apple Juice",
+  "brand": "Signature Select",
+  "store_brand": true,
+  "department": "beverages",
+  "aisle": "Juice",
+  "size": "64 fl oz",
+  "price": 3.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000432",
+  "name": "O Organics Apple Juice",
+  "brand": "O Organics",
+  "store_brand": true,
+  "department": "beverages",
+  "aisle": "Juice",
+  "size": "64 fl oz",
+  "price": 3.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "organic",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000433",
+  "name": "LaCroix Sparkling Water Lime",
+  "brand": "LaCroix",
+  "store_brand": false,
+  "department": "beverages",
+  "aisle": "Sparkling Water",
+  "size": "8 pk",
+  "price": 6.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000434",
+  "name": "Bubly Sparkling Water Lime",
+  "brand": "Bubly",
+  "store_brand": false,
+  "department": "beverages",
+  "aisle": "Sparkling Water",
+  "size": "8 pk",
+  "price": 6.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000435",
+  "name": "Soleil Sparkling Water Lime",
+  "brand": "Soleil",
+  "store_brand": true,
+  "department": "beverages",
+  "aisle": "Sparkling Water",
+  "size": "8 pk",
+  "price": 4.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000436",
+  "name": "Spindrift Sparkling Water Lime",
+  "brand": "Spindrift",
+  "store_brand": false,
+  "department": "beverages",
+  "aisle": "Sparkling Water",
+  "size": "8 pk",
+  "price": 6.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000437",
+  "name": "Coca-Cola Cola",
+  "brand": "Coca-Cola",
+  "store_brand": false,
+  "department": "beverages",
+  "aisle": "Soda",
+  "size": "12 pk",
+  "price": 11.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000438",
+  "name": "Pepsi Cola",
+  "brand": "Pepsi",
+  "store_brand": false,
+  "department": "beverages",
+  "aisle": "Soda",
+  "size": "12 pk",
+  "price": 11.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000439",
+  "name": "Signature Select Cola",
+  "brand": "Signature Select",
+  "store_brand": true,
+  "department": "beverages",
+  "aisle": "Soda",
+  "size": "12 pk",
+  "price": 7.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000440",
+  "name": "Crystal Geyser Spring Water",
+  "brand": "Crystal Geyser",
+  "store_brand": false,
+  "department": "beverages",
+  "aisle": "Water",
+  "size": "24 pk",
+  "price": 6.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000441",
+  "name": "Arrowhead Spring Water",
+  "brand": "Arrowhead",
+  "store_brand": false,
+  "department": "beverages",
+  "aisle": "Water",
+  "size": "24 pk",
+  "price": 7.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000442",
+  "name": "Signature Select Spring Water",
+  "brand": "Signature Select",
+  "store_brand": true,
+  "department": "beverages",
+  "aisle": "Water",
+  "size": "24 pk",
+  "price": 4.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000443",
+  "name": "GT's Kombucha Ginger",
+  "brand": "GT's",
+  "store_brand": false,
+  "department": "beverages",
+  "aisle": "Kombucha",
+  "size": "16 fl oz",
+  "price": 5.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000444",
+  "name": "Health-Ade Kombucha Ginger",
+  "brand": "Health-Ade",
+  "store_brand": false,
+  "department": "beverages",
+  "aisle": "Kombucha",
+  "size": "16 fl oz",
+  "price": 4.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000445",
+  "name": "Humm Kombucha Ginger",
+  "brand": "Humm",
+  "store_brand": false,
+  "department": "beverages",
+  "aisle": "Kombucha",
+  "size": "16 fl oz",
+  "price": 4.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000446",
+  "name": "Amy's Margherita Pizza",
+  "brand": "Amy's",
+  "store_brand": false,
+  "department": "frozen",
+  "aisle": "Frozen Pizza",
+  "size": "15 oz",
+  "price": 8.49,
+  "diet_tags": [
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "wheat",
+   "milk"
+  ]
+ },
+ {
+  "id": "sw-000447",
+  "name": "DiGiorno Margherita Pizza",
+  "brand": "DiGiorno",
+  "store_brand": false,
+  "department": "frozen",
+  "aisle": "Frozen Pizza",
+  "size": "15 oz",
+  "price": 8.49,
+  "diet_tags": [
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "wheat",
+   "milk"
+  ]
+ },
+ {
+  "id": "sw-000448",
+  "name": "Signature Select Margherita Pizza",
+  "brand": "Signature Select",
+  "store_brand": true,
+  "department": "frozen",
+  "aisle": "Frozen Pizza",
+  "size": "15 oz",
+  "price": 6.99,
+  "diet_tags": [
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "wheat",
+   "milk"
+  ]
+ },
+ {
+  "id": "sw-000449",
+  "name": "Newman's Own Margherita Pizza",
+  "brand": "Newman's Own",
+  "store_brand": false,
+  "department": "frozen",
+  "aisle": "Frozen Pizza",
+  "size": "15 oz",
+  "price": 8.99,
+  "diet_tags": [
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "wheat",
+   "milk"
+  ]
+ },
+ {
+  "id": "sw-000450",
+  "name": "Birds Eye Frozen Broccoli Florets",
+  "brand": "Birds Eye",
+  "store_brand": false,
+  "department": "frozen",
+  "aisle": "Frozen Vegetables",
+  "size": "12 oz",
+  "price": 2.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000451",
+  "name": "Signature Select Frozen Broccoli Florets",
+  "brand": "Signature Select",
+  "store_brand": true,
+  "department": "frozen",
+  "aisle": "Frozen Vegetables",
+  "size": "12 oz",
+  "price": 1.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000452",
+  "name": "O Organics Frozen Broccoli Florets",
+  "brand": "O Organics",
+  "store_brand": true,
+  "department": "frozen",
+  "aisle": "Frozen Vegetables",
+  "size": "12 oz",
+  "price": 2.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "organic",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000453",
+  "name": "Green Giant Frozen Broccoli Florets",
+  "brand": "Green Giant",
+  "store_brand": false,
+  "department": "frozen",
+  "aisle": "Frozen Vegetables",
+  "size": "12 oz",
+  "price": 2.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000454",
+  "name": "Birds Eye Frozen Sweet Corn",
+  "brand": "Birds Eye",
+  "store_brand": false,
+  "department": "frozen",
+  "aisle": "Frozen Vegetables",
+  "size": "16 oz",
+  "price": 2.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000455",
+  "name": "Signature Select Frozen Sweet Corn",
+  "brand": "Signature Select",
+  "store_brand": true,
+  "department": "frozen",
+  "aisle": "Frozen Vegetables",
+  "size": "16 oz",
+  "price": 1.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000456",
+  "name": "O Organics Frozen Sweet Corn",
+  "brand": "O Organics",
+  "store_brand": true,
+  "department": "frozen",
+  "aisle": "Frozen Vegetables",
+  "size": "16 oz",
+  "price": 2.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "organic",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000457",
+  "name": "Birds Eye Frozen Peas",
+  "brand": "Birds Eye",
+  "store_brand": false,
+  "department": "frozen",
+  "aisle": "Frozen Vegetables",
+  "size": "16 oz",
+  "price": 2.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000458",
+  "name": "Signature Select Frozen Peas",
+  "brand": "Signature Select",
+  "store_brand": true,
+  "department": "frozen",
+  "aisle": "Frozen Vegetables",
+  "size": "16 oz",
+  "price": 1.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000459",
+  "name": "O Organics Frozen Peas",
+  "brand": "O Organics",
+  "store_brand": true,
+  "department": "frozen",
+  "aisle": "Frozen Vegetables",
+  "size": "16 oz",
+  "price": 2.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "organic",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000460",
+  "name": "Signature Select Frozen Mixed Berries",
+  "brand": "Signature Select",
+  "store_brand": true,
+  "department": "frozen",
+  "aisle": "Frozen Fruit",
+  "size": "48 oz",
+  "price": 10.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000461",
+  "name": "O Organics Frozen Mixed Berries",
+  "brand": "O Organics",
+  "store_brand": true,
+  "department": "frozen",
+  "aisle": "Frozen Fruit",
+  "size": "48 oz",
+  "price": 11.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "organic",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000462",
+  "name": "Wyman's Frozen Mixed Berries",
+  "brand": "Wyman's",
+  "store_brand": false,
+  "department": "frozen",
+  "aisle": "Frozen Fruit",
+  "size": "48 oz",
+  "price": 14.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000463",
+  "name": "Amy's Bean & Cheese Burritos",
+  "brand": "Amy's",
+  "store_brand": false,
+  "department": "frozen",
+  "aisle": "Frozen Meals",
+  "size": "6 ct",
+  "price": 8.49,
+  "diet_tags": [
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "wheat",
+   "milk"
+  ]
+ },
+ {
+  "id": "sw-000464",
+  "name": "El Monterey Bean & Cheese Burritos",
+  "brand": "El Monterey",
+  "store_brand": false,
+  "department": "frozen",
+  "aisle": "Frozen Meals",
+  "size": "6 ct",
+  "price": 7.99,
+  "diet_tags": [
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "wheat",
+   "milk"
+  ]
+ },
+ {
+  "id": "sw-000465",
+  "name": "Signature Select Bean & Cheese Burritos",
+  "brand": "Signature Select",
+  "store_brand": true,
+  "department": "frozen",
+  "aisle": "Frozen Meals",
+  "size": "6 ct",
+  "price": 5.99,
+  "diet_tags": [
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "wheat",
+   "milk"
+  ]
+ },
+ {
+  "id": "sw-000466",
+  "name": "Trader Ming's Vegetable Fried Rice",
+  "brand": "Trader Ming's",
+  "store_brand": false,
+  "department": "frozen",
+  "aisle": "Frozen Meals",
+  "size": "20 oz",
+  "price": 4.99,
+  "diet_tags": [
+   "dairy_free",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [
+   "soy",
+   "wheat"
+  ]
+ },
+ {
+  "id": "sw-000467",
+  "name": "Ling Ling Vegetable Fried Rice",
+  "brand": "Ling Ling",
+  "store_brand": false,
+  "department": "frozen",
+  "aisle": "Frozen Meals",
+  "size": "20 oz",
+  "price": 6.49,
+  "diet_tags": [
+   "dairy_free",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [
+   "soy",
+   "wheat"
+  ]
+ },
+ {
+  "id": "sw-000468",
+  "name": "Signature Select Vegetable Fried Rice",
+  "brand": "Signature Select",
+  "store_brand": true,
+  "department": "frozen",
+  "aisle": "Frozen Meals",
+  "size": "20 oz",
+  "price": 4.49,
+  "diet_tags": [
+   "dairy_free",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [
+   "soy",
+   "wheat"
+  ]
+ },
+ {
+  "id": "sw-000469",
+  "name": "Tillamook Vanilla Ice Cream",
+  "brand": "Tillamook",
+  "store_brand": false,
+  "department": "frozen",
+  "aisle": "Ice Cream",
+  "size": "1.5 qt",
+  "price": 6.99,
+  "diet_tags": [
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk",
+   "eggs"
+  ]
+ },
+ {
+  "id": "sw-000470",
+  "name": "Häagen-Dazs Vanilla Ice Cream",
+  "brand": "Häagen-Dazs",
+  "store_brand": false,
+  "department": "frozen",
+  "aisle": "Ice Cream",
+  "size": "1.5 qt",
+  "price": 7.99,
+  "diet_tags": [
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk",
+   "eggs"
+  ]
+ },
+ {
+  "id": "sw-000471",
+  "name": "Signature Select Vanilla Ice Cream",
+  "brand": "Signature Select",
+  "store_brand": true,
+  "department": "frozen",
+  "aisle": "Ice Cream",
+  "size": "1.5 qt",
+  "price": 5.49,
+  "diet_tags": [
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk",
+   "eggs"
+  ]
+ },
+ {
+  "id": "sw-000472",
+  "name": "Breyers Vanilla Ice Cream",
+  "brand": "Breyers",
+  "store_brand": false,
+  "department": "frozen",
+  "aisle": "Ice Cream",
+  "size": "1.5 qt",
+  "price": 7.49,
+  "diet_tags": [
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk",
+   "eggs"
+  ]
+ },
+ {
+  "id": "sw-000473",
+  "name": "Oatly Oat Milk Frozen Dessert Chocolate",
+  "brand": "Oatly",
+  "store_brand": false,
+  "department": "frozen",
+  "aisle": "Ice Cream",
+  "size": "16 oz",
+  "price": 5.99,
+  "diet_tags": [
+   "dairy_free",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000474",
+  "name": "So Delicious Oat Milk Frozen Dessert Chocolate",
+  "brand": "So Delicious",
+  "store_brand": false,
+  "department": "frozen",
+  "aisle": "Ice Cream",
+  "size": "16 oz",
+  "price": 5.99,
+  "diet_tags": [
+   "dairy_free",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000475",
+  "name": "Ben & Jerry's Non-Dairy Oat Milk Frozen Dessert Chocolate",
+  "brand": "Ben & Jerry's Non-Dairy",
+  "store_brand": false,
+  "department": "frozen",
+  "aisle": "Ice Cream",
+  "size": "16 oz",
+  "price": 6.99,
+  "diet_tags": [
+   "dairy_free",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000476",
+  "name": "Eggo Frozen Waffles",
+  "brand": "Eggo",
+  "store_brand": false,
+  "department": "frozen",
+  "aisle": "Frozen Breakfast",
+  "size": "10 ct",
+  "price": 4.49,
+  "diet_tags": [
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "wheat",
+   "milk",
+   "eggs"
+  ]
+ },
+ {
+  "id": "sw-000477",
+  "name": "Van's Frozen Waffles",
+  "brand": "Van's",
+  "store_brand": false,
+  "department": "frozen",
+  "aisle": "Frozen Breakfast",
+  "size": "10 ct",
+  "price": 4.49,
+  "diet_tags": [
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "wheat",
+   "milk",
+   "eggs"
+  ]
+ },
+ {
+  "id": "sw-000478",
+  "name": "Signature Select Frozen Waffles",
+  "brand": "Signature Select",
+  "store_brand": true,
+  "department": "frozen",
+  "aisle": "Frozen Breakfast",
+  "size": "10 ct",
+  "price": 2.99,
+  "diet_tags": [
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "wheat",
+   "milk",
+   "eggs"
+  ]
+ },
+ {
+  "id": "sw-000479",
+  "name": "Maya Kaimal Coconut Curry Simmer Sauce",
+  "brand": "Maya Kaimal",
+  "store_brand": false,
+  "department": "international",
+  "aisle": "Asian Foods",
+  "size": "12 oz",
+  "price": 4.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000480",
+  "name": "Signature Select Coconut Curry Simmer Sauce",
+  "brand": "Signature Select",
+  "store_brand": true,
+  "department": "international",
+  "aisle": "Asian Foods",
+  "size": "12 oz",
+  "price": 3.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000481",
+  "name": "Thai Kitchen Coconut Curry Simmer Sauce",
+  "brand": "Thai Kitchen",
+  "store_brand": false,
+  "department": "international",
+  "aisle": "Asian Foods",
+  "size": "12 oz",
+  "price": 4.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000482",
+  "name": "Thai Kitchen Rice Noodles",
+  "brand": "Thai Kitchen",
+  "store_brand": false,
+  "department": "international",
+  "aisle": "Asian Foods",
+  "size": "14 oz",
+  "price": 4.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000483",
+  "name": "A Taste of Thai Rice Noodles",
+  "brand": "A Taste of Thai",
+  "store_brand": false,
+  "department": "international",
+  "aisle": "Asian Foods",
+  "size": "14 oz",
+  "price": 4.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000484",
+  "name": "Signature Select Rice Noodles",
+  "brand": "Signature Select",
+  "store_brand": true,
+  "department": "international",
+  "aisle": "Asian Foods",
+  "size": "14 oz",
+  "price": 2.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000485",
+  "name": "Old El Paso Green Chile Enchilada Sauce",
+  "brand": "Old El Paso",
+  "store_brand": false,
+  "department": "international",
+  "aisle": "Latin Foods",
+  "size": "15 oz",
+  "price": 3.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000486",
+  "name": "Hatch Green Chile Enchilada Sauce",
+  "brand": "Hatch",
+  "store_brand": false,
+  "department": "international",
+  "aisle": "Latin Foods",
+  "size": "15 oz",
+  "price": 3.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000487",
+  "name": "Signature Select Green Chile Enchilada Sauce",
+  "brand": "Signature Select",
+  "store_brand": true,
+  "department": "international",
+  "aisle": "Latin Foods",
+  "size": "15 oz",
+  "price": 2.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000488",
+  "name": "Las Palmas Green Chile Enchilada Sauce",
+  "brand": "Las Palmas",
+  "store_brand": false,
+  "department": "international",
+  "aisle": "Latin Foods",
+  "size": "15 oz",
+  "price": 3.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000489",
+  "name": "Happy Baby Baby Food Pouch Apple Spinach",
+  "brand": "Happy Baby",
+  "store_brand": false,
+  "department": "babies",
+  "aisle": "Baby Food",
+  "size": "4 oz",
+  "price": 2.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000490",
+  "name": "Plum Organics Baby Food Pouch Apple Spinach",
+  "brand": "Plum Organics",
+  "store_brand": false,
+  "department": "babies",
+  "aisle": "Baby Food",
+  "size": "4 oz",
+  "price": 2.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "organic",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000491",
+  "name": "O Organics Baby Food Pouch Apple Spinach",
+  "brand": "O Organics",
+  "store_brand": true,
+  "department": "babies",
+  "aisle": "Baby Food",
+  "size": "4 oz",
+  "price": 2.49,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "organic",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000492",
+  "name": "Gerber Baby Food Pouch Apple Spinach",
+  "brand": "Gerber",
+  "store_brand": false,
+  "department": "babies",
+  "aisle": "Baby Food",
+  "size": "4 oz",
+  "price": 1.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000493",
+  "name": "Pampers Diapers Size 4",
+  "brand": "Pampers",
+  "store_brand": false,
+  "department": "babies",
+  "aisle": "Diapers",
+  "size": "60 ct",
+  "price": 22.99,
+  "diet_tags": [
+   "dairy_free",
+   "nut_free"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000494",
+  "name": "Huggies Diapers Size 4",
+  "brand": "Huggies",
+  "store_brand": false,
+  "department": "babies",
+  "aisle": "Diapers",
+  "size": "60 ct",
+  "price": 24.49,
+  "diet_tags": [
+   "dairy_free",
+   "nut_free"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000495",
+  "name": "Signature Care Diapers Size 4",
+  "brand": "Signature Care",
+  "store_brand": true,
+  "department": "babies",
+  "aisle": "Diapers",
+  "size": "60 ct",
+  "price": 19.99,
+  "diet_tags": [
+   "dairy_free",
+   "nut_free"
+  ],
+  "allergens": []
+ },
+ {
+  "id": "sw-000496",
+  "name": "Similac Infant Formula Milk-Based",
+  "brand": "Similac",
+  "store_brand": false,
+  "department": "babies",
+  "aisle": "Formula",
+  "size": "20.7 oz",
+  "price": 36.99,
+  "diet_tags": [
+   "gluten_free",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk",
+   "soy"
+  ]
+ },
+ {
+  "id": "sw-000497",
+  "name": "Enfamil Infant Formula Milk-Based",
+  "brand": "Enfamil",
+  "store_brand": false,
+  "department": "babies",
+  "aisle": "Formula",
+  "size": "20.7 oz",
+  "price": 36.99,
+  "diet_tags": [
+   "gluten_free",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk",
+   "soy"
+  ]
+ },
+ {
+  "id": "sw-000498",
+  "name": "Signature Care Infant Formula Milk-Based",
+  "brand": "Signature Care",
+  "store_brand": true,
+  "department": "babies",
+  "aisle": "Formula",
+  "size": "20.7 oz",
+  "price": 27.99,
+  "diet_tags": [
+   "gluten_free",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk",
+   "soy"
+  ]
+ },
+ {
+  "id": "sw-000499",
+  "name": "Bounty Paper Towels",
+  "brand": "Bounty",
+  "store_brand": false,
+  "department": "household",
+  "aisle": "Paper Goods",
+  "size": "6 rolls",
+  "price": 16.49,
+  "diet_tags": [],
+  "allergens": []
+ },
+ {
+  "id": "sw-000500",
+  "name": "Viva Paper Towels",
+  "brand": "Viva",
+  "store_brand": false,
+  "department": "household",
+  "aisle": "Paper Goods",
+  "size": "6 rolls",
+  "price": 16.99,
+  "diet_tags": [],
+  "allergens": []
+ },
+ {
+  "id": "sw-000501",
+  "name": "Signature Select Paper Towels",
+  "brand": "Signature Select",
+  "store_brand": true,
+  "department": "household",
+  "aisle": "Paper Goods",
+  "size": "6 rolls",
+  "price": 10.99,
+  "diet_tags": [],
+  "allergens": []
+ },
+ {
+  "id": "sw-000502",
+  "name": "Charmin Toilet Paper",
+  "brand": "Charmin",
+  "store_brand": false,
+  "department": "household",
+  "aisle": "Paper Goods",
+  "size": "12 rolls",
+  "price": 16.49,
+  "diet_tags": [],
+  "allergens": []
+ },
+ {
+  "id": "sw-000503",
+  "name": "Cottonelle Toilet Paper",
+  "brand": "Cottonelle",
+  "store_brand": false,
+  "department": "household",
+  "aisle": "Paper Goods",
+  "size": "12 rolls",
+  "price": 15.99,
+  "diet_tags": [],
+  "allergens": []
+ },
+ {
+  "id": "sw-000504",
+  "name": "Signature Select Toilet Paper",
+  "brand": "Signature Select",
+  "store_brand": true,
+  "department": "household",
+  "aisle": "Paper Goods",
+  "size": "12 rolls",
+  "price": 12.49,
+  "diet_tags": [],
+  "allergens": []
+ },
+ {
+  "id": "sw-000505",
+  "name": "Seventh Generation Toilet Paper",
+  "brand": "Seventh Generation",
+  "store_brand": false,
+  "department": "household",
+  "aisle": "Paper Goods",
+  "size": "12 rolls",
+  "price": 17.99,
+  "diet_tags": [],
+  "allergens": []
+ },
+ {
+  "id": "sw-000506",
+  "name": "Dawn Dish Soap",
+  "brand": "Dawn",
+  "store_brand": false,
+  "department": "household",
+  "aisle": "Cleaning",
+  "size": "19.4 fl oz",
+  "price": 4.99,
+  "diet_tags": [],
+  "allergens": []
+ },
+ {
+  "id": "sw-000507",
+  "name": "Seventh Generation Dish Soap",
+  "brand": "Seventh Generation",
+  "store_brand": false,
+  "department": "household",
+  "aisle": "Cleaning",
+  "size": "19.4 fl oz",
+  "price": 4.49,
+  "diet_tags": [],
+  "allergens": []
+ },
+ {
+  "id": "sw-000508",
+  "name": "Signature Select Dish Soap",
+  "brand": "Signature Select",
+  "store_brand": true,
+  "department": "household",
+  "aisle": "Cleaning",
+  "size": "19.4 fl oz",
+  "price": 3.49,
+  "diet_tags": [],
+  "allergens": []
+ },
+ {
+  "id": "sw-000509",
+  "name": "Mrs. Meyer's Dish Soap",
+  "brand": "Mrs. Meyer's",
+  "store_brand": false,
+  "department": "household",
+  "aisle": "Cleaning",
+  "size": "19.4 fl oz",
+  "price": 4.99,
+  "diet_tags": [],
+  "allergens": []
+ },
+ {
+  "id": "sw-000510",
+  "name": "Tide Laundry Detergent",
+  "brand": "Tide",
+  "store_brand": false,
+  "department": "household",
+  "aisle": "Cleaning",
+  "size": "92 fl oz",
+  "price": 14.99,
+  "diet_tags": [],
+  "allergens": []
+ },
+ {
+  "id": "sw-000511",
+  "name": "Seventh Generation Laundry Detergent",
+  "brand": "Seventh Generation",
+  "store_brand": false,
+  "department": "household",
+  "aisle": "Cleaning",
+  "size": "92 fl oz",
+  "price": 14.49,
+  "diet_tags": [],
+  "allergens": []
+ },
+ {
+  "id": "sw-000512",
+  "name": "Signature Select Laundry Detergent",
+  "brand": "Signature Select",
+  "store_brand": true,
+  "department": "household",
+  "aisle": "Cleaning",
+  "size": "92 fl oz",
+  "price": 12.99,
+  "diet_tags": [],
+  "allergens": []
+ },
+ {
+  "id": "sw-000513",
+  "name": "all Laundry Detergent",
+  "brand": "all",
+  "store_brand": false,
+  "department": "household",
+  "aisle": "Cleaning",
+  "size": "92 fl oz",
+  "price": 14.99,
+  "diet_tags": [],
+  "allergens": []
+ },
+ {
+  "id": "sw-000514",
+  "name": "Ziploc Gallon Freezer Bags",
+  "brand": "Ziploc",
+  "store_brand": false,
+  "department": "household",
+  "aisle": "Food Storage",
+  "size": "28 ct",
+  "price": 5.99,
+  "diet_tags": [],
+  "allergens": []
+ },
+ {
+  "id": "sw-000515",
+  "name": "Glad Gallon Freezer Bags",
+  "brand": "Glad",
+  "store_brand": false,
+  "department": "household",
+  "aisle": "Food Storage",
+  "size": "28 ct",
+  "price": 5.99,
+  "diet_tags": [],
+  "allergens": []
+ },
+ {
+  "id": "sw-000516",
+  "name": "Signature Select Gallon Freezer Bags",
+  "brand": "Signature Select",
+  "store_brand": true,
+  "department": "household",
+  "aisle": "Food Storage",
+  "size": "28 ct",
+  "price": 4.49,
+  "diet_tags": [],
+  "allergens": []
+ },
+ {
+  "id": "sw-000517",
+  "name": "Colgate Fluoride Toothpaste",
+  "brand": "Colgate",
+  "store_brand": false,
+  "department": "personal care",
+  "aisle": "Oral Care",
+  "size": "4.8 oz",
+  "price": 4.99,
+  "diet_tags": [],
+  "allergens": []
+ },
+ {
+  "id": "sw-000518",
+  "name": "Crest Fluoride Toothpaste",
+  "brand": "Crest",
+  "store_brand": false,
+  "department": "personal care",
+  "aisle": "Oral Care",
+  "size": "4.8 oz",
+  "price": 4.99,
+  "diet_tags": [],
+  "allergens": []
+ },
+ {
+  "id": "sw-000519",
+  "name": "Signature Care Fluoride Toothpaste",
+  "brand": "Signature Care",
+  "store_brand": true,
+  "department": "personal care",
+  "aisle": "Oral Care",
+  "size": "4.8 oz",
+  "price": 3.99,
+  "diet_tags": [],
+  "allergens": []
+ },
+ {
+  "id": "sw-000520",
+  "name": "Tom's of Maine Fluoride Toothpaste",
+  "brand": "Tom's of Maine",
+  "store_brand": false,
+  "department": "personal care",
+  "aisle": "Oral Care",
+  "size": "4.8 oz",
+  "price": 4.99,
+  "diet_tags": [],
+  "allergens": []
+ },
+ {
+  "id": "sw-000521",
+  "name": "Pantene Shampoo",
+  "brand": "Pantene",
+  "store_brand": false,
+  "department": "personal care",
+  "aisle": "Hair Care",
+  "size": "12 fl oz",
+  "price": 7.99,
+  "diet_tags": [],
+  "allergens": []
+ },
+ {
+  "id": "sw-000522",
+  "name": "Head & Shoulders Shampoo",
+  "brand": "Head & Shoulders",
+  "store_brand": false,
+  "department": "personal care",
+  "aisle": "Hair Care",
+  "size": "12 fl oz",
+  "price": 8.99,
+  "diet_tags": [],
+  "allergens": []
+ },
+ {
+  "id": "sw-000523",
+  "name": "Signature Care Shampoo",
+  "brand": "Signature Care",
+  "store_brand": true,
+  "department": "personal care",
+  "aisle": "Hair Care",
+  "size": "12 fl oz",
+  "price": 5.99,
+  "diet_tags": [],
+  "allergens": []
+ },
+ {
+  "id": "sw-000524",
+  "name": "Dove Shampoo",
+  "brand": "Dove",
+  "store_brand": false,
+  "department": "personal care",
+  "aisle": "Hair Care",
+  "size": "12 fl oz",
+  "price": 6.99,
+  "diet_tags": [],
+  "allergens": []
+ }
+]

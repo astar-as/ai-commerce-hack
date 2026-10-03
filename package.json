@@ -1,0 +1,22 @@
+{
+  "name": "ai-commerce-hack",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "catalog:generate": "tsx scripts/generate-catalog.ts",
+    "mocks:generate": "tsx scripts/generate-mocks.ts",
+    "kroger:import": "tsx --env-file-if-exists=.env scripts/import-kroger.ts",
+    "moss:index": "tsx --env-file-if-exists=.env scripts/build-moss-index.ts",
+    "search": "tsx --env-file-if-exists=.env scripts/try-search.ts",
+    "test": "tsx --test lib/**/*.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@moss-js/moss": "^1.15.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  }
+}
