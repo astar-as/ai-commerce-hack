@@ -47,7 +47,8 @@ const resource = agentResource(model)
 
 let id = await findExisting()
 if (id) {
-  const { name: _name, ...sections } = resource
+  const sections: Partial<typeof resource> = { ...resource }
+  delete sections.name // name is fixed at create
   await zc.updateAgent(id, sections)
   console.log(`Updated agent ${id}`)
 } else {

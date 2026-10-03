@@ -1,70 +1,73 @@
-// Pre-demo check: runs the demo flows against the live agent and checks the tools fired.
-//   npm run agent:smoke            # profile + pickup + delivery
-//   npm run agent:smoke pickup     # just one flow
+// Pre-demo check against the live ZooWork agent, through the same path as /api/delegate.
+//   npm run agent:smoke            # pickup + profile + delivery
+//   npm run agent:smoke pickup     # one flow
 // Resets the demo profile before and after, so the live run starts clean.
-import { DEMO_PROFILE_ID, getProfile, resetProfile } from '../lib/profile/store'
-import { state } from '../lib/store/memory'
-import { runTurn } from '../lib/zoowork/turn'
-import { printEvent } from './chat'
+import { emptyOrder } from "../lib/order";
+import { DEMO_PROFILE_ID, getProfile, resetProfile } from "../lib/profile/store";
+import type { OrderState, TranscriptLine } from "../lib/types";
+import { say } from "./chat";
 
-type Flow = { name: string; turns: string[]; mustCall: string[]; check?: () => string | undefined }
+type Flow = { name: string; turns: string[]; check: (order: OrderState) => string | undefined };
 
 const FLOWS: Flow[] = [
   {
-    name: 'profile',
-    turns: ["Quick thing: my son just found out he's allergic to eggs. Can you add some breakfast stuff for the week?"],
-    mustCall: ['update_profile', 'search_catalog'],
-    check: () => (getProfile(DEMO_PROFILE_ID)?.allergens.includes('eggs') ? undefined : 'eggs not saved as allergen'),
+    name: "pickup",
+    turns: ["I want to make pasta night for four tonight. I'll pick it up at the store.", "That's everything, please place the order."],
+    check: (o) =>
+      o.items.some((i) => i.product.id === "sw-009")
+        ? "parmesan was added despite the milk allergy"
+        : o.fulfillment.mode !== "store_pickup"
+          ? `fulfillment is ${o.fulfillment.mode}`
+          : !o.fulfillment.eta?.includes("code")
+            ? "no pickup code (checkout not called)"
+            : undefined,
   },
   {
-    name: 'pickup',
-    turns: [
-      "Hey, I need stuff for taco night for four tonight. I'll pick it up at the Market Street Safeway after work.",
-      'Yes, the first slot works. Go ahead and place it.',
-    ],
-    mustCall: ['search_catalog', 'create_pickup_order'],
+    name: "profile",
+    turns: ["Heads up, my daughter just found out she can't have wheat. Can you add bread and pasta?"],
+    check: (o) =>
+      !getProfile(DEMO_PROFILE_ID)?.allergens.includes("wheat")
+        ? "wheat not saved to the profile"
+        : o.items.some((i) => i.product.allergens.includes("wheat"))
+          ? "a wheat product ended up in the order"
+          : undefined,
   },
   {
-    name: 'delivery',
-    turns: [
-      'Can you get me oat milk, bananas, eggs and spinach delivered to my home?',
-      'Yes, send it.',
-    ],
-    mustCall: ['search_catalog', 'send_to_instacart'],
+    name: "delivery",
+    turns: ["Can I get oat milk, bananas and spinach delivered to my home?", "Yes, that's all. Send it to Instacart."],
+    check: (o) =>
+      o.items.length === 0
+        ? "order is empty"
+        : o.fulfillment.mode !== "instacart_delivery"
+          ? `fulfillment is ${o.fulfillment.mode}`
+          : !o.fulfillment.checkout_url
+            ? "no Instacart checkout_url (checkout not called)"
+            : undefined,
   },
-]
+];
 
-const only = process.argv[2]
-let failed = false
-resetProfile(DEMO_PROFILE_ID) // start every smoke run from the demo seed
+const only = process.argv[2];
+let failed = false;
+resetProfile(DEMO_PROFILE_ID);
 
 for (const flow of FLOWS.filter((f) => !only || f.name === only)) {
-  console.log(`\n=== ${flow.name} ===`)
-  const called = new Set<string>()
-  let sessionId: string | undefined
-  const started = Date.now()
-
-  for (const text of flow.turns) {
-    console.log(`You: ${text}`)
-    for await (const ev of runTurn({ text, sessionId, actorRef: DEMO_PROFILE_ID })) {
-      if (ev.type === 'session') sessionId = ev.sessionId
-      if (ev.type === 'tool' && ev.phase === 'end' && ev.ok) called.add(ev.name)
-      printEvent(ev)
+  console.log(`\n=== ${flow.name} ===`);
+  const convo = { transcript: [] as TranscriptLine[], order: emptyOrder() };
+  const started = Date.now();
+  try {
+    for (const text of flow.turns) {
+      console.log(`You: ${text}`);
+      await say(convo, text);
     }
-  }
-
-  const missing: string[] = flow.mustCall.filter((t) => !called.has(t))
-  const problem = flow.check?.()
-  if (problem) missing.push(problem)
-  const secs = ((Date.now() - started) / 1000).toFixed(1)
-  if (missing.length) {
-    failed = true
-    console.log(`✗ ${flow.name}: missing ${missing.join(', ')} (${secs}s)`)
-  } else {
-    console.log(`✓ ${flow.name}: ${[...called].join(', ')} (${secs}s)`)
+    const problem = flow.check(convo.order);
+    const secs = ((Date.now() - started) / 1000).toFixed(1);
+    if (problem) failed = true;
+    console.log(problem ? `✗ ${flow.name}: ${problem} (${secs}s)` : `✓ ${flow.name} (${secs}s)`);
+  } catch (err) {
+    failed = true;
+    console.log(`✗ ${flow.name}: ${(err as Error).message}`);
   }
 }
 
-resetProfile(DEMO_PROFILE_ID) // leave the demo profile clean for the live run
-console.log(`\nOrders recorded: ${state.orders.map((o) => `${o.kind}:${o.order_id}`).join(', ') || 'none'}`)
-process.exit(failed ? 1 : 0)
+resetProfile(DEMO_PROFILE_ID);
+process.exit(failed ? 1 : 0);
