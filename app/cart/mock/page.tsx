@@ -20,7 +20,7 @@ export default async function MockCartPage({ searchParams }: PageProps<"/cart/mo
       <p className="mt-6 text-[13px] font-medium tracking-wide text-subtle uppercase">Checkout preview</p>
       <h1 className="mt-1 font-display text-[28px] leading-tight text-ink">{cart?.title ?? "Your list"}</h1>
       <p className="mt-2 text-[14px] text-body">
-        In production this list opens on Instacart, where you pick your Safeway and check out.
+        In production this list opens on Instacart, where you pick your store and check out.
       </p>
 
       {!cart ? (
