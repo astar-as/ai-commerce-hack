@@ -3,7 +3,7 @@
 //                  agent.custom_tool_use → runTool(call.name, call.input) → resolveCustomToolCall(...)
 //                  (resolve with is_error: true when the result has an `error` key).
 //   Frontend:      POST /api/tools/<name> → runTool(name, body).
-// send_to_instacart and report_oos get added here by their owners.
+// report_oos gets added here by its owner.
 
 import checkStockMock from "../../mocks/check_stock.json";
 import searchCatalogMock from "../../mocks/search_catalog.json";
@@ -11,6 +11,7 @@ import { SearchError } from "../catalog/search";
 import type { ToolError } from "../types";
 import { checkStockTool } from "./check_stock";
 import { searchCatalogTool } from "./search_catalog";
+import { sendToInstacartTool } from "./send_to_instacart";
 
 type Tool = {
   name: string;
@@ -22,6 +23,7 @@ type Tool = {
 const TOOLS: Record<string, Tool> = {
   [searchCatalogTool.name]: searchCatalogTool,
   [checkStockTool.name]: checkStockTool,
+  [sendToInstacartTool.name]: sendToInstacartTool, // handles MOCK_TOOLS itself (mock cart)
 };
 
 const MOCKS: Record<string, unknown> = {
