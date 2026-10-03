@@ -13,7 +13,7 @@ import { findLocations, searchProducts, type KrogerProduct } from "../lib/kroger
 import type { Allergen, DietTag, Product, Store, StoreStock } from "../lib/types";
 import { BASES, NON_FOOD_DEPARTMENTS, RECIPE_BASES, parseAllergens, parseTags } from "./seeds";
 
-const PER_TERM = Number(process.env.KROGER_PER_TERM ?? 5);
+const PER_TERM = Number(process.env.KROGER_PER_TERM ?? 50); // Kroger max per request
 // Kroger's own brands → ranked first on substitutes, like Safeway's in the synthetic catalog.
 const KROGER_BRANDS = /^(kroger|simple truth|private selection|heritage farm|comforts|home chef|smart way|psst|bakery fresh goodness|murray's)/i;
 
@@ -129,25 +129,37 @@ console.log(`Store: ${store.name} (${store.id}) — ${store.neighborhood}`);
 const products = new Map<string, Product>();
 const stock: StoreStock[] = [];
 const TERMS = [...BASES, ...RECIPE_BASES];
+const CONCURRENCY = Number(process.env.KROGER_CONCURRENCY ?? 5);
 let failed = 0;
-for (const [i, base] of TERMS.entries()) {
-  const term = base[2];
-  try {
-    const found = await searchWithRetry(term, loc.locationId, PER_TERM);
-    let kept = 0;
-    for (const kp of found) {
-      const rows = toRows(kp, base, store.id);
-      if (!rows || products.has(rows.product.id)) continue;
-      products.set(rows.product.id, rows.product);
-      stock.push(rows.stock);
-      kept++;
+let done = 0;
+
+// Fetch with a small worker pool (Kroger's gateway stalls ~10 s at times; parallel requests hide that),
+// then merge in seed order so the output is stable regardless of which request finished first.
+const found: Array<KrogerProduct[] | undefined> = new Array(TERMS.length);
+let next = 0;
+async function worker() {
+  while (next < TERMS.length) {
+    const i = next++;
+    const term = TERMS[i][2];
+    try {
+      found[i] = await searchWithRetry(term, loc.locationId, PER_TERM);
+      console.log(`[${++done}/${TERMS.length}] ${term} ${found[i]!.length} results`);
+    } catch (err) {
+      failed++;
+      console.warn(`  ${term}: ${err instanceof Error ? err.message.slice(0, 120) : err}`);
     }
-    console.log(`[${i + 1}/${TERMS.length}] ${term} +${kept}`);
-  } catch (err) {
-    failed++;
-    console.warn(`  ${term}: ${err instanceof Error ? err.message.slice(0, 120) : err}`);
+    await sleep(120);
   }
-  await sleep(120); // stay well inside the 10k/day Products limit and avoid bursts
+}
+await Promise.all(Array.from({ length: CONCURRENCY }, worker));
+
+for (const [i, base] of TERMS.entries()) {
+  for (const kp of found[i] ?? []) {
+    const rows = toRows(kp, base, store.id);
+    if (!rows || products.has(rows.product.id)) continue;
+    products.set(rows.product.id, rows.product);
+    stock.push(rows.stock);
+  }
 }
 
 // Never overwrite a good catalog with a broken one.

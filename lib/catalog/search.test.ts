@@ -6,6 +6,7 @@ import { searchCatalog } from "./search";
 
 delete process.env.MOSS_PROJECT_ID; // exercise the local engine deterministically
 process.env.CATALOG_SOURCE = "synthetic"; // stable fixture data; the Kroger demo case is tested at the end
+resetCatalog(); // the tool registry imports modules that load the default (Kroger) catalog at import time
 const STORE = "safeway-sf-01";
 const OATLY_BARISTA = "sw-000069";
 

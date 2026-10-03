@@ -47,7 +47,7 @@ npm test
 
 Kroger is the **in-store** data source (real shelf, aisle, stock). Online ordering goes through **Instacart** (`send_to_instacart`, person 4). No Kroger shopper login anywhere.
 
-- **Kroger (default, real):** `data/kroger/*.json` — 581 in-store products at Kroger On the Rhine, Cincinnati (`kroger-01400513`): real brands, sizes, prices, aisle numbers, stock levels, images, allergens and diet declarations. Refresh with `npm run kroger:import` (needs `KROGER_CLIENT_ID` / `KROGER_CLIENT_SECRET`), then `npm run moss:index`.
+- **Kroger (default, real):** `data/kroger/*.json` — 3,824 in-store products (≈300 search terms × up to 50 results; Kroger has no "list all products" API) at Kroger On the Rhine, Cincinnati (`kroger-01400513`): real brands, sizes, prices, aisle numbers, stock levels, images, allergens and diet declarations. Refresh with `npm run kroger:import` (needs `KROGER_CLIENT_ID` / `KROGER_CLIENT_SECRET`), then `npm run moss:index`.
   - **Demo override:** `data/kroger/demo.json` marks Oatly Barista (`kr-0019064664001`) out of stock so the substitute demo always works. Add ids there for more demo cases.
 - **Synthetic (offline fallback):** `data/*.json` — 524 Safeway-style products, 3 made-up SF stores. `CATALOG_SOURCE=synthetic`. Used by the unit tests.
 
@@ -65,7 +65,7 @@ The agent picks and scales a recipe, then sends the whole ingredient list in **o
 
 - **Search:** `searchCatalog` (Moss), in stock at the store, household `diet` / `exclude_allergens` applied.
 - **Sanity check:** the ingredient's last word must be in the product name, and so must the other words (≤3 words: all; longer: all but one). So "ground beef" never becomes a ribeye, and it comes back as `unmatched` instead.
-- **Pick:** among the top 3 matches, the cheapest way to cover the recipe amount (packages × store price), store brand gets a 10% edge.
+- **Pick:** best *name fit* first (fewest extra words; words like spray / spread / blend / patties / microwave cups count as a different product unless the recipe says so; small store-brand bonus), then among near-equal fits the cheapest way to cover the recipe amount (packages × store price).
 - **Quantity:** recipe amount ÷ package size (lb/oz/g, cups/tbsp/fl oz/gal, counts; mass↔volume at water density; garlic cloves ≈ 1/10 head; capped at 12). 1 when sizes can't be compared.
 - **Pantry staples** (salt, oil, spices, flour…) are matched but flagged `pantry_staple` and left out of `total`, so the agent asks first. `water` is never a product.
 

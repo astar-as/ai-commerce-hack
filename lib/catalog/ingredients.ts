@@ -56,7 +56,10 @@ export function packagesNeeded(quantity: number | undefined, unit: string | unde
   if (!quantity || quantity <= 0) return 1;
   const need = toAmount(quantity, unit);
   const pack = parseSize(size);
-  if (!need || !pack || pack.value <= 0) return need?.dim === "count" && !pack ? Math.ceil(quantity) : 1;
+  if (!need || !pack || pack.value <= 0) return need?.dim === "count" && !pack ? Math.min(MAX_QTY, Math.ceil(quantity)) : 1;
+  // "2 cans" / "3 jars" against a package sold by weight: one package per item. ("2 onions" vs a 3 lb bag is not.)
+  if (need.dim === "count" && pack.dim !== "count")
+    return /^(cans?|jars?|box(es)?|packages?|pkgs?|bottles?)$/i.test(unit ?? "") ? Math.min(MAX_QTY, Math.ceil(quantity)) : 1;
   // Mass ↔ volume at water density (1 g ≈ 1 ml): close enough for yogurt, cream, flour-vs-bag sizing.
   const comparable = need.dim === pack.dim || (need.dim !== "count" && pack.dim !== "count");
   if (!comparable) return 1;
@@ -80,23 +83,49 @@ function plausible(ingredient: string, r: SearchResult): boolean {
   return name.has(want[want.length - 1]) && hits >= (want.length <= 3 ? want.length : want.length - 1);
 }
 
+// Words that turn an ingredient into a different product ("butter" → butter *spray*), unless asked for.
+const MODIFIERS = new Set(
+  "spray spread blend patty patties cup cups microwavable microwaveable ready flavored flavor seasoned mix sauce soup chip chips snack snacks bar bars dressing dip cinnamon sweetened candy cereal baby kid kids frozen instant powder extract substitute style kit meal bowl".split(" "),
+);
+// A different food right before the main noun makes a different product: peanut butter, oat milk, almond flour.
+const COMPOUND = new Set(
+  "peanut almond cashew sunflower hazelnut walnut pecan coconut oat soy rice apple cocoa shea cinnamon garlic herb honey cookie nut chocolate vanilla strawberry banana pumpkin corn potato chickpea".split(" "),
+);
+const FILLER = new Set("and with the for of in fresh original classic natural pack count lb lbs oz ct fl tray bag big deal each".split(" "));
+
+// How well a product name fits the ingredient: 1 minus extra words, minus different-product words.
+function fit(ingredient: string, r: SearchResult): number {
+  const want = new Set(words(ingredient).map(stem));
+  const brand = new Set(words(r.product.brand).map(stem));
+  const extra = words(r.product.name)
+    .map(stem)
+    .filter((w) => !want.has(w) && !brand.has(w) && !FILLER.has(w));
+  const modifiers = extra.filter((w) => MODIFIERS.has(w)).length;
+  // The word just before the ingredient's main noun in the product name, e.g. "peanut" in "peanut butter".
+  const head = [...want].pop()!;
+  const nameWords = words(r.product.name).map(stem);
+  const before = nameWords[nameWords.indexOf(head) - 1];
+  const compound = before && !want.has(before) && COMPOUND.has(before) ? 1 : 0;
+  return 1 - 0.06 * extra.length - 0.5 * (modifiers + compound) + (r.product.store_brand ? 0.05 : 0);
+}
+
 function pick(
   ingredient: { name: string; quantity?: number; unit?: string },
   results: SearchResult[],
 ): { best?: SearchResult; rest: SearchResult[] } {
   const ok = results.filter((r) => plausible(ingredient.name, r));
   if (ok.length === 0) return { rest: [] };
-  // Among the top 3 relevant hits: cheapest way to cover the recipe amount (packages × store price),
-  // with a 10% edge for the store brand (the grocer's margin), then relevance.
+  // Best name fit first; among near-equal fits (±0.05), the cheapest way to cover the recipe amount.
   const cost = (r: SearchResult) =>
-    packagesNeeded(ingredient.quantity, ingredient.unit, r.product.size) *
-    (r.stock?.price ?? r.product.price) *
-    (r.product.store_brand ? 0.9 : 1);
-  const best = ok
-    .slice(0, 3)
-    .map((r, rank) => ({ r, rank, cost: cost(r) }))
-    .sort((a, b) => a.cost - b.cost || a.rank - b.rank)[0].r;
-  return { best, rest: ok.filter((r) => r !== best) };
+    packagesNeeded(ingredient.quantity, ingredient.unit, r.product.size) * (r.stock?.price ?? r.product.price);
+  const scored = ok.map((r) => ({ r, fit: fit(ingredient.name, r), cost: cost(r) }));
+  const topFit = Math.max(...scored.map((x) => x.fit));
+  const best = scored.filter((x) => x.fit >= topFit - 0.05).sort((a, b) => a.cost - b.cost)[0].r;
+  const rest = scored
+    .filter((x) => x.r !== best)
+    .sort((a, b) => b.fit - a.fit)
+    .map((x) => x.r);
+  return { best, rest };
 }
 
 export async function matchIngredients(input: MatchIngredientsInput): Promise<MatchIngredientsOutput> {
@@ -119,7 +148,7 @@ export async function matchIngredients(input: MatchIngredientsInput): Promise<Ma
         store_id: storeId,
         diet: input.diet,
         exclude_allergens: input.exclude_allergens,
-        limit: 6,
+        limit: 12, // a wider net so name fit can beat Moss's ranking on one-word ingredients
       });
       const { best, rest } = pick({ ...ing, name }, results);
       if (!best) return { ingredient: name, qty: 0, alternatives: [], pantry_staple, ...(ing.optional && { optional: true }) };

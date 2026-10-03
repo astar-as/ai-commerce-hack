@@ -28,6 +28,8 @@ test("packagesNeeded covers the recipe amount", () => {
   assert.equal(packagesNeeded(2, "cup", "5 lb"), 1);
   assert.equal(packagesNeeded(undefined, undefined, "1 lb"), 1);
   assert.equal(packagesNeeded(3, "each", "mystery size"), 3);
+  assert.equal(packagesNeeded(2, "cans", "14.5 oz"), 2);
+  assert.equal(packagesNeeded(2, "each", "3 lb"), 1); // 2 onions ≠ two 3 lb bags
   assert.equal(packagesNeeded(100, "lb", "1 lb"), 12); // capped
 });
 
