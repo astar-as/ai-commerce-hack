@@ -2,7 +2,7 @@
 // product filters → per-store stock → substitute ranking.
 
 import { allProducts, getProduct, getStock } from "./data";
-import { mossConfigured, mossSearch, type MossFilterSpec } from "./moss";
+import { ensureMossLoaded, mossConfigured, mossSearch, type MossFilterSpec } from "./moss";
 import type { DietTag, Product, SearchCatalogInput, SearchCatalogOutput, SearchResult } from "../types";
 
 // Tags a substitute must keep when the missing product had them ("still fits my diet").
@@ -55,7 +55,14 @@ function localSearch(query: string, topK: number, filter: MossFilterSpec): Array
 
 // --- public entry point ---
 
+// Call once at server start (e.g. Next.js instrumentation.ts) so the first shopper search
+// doesn't pay the one-time Moss index download (~4 s). Warm queries take ~2 ms.
+export async function warmSearch(): Promise<void> {
+  if (mossConfigured()) await ensureMossLoaded();
+}
+
 export async function searchCatalog(input: SearchCatalogInput): Promise<SearchCatalogOutput> {
+  await warmSearch(); // no-op once loaded; keeps the load out of took_ms
   const started = performance.now();
   const limit = Math.min(Math.max(input.limit ?? 5, 1), 20);
 

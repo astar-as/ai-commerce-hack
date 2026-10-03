@@ -11,7 +11,7 @@ export function mossConfigured(): boolean {
 }
 
 export function mossIndexName(): string {
-  return process.env.MOSS_INDEX ?? `${catalogSource()}-catalog`;
+  return process.env.MOSS_INDEX || `${catalogSource()}-catalog`;
 }
 
 let client: MossClient | undefined;
