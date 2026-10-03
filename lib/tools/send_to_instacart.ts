@@ -232,7 +232,7 @@ export const sendToInstacartTool = {
   name: "send_to_instacart",
   description:
     "Send the shopping list to Instacart for online checkout. Returns a link to a pre-filled Instacart " +
-    "shopping list where the shopper picks their store (e.g. Safeway) and checks out. Use a generic search " +
+    "shopping list where the shopper picks their store and checks out. Use a generic search " +
     'term as each item\'s name ("oat milk") and put the brand in brand. If mode is "mock", the link is our own ' +
     "cart preview instead of Instacart.",
   input_schema: {
