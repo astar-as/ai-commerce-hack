@@ -42,7 +42,7 @@ function Row({ item, onTogglePicked, inStore }: { item: OrderItem; onTogglePicke
         </p>
         <p className="mt-0.5 truncate text-[13px] text-subtle">
           {product.size}
-          {inStore ? ` · Aisle ${product.aisle}` : ` · ${product.brand}`}
+          {inStore ? ` · ${/^\d/.test(product.aisle) ? `Aisle ${product.aisle}` : product.aisle}` : ` · ${product.brand}`}
         </p>
         {status === "swapped" && item.swapped_from && (
           <span className="mt-1.5 inline-flex max-w-full items-center gap-1 rounded-full bg-swap px-2 py-0.5 text-[11.5px] font-medium text-swap-ink">
@@ -76,7 +76,7 @@ function Row({ item, onTogglePicked, inStore }: { item: OrderItem; onTogglePicke
 export function OrderList({ order, onTogglePicked }: { order: OrderState; onTogglePicked: (id: string) => void }) {
   const inStore = order.fulfillment.mode === "in_store";
   const items = inStore
-    ? [...order.items].sort((a, b) => Number(a.product.aisle) - Number(b.product.aisle))
+    ? [...order.items].sort((a, b) => a.product.aisle.localeCompare(b.product.aisle, undefined, { numeric: true }))
     : order.items;
 
   const groups = inStore
@@ -94,7 +94,7 @@ export function OrderList({ order, onTogglePicked }: { order: OrderState; onTogg
         <div key={g.aisle || "all"}>
           {inStore && (
             <p className="pt-4 pb-1 text-[11px] font-medium tracking-[0.12em] text-subtle uppercase">
-              Aisle {g.aisle} · {g.items[0].product.department}
+              {/^\d/.test(g.aisle) ? `Aisle ${g.aisle} · ${g.items[0].product.department}` : g.aisle}
             </p>
           )}
           <ul className="divide-y divide-hairline">
