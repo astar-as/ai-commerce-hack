@@ -47,7 +47,7 @@ export default async function MockCartPage({ searchParams }: PageProps<"/cart/mo
             ))}
           </ul>
           <div className="mt-auto pt-8">
-            <PlaceOrderButton label={`Place order · ${count} ${count === 1 ? "item" : "items"}`} />
+            <PlaceOrderButton label={`Place order · ${count} ${count === 1 ? "item" : "items"}`} list={typeof list === "string" ? list : undefined} />
           </div>
         </>
       )}

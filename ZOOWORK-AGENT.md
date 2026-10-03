@@ -53,6 +53,18 @@ All of this happens automatically:
 - **Learned** through `update_profile`.
 - **Enforced** in the tools, so a blocked product can't reach the order even if the model forgets.
 
+## Receipts after payment (automatic)
+
+- **When:** pickup `checkout` (placing the order counts as paying), and **Place order** on the checkout page (`/cart/mock`, delivery). Real Instacart payments happen on Instacart, and their API gives us no signal when they're done.
+- **What:** `lib/receipts/issue.ts` creates a receipt and adds it to order history, so `search_order_history` finds it later. It emails the receipt to the profile's `email` through Resend (`lib/receipts/email.ts`).
+- **Config:** `RESEND_API_KEY`, `RECEIPT_FROM` and `DEMO_EMAIL` (the demo household's address).
+  - Without a Resend key, mode is `mock`: nothing is sent, but the receipt is kept.
+  - Resend's test sender only delivers to your own Resend account address.
+- **Routes:**
+  - `GET /api/receipts` lists issued receipts and their email status.
+  - `GET /api/receipts/<id>` shows the email exactly as sent.
+  - `POST /api/receipts {list}` is what the checkout page calls.
+
 ## Demo script (works with the 18-product demo catalog)
 
 1. *"Pasta night for four tonight, I'll pick it up"*: penne, marinara, basil, garlic. The parmesan is skipped because of the milk allergy, and the agent says so.

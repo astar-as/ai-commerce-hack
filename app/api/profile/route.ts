@@ -8,7 +8,7 @@ export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
 
 const EDITABLE = [
-  'name', 'household_size', 'zip', 'usual_store_id', 'allergens', 'diet', 'dislikes',
+  'name', 'email', 'household_size', 'zip', 'usual_store_id', 'allergens', 'diet', 'dislikes',
   'brand_preferences', 'fulfillment_preference', 'budget_weekly', 'notes',
 ] as const
 

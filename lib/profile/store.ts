@@ -9,6 +9,7 @@ import type { Allergen, DietTag } from '@/lib/types'
 export type Profile = {
   id: string // also the ZooWork actor ref
   name: string
+  email?: string // receipts are emailed here automatically after payment
   household_size: number
   zip?: string
   usual_store_id?: string
@@ -29,6 +30,7 @@ const SEED: Profile[] = [
   {
     id: DEMO_PROFILE_ID,
     name: 'Sam Rivera',
+    email: process.env.DEMO_EMAIL || 'sam.rivera@example.com',
     household_size: 3,
     zip: '94114',
     usual_store_id: 'safeway-sf-01',
@@ -109,6 +111,7 @@ export function profileBrief(p: Profile): string {
     `- Allergens (HARD, never buy, enforced by tools): ${p.allergens.length ? p.allergens.join(', ') : 'none recorded'}.`,
     `- Diet (HARD, enforced by tools): ${p.diet.length ? p.diet.join(', ') : 'none'}.`,
   ]
+  if (p.email) lines.push(`- Receipts are emailed automatically to ${p.email.replace(/^(.)[^@]*(@.*)$/, '$1•••$2')} after payment.`)
   if (p.zip) lines.push(`- Zip: ${p.zip}.`)
   if (p.usual_store_id) lines.push(`- Usual store: ${p.usual_store_id}.`)
   if (p.fulfillment_preference) lines.push(`- Usually prefers: ${p.fulfillment_preference}.`)

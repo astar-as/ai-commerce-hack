@@ -14,7 +14,21 @@ const SPEC: Array<{ days_ago: number; channel: ReceiptChannel; lines: Array<[str
 
 const DAY = 86_400_000;
 
+// Receipts issued at runtime (paid orders, see lib/receipts/issue.ts), newest first.
+// In memory, kept on globalThis so dev hot reloads don't drop them.
+const g = globalThis as typeof globalThis & { __basketIssuedReceipts?: Receipt[] };
+const issued = (g.__basketIssuedReceipts ??= []);
+
+export function recordReceipt(receipt: Receipt) {
+  issued.unshift(receipt);
+}
+
 export function getReceipts(now = Date.now()): Receipt[] {
+  const fresh = issued.map((r) => ({ ...r, days_ago: Math.floor((now - Date.parse(r.date)) / DAY) }));
+  return [...fresh, ...seedReceipts(now)];
+}
+
+function seedReceipts(now: number): Receipt[] {
   return SPEC.map((r, i) => {
     const lines = r.lines.flatMap(([id, qty]) => {
       const product = productById(id);
