@@ -1,0 +1,62 @@
+We are going to focus on the submission related stuff on this project;
+
+1. A high quality video of 20 seconds high pased motion graphics demo like you really wanna showcase ur motion graphics skills. Dont leave anything out, please also use Elevenlabs for some voice, but let it not go out over the "fast pace", we really need to showcase the product in 20s, remember a super clean looking and focused app where it is running on the iphone. You'd want to put this on ur resume
+2. I need a presentation of the entire proejct for our pitch that covers, a live demo (we'll do that on the live preview page) and we will have 16:9 "slides" with insanly good transitions of the product, it should feel like the video above, where we tap our way around it. Its important that we highllight our product choices and why we have them. Also that the idea is shit run on Zoowork and a gateway for ordering food, pickup and it all. So it should feel like product demo of Anduril, and a slide that is SOTA in terms of rendering, graphics, demo and shit. Remember to keep it modern looking like the design guidelines for america.goc.
+
+---
+
+<task-notification>
+<task-id>b8tx23pn4</task-id>
+<tool-use-id>REDACTED</tool-use-id>
+<output-file>/private/tmp/claude-501/-Users-eriknymobohne-Documents-Astar-ai-commerce-hack--claude-worktrees-sunny-purring-token/b08e85ec-c3ea-413d-a6af-263be96a36dd/tasks/b8tx23pn4.output</output-file>
+<status>failed</status>
+<summary>Background command "Install Remotion in scratchpad project" failed with exit code 1</summary>
+</task-notification>
+
+---
+
+<task-notification>
+<task-id>b9u6r9plx</task-id>
+<tool-use-id>REDACTED</tool-use-id>
+<output-file>/private/tmp/claude-501/-Users-eriknymobohne-Documents-Astar-ai-commerce-hack--claude-worktrees-sunny-purring-token/b08e85ec-c3ea-413d-a6af-263be96a36dd/tasks/b9u6r9plx.output</output-file>
+<status>completed</status>
+<summary>Background command "Render full 20s video at 1080p60" completed (exit code 0)</summary>
+</task-notification>
+
+---
+
+<task-notification>
+<task-id>b3k5s4o1f</task-id>
+<tool-use-id>REDACTED</tool-use-id>
+<output-file>/private/tmp/claude-501/-Users-eriknymobohne-Documents-Astar-ai-commerce-hack--claude-worktrees-sunny-purring-token/b08e85ec-c3ea-413d-a6af-263be96a36dd/tasks/b3k5s4o1f.output</output-file>
+<status>completed</status>
+<summary>Monitor "Basket 20s video render completion" stream ended</summary>
+<event>-rw-r--r--@ 1 eriknymobohne  wheel  15973562 Oct  3 16:27 /private/tmp/claude-501/-Users-eriknymobohne-Documents-Astar-ai-commerce-hack/b08e85ec-c3ea-413d-a6af-263be96a36dd/scratchpad/video/out/basket-20s.mp4
+-rw-r--r--@ 1 eriknymobohne  wheel  15973562 Oct  3 16:27 out/basket-20s.mp4
+[exited with code 0]</event>
+If this event is something the user would act on now, send a PushNotification. Routine or benign output doesn't need one.
+</task-notification>
+
+---
+
+<task-notification>
+<task-id>bpkifyzg5</task-id>
+<tool-use-id>REDACTED</tool-use-id>
+<output-file>/private/tmp/claude-501/-Users-eriknymobohne-Documents-Astar-ai-commerce-hack--claude-worktrees-sunny-purring-token/b08e85ec-c3ea-413d-a6af-263be96a36dd/tasks/bpkifyzg5.output</output-file>
+<status>completed</status>
+<summary>Background command "Copy v1 to deck, re-render with fixes" completed (exit code 0)</summary>
+</task-notification>
+
+---
+
+<task-notification>
+<task-id>be0f67swy</task-id>
+<tool-use-id>toolu_01Tv63ge8NnU6TwZ1gt7YXoP</tool-use-id>
+<output-file>/private/tmp/claude-501/-Users-eriknymobohne-Documents-Astar-ai-commerce-hack--claude-worktrees-sunny-purring-token/b08e85ec-c3ea-413d-a6af-263be96a36dd/tasks/be0f67swy.output</output-file>
+<status>completed</status>
+<summary>Monitor "Final video re-render + audio remix" stream ended</summary>
+<event>[Parsed_volumedetect_0 @ 0xb19024a80] mean_volume: -16.6 dB
+[Parsed_volumedetect_0 @ 0xb19024a80] max_volume: -1.0 dB
+[exited with code 0]</event>
+If this event is something the user would act on now, send a PushNotification. Routine or benign output doesn't need one.
+</task-notification>
