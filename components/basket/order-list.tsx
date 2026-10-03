@@ -60,8 +60,8 @@ function Row({ item, onTogglePicked, inStore }: { item: OrderItem; onTogglePicke
         )}
       </div>
       <div className="text-right">
-        <p className={cn("font-mono text-[14px] tabular", oos && "text-subtle line-through")}>{money(product.price * qty)}</p>
-        {qty > 1 && <p className="font-mono text-[12px] text-subtle tabular">×{qty}</p>}
+        <p className={cn("text-[15px] font-medium tabular", oos && "text-subtle line-through")}>{money(product.price * qty)}</p>
+        {qty > 1 && <p className="text-[13px] text-subtle tabular">×{qty}</p>}
       </div>
     </motion.li>
   );

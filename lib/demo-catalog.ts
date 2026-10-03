@@ -2,7 +2,18 @@ import type { Product } from "@/lib/types";
 
 export const DEMO_STORE = { id: "safeway-sf-01", name: "Safeway-style demo store · Market St" };
 
-export const OUT_OF_STOCK = new Set(["sw-001", "sw-011"]);
+export const OUT_OF_STOCK = new Set(["sw-001"]);
+
+export const KIND: Record<string, string> = {
+  "sw-001": "oat-milk",
+  "sw-002": "oat-milk",
+  "sw-003": "oat-milk",
+  "sw-004": "oat-milk",
+  "sw-005": "pasta",
+  "sw-006": "pasta",
+  "sw-007": "sauce",
+  "sw-008": "sauce",
+};
 
 export const CATALOG: Product[] = [
   {

@@ -1,12 +1,8 @@
 "use client";
 
-import dynamic from "next/dynamic";
 import { motion } from "motion/react";
-import type { AgentState } from "@/components/ui/orb";
-
-const Orb = dynamic(() => import("@/components/ui/orb").then((m) => m.Orb), { ssr: false });
-
-const COLORS: [string, string] = ["#CADCFC", "#A0B9D1"];
+import { SkyOrb, type OrbMode } from "@/components/basket/sky-orb";
+import type { AgentState } from "@/hooks/use-live-voice";
 
 export function VoiceOrb({
   size,
@@ -25,7 +21,7 @@ export function VoiceOrb({
   getInputVolume: () => number;
   getOutputVolume: () => number;
 }) {
-  const manual = live && agentState !== "thinking";
+  const mode: OrbMode = connecting ? "connecting" : live ? (agentState ?? "listening") : "idle";
   return (
     <motion.button
       type="button"
@@ -35,22 +31,18 @@ export function VoiceOrb({
       transition={{ type: "spring", stiffness: 220, damping: 30 }}
       style={{ width: size, height: size }}
       whileTap={{ scale: 0.96 }}
-      className="relative shrink-0 rounded-full outline-none focus-visible:ring-2 focus-visible:ring-[#A0B9D1] focus-visible:ring-offset-4"
+      className="relative shrink-0 rounded-full outline-none focus-visible:ring-2 focus-visible:ring-[#3b82f6]/40 focus-visible:ring-offset-4"
     >
-      <div
-        className="pointer-events-none absolute inset-[6%] rounded-full blur-2xl transition-opacity duration-700"
-        style={{ background: "radial-gradient(circle, #CADCFC 0%, transparent 70%)", opacity: live ? 0.9 : 0.45 }}
+      <span
+        className="pointer-events-none absolute inset-[8%] translate-y-[6%] rounded-full blur-2xl transition-opacity duration-700"
+        style={{ background: "radial-gradient(circle, rgba(37,99,235,0.35) 0%, transparent 70%)", opacity: live ? 1 : 0.6 }}
       />
-      <div className="relative h-full w-full">
-        <Orb
-          colors={COLORS}
-          seed={7}
-          agentState={live ? agentState : connecting ? "thinking" : null}
-          volumeMode={manual ? "manual" : "auto"}
-          getInputVolume={getInputVolume}
-          getOutputVolume={getOutputVolume}
-        />
-      </div>
+      <SkyOrb
+        mode={mode}
+        getInputVolume={getInputVolume}
+        getOutputVolume={getOutputVolume}
+        className="relative h-full w-full"
+      />
     </motion.button>
   );
 }

@@ -1,10 +1,10 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import type { AgentState } from "@/components/ui/orb";
 import type { DelegateOutput, OrderState, TranscriptLine } from "@/lib/types";
 
 type Status = "idle" | "connecting" | "live" | "ending" | "error";
+export type AgentState = null | "listening" | "thinking" | "talking";
 
 type LiveEvent = {
   type: string;

@@ -1,4 +1,4 @@
-import { CATALOG, DEMO_STORE, OUT_OF_STOCK, productById } from "@/lib/demo-catalog";
+import { CATALOG, DEMO_STORE, KIND, OUT_OF_STOCK, productById } from "@/lib/demo-catalog";
 import type { OrderAction, OrderItem, OrderState, Product, SearchResult } from "@/lib/types";
 
 export const emptyOrder = (): OrderState => ({
@@ -20,7 +20,8 @@ export function findSubstitutes(missing: Product, limit = 3): SearchResult[] {
     (p) =>
       p.id !== missing.id &&
       !OUT_OF_STOCK.has(p.id) &&
-      p.department === missing.department &&
+      KIND[p.id] !== undefined &&
+      KIND[p.id] === KIND[missing.id] &&
       hardTags.every((t) => p.diet_tags.includes(t)),
   )
     .map((p) => {
