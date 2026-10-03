@@ -1,0 +1,3 @@
+When all of this is done, I want you to make an assessment of how we are aligned with the hackathon, like in terms of what will the judges be impressed by, what will they like and not. That is very important. I think the VP, the former VP in Alibaba, like the CEO of Sumeworks, is going to care a lot about: is this actually scalable, usable, UX-friendly, et cetera. If they are up to date, they're going to question themselves, why not just use GroKbots, ChatGPT, Dots, et cetera.
+
+I think it's very important that it is clear that the main product here is the distribution channel, and that you can literally order and fix anything, anywhere. That's core
