@@ -1,10 +1,20 @@
 # Plan: Basket — the grocer's shopping agent
 
-A grocery shopping assistant that suggests lists, sends them to online shopping (Instacart), and helps in the store when an item is out of stock by suggesting alternatives that are on the shelf.
+A grocery shopping assistant that turns "what I want to cook" into a shopping list, sends it to online shopping (Instacart), and helps in the store when an item is out of stock by suggesting alternatives that are on the shelf.
 
 > Context: [HACKATHON.md](HACKATHON.md). Submission deadline **5:00 PM PST**.
 
 ---
+
+## Core flow — step 1 is "dish → recipe → list"
+
+1. **Ask for a dish.** "I want to make chicken tikka masala for 4 on Thursday" (or several dishes for the week).
+2. **Find a recipe.** The agent picks a recipe (its own knowledge, or `web_search` / `web_fetch` for a real recipe page it can cite), scales it to the servings, and applies the household profile (diet, allergies, dislikes).
+3. **Turn ingredients into products.** One `match_ingredients` call maps every ingredient to a real in-stock product at the store (diet/allergens enforced, store brand preferred), with quantity, price and aisle. Pantry staples (salt, oil…) are asked about, not added blindly.
+4. **Show the list** in the live order, grouped by aisle, with a total. The shopper edits by voice ("skip the cream, I have it").
+5. **Then either** → **online:** `send_to_instacart` (Instacart's link also supports a recipe page) · **in store:** walk the aisles; "not on shelf" → `search_catalog` substitutes.
+
+Steps 1–4 are the opening of the demo. Owners: recipe reasoning = agent (1), `match_ingredients` = data + search (2), list UI = frontend (3).
 
 ## Pitch it as the grocer's agent
 
@@ -278,10 +288,46 @@ Registered in `lib/tools/index.ts`, so `zooworkCustomTools()` / `runTool` alread
 
 Data: 8 synthetic receipts for the demo household in `lib/history/receipts.ts`, dates computed relative to today so "two weeks ago" always lands. ⚠️ Receipts reference the **demo catalog ids** (`lib/demo-catalog.ts`, `sw-001…`); when the app switches to the Kroger catalog, remap the receipt lines to Kroger product ids (same products by name). The interim agent (`lib/agent.ts`) calls it via function calling and tags re-added items "Bought 2 weeks ago" in the UI.
 
+### 6. `match_ingredients` — recipe ingredients → real products, in one call (owner: 2, 🔜 building)
+
+Used by the agent after it has a recipe. One call instead of one `search_catalog` per ingredient (a 12-ingredient recipe = 1 tool round trip, ~20 ms of Moss search).
+
+**Input**
+```ts
+{
+  store_id?: string;               // default: the demo store (kroger-01400513)
+  ingredients: Array<{
+    name: string;                  // "boneless chicken thighs", "garam masala"
+    quantity?: number;             // recipe amount, already scaled: 1.5
+    unit?: string;                 // "lb", "cup", "tbsp", "each"
+    optional?: boolean;            // garnish etc.
+  }>;                              // max 40
+  diet?: DietTag[];                // household profile
+  exclude_allergens?: Allergen[];
+}
+```
+
+**Output**
+```ts
+{
+  items: Array<{
+    ingredient: string;            // echo of the input name
+    product?: Product;             // best in-stock match (store brand preferred), absent if none
+    stock?: StoreStock;            // aisle, price at the store
+    qty: number;                   // packages to buy (≥1; 1 when sizes can't be compared)
+    alternatives: Product[];       // next 2 matches, for "a different brand"
+    pantry_staple: boolean;        // salt, oil, spices… → agent asks "do you have this?"
+  }>;
+  unmatched: string[];             // ingredient names with no in-stock match
+  total: number;                   // sum of store price × qty (non-staples)
+  took_ms: number;
+}
+```
+
 ### What is *not* a tool
 
 - **Household preferences** (diet, allergies, budget, usual brands) live in **our backend's profile store** (`lib/profile/`, `GET/PUT /api/profile`). They're injected into every ZooWork session, learned through the agent's `update_profile` tool, and allergens/diet are enforced inside the tools. ZooWork memory alone isn't recalled automatically and can't block an unsafe product.
-- **Meal planning and list building** is the agent's own reasoning on top of `search_catalog`.
+- **Recipe choice and meal planning** is the agent's own reasoning (plus ZooWork `web_search` / `web_fetch` for real recipes). Turning the recipe into products is `match_ingredients`.
 
 ## Timeline (deadline 5:00 PM)
 
@@ -295,7 +341,7 @@ Data: 8 synthetic receipts for the demo household in `lib/history/receipts.ts`, 
 
 ## Demo script (~3 min)
 
-1. Ask for a weekly plan → list appears and uses remembered preferences.
+1. "I want to make chicken tikka masala for 4" → the agent picks a recipe, scales it, and the list fills in with real Kroger products (aisle, price, store brand), respecting the household's diet; it asks about pantry staples.
 2. Tap "Send to Instacart" → the checkout preview (`/cart/mock`) opens with the whole list → "Place order". Say: "The real Instacart call is built; it switches on with a partner key."
 3. Switch to the phone in the Kroger: "They're out of Oatly Barista" → real in-stock alternatives in ~5 ms, same aisle, dairy-free kept, store brand (Simple Truth) shown → swap.
 4. Store dashboard: "This Kroger kept $X in sales today, and here's what to restock."
