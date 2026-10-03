@@ -1,0 +1,15 @@
+{
+  "input": {
+    "title": "Week of Oct 5 — family of 3",
+    "items": [
+      { "product_id": "sw-000123", "name": "oat milk", "display_text": "O Organics Oat Milk Original, 64 fl oz", "quantity": 1, "unit": "each", "brand": "O Organics", "health_filters": ["ORGANIC"] },
+      { "product_id": "sw-000456", "name": "bananas", "display_text": "Bananas", "quantity": 6, "unit": "each" },
+      { "product_id": "sw-000789", "name": "black beans", "display_text": "Signature Select Black Beans, 15 oz", "quantity": 2, "unit": "can", "brand": "Signature Select" }
+    ]
+  },
+  "output": {
+    "url": "http://localhost:3000/cart/mock?list=eyJ0aXRsZSI6IldlZWsgb2YgT2N0IDUifQ",
+    "item_count": 3,
+    "mode": "mock"
+  }
+}
