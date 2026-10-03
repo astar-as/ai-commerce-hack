@@ -17,6 +17,8 @@ export type KrogerProduct = {
   brand?: string;
   description: string;
   categories?: string[];
+  allergens?: Array<{ name: string; levelOfContainmentName: string }>;
+  manufacturerDeclarations?: string[];
   aisleLocations?: Array<{ description?: string; number?: string; side?: string; shelfNumber?: string }>;
   images?: Array<{ perspective: string; featured?: boolean; sizes: Array<{ size: string; url: string }> }>;
   items?: Array<{
