@@ -1,5 +1,6 @@
-import { updateProfile, type Profile, type ProfilePatch } from '../profile/store'
-import { ToolError, type Allergen, type DietTag, type ToolContext, type ToolDefinition } from './types'
+import { updateProfile, type Profile, type ProfilePatch } from '@/lib/profile/store'
+import type { Allergen, DietTag } from '@/lib/types'
+import { AgentToolError as ToolError, type ToolContext, type ToolDefinition } from './types'
 
 const DIET_TAGS: DietTag[] = ['vegan', 'vegetarian', 'gluten_free', 'dairy_free', 'nut_free', 'organic', 'kosher']
 const ALLERGENS: Allergen[] = ['milk', 'eggs', 'peanuts', 'tree_nuts', 'soy', 'wheat', 'fish', 'shellfish', 'sesame']
@@ -7,15 +8,6 @@ const ALLERGENS: Allergen[] = ['milk', 'eggs', 'peanuts', 'tree_nuts', 'soy', 'w
 function requireProfile(ctx: ToolContext): Profile {
   if (!ctx.profile) throw new ToolError('not_found', 'no household profile for this conversation')
   return ctx.profile
-}
-
-export const getProfileTool: ToolDefinition<Record<string, never>, Profile> = {
-  name: 'get_profile',
-  description:
-    'Read the household profile (allergens, diet, usual store, zip, brand preferences, budget). It is also ' +
-    'given to you at the start of each conversation; call this if you need the latest version.',
-  input_schema: { type: 'object', properties: {} },
-  run: async (_input, ctx) => requireProfile(ctx),
 }
 
 export type UpdateProfileInput = {

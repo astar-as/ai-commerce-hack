@@ -1,6 +1,6 @@
 // Hard profile rules, enforced in the tools, so a product that breaks them can't reach
 // the shopper or an order even if the model forgets the profile.
-import type { Product } from '../tools/types'
+import type { Product } from '@/lib/types'
 import type { Profile } from './store'
 
 export function profileViolations(product: Product, profile: Profile | undefined): string[] {

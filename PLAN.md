@@ -25,6 +25,7 @@ The brief judges merchant agents: *"Pick a real merchant. Pick one line of their
 | **ZooWork** | ✅ Core | The agent itself. Builds meal plans and lists, and remembers household preferences (diet, allergies, budget, usual brands). Can run a weekly "Sunday list" job with Schedules. Calls our backend through custom tools for catalog search, stock checks and Instacart. Targets the $800 Best Use of ZooWork prize. |
 | **Moss** | ✅ Core | Catalog search. In-store substitutes come back in under 10 ms, filtered to what's in stock at that store and to the shopper's diet. Moss has a browser (WASM) build, so in-store search can work on bad store wifi — the X-factor moment. |
 | **Instacart** | ✅ Online path | The Developer Platform API (`POST /idp/v1/products/products_link`) takes our list and returns a link to a pre-filled shopping list on Instacart, where the user picks a store and checks out. It can't add to a cart directly; the link is the closest thing. Development keys are self-serve in the Instacart Developer Dashboard and use `https://connect.dev.instacart.tools`; production keys need a review (~5 business days), so the demo runs on the dev key. |
+| **Kroger** (not a sponsor) | ✅ Real data + real cart | Kroger Public API (developer.kroger.com, self-serve app registration). **Products** with `filter.locationId` give real brands, sizes, prices, **aisle numbers** and **stock level** (`HIGH` / `LOW` / `TEMPORARILY_OUT_OF_STOCK`) for one store → imported into our catalog (`npm run kroger:import`, `CATALOG_SOURCE=kroger`). **Cart API** (`PUT /v1/cart/add`, shopper OAuth with `cart.basic:write`) really adds items to a shopper's kroger.com cart — the only real add-to-cart we have. Limits: Products 10k calls/day, Cart 5k/day; no allergens in the API; no Kroger stores in SF. |
 | **Entire** | ✅ Nearly free | Install the CLI so our Claude Code sessions are saved with each commit. Almost no work, qualifies for the Entire prize. |
 | **Band** | ⚠️ Stretch | Only worth it as a shopper agent ↔ store agent conversation across the account boundary. The store agent owns inventory and can veto a substitute (recall, age-restricted item). Fits the brief and Band's judging. If it isn't essential (Band's "delete test"), skip it. |
 | **Tavily** | ❌ Skip | ZooWork already has `web_search` / `web_fetch` built in. |
@@ -43,23 +44,73 @@ Next.js API routes ── ZooWork session (streams the agent's replies to the UI
         │                 └─ custom tools → search_catalog, check_stock,
         │                                   send_to_instacart, report_oos
         ├── Moss index: catalog (name, category, diet tags, aisle, price, in stock per store)
-        └── Instacart shopping-list API (fallback: our own mock cart)
+        ├── Kroger API: product/aisle/stock import + Cart API (real add-to-cart, shopper OAuth)
+        └── Instacart shopping-list API (any retailer incl. Safeway; fallback: our own mock cart)
 ```
 
 - **Packages:** `@zoowork-ai/sdk`, `@moss-js/moss`, plus `@moss-dev/moss-web` for in-browser search.
 - **Data:** a Safeway-style product catalog of 1–3k items — Instacart's public Market Basket product/aisle list or a generated set, including Safeway store brands (O Organics, Signature Select). Add synthetic per-store price, aisle and stock, with ~10% of items out of stock to set up the demo.
-- **Keys (backend only):** `ZOOWORK_API_KEY`, Moss `project_id` / `project_key`, Instacart dev API key.
+- **Two catalogs, one interface** (`CATALOG_SOURCE`): `synthetic` = Safeway-style demo data (default, offline), `kroger` = real products for one Kroger store. Online checkout: **Kroger Cart API** when the catalog is Kroger and the shopper has logged in to Kroger; **Instacart link** otherwise (any store, incl. Safeway).
+- **Keys (backend only):** `ZOOWORK_API_KEY`, Moss `MOSS_PROJECT_ID` / `MOSS_PROJECT_KEY`, `KROGER_CLIENT_ID` / `KROGER_CLIENT_SECRET`, Instacart dev API key. See `.env.example`.
 
 ## Team split (4 people)
 
 | Person | Owns |
 |---|---|
-| **1. Agent** | The ZooWork agent (persona docs, remembered preferences, custom tools) and the backend that streams its replies to the app. |
-| **2. Data + search** | Safeway-style catalog with synthetic stock and aisles, the Moss index, the substitute-search endpoint, then in-browser Moss (WASM) if there's time. |
-| **3. Frontend** | The mobile web app: list view, in-store mode with voice input, and the store dashboard. |
-| **4. Integrations + pitch** | Instacart dev key and the "Send to Instacart" link, Entire setup, then Band shopper ↔ store agents (from ~2:30), then demo script, slides and backup video. |
+| **1. Agent — Anders** | The ZooWork agent (persona docs, remembered preferences, custom tools) and the backend that streams its replies to the app. **Status (`main`):** ✅ ZooWork agent `basket-safeway` behind `/api/delegate` (`lib/zoowork/`), used when `ZOOWORK_API_KEY` + `ZOOWORK_AGENT_ID` are set, interim OpenAI agent otherwise · ✅ agent tools in `lib/agent-tools/`: `search_catalog`, one tool per `OrderAction`, `checkout` (pickup code / Instacart link in `fulfillment.checkout_url`), `update_profile` · ✅ household profile with automatic allergen/diet enforcement (`lib/profile/`, `GET/PUT /api/profile`) · ✅ `npm run agent:setup / agent:smoke / agent:chat` · 🔜 ZooWork key → run setup + smoke, set the two env vars on Vercel. Docs: `ZOOWORK-AGENT.md`. |
+| **2. Data + search** | Safeway-style catalog with synthetic stock and aisles, the Moss index, the substitute-search endpoint, then in-browser Moss (WASM) if there's time. **Status (branch `data-search`):** ✅ synthetic catalog (524 products, 3 SF stores, demo case: Oatly Barista out at `safeway-sf-01`) · ✅ `search_catalog` + `check_stock` with `runTool` / `zooworkCustomTools()` registry, mocks, tests · ✅ Moss index + filtered search with local fallback (needs Moss keys to go live) · ✅ Kroger import + `addToCart` client (needs Kroger app keys) · 🔜 run Kroger import + Moss index once keys exist. Docs: `lib/catalog/README.md`. |
+| **3. Frontend — Erik** | One-screen mobile web app on Vercel: GPT-Live voice orb + live order view (items with images, fulfillment mode). See [Frontend](#frontend-owner-3--erik). **Status (`main`):** ✅ voice orb + live order screen (fulfillment switch, swap card, aisle grouping in store) · ✅ `/api/live` (GPT-Live session) + `/api/delegate` · ✅ interim OpenAI agent in `lib/agent.ts` emitting `OrderAction`s · ✅ 18-product stand-in catalog with real images in `lib/demo-catalog.ts` · 🔜 switch to `lib/tools/search_catalog` when `data-search` merges · ✅ **Live: https://ai-commerce-hack.vercel.app** (Vercel team Astar, `OPENAI_API_KEY` set; redeploy with `vercel deploy --prod --scope astar12`). |
+| **4. Integrations + pitch** | Instacart dev key and the "Send to Instacart" link, Kroger shopper login (OAuth) + "Add to Kroger cart" using `lib/kroger/client.ts` `addToCart`, Entire setup, then Band shopper ↔ store agents (from ~2:30), then demo script, slides and backup video. |
 
 **First 15 minutes, all together:** agree on the custom tool interfaces — `search_catalog`, `check_stock`, `send_to_instacart`, `report_oos` — so persons 1–3 can build in parallel against mocks. The draft below is the starting point.
+
+## Frontend (owner: 3 — Erik)
+
+**Hosting: Vercel.** ZooWork's API runs agents, not web apps, and we need server routes for the OpenAI and ZooWork keys anyway.
+
+**One screen, white background.** A voice orb ([ElevenLabs UI `Orb`](https://ui.elevenlabs.io), states `listening` / `thinking` / `talking`, reacts to mic and speaker volume) and under it the **live order**: product images, name, size, qty, price, swap badges ("↺ swapped from Oatly"), and a fulfillment chip (🚚 Instacart delivery · 🛍 Store pickup · 🛒 In store). The store is labeled "Safeway-style demo store".
+
+**Voice: OpenAI GPT-Live (`gpt-live-1`) with client delegation.** GPT-Live only does the talking; ZooWork stays the brain.
+
+```
+browser ⇄ WebRTC ⇄ GPT-Live      (mic/speaker + data channel: transcripts, delegation events)
+   │ POST /api/live      → server creates the session (OPENAI_API_KEY)
+   │ POST /api/delegate  ← on session.delegation.created: { delegation_id, transcript, store_id, order }
+   │                       → runs the ZooWork turn (owner 1) → returns { say, order }
+   └ data channel: session.commentary.append { delegation_id, content: say }  → GPT-Live speaks it
+```
+
+- Cost: $0.05/min voice (billed per second), backend billed separately.
+- `/api/delegate` is the **seam between frontend and agent**: `runAgentTurn({ delegation_id, transcript, order }) → { say, order, actions }` in `lib/agent.ts`. With `ZOOWORK_API_KEY` + `ZOOWORK_AGENT_ID` set it runs the **ZooWork turn** (`lib/zoowork/delegate.ts`): one ZooWork session per voice conversation, the current order and household profile posted as system notes, order tools mapped 1:1 to `OrderAction` and applied with `applyAction`. Without them it falls back to the interim OpenAI agent (`OPENAI_AGENT_MODEL`, default `gpt-6-luna`).
+- Typed fallback: the "Type instead" box calls the same `/api/delegate`, so the demo still works if voice or wifi fails.
+
+### `OrderState` — what the screen renders (needs sign-off from 1)
+
+The order must live in **our backend / the request**, not only in ZooWork's `agent_db` — the frontend can't read `agent_db` in production. The agent changes it through order tools; `/api/delegate` returns the new state with each turn.
+
+```ts
+type OrderItem = {
+  product: Product;
+  qty: number;
+  status: "added" | "swapped" | "out_of_stock" | "picked";
+  swapped_from?: Product;
+  note?: string;                  // short reason, e.g. "Store brand · dairy-free · −$1.50"
+};
+
+type OrderState = {
+  fulfillment: {
+    mode: "instacart_delivery" | "store_pickup" | "in_store";
+    store: { id: string; name: string };
+    eta?: string;
+    checkout_url?: string;         // from send_to_instacart
+  };
+  items: OrderItem[];
+  subtotal: number;
+  pending?: { kind: "swap"; missing: Product; options: SearchResult[] };  // waiting for shopper confirmation
+};
+```
+
+Proposed order tools for the agent (owner 1, same wiring as the tools below): `add_item { product_id, qty }`, `remove_item { product_id }`, `swap_item { product_id, substitute_product_id }` (only after the shopper confirms), `set_fulfillment { mode }`. `Product.image_url` is optional — the data owner (2) can fill it from Glasser → Serper `/shopping` (`imageUrl` per listing, $0.0022 per 40 products).
 
 ## Tool interfaces (draft — confirm in the first 15 minutes)
 
@@ -73,6 +124,8 @@ Next.js API routes ── ZooWork session (streams the agent's replies to the UI
 - **Errors** (both paths): `{ "error": { "code": "not_found" | "invalid_input" | "upstream_failed", "message": string } }`.
 
 ### Shared types
+
+> Code: `lib/types.ts` (single source, used by app and tools). Additions from Data + search: `Product.upc?` (Kroger, needed by the Cart API), `Product.image_url?` (filled by the Kroger import), `Store { id, name, neighborhood }`, `SearchCatalogOutput.engine?: "moss" | "local"`.
 
 ```ts
 type DietTag = "vegan" | "vegetarian" | "gluten_free" | "dairy_free" | "nut_free" | "organic" | "kosher";
@@ -217,7 +270,7 @@ Called when the shopper taps "not on shelf" (or says it), and again when they pi
 
 ### What is *not* a tool
 
-- **Household preferences** (diet, allergies, budget, usual brands) live in ZooWork's agent memory and the persona docs (`USER.md`), not in our backend.
+- **Household preferences** (diet, allergies, budget, usual brands) live in **our backend's profile store** (`lib/profile/`, `GET/PUT /api/profile`). They're injected into every ZooWork session, learned through the agent's `update_profile` tool, and allergens/diet are enforced inside the tools. ZooWork memory alone isn't recalled automatically and can't block an unsafe product.
 - **Meal planning and list building** is the agent's own reasoning on top of `search_catalog`.
 
 ## Timeline (deadline 5:00 PM)

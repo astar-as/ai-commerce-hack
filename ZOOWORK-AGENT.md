@@ -1,86 +1,69 @@
-# ZooWork agent — voice to home delivery or store pickup
+# ZooWork agent (owner 1)
 
-The agent takes what the shopper said (a transcript), builds a Safeway basket, asks
-**delivery or pickup**, confirms once, and places it:
+The ZooWork agent is Basket's brain behind the voice. GPT-Live does the talking. When the shopper
+wants something, the frontend calls `POST /api/delegate`. With ZooWork configured, that runs a ZooWork
+turn. The agent changes the order on screen through custom tools and answers with one sentence for the
+voice to say.
 
-- **Pickup** → `create_pickup_order` creates an order at the chosen Safeway with a slot and a 4-digit pickup code. It shows up in `GET /api/orders`, for the store screen.
-- **Delivery** → `send_to_instacart` returns a pre-filled Instacart list. The shopper picks Safeway, a delivery window and pays there. Without `INSTACART_API_KEY` it returns a mock link.
+```
+voice (GPT-Live) ─► POST /api/delegate { transcript, order }
+                     └► lib/agent.ts runAgentTurn
+                          ├─ ZOOWORK_API_KEY + ZOOWORK_AGENT_ID set → lib/zoowork/delegate.ts (ZooWork)
+                          └─ otherwise → interim OpenAI agent (unchanged)
+ZooWork turn: system.message (profile + current order) + user.message (newest shopper words)
+   ⇄ agent.custom_tool_use → lib/agent-tools/* → resolveCustomToolCall
+   → { say, order, actions }   (same DelegateOutput the frontend already renders)
+```
 
 ## Run it
 
 ```bash
 cp .env.example .env.local      # add ZOOWORK_API_KEY
 npm install
-npm run agent:setup             # creates/updates + starts the agent, saves ZOOWORK_AGENT_ID
-npm run agent:smoke             # runs the pickup + delivery flows live, checks tools fired
-npm run agent:chat              # talk to it in the terminal (demo fallback)
-npm run dev                     # API on http://localhost:3000
+npm run agent:setup             # create/update + start the agent, saves ZOOWORK_AGENT_ID to .env.local
+npm run agent:smoke             # live: pickup, profile, delivery flows through the /api/delegate path
+npm run agent:chat              # talk to it in the terminal (demo fallback), prints the order after each turn
+npm run dev                     # the app; /api/delegate now uses ZooWork
 ```
 
-Re-run `agent:setup` after editing `lib/zoowork/agent-config.ts` (persona or tools).
+On Vercel, set `ZOOWORK_API_KEY` and `ZOOWORK_AGENT_ID` to switch the live site to ZooWork. Remove them to go back to the interim agent.
+Re-run `agent:setup` after editing `lib/zoowork/agent-config.ts`.
 
-## API for the voice / frontend layer
+## Agent tools (`lib/agent-tools/`)
 
-`POST /api/agent` with `{ "text": "<transcript>", "sessionId": "<from the previous turn, optional>" }`
-returns `text/event-stream`. Each `data:` line is one JSON event:
+| Tool | What it does |
+|---|---|
+| `search_catalog` | Searches `lib/demo-catalog.ts`, the same ids the screen renders. Profile allergens and diet are applied automatically, and removed matches are listed in `hidden_by_profile`. With `substitute_for` it uses `findSubstitutes`. |
+| `add_item` `remove_item` `set_qty` `propose_swap` `swap_item` `dismiss_swap` `set_fulfillment` | One per `OrderAction`, applied with `applyAction` from `lib/order.ts`. The actions are returned to the frontend. `add_item` and `swap_item` refuse products the profile blocks. The swap tools log out-of-stock events automatically. |
+| `checkout` | Places the order the screen shows. Pickup: a pickup order with slot and 4-digit code, shown in `fulfillment.eta` and listed at `GET /api/orders`. Delivery: an Instacart shopping-list link in `fulfillment.checkout_url`, which the checkout button opens. Without `INSTACART_API_KEY` it links to Safeway's Instacart storefront. |
+| `update_profile` | Saves lasting facts the shopper mentions: allergens, diet, brands, dislikes, pickup or delivery. Removing an allergen needs the shopper's confirmation. |
 
-| `type` | Fields | What to do |
-|---|---|---|
-| `session` | `sessionId` | Keep it and send it with the next utterance. Only sent on the first turn. |
-| `assistant` | `text` | Show it and speak it (TTS). Can arrive more than once per turn. |
-| `tool` | `phase` (`start`/`end`), `name`, `input` / `output`, `ok`, `ms` | Optional progress, e.g. "Checking Market St stock…". |
-| `order` | `kind` (`pickup`/`delivery`), `order` | Pickup: card with store, slot, `pickup_code`, `total`. Delivery: button to `order.url`. |
-| `profile` | `profile` | The agent saved something ("my son is allergic to eggs"). Refresh the profile view, e.g. a "Saved: eggs" toast. |
-| `done` | `status` (`succeeded`/`failed`/`aborted`), `error?` | Turn over: start listening again. |
+When data-search merges, point `search_catalog` at `lib/catalog` (Moss). The output shape stays the same.
 
-Example:
+## Household profile (`lib/profile/`)
 
-```js
-const res = await fetch('/api/agent', { method: 'POST', headers: { 'Content-Type': 'application/json' },
-  body: JSON.stringify({ text, sessionId }) })
-const reader = res.body.pipeThrough(new TextDecoderStream()).getReader()
-let buf = ''
-for (;;) {
-  const { value, done } = await reader.read(); if (done) break
-  buf += value
-  let i
-  while ((i = buf.indexOf('\n\n')) >= 0) {
-    const line = buf.slice(0, i); buf = buf.slice(i + 2)
-    if (line.startsWith('data: ')) handle(JSON.parse(line.slice(6)))
-  }
-}
-```
+All of this happens automatically:
 
-Other routes:
-- `GET /api/profile` returns the household profile. `PUT /api/profile` with any of `allergens`, `diet`, `brand_preferences`, `dislikes`, `zip`, `usual_store_id`, `fulfillment_preference`, `budget_weekly`, `notes`, `name`, `household_size` edits it from the app. `POST /api/profile {"reset":true}` restores the demo seed.
-- `POST /api/agent/interrupt` with `{ sessionId }` stops the agent mid-turn (barge-in).
-- `POST /api/tools/<name>` calls a tool directly, with no LLM. Same JSON in and out as the agent gets.
-- `GET /api/orders?store_id=safeway-sf-01` lists the pickup orders for the store screen.
+- **Stored** in our backend: `data/profiles.json` (git-ignored), or `/tmp` on Vercel. The seed is Sam: milk + peanut allergies, prefers pickup.
+  - `GET /api/profile` reads it.
+  - `PUT /api/profile` with fields edits it.
+  - `POST /api/profile {"reset":true}` restores the seed.
+- **Injected** into each ZooWork session as a `system.message`, and re-sent when it changes.
+- **Learned** through `update_profile`.
+- **Enforced** in the tools, so a blocked product can't reach the order even if the model forgets.
 
-One turn at a time per session. Send the next utterance after `done`, or interrupt first.
+## Demo script (works with the 18-product demo catalog)
 
-## How it fits together
+1. *"Pasta night for four tonight, I'll pick it up"*: penne, marinara, basil, garlic. The parmesan is skipped because of the milk allergy, and the agent says so.
+2. *"Add oat milk"*: Oatly is out, so the swap card shows O Organics first. *"Yes"* swaps it.
+3. *"That's all, place it"*: pickup time and code.
+4. *"My daughter can't have wheat"*: the profile updates live, and pasta and bread are blocked from then on.
+5. Delivery: *"Send it to Instacart"*. The checkout button opens the Instacart list.
 
-```
-transcript ─► POST /api/agent ─► lib/zoowork/turn.ts ─► ZooWork session (agent "basket-safeway")
-                                     ▲        │ agent.custom_tool_use (requested)
-                                     │        ▼
-                                     │   lib/tools/* (search_catalog, check_stock, get_fulfillment_options,
-                                     │                create_pickup_order, send_to_instacart, report_oos)
-                                     └── resolveCustomToolCall ◄┘
-```
+Before the demo: run `npm run agent:smoke`, which also resets the profile. Keep `npm run agent:chat` open as a fallback.
 
-- **Persona** (`lib/zoowork/agent-config.ts`): `AGENTS.md` sets a voice style (short spoken replies, no URLs), the order flow, "never place without an explicit yes", and "save lasting facts with update_profile right away".
-- **Household profile** (`lib/profile/`), all automatic:
-  - It's stored in our backend (`data/profiles.json`, git-ignored). The seed is Sam: 94114, Market St, milk + peanut allergies, prefers pickup.
-  - It's injected into every ZooWork session as a `system.message`, and re-sent if it changes between turns (for example after an edit in the app). The shopper never repeats it.
-  - It's learned from conversation: the agent calls `update_profile` as soon as the shopper mentions an allergy, diet, brand or store. Removing an allergen requires the shopper to confirm.
-  - It's enforced server-side in the tools: `search_catalog` hides products that break allergens or diet and reports them in `profile_filters.hidden`. `create_pickup_order` and `send_to_instacart` refuse them. This holds even if the model forgets.
-- **Data**: `mocks/catalog.ts` holds 52 products and 3 SF stores, with demo out-of-stocks (Oatly Barista is out at Market St). Person 2 swaps `lib/tools/catalog-source.ts` and `search_catalog` for the real catalog plus Moss. The tool's input and output don't change.
-- **State** (orders, OOS events, stream cursors) is in memory. Restarting the server clears it.
+## Notes
 
-## Live demo checklist
-
-1. 15 min before: `npm run agent:setup` (agent running) and `npm run agent:smoke` (profile, pickup, delivery ✓; it resets the profile afterwards).
-2. Keep `npm run agent:chat` open in a terminal as the fallback if voice or the network to the UI fails.
-3. Script: *"Taco night for four tonight, I'll pick it up at Market Street after work"* → basket with dairy-free cheese, because the profile says milk allergy and the shopper never mentioned it → *"yes"* → pickup code, and the order appears on the store screen. Then *"My son is allergic to eggs now"* → the profile updates live, and eggs vanish from results. Then *"Get me oat milk, bananas, eggs and spinach delivered"* → *"yes"* → Instacart button.
+- One ZooWork session per voice conversation, keyed by the first transcript line. Sessions are kept in memory: a new server instance starts a fresh session and gets the recent transcript as context.
+- `maxDuration = 60` on `/api/delegate`, because a turn with several tool calls takes 10–30 s.
+- Explainer page: https://claude.ai/artifact/TqNTpfvhrVNXMLRDFNeoHh

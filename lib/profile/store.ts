@@ -4,7 +4,7 @@
 // Persisted to data/profiles.json so a server restart mid-demo keeps what was learned.
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
-import type { Allergen, DietTag } from '../tools/types'
+import type { Allergen, DietTag } from '@/lib/types'
 
 export type Profile = {
   id: string // also the ZooWork actor ref
@@ -44,7 +44,8 @@ const SEED: Profile[] = [
   },
 ]
 
-const FILE = join(process.cwd(), 'data', 'profiles.json')
+// Vercel's filesystem is read-only except /tmp (per instance, so edits there are best-effort).
+const FILE = process.env.VERCEL ? '/tmp/basket-profiles.json' : join(process.cwd(), 'data', 'profiles.json')
 
 // Read fresh on every call: the file is tiny, and the dev server, agent:chat and agent:smoke
 // are separate processes that must all see the same profile.
