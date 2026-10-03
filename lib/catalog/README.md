@@ -50,5 +50,7 @@ npm test
 ## Search engine
 
 - **Moss** when `MOSS_PROJECT_ID` / `MOSS_PROJECT_KEY` are set: build the index with `npm run moss:index` (per catalog source). One product-level index; diet tags and allergens are `diet_*` / `allergen_*` string metadata used as `$eq` filters. Stock is applied after retrieval, so out-of-stock reports work without reindexing.
+- **Warm-up:** the first query in a server process downloads the index (~4 s); after that queries take ~2 ms. Call `warmSearch()` from `lib/catalog/search` at server start (Next.js `instrumentation.ts` `register()`). `took_ms` measures the search only.
+- **Indexes built** (Moss project "Voice Agent"): `kroger-catalog` (581 docs) and `synthetic-catalog` (524 docs). Rebuild after re-importing: `CATALOG_SOURCE=<source> npm run moss:index`.
 - **Local keyword fallback** otherwise — same output, `engine: "local"`.
 - **Substitutes** (`substitute_for`): same department, keep the original's vegan / vegetarian / gluten-free / dairy-free / nut-free tags, in stock at the store, ranked by relevance + store brand + same aisle − price gap.
