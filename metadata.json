@@ -1,0 +1,31 @@
+{
+  "cli_version": "0.11.3",
+  "checkpoint_id": "01M4224FWG08QGPBM5GNXHRKE0",
+  "strategy": "manual-commit",
+  "branch": "worktree-sunny-purring-token",
+  "checkpoints_count": 1,
+  "files_touched": null,
+  "sessions": [
+    {
+      "metadata": "/0/metadata.json",
+      "transcript": "/0/full.jsonl",
+      "compact_transcript": "/0/transcript.jsonl",
+      "content_hash": "/0/content_hash.txt",
+      "prompt": "/0/prompt.txt"
+    }
+  ],
+  "token_usage": {
+    "input_tokens": 38,
+    "cache_creation_tokens": 15209,
+    "cache_read_tokens": 5042877,
+    "output_tokens": 8337,
+    "api_call_count": 19,
+    "subagent_tokens": {
+      "input_tokens": 18,
+      "cache_creation_tokens": 22292,
+      "cache_read_tokens": 2281388,
+      "output_tokens": 4737,
+      "api_call_count": 9
+    }
+  }
+}

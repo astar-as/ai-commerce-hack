@@ -1,0 +1,1 @@
+you can host the slides on the vercel behind /presentation
