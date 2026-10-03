@@ -68,7 +68,7 @@ Next.js API routes ── ZooWork session (streams the agent's replies to the UI
 
 **Hosting: Vercel.** ZooWork's API runs agents, not web apps, and we need server routes for the OpenAI and ZooWork keys anyway.
 
-**One screen, white background.** A voice orb ([ElevenLabs UI `Orb`](https://ui.elevenlabs.io), states `listening` / `thinking` / `talking`, reacts to mic and speaker volume) and under it the **live order**: product images, name, size, qty, price, swap badges ("↺ swapped from Oatly"), and a fulfillment chip (🚚 Instacart delivery · 🛍 Store pickup · 🛒 In store). The store is labeled "Safeway-style demo store" (see [STAKEHOLDERS.md](STAKEHOLDERS.md)).
+**One screen, white background.** A voice orb ([ElevenLabs UI `Orb`](https://ui.elevenlabs.io), states `listening` / `thinking` / `talking`, reacts to mic and speaker volume) and under it the **live order**: product images, name, size, qty, price, swap badges ("↺ swapped from Oatly"), and a fulfillment chip (🚚 Instacart delivery · 🛍 Store pickup · 🛒 In store). The store is labeled "Safeway-style demo store".
 
 **Voice: OpenAI GPT-Live (`gpt-live-1`) with client delegation.** GPT-Live only does the talking; ZooWork stays the brain.
 
