@@ -16,9 +16,10 @@
   --serif:"Newsreader",Georgia,serif;--sans:"Geist",ui-sans-serif,system-ui,-apple-system,sans-serif;--mono:"Geist Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html,body{height:100%;background:#000;overflow:hidden}
+html,body{height:100%;background:#05070d;overflow:hidden;transition:background .6s}
 body{font-family:var(--sans);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;color:var(--ink);cursor:default}
-#stage{position:absolute;left:0;top:0;width:1920px;height:1080px;transform-origin:0 0;overflow:hidden;background:var(--dark);perspective:2200px;perspective-origin:50% 45%}
+#stage{position:absolute;left:0;top:0;width:1920px;height:1080px;transform-origin:0 0;overflow:hidden;background:var(--dark)}
+#frame{position:absolute;left:0;top:0;width:1920px;height:1080px;perspective:2200px;perspective-origin:50% 45%}
 #bgBase,#wipe{position:absolute;inset:0}
 #bgBase{background:var(--dark);transition:background .01s}
 #wipe{clip-path:circle(0% at 50% 50%)}
@@ -43,7 +44,7 @@ body{font-family:var(--sans);-webkit-font-smoothing:antialiased;-moz-osx-font-sm
 .dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#3fd17a;box-shadow:0 0 10px #3fd17a;margin-right:10px;animation:blink 1.6s infinite}
 .dot.red{background:#ff4a3d;box-shadow:0 0 12px #ff4a3d}
 @keyframes blink{50%{opacity:.25}}
-.crn{position:absolute;width:22px;height:22px;border-color:currentColor;border-style:solid;opacity:.6}
+.crn{position:absolute;width:22px;height:22px;border-color:currentColor;border-style:solid;opacity:.35}
 .crn.a{left:40px;top:28px;border-width:1.5px 0 0 1.5px}.crn.b{right:40px;top:28px;border-width:1.5px 1.5px 0 0}.crn.c{left:40px;bottom:28px;border-width:0 0 1.5px 1.5px}.crn.d{right:40px;bottom:28px;border-width:0 1.5px 1.5px 0}
 #prog{position:absolute;left:0;bottom:0;height:3px;background:#3b6cff;width:0;transition:width 1s var(--ease),background .8s}
 #stage.light #prog{background:var(--navy)}
@@ -78,7 +79,7 @@ em{font-style:italic}
 .red-i{color:var(--red)}
 .slide.dark .red-i{color:#ff5a47}
 
-#phone{position:absolute;left:0;top:0;width:433px;height:892px;z-index:40;transform-style:preserve-3d;transition:transform 1.35s var(--ease),opacity .8s var(--ease);will-change:transform;pointer-events:none}
+#phone{position:absolute;left:0;top:0;width:433px;height:892px;z-index:40;transform-style:preserve-3d;transition:transform 1.35s var(--ease),opacity .8s var(--ease);pointer-events:none}
 #phone .shadow{position:absolute;left:30px;right:30px;bottom:-30px;height:80px;border-radius:50%;background:rgba(0,0,0,.45);filter:blur(30px);transform:translateZ(-40px)}
 .bezel{position:absolute;inset:0;border-radius:74px;padding:20px;background:linear-gradient(150deg,#4a4c52 0%,#1a1b1f 18%,#0c0d10 50%,#232428 82%,#55575d 100%);box-shadow:inset 0 0 0 2px #6a6d74,inset 0 0 0 5px #121316,inset 0 0 0 7px #2a2b30,0 80px 140px -40px rgba(0,0,0,.7),0 30px 80px -30px rgba(20,50,160,.45)}
 #stage.light .bezel{box-shadow:inset 0 0 0 2px #6a6d74,inset 0 0 0 5px #121316,inset 0 0 0 7px #2a2b30,0 70px 120px -40px rgba(11,31,91,.45),0 20px 40px -20px rgba(0,0,0,.35)}
@@ -308,6 +309,47 @@ em{font-style:italic}
 .nofilm .film{display:none}
 .s10 .h-l .ln:last-child .li{color:#9db6ff}
 
+
+.s1 .h-xl{top:390px;font-size:320px}.s1 .tag{top:570px}.s1 .p{top:700px}.s1 .chips{top:790px}
+.s2 .h-l{top:300px}.s2 .p{top:640px}
+.s3 .h-m{position:absolute;left:142px;top:140px;font-size:96px;white-space:nowrap}
+.gin{position:absolute;left:150px;top:470px;display:flex;flex-direction:column;gap:78px;font-family:var(--serif);font-size:46px;letter-spacing:-.02em;line-height:60px;color:#fff}
+.gin span:nth-child(2){margin-top:0}
+.gwg{position:absolute;left:1200px;width:620px;height:110px;padding:18px 0 0 26px;border-left:2px solid rgba(255,255,255,.14);transition:border-color .5s}
+.gwg .k{font-family:var(--mono);font-size:15px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.5);transition:color .5s}
+.gwg .wm{margin-top:12px;display:flex;gap:26px;align-items:center}
+.gwg .wm b{font-family:var(--sans);font-weight:600;font-size:32px;letter-spacing:-.025em;color:rgba(255,255,255,.62);transition:color .5s;display:inline-flex;align-items:center;white-space:nowrap}
+.gwg.on{border-color:#6f95ff}.gwg.on .k{color:#9db6ff}.gwg.on .wm b{color:#fff}
+.wm i,.fan i{font-style:normal;font-family:var(--mono);font-weight:500;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#3fd17a;border:1px solid rgba(63,209,122,.5);border-radius:999px;padding:3px 8px 3px 18px;margin-left:12px;position:relative;line-height:1}
+.wm i::before,.fan i::before{content:"";position:absolute;left:7px;top:50%;width:6px;height:6px;margin-top:-3px;border-radius:50%;background:#3fd17a;box-shadow:0 0 8px #3fd17a}
+#gwsvg path{fill:none;stroke:rgba(255,255,255,.16);stroke-width:1.5}
+#gwsvg path.in{stroke:rgba(255,255,255,.22);stroke-dasharray:3 9;animation:dash 1.4s linear infinite}
+#gwsvg path.on{stroke:#6f95ff;stroke-width:2.5;stroke-dasharray:6 10;animation:dash .9s linear infinite}
+.gfoot{position:absolute;left:150px;bottom:96px;font-family:var(--serif);font-size:40px;letter-spacing:-.02em;color:rgba(255,255,255,.85)}
+.s4 .h-m{top:330px}.s4 .p{top:600px}
+.s5 .h-m{top:170px}
+.s6 .live{top:200px}.s6 .url{top:560px}.s6 .qrw{top:720px}
+.s7 .h-m{top:160px}
+.s7 .cg{top:380px;grid-template-columns:repeat(3,1fr)}
+.s7 .cc{padding:34px 40px 40px 0}
+.s7 .cc:not(:nth-child(3n+1)){padding-left:40px}
+.s7 .cc .i{font-size:15px}
+.s7 .cc .c{font-size:42px;margin-top:14px;white-space:nowrap}
+.s7 .cc .r{font-size:24px;margin-top:14px}
+.s8 .h-m{top:160px}
+.s8 .nd .t{margin-top:0;font-size:40px}
+.s8 .nd .d{font-size:14px}
+.fan b{position:absolute;left:1270px;margin-top:-24px;height:48px;display:flex;align-items:center;font-family:var(--sans);font-weight:600;font-size:34px;letter-spacing:-.025em;color:#fff;white-space:nowrap}
+.s9 .h-m{top:200px}
+.biz{position:absolute;left:150px;right:150px;top:420px;border-top:1px solid rgba(10,15,28,.85)}
+.biz div{display:flex;align-items:baseline;gap:40px;padding:34px 0;border-bottom:1px solid rgba(10,15,28,.12);font-family:var(--serif);font-size:64px;letter-spacing:-.03em;line-height:1}
+.biz b{font-family:var(--mono);font-weight:500;font-size:16px;letter-spacing:.14em;color:var(--red)}
+.s10 .h-l{top:170px}
+.s10 .team{position:absolute;left:150px;top:720px;display:flex;gap:44px;font-family:var(--serif);font-size:38px;letter-spacing:-.02em;color:rgba(255,255,255,.9)}
+.s10 .team span{display:inline;font-family:var(--serif);font-size:38px;text-transform:none;letter-spacing:-.02em;color:rgba(255,255,255,.9);margin:0}
+.hud .tl,.hud .tr{transition:opacity .8s var(--ease)}
+#stage.first .hud .tl,#stage.first .hud .tr{opacity:0}
+#cnt{opacity:.6}
 .nav{position:absolute;top:0;bottom:0;width:50%;z-index:100;cursor:pointer}
 .nav.l{left:0;cursor:w-resize}.nav.r{right:0;cursor:e-resize}
 @media (prefers-reduced-motion:reduce){*{transition-duration:.01ms!important;animation-duration:.01ms!important}}
@@ -319,140 +361,95 @@ em{font-style:italic}
   <div id="wipe"></div>
   <div class="grid g-dark"></div>
   <div class="grid g-light"></div>
+  <div id="frame">
   <div id="glow"></div>
   <canvas id="gx" width="1920" height="1080"></canvas>
 
   <section class="slide dark s1" data-theme="dark" data-name="Basket">
-    <div class="lbl fx" style="--d:0"><b>ZOOWORK × AI VALLEY</b> &nbsp;/&nbsp; AI COMMERCE GALLERY &nbsp;/&nbsp; SF</div>
     <h1 class="h-xl split" data-d="60">Basket</h1>
-    <div class="tag h-s split" data-d="260"><em>The grocer’s agent.</em></div>
-    <p class="p fx" style="--d:520">One voice for every way to get food — delivery, pickup, and in store. Built for Kroger. Runs on ZooWork.</p>
-    <div class="chips">
-      <span class="chip fx" style="--d:700"><i></i>Runs on ZooWork</span>
-      <span class="chip fx" style="--d:780"><i></i>Kroger · real store</span>
-      <span class="chip fx" style="--d:860"><i></i>Moss · 2 ms search</span>
-      <span class="chip fx" style="--d:940"><i></i>Instacart</span>
-    </div>
   </section>
 
   <section class="slide light s2" data-theme="light" data-name="The P&amp;L line">
-    <div class="lbl fx" style="--d:0"><b>01</b> &nbsp;—&nbsp; One line of the P&amp;L</div>
     <h2 class="h-l split" data-d="80">Empty shelf.<br><span class="red-i">Lost sale.</span></h2>
-    <p class="p fx" style="--d:360">The shopper walks without it — or buys it somewhere else. And the store finds out late, if at all. We picked that line on Kroger’s P&amp;L and moved it.</p>
-    <div class="flow3">
-      <div class="fx" style="--d:520"><div class="n">01 · SHELF</div><div class="t">Oatly Barista<br>runs out</div></div>
-      <div class="fx" style="--d:620"><div class="n">02 · SHOPPER</div><div class="t">Leaves without<br>a substitute</div></div>
-      <div class="fx" style="--d:720"><div class="n">03 · STORE</div><div class="t r">Sale lost.<br>Nobody told it.</div></div>
-    </div>
+    <p class="p fx" style="--d:360">The shopper walks. The store never knows.</p>
   </section>
 
   <section class="slide dark s3" data-theme="dark" data-name="The gateway">
-    <svg id="gwsvg" viewBox="0 0 1920 1080"><path id="gp0" d="M 742 640 C 640 640, 640 730, 560 730"/><path id="gp1" d="M 1178 470 C 1260 470, 1260 400, 1330 400"/><path id="gp2" d="M 1178 700 C 1260 700, 1260 760, 1330 760"/></svg>
-    <div class="lbl fx" style="--d:0"><b>02</b> &nbsp;—&nbsp; The gateway</div>
-    <h2 class="h-m split" data-d="80">One agent.<br>Every way<br>to get food.</h2>
-    <div class="gwn n0 fx" style="left:140px;top:600px;--d:400"><div class="k"><span>Online</span><span>Delivery</span></div><div class="t">Instacart</div><div class="d">The list becomes an Instacart shopping-list link. Any retailer, checkout in one tap.</div></div>
-    <div class="gwn n1 fx" style="left:1330px;top:270px;--d:500"><div class="k"><span>Order ahead</span><span>Pickup</span></div><div class="t">Kroger pickup</div><div class="d">Pickup code, ready at Kroger On the Rhine. Receipt by email.</div></div>
-    <div class="gwn n2 fx" style="left:1330px;top:630px;--d:600"><div class="k"><span>On the floor</span><span>In store</span></div><div class="t">Aisle by aisle</div><div class="d">Real Kroger aisles and stock. Empty shelf? Swap in milliseconds.</div></div>
-    <div class="foot fx" style="--d:700"><b>Runs on ZooWork</b> &nbsp;·&nbsp; one agent, one order</div>
+    <svg id="gwsvg" viewBox="0 0 1920 1080">
+      <path class="in" d="M 300 500 C 600 500, 620 640, 800 640"/><path class="in" d="M 350 640 L 800 640"/><path class="in" d="M 520 780 C 680 780, 680 640, 800 640"/>
+      <path class="sp" d="M 1118 640 C 1160 640, 1150 430, 1198 430"/><path class="sp" d="M 1118 640 L 1198 640"/><path class="sp" d="M 1118 640 C 1160 640, 1150 850, 1198 850"/>
+    </svg>
+    <h2 class="h-m split" data-d="80">One agent. Every way to get food.</h2>
+    <div class="gin fx" style="--d:300"><span>A dish</span><span>A recipe</span><span>A week of dinners</span></div>
+    <div class="gwg fx" style="top:375px;--d:420"><div class="k">Delivery</div><div class="wm"><b>Instacart<i>Live</i></b><b>Uber Eats</b><b>DoorDash</b></div></div>
+    <div class="gwg fx" style="top:585px;--d:520"><div class="k">Pickup</div><div class="wm"><b>Kroger<i>Live</i></b><b>Walmart</b><b>Target</b></div></div>
+    <div class="gwg fx" style="top:795px;--d:620"><div class="k">In store</div><div class="wm"><b>Aisle by aisle, any grocer</b></div></div>
+    <div class="gfoot fx" style="--d:760"><em>US first. Every country next.</em></div>
   </section>
 
   <section class="slide light s4" data-theme="light" data-name="Say it">
-    <div class="lbl fx" style="--d:0"><b>03</b> &nbsp;—&nbsp; Dish → recipe → list</div>
     <h2 class="h-m split" data-d="80">Say the dish.<br>Get the list.</h2>
-    <p class="p fx" style="--d:300">“Chicken tikka masala for 4.” The agent picks a recipe, scales it, and maps every ingredient to a real, in-stock Kroger product — in one tool call.</p>
-    <div class="map fx" style="--d:420">
-      <div class="mh"><span>Ingredient</span><span>Kroger product</span><span>Aisle</span><span style="text-align:right">Price</span></div>
-      <div id="maprows"></div>
-    </div>
-    <div class="mf fx" style="--d:520"><b>match_ingredients</b> · 1 call · ~15 ms · store brand first · allergens enforced</div>
+    <p class="p fx" style="--d:300">Recipe in. Real Kroger products out. One call.</p>
   </section>
 
   <section class="slide dark s5" data-theme="dark" data-name="Not on the shelf">
-    <div class="lbl fx" style="--d:0"><b>04</b> &nbsp;—&nbsp; In store</div>
     <h2 class="h-m split" data-d="80">Not on the shelf?<br><em>Swapped.</em></h2>
-    <div class="ro fx" style="--d:400">
-      <div>QUERY &nbsp;&nbsp;› <span class="q">“oat milk barista”</span></div>
-      <div>FILTER &nbsp;› in_stock · dairy_free · kroger-01400513</div>
-      <div>RANK &nbsp;&nbsp;&nbsp;› similarity → <b>store brand</b> → price</div>
-      <div>SCAN &nbsp;&nbsp;&nbsp;› <b id="scanN">4,014</b> products → <b id="scanM">3</b></div>
-    </div>
-    <div class="ms fx" style="--d:500"><div class="v"><span id="msv">0.0</span><small>ms</small></div><div class="k">Moss · no LLM in the hot path</div></div>
+    <div class="ms fx" style="--d:500"><div class="v"><span id="msv">0.0</span><small>ms</small></div><div class="k">4,014 products → 3 in stock</div></div>
     <div class="gl" id="gl0"></div><div class="gl" id="gl1"></div><div class="gl" id="gl2"></div>
   </section>
 
   <section class="slide light s6" data-theme="light" data-name="Live demo">
-    <div class="lbl fx" style="--d:0"><b>05</b> &nbsp;—&nbsp; Live, on a real store</div>
     <div class="live"><span class="rec fx" style="--d:200"></span><h2 class="h-xl split" data-d="80">Live.</h2></div>
     <div class="url fx" style="--d:300">ai-commerce-hack<span>.vercel.app</span></div>
-    <p class="p fx" style="--d:400">Real Kroger On the Rhine data. Real ZooWork agent. Real voice. Nothing on this phone is mocked except the Instacart key.</p>
-    <div class="qrw fx" style="--d:500"><div id="qr"></div><div class="t"><b>Scan to try it</b><br>Tap the orb · say a dish<br>Say “they’re out of Oatly”</div></div>
+    <div class="qrw fx" style="--d:450"><div id="qr"></div><div class="t"><b>Scan to try it</b></div></div>
   </section>
 
   <section class="slide light s7" data-theme="light" data-name="Product choices">
-    <div class="lbl fx" style="--d:0"><b>06</b> &nbsp;—&nbsp; Product choices</div>
     <h2 class="h-m split" data-d="80">Every choice has a reason.</h2>
     <div class="cg">
-      <div class="cc fx" style="--d:300"><div class="i">01 · VOICE-FIRST</div><div class="c">Talk, don’t type.</div><div class="r">Hands are full — cooking, pushing a cart. Saying the dish is the fastest input there is.</div></div>
-      <div class="cc fx" style="--d:360"><div class="i">02 · SPLIT BRAIN</div><div class="c">Voice talks. ZooWork thinks.</div><div class="r">GPT-Live keeps the voice instant; the ZooWork agent gets time to reason and call tools.</div></div>
-      <div class="cc fx" style="--d:420"><div class="i">03 · ONE SCREEN</div><div class="c">Mobile web, no install.</div><div class="r">A shopper opens a link. A grocer can ship it on Monday.</div></div>
-      <div class="cc fx" style="--d:480"><div class="i">04 · REAL DATA</div><div class="c">One real Kroger store.</div><div class="r">4,014 products with real aisles, stock, prices and allergens beat a synthetic demo.</div></div>
-      <div class="cc fx" style="--d:540"><div class="i">05 · SPEED</div><div class="c">No LLM in the hot path.</div><div class="r">“Not on the shelf” → Moss → in-stock alternatives in ~2 ms, even on store wifi.</div></div>
-      <div class="cc fx" style="--d:600"><div class="i">06 · MARGIN</div><div class="c">Store brand first.</div><div class="r">The substitute that keeps the sale usually earns the grocer more per item.</div></div>
-      <div class="cc fx" style="--d:660"><div class="i">07 · SAFETY</div><div class="c">Safety in the tools.</div><div class="r">Not in the prompt: allergens and diet are filtered before the agent ever sees a product.</div></div>
-      <div class="cc fx" style="--d:720"><div class="i">08 · TRUST</div><div class="c">Order state in our backend.</div><div class="r">The screen renders what’s true — not what the model remembers.</div></div>
-      <div class="cc fx" style="--d:780"><div class="i">09 · REACH</div><div class="c">Instacart + Kroger.</div><div class="r">Instacart link for delivery from any retailer; Kroger for pickup, aisles and stock.</div></div>
+      <div class="cc fx" style="--d:300"><div class="i">01</div><div class="c">Voice-first.</div><div class="r">Hands are full. Talking is fastest.</div></div>
+      <div class="cc fx" style="--d:370"><div class="i">02</div><div class="c">ZooWork is the brain.</div><div class="r">Instant voice on top, real reasoning underneath.</div></div>
+      <div class="cc fx" style="--d:440"><div class="i">03</div><div class="c">No install.</div><div class="r">A link on any phone. Ships Monday.</div></div>
+      <div class="cc fx" style="--d:510"><div class="i">04</div><div class="c">Real store data.</div><div class="r">Real Kroger aisles, stock and prices.</div></div>
+      <div class="cc fx" style="--d:580"><div class="i">05</div><div class="c">No LLM in the hot path.</div><div class="r">Swaps in milliseconds, even on store wifi.</div></div>
+      <div class="cc fx" style="--d:650"><div class="i">06</div><div class="c">Store brand first.</div><div class="r">Keeps the sale at a better margin.</div></div>
     </div>
   </section>
 
   <section class="slide dark s8" data-theme="dark" data-name="Architecture">
     <svg id="archsvg" viewBox="0 0 1920 1080">
-      <path d="M 330 620 L 410 620"/><path class="f" d="M 330 620 L 410 620"/>
-      <path d="M 650 620 L 720 620"/><path class="f" d="M 650 620 L 720 620"/>
-      <path d="M 960 620 L 1030 620"/><path class="f" d="M 960 620 L 1030 620"/>
-      <path d="M 1300 620 C 1330 620, 1330 437, 1360 437"/><path d="M 1300 620 C 1330 620, 1330 501, 1360 501"/><path d="M 1300 620 C 1330 620, 1330 565, 1360 565"/><path d="M 1300 620 C 1330 620, 1330 629, 1360 629"/><path d="M 1300 620 C 1330 620, 1330 693, 1360 693"/><path d="M 1300 620 C 1330 620, 1330 757, 1360 757"/>
-      <path class="f" d="M 1300 620 C 1330 620, 1330 437, 1360 437"/><path class="f" d="M 1300 620 C 1330 620, 1330 565, 1360 565"/><path class="f" d="M 1300 620 C 1330 620, 1330 693, 1360 693"/>
-      <path d="M 1660 437 C 1680 437, 1680 470, 1700 470"/><path d="M 1660 501 C 1680 501, 1680 470, 1700 470"/><path d="M 1660 565 C 1680 565, 1680 610, 1700 610"/><path d="M 1660 693 C 1680 693, 1680 610, 1700 610"/><path d="M 1660 629 C 1680 629, 1680 750, 1700 750"/>
-      <path class="f" d="M 1660 437 C 1680 437, 1680 470, 1700 470"/><path class="f" d="M 1660 565 C 1680 565, 1680 610, 1700 610"/><path class="f" d="M 1660 629 C 1680 629, 1680 750, 1700 750"/>
+      <path d="M 330 620 L 430 620"/><path class="f" d="M 330 620 L 430 620"/>
+      <path d="M 690 620 L 790 620"/><path class="f" d="M 690 620 L 790 620"/>
+      <path d="M 1110 620 C 1170 620, 1170 395, 1250 395"/><path d="M 1110 620 C 1170 620, 1170 485, 1250 485"/><path d="M 1110 620 C 1170 620, 1170 575, 1250 575"/><path d="M 1110 620 C 1170 620, 1170 665, 1250 665"/><path d="M 1110 620 C 1170 620, 1170 755, 1250 755"/><path d="M 1110 620 C 1170 620, 1170 845, 1250 845"/>
+      <path class="f" d="M 1110 620 C 1170 620, 1170 395, 1250 395"/><path class="f" d="M 1110 620 C 1170 620, 1170 485, 1250 485"/>
     </svg>
-    <div class="lbl fx" style="--d:0"><b>07</b> &nbsp;—&nbsp; Architecture</div>
-    <h2 class="h-m split" data-d="80">How it runs.</h2>
-    <div class="nd fx" style="left:410px;top:540px;width:240px;--d:300"><div class="k">Voice · WebRTC</div><div class="t">GPT-Live</div><div class="d">talks, delegates</div></div>
-    <div class="nd fx" style="left:720px;top:540px;width:240px;--d:380"><div class="k">Next.js · Vercel</div><div class="t">/api/delegate</div><div class="d">order state lives here</div></div>
-    <div class="nd zw fx" style="left:1030px;top:520px;width:270px;--d:460"><div class="k">The brain</div><div class="t">ZooWork agent</div><div class="d">claude-sonnet-5-5 · memory</div></div>
-    <div class="tl2 fx" style="left:1360px;top:412px;--d:540"><i></i>match_ingredients</div>
-    <div class="tl2 fx" style="left:1360px;top:476px;--d:570"><i></i>search_order_history</div>
-    <div class="tl2 fx" style="left:1360px;top:540px;--d:600"><i></i>search_catalog</div>
-    <div class="tl2 fx" style="left:1360px;top:604px;--d:630"><i></i>send_to_instacart</div>
-    <div class="tl2 fx" style="left:1360px;top:668px;--d:660"><i></i>check_stock</div>
-    <div class="tl2 fx" style="left:1360px;top:732px;--d:690"><i></i>checkout · pickup</div>
-    <div class="nd fx" style="left:1700px;top:420px;width:180px;padding:14px 18px;--d:720"><div class="k">Search</div><div class="t" style="font-size:28px">Moss</div></div>
-    <div class="nd fx" style="left:1700px;top:560px;width:180px;padding:14px 18px;--d:760"><div class="k">Store data</div><div class="t" style="font-size:28px">Kroger API</div></div>
-    <div class="nd fx" style="left:1700px;top:700px;width:180px;padding:14px 18px;--d:800"><div class="k">Online</div><div class="t" style="font-size:28px">Instacart</div></div>
-    <div class="foot fx" style="--d:860"><span>Allergens enforced in tools</span><span>Tap → Moss → swap, no LLM</span><span>Every session saved with Entire</span></div>
+    <h2 class="h-m split" data-d="80">Runs on ZooWork.</h2>
+    <div class="nd fx" style="left:430px;top:560px;width:260px;--d:300"><div class="t">GPT-Live</div><div class="d">voice</div></div>
+    <div class="nd zw fx" style="left:790px;top:545px;width:320px;--d:400"><div class="t">ZooWork agent</div><div class="d">memory · tools · Moss search</div></div>
+    <div class="fan">
+      <b class="fx" style="top:395px;--d:500">Instacart<i>Live</i></b>
+      <b class="fx" style="top:485px;--d:550">Kroger<i>Live</i></b>
+      <b class="fx" style="top:575px;--d:600">Uber Eats</b>
+      <b class="fx" style="top:665px;--d:650">DoorDash</b>
+      <b class="fx" style="top:755px;--d:700">Walmart</b>
+      <b class="fx" style="top:845px;--d:750">Target</b>
+    </div>
   </section>
 
   <section class="slide light s9" data-theme="light" data-name="Why Monday">
-    <div class="lbl fx" style="--d:0"><b>08</b> &nbsp;—&nbsp; The business</div>
-    <h2 class="h-m split" data-d="80">Who pays. What moves.<br>Why Monday.</h2>
-    <div class="cols">
-      <div class="col fx" style="--d:320"><div class="k">Who pays</div><div class="big">The grocer.</div><div class="d">Basket runs on the grocer’s own catalog and stock feed, under the grocer’s brand. The shopper’s agent finally has a merchant counterpart.</div></div>
-      <div class="col fx" style="--d:420"><div class="k">What moves</div><ul><li><b>01</b>Revenue kept on every out-of-stock</li><li><b>02</b>Store-brand mix — Simple Truth before Oatly</li><li><b>03</b>A live restock signal from every “not on the shelf”</li></ul></div>
-      <div class="col fx" style="--d:520"><div class="k">Runs Monday</div><ul><li><b>01</b>Plug in the store’s product + stock API — Kroger works today</li><li><b>02</b>Deploy the web app</li><li><b>03</b>Shoppers open a link. No install.</li></ul></div>
+    <h2 class="h-m split" data-d="80">Built for the grocer.</h2>
+    <div class="biz">
+      <div class="fx" style="--d:320"><b>01</b>Sales kept on every empty shelf.</div>
+      <div class="fx" style="--d:420"><b>02</b>Store brand first. Better margin.</div>
+      <div class="fx" style="--d:520"><b>03</b>Plug in the stock feed. Live Monday.</div>
     </div>
-    <div class="brief fx" style="--d:640">“Pick a real merchant. Pick one line of their P&amp;L. Move it.” &nbsp;<span>→ Kroger · sales lost to empty shelves</span></div>
   </section>
 
   <section class="slide dark s10" data-theme="dark" data-name="Basket">
-    <div class="lbl fx" style="--d:0"><b>BASKET</b> &nbsp;/&nbsp; THE GROCER’S AGENT &nbsp;/&nbsp; RUNS ON ZOOWORK</div>
     <h2 class="h-l split" data-d="80">Every empty shelf<br>is a lost sale.<br>With Basket,<br>it’s a swap.</h2>
-    <div class="team">
-      <div class="fx" style="--d:600">Anders<span>Agent · ZooWork</span></div>
-      <div class="fx" style="--d:660">Leon<span>Data · Moss search</span></div>
-      <div class="fx" style="--d:720">Erik<span>Frontend · voice</span></div>
-      <div class="fx" style="--d:780">Oliver<span>Integrations · pitch</span></div>
-    </div>
+    <div class="team fx" style="--d:600"><span>Anders</span><span>Leon</span><span>Erik</span><span>Oliver</span></div>
     <div class="film fx" style="--d:400"><span class="snd" id="snd">Click for sound</span><video id="film" src="/presentation/basket-20s.mp4" muted loop playsinline preload="auto"></video></div>
-    <div class="url fx" style="--d:840"><b>ai-commerce-hack.vercel.app</b> &nbsp;·&nbsp; ZooWork · Moss · Kroger · Instacart · Entire</div>
+    <div class="url fx" style="--d:700"><b>ai-commerce-hack.vercel.app</b></div>
   </section>
 
   <div id="phone">
@@ -491,12 +488,11 @@ em{font-style:italic}
     </div>
   </div>
 
+  </div>
   <div class="hud">
     <span class="crn a"></span><span class="crn b"></span><span class="crn c"></span><span class="crn d"></span>
-    <div class="tl"><span class="mark"><i></i>Basket</span><span>SYS / AGENT · ZOOWORK</span></div>
-    <div class="tr"><span id="secname">Basket</span><span id="cnt">01 / 10</span></div>
-    <div class="bl">39.1153° N · 84.5157° W &nbsp;·&nbsp; KROGER ON THE RHINE · STORE 01400513</div>
-    <div class="br"><span><span class="dot"></span>Agent online</span><span id="clock">16:20:00</span></div>
+    <div class="tl"><span class="mark"><i></i>Basket</span></div>
+    <div class="tr"><span id="cnt">01 / 10</span></div>
     <div id="prog"></div>
   </div>
   <div class="nav l" id="navl"></div><div class="nav r" id="navr"></div>
@@ -507,7 +503,7 @@ em{font-style:italic}
 <script>
 const $=(s,r=document)=>r.querySelector(s);const $$=(s,r=document)=>[...r.querySelectorAll(s)];
 const stage=$('#stage'),phone=$('#phone'),scr=$('#scr');
-function fit(){const s=Math.min(innerWidth/1920,innerHeight/1080);stage.style.transform=`translate(${(innerWidth-1920*s)/2}px,${(innerHeight-1080*s)/2}px) scale(${s})`}
+let FX=0,FY=0;function fit(){const vw=innerWidth,vh=innerHeight,s=Math.min(vw/1920,vh/1080),W=vw/s,H=vh/s;FX=(W-1920)/2;FY=(H-1080)/2;stage.style.width=W+'px';stage.style.height=H+'px';stage.style.transform=`scale(${s})`;const f=document.getElementById('frame');f.style.left=FX+'px';f.style.top=FY+'px'}
 addEventListener('resize',fit);fit();
 $$('.split').forEach(el=>{const base=+(el.dataset.d||0);el.innerHTML=el.innerHTML.split(/<br\s*\/?>/i).map((h,i)=>`<span class="ln"><span class="li" style="--d:${base+i*90}">${h}</span></span>`).join('')});
 
@@ -642,26 +638,26 @@ function drawGalaxy(t){if(!G.r||!G.on)return;G.q+=(G.qt-G.q)*0.035;G.u.uTime.val
   G.rings.forEach((m,j)=>{m.material.opacity=Math.max(0,G.q*1.4-0.5-j*.1);const s=1+0.15*Math.sin(t/300+j);m.scale.set(s,s,s)});G.r.render(G.scene,G.cam)}
 
 function loop(t){drawOrb(t);drawGalaxy(t);requestAnimationFrame(loop)}requestAnimationFrame(loop);
-setInterval(()=>{const d=new Date();$('#clock').textContent=d.toTimeString().slice(0,8)},1000);
+
 
 function countUp(el,to,dur,dec=0,fmt){const t0=performance.now();const g=gen;const f=t=>{if(g!==gen)return;const k=Math.max(0,Math.min(1,(t-t0)/dur)),e=1-Math.pow(1-k,4);const v=to*e;el.textContent=fmt?fmt(v):v.toFixed(dec);if(k<1)requestAnimationFrame(f)};requestAnimationFrame(f)}
 
 const OFF={x:743,y:1250,s:.7,rx:30,ry:0,rz:-8,o:0};
 const SL=[
- {pose:{x:1290,y:94,s:1,rx:6,ry:-24,rz:3},glow:[820,-160],async run(){instant(()=>{reset();setView('home')});await sleep(1700);tap($('#orbHit'));S.orbMode='listening';setStatus('Listening',true);await sleep(900);await setCaption('Chicken tikka masala for 4','user');await sleep(1300);S.orbMode='thinking';setStatus('Checking the shelves…',false);await sleep(1500);S.orbMode='talking';setStatus('Speaking',true);await setCaption('Ten things from Kroger On the Rhine. Want delivery?','agent');await sleep(2600);S.orbMode='listening';setStatus('Listening',true)}},
+ {pose:{x:1250,y:94,s:1,rx:6,ry:-24,rz:3},glow:[820,-160],async run(){instant(()=>{reset();setView('home')});await sleep(1700);tap($('#orbHit'));S.orbMode='listening';setStatus('Listening',true);await sleep(900);await setCaption('Chicken tikka masala for 4','user');await sleep(1300);S.orbMode='thinking';setStatus('Checking the shelves…',false);await sleep(1500);S.orbMode='talking';setStatus('Speaking',true);await setCaption('Ten things from Kroger On the Rhine. Want delivery?','agent');await sleep(2600);S.orbMode='listening';setStatus('Listening',true)}},
  {pose:{x:1320,y:110,s:.94,rx:0,ry:-10,rz:0},glow:[980,-100],async run(){instant(()=>{reset();setMode('in_store',false);fill(true);setView('order');S.orbMode='listening';setStatus('Listening',true);capNow('');const r=S.rows.get('oatly');scrollToEl(r,330)});
    await sleep(1300);await setCaption('They’re out of Oatly Barista.','user');await sleep(500);const it=S.items.find(i=>i.p.id==='oatly');it.status='oos';it.note='';it.fresh=true;renderList(false);totals();const r=S.rows.get('oatly');r.animate([{background:'rgba(180,35,24,.08)'},{background:'transparent'}],{duration:1400})}},
- {pose:{x:743,y:94,s:.98,rx:0,ry:0,rz:0},glow:[260,-160],async run(){instant(()=>{reset();fill(true);setView('order');setStatus('Listening',true);capNow('Delivery, pickup, or in store?','agent');S.orbMode='listening';hl(0)});
+ {pose:{x:743.5,y:194,s:.72,rx:0,ry:0,rz:0},glow:[260,-60],async run(){instant(()=>{reset();fill(true);setView('order');setStatus('Listening',true);capNow('Delivery, pickup, or in store?','agent');S.orbMode='listening';hl(0)});
    const btns=$$('#sw button');let i=0;await sleep(1500);while(true){i=(i+1)%3;tap(btns[i]);await sleep(160);setMode(MODES[i]);hl(i);await sleep(2300)}}},
- {pose:{x:170,y:94,s:1,rx:0,ry:14,rz:0},glow:[-300,-100],async run(){instant(()=>{reset();setView('home')});const mr=$('#maprows');mr.innerHTML=TIKKA.slice(0,8).map(([k,q,ing])=>{const p=P[k];return `<div class="mr" data-k="${k}"><span class="a">${ing}</span><span class="b">${p.name.replace('Boneless Skinless ','')}${p.sb?'<i>STORE BRAND</i>':''}</span><span class="c">${p.ais.split(' · ')[0]}</span><span class="d">${money(p.price*q)}</span></div>`}).join('');
+ {pose:{x:170,y:94,s:1,rx:0,ry:14,rz:0},glow:[-300,-100],async run(){instant(()=>{reset();setView('home')});
    await sleep(1100);tap($('#orbHit'));S.orbMode='listening';setStatus('Listening',true);await sleep(700);await setCaption('Chicken tikka masala for 4','user');await sleep(1000);S.orbMode='thinking';setStatus('Checking the shelves…',false);await sleep(1100);
    setView('order');S.orbMode='talking';setStatus('Speaking',true);await sleep(500);await setCaption('Tikka masala for 4. Got salt and oil at home?','agent');
-   for(const [k,q] of TIKKA){addItem(k,q,undefined);const m=$(`.mr[data-k="${k}"]`);if(m)m.classList.add('on');followBottom();await sleep(330)}
+   for(const [k,q] of TIKKA){addItem(k,q,undefined);followBottom();await sleep(330)}
    S.orbMode='listening';setStatus('Listening',true)}},
  {pose:{x:1350,y:110,s:.94,rx:0,ry:-8,rz:0},glow:[1000,-200],galaxy:1,async run(){instant(()=>{reset();setMode('in_store',false);fill(true);setView('order');S.orbMode='listening';setStatus('Listening',true);capNow('');scrollTo(0)});
-   G.qt=0;G.q=0;$$('.gl').forEach(e=>e.classList.remove('on'));$('#msv').textContent='0.0';$('#scanN').textContent='4,014';$('#scanM').textContent='—';
+   G.qt=0;G.q=0;$$('.gl').forEach(e=>e.classList.remove('on'));$('#msv').textContent='0.0';
    await sleep(1000);await setCaption('They’re out of Oatly Barista.','user');const it=S.items.find(i=>i.p.id==='oatly');it.status='oos';it.note='';it.fresh=true;renderList(false);totals();
-   await sleep(500);G.qt=1;countUp($('#msv'),2.1,1500,1);countUp($('#scanM'),3,1500,0);S.orbMode='thinking';setStatus('Checking the shelves…',false);
+   await sleep(500);G.qt=1;countUp($('#msv'),2.1,1500,1);S.orbMode='thinking';setStatus('Checking the shelves…',false);
    await sleep(1100);$$('.gl').forEach((e,j)=>setTimeout(()=>e.classList.add('on'),j*120));showSwap(true);S.orbMode='talking';setStatus('Speaking',true);await setCaption('Simple Truth is in aisle 4 — $2 less, still dairy-free.','agent');
    await sleep(2200);const best=$('.opt.best .go');tap(best);await sleep(350);
    it.status='swapped';it.from=P.oatly;it.p=P.stoat;it.note='−$2.00';it.fresh=true;S.rows.set('stoat',S.rows.get('oatly'));S.rows.delete('oatly');showSwap(false);renderList(false);totals();
@@ -672,7 +668,7 @@ const SL=[
  {pose:{x:743,y:1250,s:.7,rx:-30,ry:0,rz:8,o:0},glow:[700,400],async run(){}},
  {pose:{x:1260,y:94,s:1,rx:4,ry:-20,rz:2},glow:[900,-160],async run(){instant(()=>{reset();setView('home');S.orbMode='idle';setStatus('Tap the orb to start talking',false)})}},
 ];
-function hl(i){$$('.gwn').forEach((n,j)=>n.classList.toggle('on',j===i));$$('#gwsvg path').forEach((p,j)=>p.classList.toggle('on',j===i))}
+function hl(i){$$('.gwg').forEach((n,j)=>n.classList.toggle('on',j===i));$$('#gwsvg path.sp').forEach((p,j)=>p.classList.toggle('on',j===i))}
 let hasFilm=true;const film=$('#film');
 film.addEventListener('loadeddata',()=>{if(cur===9)film.play().catch(()=>{})});
 film.addEventListener('error',()=>{hasFilm=false;$('.s10').classList.add('nofilm');if(cur===9)apply(9)});
@@ -681,14 +677,14 @@ function poseCSS(p){return `translate3d(${p.x}px,${p.y}px,0) rotateX(${p.rx||0}d
 function apply(i,force){const d=SL[i];let pose=d.pose;if(i===9&&hasFilm)pose={...OFF,y:1300};phone.style.transform=poseCSS(pose);phone.style.opacity=pose.o===0?0:1;
   $('#glow').style.transform=`translate(${d.glow[0]-820}px,${d.glow[1]+160}px)`}
 function wipe(theme,x,y){const w=$('#wipe'),col=theme==='dark'?'#05070d':'#f4f5f7';w.getAnimations().forEach(a=>a.cancel());w.style.background=col;
-  const a=w.animate([{clipPath:`circle(0% at ${x}px ${y}px)`},{clipPath:`circle(2300px at ${x}px ${y}px)`}],{duration:1150,easing:'cubic-bezier(.76,0,.18,1)',fill:'forwards'});
-  a.onfinish=()=>{$('#bgBase').style.background=col;a.cancel();w.style.clipPath='circle(0% at 50% 50%)'}}
+  const a=w.animate([{clipPath:`circle(0% at ${x+FX}px ${y+FY}px)`},{clipPath:`circle(2700px at ${x+FX}px ${y+FY}px)`}],{duration:1150,easing:'cubic-bezier(.76,0,.18,1)',fill:'forwards'});
+  a.onfinish=()=>{$('#bgBase').style.background=col;document.documentElement.style.background=col;document.body.style.background=col;a.cancel();w.style.clipPath='circle(0% at 50% 50%)'}}
 function go(i){i=Math.max(0,Math.min(slides.length-1,i));if(i===cur)return;const prev=cur;cur=i;gen++;
-  slides.forEach((s,j)=>{s.classList.toggle('active',j===i);s.classList.toggle('past',j<i)});
+  slides.forEach((s,j)=>{s.classList.toggle('active',j===i);s.classList.toggle('past',j<i)});stage.classList.toggle('first',i===0);
   const th=slides[i].dataset.theme;const pth=prev>=0?slides[prev].dataset.theme:null;
-  if(th!==pth){const p=SL[i].pose;const cx=p.o===0?960:p.x+216,cy=p.o===0?540:p.y+446;if(prev<0){$('#bgBase').style.background=th==='dark'?'#05070d':'#f4f5f7'}else wipe(th,cx,cy);setTimeout(()=>stage.classList.toggle('light',th==='light'),prev<0?0:350)}
+  if(th!==pth){const p=SL[i].pose;const cx=p.o===0?960:p.x+216,cy=p.o===0?540:p.y+446;if(prev<0){const c0=th==='dark'?'#05070d':'#f4f5f7';$('#bgBase').style.background=c0;document.documentElement.style.background=c0;document.body.style.background=c0}else wipe(th,cx,cy);setTimeout(()=>stage.classList.toggle('light',th==='light'),prev<0?0:350)}
   apply(i);$('#gx').classList.toggle('on',!!SL[i].galaxy);G.on=!!SL[i].galaxy||G.on;if(SL[i].galaxy){G.on=true}else setTimeout(()=>{if(!SL[cur].galaxy)G.on=false},1200);
-  $('#cnt').textContent=`${String(i+1).padStart(2,'0')} / ${String(slides.length).padStart(2,'0')}`;$('#secname').textContent=slides[i].dataset.name.replace('&amp;','&');$('#prog').style.width=`${(i+1)/slides.length*100}%`;
+  $('#cnt').textContent=`${String(i+1).padStart(2,'0')} / ${String(slides.length).padStart(2,'0')}`;$('#prog').style.width=`${(i+1)/slides.length*100}%`;
   if(i===9&&hasFilm){try{film.currentTime=0}catch(e){}film.play().catch(()=>{})}else if(hasFilm){film.pause();film.muted=true;$('#snd').textContent='Click for sound'}
   history.replaceState(null,'','#'+(i+1));
   SL[i].run().catch(()=>{})}
