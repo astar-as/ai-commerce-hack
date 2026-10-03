@@ -1,7 +1,7 @@
 // Pre-demo check against the live ZooWork agent, through the same path as /api/delegate.
-//   npm run agent:smoke            # pickup + profile + delivery
+//   npm run agent:smoke            # pickup + profile + receipt + delivery
 //   npm run agent:smoke pickup     # one flow
-// Resets the demo profile before and after, so the live run starts clean.
+// Resets the demo profile before each flow and after the run, so the live demo starts clean.
 import { emptyOrder } from "../lib/order";
 import { DEMO_PROFILE_ID, getProfile, resetProfile } from "../lib/profile/store";
 import type { OrderState, TranscriptLine } from "../lib/types";
@@ -33,6 +33,14 @@ const FLOWS: Flow[] = [
           : undefined,
   },
   {
+    name: "receipt",
+    turns: ["Add that really good bread I bought about two weeks ago."],
+    check: (o) => {
+      const bread = o.items.find((i) => i.product.id === "sw-019");
+      return !bread ? "Acme bread from the receipt not added" : !bread.note?.startsWith("Bought") ? "no 'Bought … ago' note" : undefined;
+    },
+  },
+  {
     name: "delivery",
     turns: ["Can I get oat milk, bananas and spinach delivered to my home?", "Yes, that's all. Send it to Instacart."],
     check: (o) =>
@@ -52,6 +60,7 @@ resetProfile(DEMO_PROFILE_ID);
 
 for (const flow of FLOWS.filter((f) => !only || f.name === only)) {
   console.log(`\n=== ${flow.name} ===`);
+  resetProfile(DEMO_PROFILE_ID); // each flow starts from the demo household
   const convo = { transcript: [] as TranscriptLine[], order: emptyOrder() };
   const started = Date.now();
   try {

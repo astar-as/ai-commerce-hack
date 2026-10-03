@@ -8,8 +8,10 @@ export const orderHistoryTool: ToolDefinition<SearchOrderHistoryInput> = {
   name: searchOrderHistoryTool.name,
   description: searchOrderHistoryTool.description + " Then add the match with add_item and mention when they bought it.",
   input_schema: searchOrderHistoryTool.input_schema as ToolDefinition["input_schema"],
-  run: async (input) => {
+  run: async (input, ctx) => {
     const out = await searchOrderHistoryTool.run(input);
+    ctx.historyHits ??= new Map();
+    for (const m of out.matches) ctx.historyHits.set(m.product.id, m.receipt.days_ago);
     return {
       matches: out.matches.map((m) => ({
         product_id: m.product.id,

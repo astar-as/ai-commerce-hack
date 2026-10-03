@@ -40,34 +40,34 @@ export async function* runTurn({ text, notes = [], sessionId, actorRef, ctx, sig
   const content = text.trim();
   if (!content) throw new Error("text is empty");
 
+  const message = (text: string) => ({
+    type: "user.message",
+    content: text,
+    idempotency_key: `msg-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
+    ...(actorRef && { actor: { ref: actorRef } }),
+  });
+
   let sid = sessionId;
+  const profileChanged = Boolean(ctx.profile && (!sid || profileSeen.get(sid) !== ctx.profile.version));
+  const context = [...(profileChanged && ctx.profile ? [profileBrief(ctx.profile)] : []), ...notes];
   // Without a saved cursor for an existing session, skip everything up to its current end.
   let minSeq = -1;
+
   if (sid) {
     if (state.busy.has(sid)) throw new Error("A turn is already running in this session");
     if (!state.cursors.has(sid)) {
       const history = await zc.listAllEvents(aid, sid);
       minSeq = history.reduce((max, ev) => Math.max(max, ev.seq), -1);
     }
+    await zc.postEvents(aid, sid, [...context.map((note) => ({ type: "system.message", text: note })), message(content)]);
   } else {
-    // initial_events only accepts user.message, so open empty and post the notes first.
-    const session = await zc.createSession(aid, { metadata: { app: "basket", household: actorRef ?? null } });
+    // ZooWork answers 502 to a system.message before a session's first turn, so the first turn
+    // carries its context inside the user message instead.
+    const first = context.length ? `[Context from the Basket app, not said by the shopper]\n${context.join("\n\n")}\n\n[Shopper said]\n${content}` : content;
+    const session = await zc.createSession(aid, { initial_events: [message(first)], metadata: { app: "basket", household: actorRef ?? null } });
     sid = session.session_id;
     yield { type: "session", sessionId: sid };
   }
-
-  const outbound: Array<Record<string, unknown> & { type: string }> = [];
-  if (ctx.profile && profileSeen.get(sid) !== ctx.profile.version) {
-    outbound.push({ type: "system.message", text: profileBrief(ctx.profile) });
-  }
-  for (const note of notes) outbound.push({ type: "system.message", text: note });
-  outbound.push({
-    type: "user.message",
-    content,
-    idempotency_key: `msg-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
-    ...(actorRef && { actor: { ref: actorRef } }),
-  });
-  await zc.postEvents(aid, sid, outbound);
   if (ctx.profile) profileSeen.set(sid, ctx.profile.version);
 
   state.busy.add(sid);

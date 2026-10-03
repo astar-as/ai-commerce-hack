@@ -15,6 +15,7 @@ export type ToolContext = {
   profile?: Profile; // the household: allergens and diet are enforced in the tools
   order: OrderState; // the order the screen renders; order tools change it
   actions: OrderAction[]; // what changed this turn, returned to the frontend
+  historyHits?: Map<string, number>; // product id → days since bought, from search_order_history
 };
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any -- tools with different inputs share one registry

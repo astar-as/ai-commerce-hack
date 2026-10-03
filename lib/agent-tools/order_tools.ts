@@ -1,9 +1,11 @@
 // Order tools: one per OrderAction in lib/types.ts, applied with applyAction from lib/order.ts.
 // The tools change ctx.order (what the screen renders) and record each action for /api/delegate.
 import { DEMO_STORE, OUT_OF_STOCK, productById } from "@/lib/demo-catalog";
+import { ago } from "@/lib/history/ago";
 import { applyAction } from "@/lib/order";
 import { profileViolations } from "@/lib/profile/guard";
 import type { FulfillmentMode, OrderAction, OrderState } from "@/lib/types";
+import { nextPickupSlot } from "./create_pickup_order";
 import { reportOos } from "./report_oos";
 import { AgentToolError, type ToolContext, type ToolDefinition } from "./types";
 
@@ -54,7 +56,13 @@ export const addItemTool: ToolDefinition<{ product_id: string; qty?: number }> =
   input_schema: { type: "object", properties: { product_id: productId, qty: { type: "integer", minimum: 1 } }, required: ["product_id"] },
   run: async ({ product_id, qty }, ctx) => {
     guard(product_id, ctx);
-    return apply(ctx, { type: "add_item", product_id, qty: qty ?? 1 });
+    const summary = apply(ctx, { type: "add_item", product_id, qty: qty ?? 1 });
+    // Re-added from a past receipt: label it the way the screen expects ("Bought 2 weeks ago").
+    const days = ctx.historyHits?.get(product_id);
+    if (days === undefined) return summary;
+    const items = ctx.order.items.map((i) => (i.product.id === product_id && !i.note ? { ...i, note: `Bought ${ago(days)}` } : i));
+    ctx.order = { ...ctx.order, items };
+    return orderSummary(ctx.order);
   },
 };
 
@@ -130,7 +138,11 @@ export const setFulfillmentTool: ToolDefinition<{ mode: FulfillmentMode }> = {
   input_schema: { type: "object", properties: { mode: { type: "string", enum: MODES } }, required: ["mode"] },
   run: async ({ mode }, ctx) => {
     if (!MODES.includes(mode)) throw new AgentToolError("invalid_input", `mode must be one of ${MODES.join(", ")}`);
-    return apply(ctx, { type: "set_fulfillment", mode });
+    const summary = apply(ctx, { type: "set_fulfillment", mode });
+    if (mode !== "store_pickup") return summary;
+    // Promise the slot checkout will actually book, not the generic default.
+    ctx.order = { ...ctx.order, fulfillment: { ...ctx.order.fulfillment, eta: `Pickup ${nextPickupSlot()}` } };
+    return orderSummary(ctx.order);
   },
 };
 
