@@ -1,7 +1,7 @@
 // (Re)builds the Moss index from the active catalog (CATALOG_SOURCE) and runs a test query.
 // Needs MOSS_PROJECT_ID + MOSS_PROJECT_KEY. Run: npm run moss:index
-import { allProducts } from "../lib/catalog/data.ts";
-import { mossClient, mossConfigured, mossIndexName, productToDoc } from "../lib/catalog/moss.ts";
+import { allProducts } from "../lib/catalog/data";
+import { mossClient, mossConfigured, mossIndexName, productToDoc } from "../lib/catalog/moss";
 
 if (!mossConfigured()) {
   console.error("Set MOSS_PROJECT_ID and MOSS_PROJECT_KEY (see .env.example)");

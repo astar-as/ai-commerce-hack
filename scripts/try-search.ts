@@ -2,7 +2,7 @@
 //   npm run search -- "oat milk barista"
 //   npm run search -- --sub sw-000069 --store safeway-sf-01
 //   npm run search -- "pasta sauce" --diet vegan --store safeway-sf-01
-import { runTool } from "../lib/tools/index.ts";
+import { runTool } from "../lib/tools/index";
 
 const args = process.argv.slice(2);
 const flag = (name: string) => {

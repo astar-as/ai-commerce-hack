@@ -9,7 +9,7 @@ import syntheticStores from "../../data/stores.json";
 import krogerCatalog from "../../data/kroger/catalog.json";
 import krogerStock from "../../data/kroger/stock.json";
 import krogerStores from "../../data/kroger/stores.json";
-import type { Product, Store, StoreStock } from "./types.ts";
+import type { Product, Store, StoreStock } from "../types";
 
 export type CatalogSource = "synthetic" | "kroger";
 

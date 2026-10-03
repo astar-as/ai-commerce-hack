@@ -1,6 +1,6 @@
-import { getProduct, getStock, getStore } from "../catalog/data.ts";
-import { SearchError } from "../catalog/search.ts";
-import type { CheckStockInput, CheckStockOutput, StoreStock } from "../catalog/types.ts";
+import { getProduct, getStock, getStore } from "../catalog/data";
+import { SearchError } from "../catalog/search";
+import type { CheckStockInput, CheckStockOutput, StoreStock } from "../types";
 
 export async function checkStock({ store_id, product_ids }: CheckStockInput): Promise<CheckStockOutput> {
   if (!getStore(store_id)) throw new SearchError("not_found", `Unknown store ${store_id}`);
