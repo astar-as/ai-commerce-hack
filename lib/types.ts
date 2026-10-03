@@ -1,5 +1,7 @@
-export type DietTag = "vegan" | "vegetarian" | "gluten_free" | "dairy_free" | "nut_free" | "organic" | "kosher";
-export type Allergen = "milk" | "eggs" | "peanuts" | "tree_nuts" | "soy" | "wheat" | "fish" | "shellfish" | "sesame";
+export const DIET_TAGS = ["vegan", "vegetarian", "gluten_free", "dairy_free", "nut_free", "organic", "kosher"] as const;
+export type DietTag = (typeof DIET_TAGS)[number];
+export const ALLERGENS = ["milk", "eggs", "peanuts", "tree_nuts", "soy", "wheat", "fish", "shellfish", "sesame"] as const;
+export type Allergen = (typeof ALLERGENS)[number];
 
 export type Product = {
   id: string;
@@ -13,7 +15,10 @@ export type Product = {
   diet_tags: DietTag[];
   allergens: Allergen[];
   image_url?: string;
+  upc?: string; // Kroger catalog only — needed by the Kroger Cart API
 };
+
+export type Store = { id: string; name: string; neighborhood: string };
 
 export type StoreStock = {
   store_id: string;
@@ -45,7 +50,7 @@ export type SearchResult = {
   reason?: string;
 };
 
-export type SearchCatalogOutput = { results: SearchResult[]; took_ms: number };
+export type SearchCatalogOutput = { results: SearchResult[]; took_ms: number; engine?: "moss" | "local" };
 
 export type CheckStockInput = { store_id: string; product_ids: string[] };
 export type CheckStockOutput = { store_id: string; items: StoreStock[]; unknown_ids: string[] };

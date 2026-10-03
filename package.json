@@ -6,9 +6,17 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test": "tsx --test lib/**/*.test.ts",
+    "typecheck": "tsc --noEmit",
+    "catalog:generate": "tsx scripts/generate-catalog.ts",
+    "mocks:generate": "tsx scripts/generate-mocks.ts",
+    "kroger:import": "tsx --env-file-if-exists=.env scripts/import-kroger.ts",
+    "moss:index": "tsx --env-file-if-exists=.env scripts/build-moss-index.ts",
+    "search": "tsx --env-file-if-exists=.env scripts/try-search.ts"
   },
   "dependencies": {
+    "@moss-js/moss": "^1.15.0",
     "class-variance-authority": "^0.7.1",
     "cn": "^0.4.0",
     "lucide-react": "^1.51.0",
@@ -29,6 +37,8 @@
     "eslint": "^9",
     "eslint-config-next": "16.3.8",
     "tailwindcss": "^4",
+    "tsx": "^4.19.0",
     "typescript": "^5"
-  }
+  },
+  "type": "module"
 }
