@@ -2,14 +2,14 @@
   "results": [
     {
       "product": {
-        "id": "sw-000072",
-        "name": "Signature Select Oat Milk Barista Edition",
-        "brand": "Signature Select",
+        "id": "kr-0001111013269",
+        "name": "Simple Truth Dairy Free Original Coconut Milk Half Gallon",
+        "brand": "Simple Truth",
         "store_brand": true,
         "department": "dairy eggs",
         "aisle": "Dairy Alternatives",
-        "size": "32 fl oz",
-        "price": 4.49,
+        "size": "1/2 gal",
+        "price": 3.59,
         "diet_tags": [
           "dairy_free",
           "kosher",
@@ -17,62 +17,32 @@
           "vegan",
           "vegetarian"
         ],
-        "allergens": []
+        "allergens": [],
+        "upc": "0001111013269",
+        "image_url": "https://www.kroger.com/product/images/medium/front/0001111013269"
       },
-      "score": 1,
+      "score": 0.444,
       "stock": {
-        "store_id": "safeway-sf-01",
-        "product_id": "sw-000072",
+        "store_id": "kroger-01400513",
+        "product_id": "kr-0001111013269",
         "in_stock": true,
-        "qty": 8,
-        "aisle_number": "11",
-        "price": 4.66
+        "qty": 20,
+        "aisle_number": "100",
+        "price": 3.59
       },
-      "price_diff": -0.22,
-      "reason": "Store brand · same aisle (11) · vegan · nut-free"
+      "price_diff": -0.4,
+      "reason": "Store brand · same aisle (100) · vegan · nut-free"
     },
     {
       "product": {
-        "id": "sw-000065",
-        "name": "O Organics Oat Milk Original",
-        "brand": "O Organics",
-        "store_brand": true,
-        "department": "dairy eggs",
-        "aisle": "Dairy Alternatives",
-        "size": "64 fl oz",
-        "price": 4.99,
-        "diet_tags": [
-          "dairy_free",
-          "kosher",
-          "nut_free",
-          "organic",
-          "vegan",
-          "vegetarian"
-        ],
-        "allergens": []
-      },
-      "score": 0.5,
-      "stock": {
-        "store_id": "safeway-sf-01",
-        "product_id": "sw-000065",
-        "in_stock": true,
-        "qty": 11,
-        "aisle_number": "11",
-        "price": 4.85
-      },
-      "price_diff": -0.03,
-      "reason": "Store brand · same aisle (11) · vegan · nut-free"
-    },
-    {
-      "product": {
-        "id": "sw-000070",
-        "name": "Califia Farms Oat Milk Barista Edition",
-        "brand": "Califia Farms",
+        "id": "kr-0004410015618",
+        "name": "Planet Oat Dairy Free Original Oat Milk 52 fl oz",
+        "brand": "Planet Oat",
         "store_brand": false,
         "department": "dairy eggs",
         "aisle": "Dairy Alternatives",
-        "size": "32 fl oz",
-        "price": 5.99,
+        "size": "52 fl oz",
+        "price": 3.69,
         "diet_tags": [
           "dairy_free",
           "kosher",
@@ -80,21 +50,57 @@
           "vegan",
           "vegetarian"
         ],
-        "allergens": []
+        "allergens": [],
+        "upc": "0004410015618",
+        "image_url": "https://www.kroger.com/product/images/medium/front/0004410015618"
       },
-      "score": 1,
+      "score": 0.556,
       "stock": {
-        "store_id": "safeway-sf-01",
-        "product_id": "sw-000070",
+        "store_id": "kroger-01400513",
+        "product_id": "kr-0004410015618",
         "in_stock": true,
-        "qty": 2,
-        "aisle_number": "11",
-        "price": 5.84
+        "qty": 20,
+        "aisle_number": "100",
+        "price": 3.69
       },
-      "price_diff": 0.96,
-      "reason": "same aisle (11) · vegan · nut-free"
+      "price_diff": -0.3,
+      "reason": "same aisle (100) · vegan · nut-free"
+    },
+    {
+      "product": {
+        "id": "kr-0004410019080",
+        "name": "Planet Oat Dairy Free Unsweeted Original Oat Milk",
+        "brand": "Planet Oat",
+        "store_brand": false,
+        "department": "dairy eggs",
+        "aisle": "Dairy Alternatives",
+        "size": "52 oz",
+        "price": 3.69,
+        "diet_tags": [
+          "dairy_free",
+          "gluten_free",
+          "kosher",
+          "nut_free",
+          "vegan",
+          "vegetarian"
+        ],
+        "allergens": [],
+        "upc": "0004410019080",
+        "image_url": "https://www.kroger.com/product/images/medium/front/0004410019080"
+      },
+      "score": 0.556,
+      "stock": {
+        "store_id": "kroger-01400513",
+        "product_id": "kr-0004410019080",
+        "in_stock": true,
+        "qty": 20,
+        "aisle_number": "100",
+        "price": 3.69
+      },
+      "price_diff": -0.3,
+      "reason": "same aisle (100) · vegan · nut-free"
     }
   ],
-  "took_ms": 0.7,
+  "took_ms": 0.6,
   "engine": "local"
 }

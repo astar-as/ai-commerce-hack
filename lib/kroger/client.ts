@@ -1,6 +1,6 @@
 // Minimal Kroger Public API client (developer.kroger.com).
-// App credentials (client_credentials) → Locations + Products. Adding to a shopper's cart needs a
-// *user* token (authorization_code flow, scope cart.basic:write) — see addToCart below.
+// App credentials only (client_credentials) → Locations + Products. No shopper login: Kroger is our
+// in-store data source; online ordering goes through Instacart.
 
 const BASE = process.env.KROGER_API_BASE ?? "https://api.kroger.com/v1";
 
@@ -65,17 +65,4 @@ export function findLocations(zipCode: string, limit = 5): Promise<KrogerLocatio
 
 export function searchProducts(term: string, locationId: string, limit = 10): Promise<KrogerProduct[]> {
   return get("/products", { "filter.term": term, "filter.locationId": locationId, "filter.limit": String(limit) });
-}
-
-// Person 4 (integrations): call with the shopper's OAuth access token from the authorization_code flow.
-export async function addToCart(
-  userToken: string,
-  items: Array<{ upc: string; quantity: number; modality?: "PICKUP" | "DELIVERY" }>,
-): Promise<void> {
-  const res = await fetch(`${BASE}/cart/add`, {
-    method: "PUT",
-    headers: { Authorization: `Bearer ${userToken}`, "Content-Type": "application/json" },
-    body: JSON.stringify({ items }),
-  });
-  if (!res.ok) throw new Error(`Kroger cart/add ${res.status}: ${await res.text()}`);
 }

@@ -5,6 +5,7 @@ import { getProduct, markOutOfStock, resetCatalog } from "./data";
 import { searchCatalog } from "./search";
 
 delete process.env.MOSS_PROJECT_ID; // exercise the local engine deterministically
+process.env.CATALOG_SOURCE = "synthetic"; // stable fixture data; the Kroger demo case is tested at the end
 const STORE = "safeway-sf-01";
 const OATLY_BARISTA = "sw-000069";
 
@@ -56,4 +57,23 @@ test("tool errors are returned, not thrown", async () => {
   assert.equal(stock.items[0].in_stock, false);
   assert.deepEqual(stock.unknown_ids, ["nope"]);
   assert.equal(((await runTool("check_stock", { store_id: "x", product_ids: [] })) as any).error.code, "not_found");
+});
+
+test("kroger catalog: demo override makes Oatly Barista out, substitutes are real in-stock products", async () => {
+  process.env.CATALOG_SOURCE = "kroger";
+  resetCatalog();
+  try {
+    const store = "kroger-01400513";
+    const out = await searchCatalog({ query: "", substitute_for: "kr-0019064664001", store_id: store });
+    assert.ok(out.results.length >= 3);
+    for (const r of out.results) {
+      assert.equal(r.stock?.in_stock, true);
+      assert.ok(r.product.diet_tags.includes("dairy_free"));
+    }
+    const stock: any = await runTool("check_stock", { store_id: store, product_ids: ["kr-0019064664001"] });
+    assert.equal(stock.items[0].in_stock, false);
+  } finally {
+    process.env.CATALOG_SOURCE = "synthetic";
+    resetCatalog();
+  }
 });
