@@ -288,7 +288,9 @@ Registered in `lib/tools/index.ts`, so `zooworkCustomTools()` / `runTool` alread
 
 Data: 8 synthetic receipts for the demo household in `lib/history/receipts.ts`, dates computed relative to today so "two weeks ago" always lands. ⚠️ Receipts reference the **demo catalog ids** (`lib/demo-catalog.ts`, `sw-001…`); when the app switches to the Kroger catalog, remap the receipt lines to Kroger product ids (same products by name). The interim agent (`lib/agent.ts`) calls it via function calling and tags re-added items "Bought 2 weeks ago" in the UI.
 
-### 6. `match_ingredients` — recipe ingredients → real products, in one call (owner: 2, 🔜 building)
+### 6. `match_ingredients` — recipe ingredients → real products, in one call (owner: 2, ✅ on `main`)
+
+> **Status:** built in `lib/catalog/ingredients.ts`, registered in `lib/tools` (`runTool("match_ingredients", …)`, `POST /api/tools/match_ingredients` once a route exists). ~15 ms for a 12-ingredient recipe on Moss. **To wire into the agent (owner 1):** add it to `lib/agent-tools` once the order layer uses the real catalog (`lib/catalog/data` `getProduct`) instead of `lib/demo-catalog.ts` — Kroger ids from this tool aren't in the stand-in catalog, so `add_item` would reject them. Catalog gaps (e.g. ground beef) come back in `unmatched`; a bigger Kroger import with ~110 recipe ingredients is in progress.
 
 Used by the agent after it has a recipe. One call instead of one `search_catalog` per ingredient (a 12-ingredient recipe = 1 tool round trip, ~20 ms of Moss search).
 
