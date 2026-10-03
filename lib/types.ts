@@ -69,7 +69,12 @@ export type SendToInstacartInput = {
     health_filters?: HealthFilter[];
   }>;
 };
-export type SendToInstacartOutput = { url: string; item_count: number; mode: "instacart" | "mock" };
+export type SendToInstacartOutput = {
+  url: string;
+  item_count: number;
+  mode: "instacart" | "mock";
+  fallback_reason?: string; // why mode = "mock" (no key, MOCK_TOOLS=1, Instacart error) — for logs
+};
 
 export type ReportOosInput = {
   store_id: string;
