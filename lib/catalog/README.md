@@ -45,7 +45,7 @@ npm test
 ## Data sources
 
 - **Synthetic (default):** `data/*.json` — 524 Safeway-style products, 3 SF stores, ~10% out of stock. Demo case: at `safeway-sf-01` Oatly Barista (`sw-000069`) is out; Signature Select Barista is in. Regenerate with `npm run catalog:generate`, then `npm run mocks:generate`.
-- **Kroger (real):** `npm run kroger:import` with `KROGER_CLIENT_ID` / `KROGER_CLIENT_SECRET` → `data/kroger/*.json` for one store (real brands, sizes, prices, aisle numbers, stock levels, UPCs for the Cart API). Diet tags and allergens are inferred from the seed item — Kroger's public API has no allergens. Then `CATALOG_SOURCE=kroger`.
+- **Kroger (real):** `npm run kroger:import` with `KROGER_CLIENT_ID` / `KROGER_CLIENT_SECRET` → `data/kroger/*.json` for one store (real brands, sizes, prices, aisle numbers, stock levels, UPCs for the Cart API). Allergens and diet tags come from Kroger's own `allergens` + `manufacturerDeclarations` (falls back to the seed item when missing). Then `CATALOG_SOURCE=kroger`.
 
 ## Search engine
 
