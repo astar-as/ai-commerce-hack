@@ -12,7 +12,11 @@ The brief judges merchant agents: *"Pick a real merchant. Pick one line of their
 
 - **Revenue:** when an item is out of stock, the agent suggests a substitute the store has, so the sale isn't lost. This is the main P&L line we move.
 - **Efficiency:** every "not on the shelf" report becomes a live restock signal for the store.
-- Pick one real chain (e.g. Safeway or Whole Foods in SF) and use synthetic inventory for it.
+- **Merchant: Safeway** (synthetic inventory for SF stores). Why:
+  - **The online path is real.** Safeway sells through Instacart, so "Send to Instacart" can show a real Safeway store. Whole Foods (Amazon only) and Trader Joe's (no online ordering) aren't on Instacart. ⚠️ Verify on instacart.com that SF Safeway stores show up.
+  - **Stronger P&L story.** Safeway has big store brands (O Organics, Signature Select). On an out-of-stock, the agent suggests the store-brand version first — keeps the sale and usually earns more per item.
+  - **Judges know it.** The mainstream SF chain, and its shelves really do run out.
+  - Runner-up: Sprouts (on Instacart, diet-heavy shoppers make "still fits my diet" substitutions shine), but Safeway is the stronger P&L pitch.
 
 ## Where each sponsor tool fits
 
@@ -43,31 +47,36 @@ Next.js API routes ── ZooWork session (streams the agent's replies to the UI
 ```
 
 - **Packages:** `@zoowork-ai/sdk`, `@moss-js/moss`, plus `@moss-dev/moss-web` for in-browser search.
-- **Data:** a product catalog of 1–3k items — Instacart's public Market Basket product/aisle list or a generated set. Add synthetic per-store price, aisle and stock, with ~10% of items out of stock to set up the demo.
+- **Data:** a Safeway-style product catalog of 1–3k items — Instacart's public Market Basket product/aisle list or a generated set, including Safeway store brands (O Organics, Signature Select). Add synthetic per-store price, aisle and stock, with ~10% of items out of stock to set up the demo.
 - **Keys (backend only):** `ZOOWORK_API_KEY`, Moss `project_id` / `project_key`, Instacart dev API key.
+
+## Team split (4 people)
+
+| Person | Owns |
+|---|---|
+| **1. Agent** | The ZooWork agent (persona docs, remembered preferences, custom tools) and the backend that streams its replies to the app. |
+| **2. Data + search** | Safeway-style catalog with synthetic stock and aisles, the Moss index, the substitute-search endpoint, then in-browser Moss (WASM) if there's time. |
+| **3. Frontend** | The mobile web app: list view, in-store mode with voice input, and the store dashboard. |
+| **4. Integrations + pitch** | Instacart dev key and the "Send to Instacart" link, Entire setup, then Band shopper ↔ store agents (from ~2:30), then demo script, slides and backup video. |
+
+**First 15 minutes, all together:** agree on the custom tool interfaces — `search_catalog`, `check_stock`, `send_to_instacart`, `report_oos` — so persons 1–3 can build in parallel against mocks.
 
 ## Timeline (deadline 5:00 PM)
 
-| Time | Work |
-|---|---|
-| **12:15–1:00** | Keys: ZooWork + credit code, Moss project, Instacart dev key (check right away whether it's self-serve). Scaffold Next.js, install Entire, build the catalog and Moss index. |
-| **1:00–2:30** | **Core agent:** ZooWork agent with persona docs and custom tools. Flow: "Plan my week, 2 adults, vegetarian kid, $150" → list grouped by aisle. |
-| **1:00–2:30, in parallel** | **In-store mode:** checklist view; tap "not on shelf" or speak the request → Moss returns in-stock alternatives (latency badge, price difference) → agent picks one and explains why → one tap to swap. |
-| **2:30–3:30** | "Send to Instacart" (or mock cart fallback). Store dashboard: substitutions saved = $ retained, plus out-of-stock heatmap. |
-| **3:30–4:15** | Band shopper ↔ store agents, *only if* everything above works live. Otherwise polish the UI. |
-| **4:15–5:00** | Feature freeze, record a backup demo video, write the submission and the P&L slide. |
+| Time | Agent (1) | Data + search (2) | Frontend (3) | Integrations + pitch (4) |
+|---|---|---|---|---|
+| **12:15–1:00** | ZooWork key + credits; agent created and running | Moss project; catalog + synthetic Safeway stock | Scaffold Next.js; mock tool responses | Instacart dev key (check self-serve right away); install Entire |
+| **1:00–2:30** | Plan-my-week flow: "2 adults, vegetarian kid, $150" → list grouped by aisle | Substitute search: in-stock, diet-filtered, store brand first | List view + in-store mode (tap "not on shelf" / voice → swap) | `send_to_instacart` tool (or mock cart fallback) |
+| **2:30–3:30** | Wire real tools end to end; `report_oos` | In-browser Moss; restock data for dashboard | Store dashboard: $ retained, out-of-stock heatmap | Band shopper ↔ store agents (store agent can veto) |
+| **3:30–4:15** | Bug fixes, demo hardening | Bug fixes, latency badge | UI polish | Finish Band, or drop it if not essential; draft slides |
+| **4:15–5:00** | Feature freeze | Feature freeze | Feature freeze | Record backup demo video, write submission, P&L slide |
 
 ## Demo script (~3 min)
 
 1. Ask for a weekly plan → list appears and uses remembered preferences.
 2. Tap "Send to Instacart" → a real pre-filled Instacart list opens.
-3. Switch to the phone in store: "They're out of Oatly Barista" → alternatives in ~4 ms, dairy-free constraint kept → swap.
-4. Store dashboard: "This store kept $X in sales today, and here's what to restock."
-
-## Open questions
-
-- **Team size:** plan assumes 2–3 people working in parallel. Solo → drop Band and the store dashboard.
-- **Merchant:** which chain do we name?
+3. Switch to the phone in a Safeway: "They're out of Oatly Barista" → alternatives in ~4 ms, dairy-free constraint kept, O Organics option first → swap.
+4. Store dashboard: "This Safeway kept $X in sales today, and here's what to restock."
 
 ## References
 
