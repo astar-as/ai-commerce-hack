@@ -1,6 +1,6 @@
 // Minimal Kroger Public API client (developer.kroger.com).
-// App credentials only (client_credentials) → Locations + Products. No shopper login: Kroger is our
-// in-store data source; online ordering goes through Instacart.
+// App credentials (client_credentials) → Locations + Products. Adding to a shopper's kroger.com cart
+// needs a *user* token (authorization_code flow, scope cart.basic:write) — see lib/kroger/cart.ts.
 
 const BASE = process.env.KROGER_API_BASE ?? "https://api.kroger.com/v1";
 
@@ -67,4 +67,47 @@ export function findLocations(zipCode: string, limit = 5): Promise<KrogerLocatio
 
 export function searchProducts(term: string, locationId: string, limit = 10): Promise<KrogerProduct[]> {
   return get("/products", { "filter.term": term, "filter.locationId": locationId, "filter.limit": String(limit) });
+}
+
+// Shopper OAuth (authorization_code). redirectUri must be registered on the Kroger app.
+export function authorizeUrl(redirectUri: string, state: string): string {
+  const id = process.env.KROGER_CLIENT_ID;
+  if (!id) throw new Error("Set KROGER_CLIENT_ID (see .env.example)");
+  const params = new URLSearchParams({
+    scope: "cart.basic:write",
+    response_type: "code",
+    client_id: id,
+    redirect_uri: redirectUri,
+    state,
+  });
+  return `${BASE}/connect/oauth2/authorize?${params}`;
+}
+
+export async function exchangeCode(code: string, redirectUri: string): Promise<string> {
+  const id = process.env.KROGER_CLIENT_ID;
+  const secret = process.env.KROGER_CLIENT_SECRET;
+  if (!id || !secret) throw new Error("Set KROGER_CLIENT_ID and KROGER_CLIENT_SECRET (see .env.example)");
+  const res = await fetch(`${BASE}/connect/oauth2/token`, {
+    method: "POST",
+    headers: {
+      Authorization: `Basic ${Buffer.from(`${id}:${secret}`).toString("base64")}`,
+      "Content-Type": "application/x-www-form-urlencoded",
+    },
+    body: new URLSearchParams({ grant_type: "authorization_code", code, redirect_uri: redirectUri }),
+  });
+  if (!res.ok) throw new Error(`Kroger token ${res.status}: ${await res.text()}`);
+  return ((await res.json()) as { access_token: string }).access_token;
+}
+
+// Call with the shopper's access token from exchangeCode. Kroger returns 204 on success.
+export async function addToCart(
+  userToken: string,
+  items: Array<{ upc: string; quantity: number; modality?: "PICKUP" | "DELIVERY" }>,
+): Promise<void> {
+  const res = await fetch(`${BASE}/cart/add`, {
+    method: "PUT",
+    headers: { Authorization: `Bearer ${userToken}`, "Content-Type": "application/json" },
+    body: JSON.stringify({ items }),
+  });
+  if (!res.ok) throw new Error(`Kroger cart/add ${res.status}: ${await res.text()}`);
 }

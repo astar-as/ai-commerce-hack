@@ -1,7 +1,7 @@
 // Mock checkout page: where "Checkout on Instacart" lands when there's no Instacart key
 // (send_to_instacart mode "mock"). The whole list is in the `list` query param.
 import Link from "next/link";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, ShoppingCart } from "lucide-react";
 import { decodeMockCart } from "@/lib/tools/send_to_instacart";
 import { PlaceOrderButton } from "./place-order-button";
 
@@ -46,8 +46,20 @@ export default async function MockCartPage({ searchParams }: PageProps<"/cart/mo
               </li>
             ))}
           </ul>
+<<<<<<< Updated upstream
           <div className="mt-auto pt-8">
             <PlaceOrderButton label={`Place order · ${count} ${count === 1 ? "item" : "items"}`} list={typeof list === "string" ? list : undefined} />
+=======
+          <div className="mt-auto flex flex-col gap-3 pt-8">
+            <a
+              href={`/api/kroger/login?list=${list}`}
+              className="flex h-[60px] w-full items-center justify-center gap-2 rounded-full border border-navy text-[16px] font-medium text-navy transition-transform active:scale-[0.985]"
+            >
+              <ShoppingCart className="size-5" strokeWidth={2} />
+              Add to my Kroger cart
+            </a>
+            <PlaceOrderButton label={`Place order · ${count} ${count === 1 ? "item" : "items"}`} />
+>>>>>>> Stashed changes
           </div>
         </>
       )}
