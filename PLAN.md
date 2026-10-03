@@ -37,6 +37,11 @@ Data + search changes since lunch that other owners need to pick up. Tick them o
 
 Done already (no action): `warmSearch()` runs at server start (`instrumentation.ts`) · Moss/Kroger env vars set on Vercel for Production, Preview and Development.
 
+## 🎬 Submission assets (Erik, 4:30 PM)
+
+- **20 s product video:** `public/pitch/basket-20s.mp4` (1080p60, Remotion; ElevenLabs voiceover "Alex" + ElevenLabs music bed). Use it for the submission and as the backup demo.
+- **Pitch deck:** `public/pitch/index.html` → https://ai-commerce-hack.vercel.app/pitch/ after the next deploy. 16:9 HTML slides, → / ← / Space, F = fullscreen. Live demo slide in the middle → switch to https://ai-commerce-hack.vercel.app.
+
 ## Pitch it as the grocer's agent
 
 The brief judges merchant agents: *"Pick a real merchant. Pick one line of their P&L. Move it."* A shopping assistant on its own reads as a consumer app, so we pitch it as **an agent a grocer deploys for its shoppers**:
