@@ -4,6 +4,7 @@ import { applyActions, findSubstitutes } from "@/lib/order";
 import { ago } from "@/lib/history/ago";
 import { searchOrderHistoryTool } from "@/lib/tools/search_order_history";
 import type { DelegateInput, DelegateOutput, FulfillmentMode, OrderAction } from "@/lib/types";
+import { describeToolEnd, describeToolStart } from "@/lib/progress";
 import { zooworkDelegate, zooworkEnabled } from "@/lib/zoowork/delegate";
 
 const MODEL = process.env.OPENAI_AGENT_MODEL ?? "gpt-6-luna";
@@ -152,12 +153,19 @@ async function runHistoryTool(name: string, args: string, hits: Map<string, numb
 
 // ZooWork is the agent when ZOOWORK_API_KEY + ZOOWORK_AGENT_ID are set (lib/zoowork, owner 1).
 // Otherwise the interim OpenAI agent below keeps the UI working end to end.
-export async function runAgentTurn(input: DelegateInput): Promise<DelegateOutput> {
-  if (zooworkEnabled()) return zooworkDelegate(input);
-  return runInterimTurn(input);
+export async function runAgentTurn(input: DelegateInput, onProgress?: (text: string) => void): Promise<DelegateOutput> {
+  if (zooworkEnabled())
+    return zooworkDelegate(input, {
+      onEvent: (ev) => {
+        if (!onProgress || ev.type !== "tool") return;
+        const text = ev.phase === "start" ? describeToolStart(ev.name, ev.input) : describeToolEnd(ev.name, ev.ok, ev.output);
+        if (text) onProgress(text);
+      },
+    });
+  return runInterimTurn(input, onProgress);
 }
 
-async function runInterimTurn(input: DelegateInput): Promise<DelegateOutput> {
+async function runInterimTurn(input: DelegateInput, onProgress?: (text: string) => void): Promise<DelegateOutput> {
   const client = new OpenAI();
   const { order, transcript } = input;
 
@@ -199,15 +207,16 @@ async function runInterimTurn(input: DelegateInput): Promise<DelegateOutput> {
     const calls = response.output.filter((o) => o.type === "function_call");
     if (!calls.length) break;
     const outputs = await Promise.all(
-      calls.map(async (c) => ({
-        type: "function_call_output" as const,
-        call_id: c.call_id,
-        output: JSON.stringify(
-          c.name === searchCatalogFn.name
-            ? { results: searchStore(JSON.parse(c.arguments || "{}").query ?? "", JSON.parse(c.arguments || "{}").limit) }
-            : await runHistoryTool(c.name, c.arguments, historyHits),
-        ),
-      })),
+      calls.map(async (c) => {
+        const args = JSON.parse(c.arguments || "{}");
+        const start = describeToolStart(c.name, args);
+        if (start) onProgress?.(start);
+        const out =
+          c.name === searchCatalogFn.name ? { results: searchStore(args.query ?? "", args.limit) } : await runHistoryTool(c.name, c.arguments, historyHits);
+        const end = describeToolEnd(c.name, true, out);
+        if (end) onProgress?.(end);
+        return { type: "function_call_output" as const, call_id: c.call_id, output: JSON.stringify(out) };
+      }),
     );
     response = await client.responses.create({
       model: MODEL,

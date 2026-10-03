@@ -4,14 +4,27 @@ import { motion } from "motion/react";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import type { OrderState } from "@/lib/types";
 
-export function CheckoutBar({ order }: { order: OrderState }) {
+export function CheckoutBar({ order, onPlace, placing }: { order: OrderState; onPlace: () => void; placing: boolean }) {
   const { mode, checkout_url } = order.fulfillment;
   const count = order.items.reduce((n, i) => n + i.qty, 0);
   const picked = order.items.filter((i) => i.status === "picked").length;
 
+  const booked = mode === "store_pickup" && /code/i.test(order.fulfillment.eta ?? "");
   const label =
-    mode === "instacart_delivery" ? "Checkout on Instacart" : mode === "store_pickup" ? "Place pickup order" : "Finish shopping";
-  const sub = mode === "in_store" ? `${picked} of ${order.items.length} picked` : `${count} ${count === 1 ? "item" : "items"}`;
+    mode === "instacart_delivery"
+      ? "Checkout on Instacart"
+      : mode === "store_pickup"
+        ? booked
+          ? "Pickup booked"
+          : placing
+            ? "Placing your order…"
+            : "Place pickup order"
+        : "Finish shopping";
+  const sub = booked
+    ? (order.fulfillment.eta ?? "")
+    : mode === "in_store"
+      ? `${picked} of ${order.items.length} picked`
+      : `${count} ${count === 1 ? "item" : "items"}`;
 
   return (
     <motion.div
@@ -25,12 +38,19 @@ export function CheckoutBar({ order }: { order: OrderState }) {
         href={mode === "instacart_delivery" ? (checkout_url ?? "#") : undefined}
         target="_blank"
         rel="noreferrer"
+        role={mode === "store_pickup" ? "button" : undefined}
+        aria-disabled={booked || placing}
+        onClick={(e) => {
+          if (mode !== "store_pickup") return;
+          e.preventDefault();
+          if (!booked && !placing) onPlace();
+        }}
         className="flex h-[68px] items-center justify-between rounded-full border border-[#c9ced8] bg-white/95 pr-2.5 pl-7 shadow-[0_18px_40px_-18px_rgba(11,31,91,0.35)] backdrop-blur-xl transition-transform active:scale-[0.985]"
       >
         <span className="flex flex-col leading-tight">
           <span className="text-[16px] font-medium text-ink">{label}</span>
           <span className="text-[13px] text-subtle tabular">
-            ${order.subtotal.toFixed(2)} · {sub}
+            {booked ? sub : `$${order.subtotal.toFixed(2)} · ${sub}`}
           </span>
         </span>
         <span className="flex size-12 items-center justify-center rounded-full bg-navy text-white">

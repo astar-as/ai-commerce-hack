@@ -89,7 +89,32 @@ export function useLiveVoice({
             order: orderRef.current,
           }),
         });
-        const out = (await res.json()) as DelegateOutput;
+        let out: DelegateOutput | null = null;
+        const reader = res.body!.getReader();
+        const decoder = new TextDecoder();
+        let buf = "";
+        let step = 0;
+        for (;;) {
+          const { done, value } = await reader.read();
+          if (value) buf += decoder.decode(value, { stream: true });
+          let nl: number;
+          while ((nl = buf.indexOf("\n")) >= 0) {
+            const line = buf.slice(0, nl).trim();
+            buf = buf.slice(nl + 1);
+            if (!line) continue;
+            const msg = JSON.parse(line) as { type: string; text?: string } & DelegateOutput;
+            if (msg.type === "progress" && msg.text) {
+              send({
+                type: "session.thinking.append",
+                event_id: `progress_${delegationId}_${step++}`,
+                delegation_id: delegationId,
+                content: `Backend progress (not the final result): ${msg.text}`,
+              });
+            } else if (msg.type === "result") out = msg;
+          }
+          if (done) break;
+        }
+        if (!out) throw new Error("no result");
         if (out.order) {
           orderRef.current = out.order;
           onOrderRef.current(out.order);

@@ -8,6 +8,7 @@ import { OrderList } from "@/components/basket/order-list";
 import { SwapCard } from "@/components/basket/swap-card";
 import { VoiceOrb } from "@/components/basket/voice-orb";
 import { useLiveVoice } from "@/hooks/use-live-voice";
+import { readDelegate } from "@/lib/delegate-client";
 import { emptyOrder, setFulfillment, STORE, swapInOrder } from "@/lib/order-core";
 import type { FulfillmentMode, OrderState, SearchResult } from "@/lib/types";
 import { cn } from "@/lib/utils";
@@ -74,7 +75,29 @@ export function BasketApp() {
     }));
   }, []);
 
+  const [placing, setPlacing] = useState(false);
+  const placeOrder = async () => {
+    setPlacing(true);
+    try {
+      const res = await fetch("/api/delegate", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          delegation_id: `tap_${Date.now()}`,
+          transcript: [...voice.transcript, { role: "user", text: "Yes, place my pickup order now.", at: Date.now() }],
+          order,
+        }),
+      });
+      const out = await readDelegate(res);
+      setOrder(out.order);
+      if (live) voice.say(`The shopper tapped Place pickup order. Result: ${out.say}`);
+    } finally {
+      setPlacing(false);
+    }
+  };
+
   const [lead, rest] = MODE_LINE[order.fulfillment.mode];
+  const pickupLine = order.fulfillment.mode === "store_pickup" && /code/i.test(order.fulfillment.eta ?? "") ? order.fulfillment.eta : null;
 
   return (
     <div className="min-h-dvh bg-white p-2 sm:p-3">
@@ -155,7 +178,7 @@ export function BasketApp() {
                 <section className="rounded-[32px] border border-hairline bg-white p-2">
                   <FulfillmentSwitch mode={order.fulfillment.mode} onChange={setMode} />
                   <p className="px-4 pt-3 pb-2 text-[15px] leading-snug text-body">
-                    <span className="text-ink">{lead}</span> {rest}
+                    <span className="text-ink">{pickupLine ? "Pickup booked." : lead}</span> {pickupLine ?? rest}
                   </p>
                 </section>
 
@@ -180,7 +203,7 @@ export function BasketApp() {
         <AnimatePresence>
           {hasItems && (
             <div className="pointer-events-none fixed inset-x-0 bottom-0 z-20">
-              <CheckoutBar order={order} />
+              <CheckoutBar order={order} onPlace={placeOrder} placing={placing} />
             </div>
           )}
         </AnimatePresence>
