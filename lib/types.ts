@@ -82,17 +82,47 @@ export type Dashboard = {
   top_oos: Array<{ product: Product; reports: number }>;
 };
 
+export type FulfillmentMode = "instacart_delivery" | "store_pickup" | "in_store";
+
+export type OrderItem = {
+  product: Product;
+  qty: number;
+  status: "added" | "swapped" | "out_of_stock" | "picked";
+  swapped_from?: Product;
+  note?: string;
+};
+
+export type OrderState = {
+  fulfillment: {
+    mode: FulfillmentMode;
+    store: { id: string; name: string };
+    eta?: string;
+    checkout_url?: string;
+  };
+  items: OrderItem[];
+  subtotal: number;
+  pending?: { kind: "swap"; missing: Product; options: SearchResult[] };
+};
+
+export type OrderAction =
+  | { type: "add_item"; product_id: string; qty?: number }
+  | { type: "remove_item"; product_id: string }
+  | { type: "set_qty"; product_id: string; qty: number }
+  | { type: "propose_swap"; product_id: string }
+  | { type: "swap_item"; product_id: string; substitute_product_id: string }
+  | { type: "dismiss_swap" }
+  | { type: "set_fulfillment"; mode: FulfillmentMode };
+
 export type TranscriptLine = { role: "user" | "assistant"; text: string; at: number };
 
 export type DelegateInput = {
   delegation_id: string;
   transcript: TranscriptLine[];
-  store_id: string;
+  order: OrderState;
 };
 
 export type DelegateOutput = {
   say: string;
-  thinking?: string;
-  results?: SearchResult[];
-  missing?: Product;
+  order: OrderState;
+  actions: OrderAction[];
 };
