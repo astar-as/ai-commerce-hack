@@ -39,8 +39,8 @@ Done already (no action): `warmSearch()` runs at server start (`instrumentation.
 
 ## 🎬 Submission assets (Erik, 4:30 PM)
 
-- **20 s product video:** `public/pitch/basket-20s.mp4` (1080p60, Remotion; ElevenLabs voiceover "Alex" + ElevenLabs music bed). Use it for the submission and as the backup demo.
-- **Pitch deck:** `public/pitch/index.html` → https://ai-commerce-hack.vercel.app/pitch/ after the next deploy. 16:9 HTML slides, → / ← / Space, F = fullscreen. Live demo slide in the middle → switch to https://ai-commerce-hack.vercel.app.
+- **20 s product video:** `public/presentation/basket-20s.mp4` → https://ai-commerce-hack.vercel.app/presentation/basket-20s.mp4 (1080p60, Remotion; ElevenLabs voiceover "Alex" + ElevenLabs music bed). Use it for the submission and as the backup demo.
+- **Pitch deck:** `public/presentation/index.html` → **https://ai-commerce-hack.vercel.app/presentation** (rewrite in `next.config.ts`). 16:9 HTML slides, → / ← / Space, F = fullscreen. Live demo slide in the middle → switch to https://ai-commerce-hack.vercel.app.
 
 ## Pitch it as the grocer's agent
 
