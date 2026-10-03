@@ -1,5 +1,5 @@
 import OpenAI from "openai";
-import { CATALOG, OUT_OF_STOCK } from "@/lib/catalog";
+import { CATALOG, OUT_OF_STOCK } from "@/lib/demo-catalog";
 import { applyActions, findSubstitutes } from "@/lib/order";
 import type { DelegateInput, DelegateOutput, FulfillmentMode, OrderAction } from "@/lib/types";
 

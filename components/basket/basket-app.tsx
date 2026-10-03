@@ -9,7 +9,7 @@ import { OrderList } from "@/components/basket/order-list";
 import { SwapCard } from "@/components/basket/swap-card";
 import { VoiceOrb } from "@/components/basket/voice-orb";
 import { useLiveVoice } from "@/hooks/use-live-voice";
-import { DEMO_STORE } from "@/lib/catalog";
+import { DEMO_STORE } from "@/lib/demo-catalog";
 import { applyAction, emptyOrder } from "@/lib/order";
 import type { DelegateOutput, FulfillmentMode, OrderState, SearchResult, TranscriptLine } from "@/lib/types";
 import { cn } from "@/lib/utils";
