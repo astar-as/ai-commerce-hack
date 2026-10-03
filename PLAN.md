@@ -25,6 +25,7 @@ The brief judges merchant agents: *"Pick a real merchant. Pick one line of their
 | **ZooWork** | ✅ Core | The agent itself. Builds meal plans and lists, and remembers household preferences (diet, allergies, budget, usual brands). Can run a weekly "Sunday list" job with Schedules. Calls our backend through custom tools for catalog search, stock checks and Instacart. Targets the $800 Best Use of ZooWork prize. |
 | **Moss** | ✅ Core | Catalog search. In-store substitutes come back in under 10 ms, filtered to what's in stock at that store and to the shopper's diet. Moss has a browser (WASM) build, so in-store search can work on bad store wifi — the X-factor moment. |
 | **Instacart** | ✅ Online path | The Developer Platform API (`POST /idp/v1/products/products_link`) takes our list and returns a link to a pre-filled shopping list on Instacart, where the user picks a store and checks out. It can't add to a cart directly; the link is the closest thing. Development keys are self-serve in the Instacart Developer Dashboard and use `https://connect.dev.instacart.tools`; production keys need a review (~5 business days), so the demo runs on the dev key. |
+| **Kroger** (not a sponsor) | ✅ Real data + real cart | Kroger Public API (developer.kroger.com, self-serve app registration). **Products** with `filter.locationId` give real brands, sizes, prices, **aisle numbers** and **stock level** (`HIGH` / `LOW` / `TEMPORARILY_OUT_OF_STOCK`) for one store → imported into our catalog (`npm run kroger:import`, `CATALOG_SOURCE=kroger`). **Cart API** (`PUT /v1/cart/add`, shopper OAuth with `cart.basic:write`) really adds items to a shopper's kroger.com cart — the only real add-to-cart we have. Limits: Products 10k calls/day, Cart 5k/day; no allergens in the API; no Kroger stores in SF. |
 | **Entire** | ✅ Nearly free | Install the CLI so our Claude Code sessions are saved with each commit. Almost no work, qualifies for the Entire prize. |
 | **Band** | ⚠️ Stretch | Only worth it as a shopper agent ↔ store agent conversation across the account boundary. The store agent owns inventory and can veto a substitute (recall, age-restricted item). Fits the brief and Band's judging. If it isn't essential (Band's "delete test"), skip it. |
 | **Tavily** | ❌ Skip | ZooWork already has `web_search` / `web_fetch` built in. |
@@ -43,21 +44,23 @@ Next.js API routes ── ZooWork session (streams the agent's replies to the UI
         │                 └─ custom tools → search_catalog, check_stock,
         │                                   send_to_instacart, report_oos
         ├── Moss index: catalog (name, category, diet tags, aisle, price, in stock per store)
-        └── Instacart shopping-list API (fallback: our own mock cart)
+        ├── Kroger API: product/aisle/stock import + Cart API (real add-to-cart, shopper OAuth)
+        └── Instacart shopping-list API (any retailer incl. Safeway; fallback: our own mock cart)
 ```
 
 - **Packages:** `@zoowork-ai/sdk`, `@moss-js/moss`, plus `@moss-dev/moss-web` for in-browser search.
 - **Data:** a Safeway-style product catalog of 1–3k items — Instacart's public Market Basket product/aisle list or a generated set, including Safeway store brands (O Organics, Signature Select). Add synthetic per-store price, aisle and stock, with ~10% of items out of stock to set up the demo.
-- **Keys (backend only):** `ZOOWORK_API_KEY`, Moss `project_id` / `project_key`, Instacart dev API key.
+- **Two catalogs, one interface** (`CATALOG_SOURCE`): `synthetic` = Safeway-style demo data (default, offline), `kroger` = real products for one Kroger store. Online checkout: **Kroger Cart API** when the catalog is Kroger and the shopper has logged in to Kroger; **Instacart link** otherwise (any store, incl. Safeway).
+- **Keys (backend only):** `ZOOWORK_API_KEY`, Moss `MOSS_PROJECT_ID` / `MOSS_PROJECT_KEY`, `KROGER_CLIENT_ID` / `KROGER_CLIENT_SECRET`, Instacart dev API key. See `.env.example`.
 
 ## Team split (4 people)
 
 | Person | Owns |
 |---|---|
 | **1. Agent** | The ZooWork agent (persona docs, remembered preferences, custom tools) and the backend that streams its replies to the app. |
-| **2. Data + search** | Safeway-style catalog with synthetic stock and aisles, the Moss index, the substitute-search endpoint, then in-browser Moss (WASM) if there's time. |
+| **2. Data + search** | Safeway-style catalog with synthetic stock and aisles, the Moss index, the substitute-search endpoint, then in-browser Moss (WASM) if there's time. **Status (branch `data-search`):** ✅ synthetic catalog (524 products, 3 SF stores, demo case: Oatly Barista out at `safeway-sf-01`) · ✅ `search_catalog` + `check_stock` with `runTool` / `zooworkCustomTools()` registry, mocks, tests · ✅ Moss index + filtered search with local fallback (needs Moss keys to go live) · ✅ Kroger import + `addToCart` client (needs Kroger app keys) · 🔜 run Kroger import + Moss index once keys exist. Docs: `lib/catalog/README.md`. |
 | **3. Frontend — Erik** | One-screen mobile web app on Vercel: GPT-Live voice orb + live order view (items with images, fulfillment mode). See [Frontend](#frontend-owner-3--erik). Status: Next.js + shadcn + ElevenLabs orb scaffolded on `main`; building voice + order view now. |
-| **4. Integrations + pitch** | Instacart dev key and the "Send to Instacart" link, Entire setup, then Band shopper ↔ store agents (from ~2:30), then demo script, slides and backup video. |
+| **4. Integrations + pitch** | Instacart dev key and the "Send to Instacart" link, Kroger shopper login (OAuth) + "Add to Kroger cart" using `lib/kroger/client.ts` `addToCart`, Entire setup, then Band shopper ↔ store agents (from ~2:30), then demo script, slides and backup video. |
 
 **First 15 minutes, all together:** agree on the custom tool interfaces — `search_catalog`, `check_stock`, `send_to_instacart`, `report_oos` — so persons 1–3 can build in parallel against mocks. The draft below is the starting point.
 
@@ -120,6 +123,8 @@ Proposed order tools for the agent (owner 1, same wiring as the tools below): `a
 - **Errors** (both paths): `{ "error": { "code": "not_found" | "invalid_input" | "upstream_failed", "message": string } }`.
 
 ### Shared types
+
+> Code: `lib/types.ts` (single source, used by app and tools). Additions from Data + search: `Product.upc?` (Kroger, needed by the Cart API), `Product.image_url?` (filled by the Kroger import), `Store { id, name, neighborhood }`, `SearchCatalogOutput.engine?: "moss" | "local"`.
 
 ```ts
 type DietTag = "vegan" | "vegetarian" | "gluten_free" | "dairy_free" | "nut_free" | "organic" | "kosher";
