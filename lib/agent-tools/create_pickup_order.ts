@@ -29,7 +29,8 @@ export function createPickupOrder(order: OrderState, customerName: string): Pick
     kind: "pickup",
     store_id: DEMO_STORE.id,
     store_name: DEMO_STORE.name,
-    slot: nextPickupSlot(),
+    // Keep the slot already shown to the shopper (set by set_fulfillment) if there is one.
+    slot: order.fulfillment.eta?.match(/^Pickup (.+)$/)?.[1] ?? nextPickupSlot(),
     customer_name: customerName,
     pickup_code: String(Math.floor(1000 + Math.random() * 9000)),
     lines,

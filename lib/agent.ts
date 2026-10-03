@@ -1,6 +1,7 @@
 import OpenAI from "openai";
 import { CATALOG, OUT_OF_STOCK } from "@/lib/demo-catalog";
 import { applyActions, findSubstitutes } from "@/lib/order";
+import { ago } from "@/lib/history/ago";
 import { searchOrderHistoryTool } from "@/lib/tools/search_order_history";
 import type { DelegateInput, DelegateOutput, FulfillmentMode, OrderAction } from "@/lib/types";
 import { zooworkDelegate, zooworkEnabled } from "@/lib/zoowork/delegate";
@@ -109,9 +110,6 @@ async function runHistoryTool(name: string, args: string, hits: Map<string, numb
     recent_receipts: out.recent_receipts,
   };
 }
-
-const ago = (days: number) =>
-  days <= 1 ? "yesterday" : days < 7 ? `${days} days ago` : days < 11 ? "last week" : days < 25 ? `${Math.round(days / 7)} weeks ago` : `${days} days ago`;
 
 // ZooWork is the agent when ZOOWORK_API_KEY + ZOOWORK_AGENT_ID are set (lib/zoowork, owner 1).
 // Otherwise the interim OpenAI agent below keeps the UI working end to end.

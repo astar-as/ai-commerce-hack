@@ -6,8 +6,8 @@ import { existsSync, readFileSync, writeFileSync } from 'node:fs'
 import { AGENT_LABELS, AGENT_NAME, agentResource } from '../lib/zoowork/agent-config'
 import { zoowork } from '../lib/zoowork/client'
 
-// Strong tool-callers first; the first selectable match wins.
-const MODEL_PREFERENCES = [/claude.*sonnet/i, /claude.*opus/i, /gpt-5/i, /claude/i, /gemini.*pro/i]
+// Strong, fast tool-callers first (newest first); the first selectable match wins.
+const MODEL_PREFERENCES = [/claude-sonnet-5-5$/, /claude-sonnet-5$/, /claude-opus-5-5$/, /claude-sonnet/, /claude/, /gpt-6/]
 
 const zc = zoowork()
 
