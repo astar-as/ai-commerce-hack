@@ -1,4 +1,4 @@
-import { CATALOG, DEMO_STORE, OUT_OF_STOCK, productById } from "@/lib/catalog";
+import { CATALOG, DEMO_STORE, OUT_OF_STOCK, productById } from "@/lib/demo-catalog";
 import type { OrderAction, OrderItem, OrderState, Product, SearchResult } from "@/lib/types";
 
 export const emptyOrder = (): OrderState => ({
