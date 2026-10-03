@@ -13,7 +13,7 @@ The brief judges merchant agents: *"Pick a real merchant. Pick one line of their
 - **Revenue:** when an item is out of stock, the agent suggests a substitute the store has, so the sale isn't lost. This is the main P&L line we move.
 - **Efficiency:** every "not on the shelf" report becomes a live restock signal for the store.
 - **Merchant: Safeway** (synthetic inventory for SF stores). Why:
-  - **The online path is real.** Safeway sells through Instacart, so "Send to Instacart" can show a real Safeway store. Whole Foods (Amazon only) and Trader Joe's (no online ordering) aren't on Instacart. ⚠️ Verify on instacart.com that SF Safeway stores show up.
+  - **The online path is real.** Safeway sells through Instacart, so the shopper can pick a Safeway on the Instacart list page. Whole Foods (Amazon only) and Trader Joe's (no online ordering) aren't on Instacart. ⚠️ Instacart's API can't force a specific retailer ("directing users to a specific merchant is not supported") — the user picks the store. Verify on instacart.com that SF Safeway stores show up.
   - **Stronger P&L story.** Safeway has big store brands (O Organics, Signature Select). On an out-of-stock, the agent suggests the store-brand version first — keeps the sale and usually earns more per item.
   - **Judges know it.** The mainstream SF chain, and its shelves really do run out.
   - Runner-up: Sprouts (on Instacart, diet-heavy shoppers make "still fits my diet" substitutions shine), but Safeway is the stronger P&L pitch.
@@ -24,7 +24,7 @@ The brief judges merchant agents: *"Pick a real merchant. Pick one line of their
 |---|---|---|
 | **ZooWork** | ✅ Core | The agent itself. Builds meal plans and lists, and remembers household preferences (diet, allergies, budget, usual brands). Can run a weekly "Sunday list" job with Schedules. Calls our backend through custom tools for catalog search, stock checks and Instacart. Targets the $800 Best Use of ZooWork prize. |
 | **Moss** | ✅ Core | Catalog search. In-store substitutes come back in under 10 ms, filtered to what's in stock at that store and to the shopper's diet. Moss has a browser (WASM) build, so in-store search can work on bad store wifi — the X-factor moment. |
-| **Instacart** | ✅ Online path | The Developer Platform API (`POST /idp/v1/products/products_link`) takes our list and returns a link to a pre-filled shopping list on Instacart, where the user picks a store and checks out. It can't add to a cart directly; the link is the closest thing. |
+| **Instacart** | ✅ Online path | The Developer Platform API (`POST /idp/v1/products/products_link`) takes our list and returns a link to a pre-filled shopping list on Instacart, where the user picks a store and checks out. It can't add to a cart directly; the link is the closest thing. Development keys are self-serve in the Instacart Developer Dashboard and use `https://connect.dev.instacart.tools`; production keys need a review (~5 business days), so the demo runs on the dev key. |
 | **Entire** | ✅ Nearly free | Install the CLI so our Claude Code sessions are saved with each commit. Almost no work, qualifies for the Entire prize. |
 | **Band** | ⚠️ Stretch | Only worth it as a shopper agent ↔ store agent conversation across the account boundary. The store agent owns inventory and can veto a substitute (recall, age-restricted item). Fits the brief and Band's judging. If it isn't essential (Band's "delete test"), skip it. |
 | **Tavily** | ❌ Skip | ZooWork already has `web_search` / `web_fetch` built in. |
@@ -59,7 +59,166 @@ Next.js API routes ── ZooWork session (streams the agent's replies to the UI
 | **3. Frontend** | The mobile web app: list view, in-store mode with voice input, and the store dashboard. |
 | **4. Integrations + pitch** | Instacart dev key and the "Send to Instacart" link, Entire setup, then Band shopper ↔ store agents (from ~2:30), then demo script, slides and backup video. |
 
-**First 15 minutes, all together:** agree on the custom tool interfaces — `search_catalog`, `check_stock`, `send_to_instacart`, `report_oos` — so persons 1–3 can build in parallel against mocks.
+**First 15 minutes, all together:** agree on the custom tool interfaces — `search_catalog`, `check_stock`, `send_to_instacart`, `report_oos` — so persons 1–3 can build in parallel against mocks. The draft below is the starting point.
+
+## Tool interfaces (draft — confirm in the first 15 minutes)
+
+### How the tools are wired
+
+- Each tool is one plain backend function in `lib/tools/<name>.ts`: `(input) => Promise<output>`.
+- It's exposed two ways, with the **same input/output JSON**:
+  1. **To the ZooWork agent** as an application-executed custom tool (`resource.custom_tools`: `name`, `description`, `input_schema` with `type: "object"`, optional `timeoutMs`). When the stream emits `agent.custom_tool_use` (`phase: "requested"`), the backend runs the function and calls `resolveCustomToolCall(agentId, callId, { content: [{ type: "json", value: output }] })`. On failure, resolve with the error JSON and `is_error: true` so the agent can recover.
+  2. **To the frontend** as `POST /api/tools/<name>`. The in-store "not on shelf" tap calls `search_catalog` and `report_oos` **directly** — no LLM in the hot path — and only then asks the agent to explain or pick.
+- **Mocks first:** each tool ships with a fixture in `mocks/<name>.json` and an env flag `MOCK_TOOLS=1`, so the agent (1) and frontend (3) can build before data + search (2) and Instacart (4) are ready.
+- **Errors** (both paths): `{ "error": { "code": "not_found" | "invalid_input" | "upstream_failed", "message": string } }`.
+
+### Shared types
+
+```ts
+type DietTag = "vegan" | "vegetarian" | "gluten_free" | "dairy_free" | "nut_free" | "organic" | "kosher";
+type Allergen = "milk" | "eggs" | "peanuts" | "tree_nuts" | "soy" | "wheat" | "fish" | "shellfish" | "sesame";
+
+type Product = {
+  id: string;            // our catalog id, e.g. "sw-000123" (not an Instacart id)
+  name: string;          // "O Organics Oat Milk Original"
+  brand: string;         // "O Organics"
+  store_brand: boolean;  // true for O Organics / Signature Select → ranked first on substitutes
+  department: string;    // "dairy eggs"
+  aisle: string;         // "Dairy Alternatives"
+  size: string;          // "64 fl oz"
+  price: number;         // USD, default list price
+  diet_tags: DietTag[];
+  allergens: Allergen[];
+};
+
+type StoreStock = {
+  store_id: string;      // "safeway-sf-01" (2–3 synthetic SF stores)
+  product_id: string;
+  in_stock: boolean;
+  qty: number;
+  aisle_number: string;  // "12"
+  price: number;         // store price (may differ from list price)
+};
+```
+
+**Moss mapping (person 2):** one Moss index per store (e.g. `safeway-sf-01`). Each doc: `id` = product id, `text` = name + brand + aisle + diet tags (what we search on), `metadata` = filter fields. Moss metadata values are **strings** (`"true"`, `"4.99"`), and filters (`$eq`, `$and`, `$in`, `$lt`) need the index **loaded locally** (`loadIndex`) — do that once at server start. One boolean field per diet tag (`vegan: "true"`) keeps `$eq` filters simple. `alpha` tunes semantic vs keyword weight.
+
+### 1. `search_catalog` — find products or substitutes (owner: 2)
+
+Used by the agent to build lists, and by the frontend for the in-store substitute fast path.
+
+**Input**
+```ts
+{
+  query: string;                 // "oat milk barista", or the product name when substituting
+  store_id?: string;             // set → results include stock for that store
+  substitute_for?: string;       // product id that's missing → excluded from results; ranked by
+                                 // similarity, then store brand first, then smallest price difference
+  in_stock_only?: boolean;       // default true when store_id is set
+  diet?: DietTag[];              // every tag must match
+  exclude_allergens?: Allergen[];
+  max_price?: number;
+  limit?: number;                // default 5, max 20
+}
+```
+
+**Output**
+```ts
+{
+  results: Array<{
+    product: Product;
+    score: number;               // Moss relevance score
+    stock?: StoreStock;          // present when store_id is set
+    price_diff?: number;         // vs substitute_for, in USD (+ = more expensive)
+    reason?: string;             // short template, e.g. "Store brand · same aisle · dairy-free"
+  }>;
+  took_ms: number;               // Moss query time → latency badge in the UI
+}
+```
+
+### 2. `check_stock` — stock, aisle and price for a list at one store (owner: 2)
+
+Used to sort the in-store list by aisle and flag items that are out before the shopper leaves home.
+
+**Input**
+```ts
+{
+  store_id: string;
+  product_ids: string[];         // max 100
+}
+```
+
+**Output**
+```ts
+{
+  store_id: string;
+  items: StoreStock[];
+  unknown_ids: string[];         // ids not in the catalog
+}
+```
+
+### 3. `send_to_instacart` — turn the list into an Instacart shopping-list link (owner: 4)
+
+Maps our list to Instacart's `POST /idp/v1/products/products_link` and returns the link. Instacart matches products by **name** (our ids aren't Instacart ids), so we send good names plus brand / health filters.
+
+**Input**
+```ts
+{
+  title: string;                 // "Week of Oct 5 — family of 3"
+  items: Array<{
+    product_id?: string;         // ours, for logging only
+    name: string;                // search term on Instacart: "oat milk"
+    display_text?: string;       // shown to the user: "O Organics Oat Milk, 64 fl oz"
+    quantity: number;            // > 0
+    unit?: string;               // only Instacart-supported units (each, oz, fl oz, lb, gallon…); default "each"
+    brand?: string;              // → filters.brand_filters (case-sensitive)
+    health_filters?: Array<"ORGANIC" | "GLUTEN_FREE" | "FAT_FREE" | "VEGAN" | "KOSHER" | "SUGAR_FREE" | "LOW_FAT">;
+  }>;
+}
+```
+
+**Output**
+```ts
+{
+  url: string;                   // Instacart products_link_url, or our mock cart page
+  item_count: number;
+  mode: "instacart" | "mock";    // "mock" when there's no key or Instacart errors
+}
+```
+
+Notes: cache the URL by a hash of the list and only regenerate when the list changes (Instacart's guidance). Set `landing_page_configuration.partner_linkback_url` to our app. The link can't pre-select Safeway — the shopper picks the store on Instacart.
+
+### 4. `report_oos` — record an out-of-stock and what happened (owner: 1, dashboard reads it: 3)
+
+Called when the shopper taps "not on shelf" (or says it), and again when they pick a substitute or skip. Feeds the store dashboard: revenue retained and restock signals.
+
+**Input**
+```ts
+{
+  store_id: string;
+  product_id: string;                       // the missing product
+  outcome: "pending" | "substituted" | "skipped";
+  substitute_product_id?: string;           // required when outcome = "substituted"
+  source: "shopper_tap" | "voice" | "agent";
+}
+```
+
+**Output**
+```ts
+{
+  event_id: string;
+  recorded_at: string;                      // ISO timestamp
+}
+```
+
+**Dashboard read (not an agent tool):** `GET /api/dashboard?store_id=…` →
+`{ revenue_retained: number, substitutions: number, skipped: number, top_oos: Array<{ product: Product, reports: number }> }`.
+`revenue_retained` = sum of the substitute's store price for `substituted` events. Store events in memory or a JSON file — no database needed for the demo.
+
+### What is *not* a tool
+
+- **Household preferences** (diet, allergies, budget, usual brands) live in ZooWork's agent memory and the persona docs (`USER.md`), not in our backend.
+- **Meal planning and list building** is the agent's own reasoning on top of `search_catalog`.
 
 ## Timeline (deadline 5:00 PM)
 
@@ -74,7 +233,7 @@ Next.js API routes ── ZooWork session (streams the agent's replies to the UI
 ## Demo script (~3 min)
 
 1. Ask for a weekly plan → list appears and uses remembered preferences.
-2. Tap "Send to Instacart" → a real pre-filled Instacart list opens.
+2. Tap "Send to Instacart" → a real pre-filled Instacart list opens → pick Safeway.
 3. Switch to the phone in a Safeway: "They're out of Oatly Barista" → alternatives in ~4 ms, dairy-free constraint kept, O Organics option first → swap.
 4. Store dashboard: "This Safeway kept $X in sales today, and here's what to restock."
 
@@ -83,4 +242,6 @@ Next.js API routes ── ZooWork session (streams the agent's replies to the UI
 - [ZooWork docs](https://zoowork.ai/docs/) · [SDK skills](https://github.com/SerendipityOneInc/zoowork-sdk-skills)
 - [Moss](https://github.com/usemoss/moss)
 - [Instacart: Create shopping list page](https://docs.instacart.com/developer_platform_api/api/products/create_shopping_list_page/) · [Instacart MCP](https://docs.instacart.com/developer_platform_api/guide/tutorials/mcp)
+- [Instacart: Get an API key](https://docs.instacart.com/developer_platform_api/get_started/api-keys) · [Instacart FAQ](https://docs.instacart.com/developer_platform_api/faq/)
+- [ZooWork custom tools](https://zoowork.ai/docs/build/tools.md) · [Moss metadata filtering example](https://github.com/usemoss/moss/blob/main/examples/python/metadata_filtering.py)
 - [Band hacker guide](https://band.ai/hacker-guide)
