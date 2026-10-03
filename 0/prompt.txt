@@ -1,0 +1,40 @@
+When all of this is done, I want you to make an assessment of how we are aligned with the hackathon, like in terms of what will the judges be impressed by, what will they like and not. That is very important. I think the VP, the former VP in Alibaba, like the CEO of Sumeworks, is going to care a lot about: is this actually scalable, usable, UX-friendly, et cetera. If they are up to date, they're going to question themselves, why not just use GroKbots, ChatGPT, Dots, et cetera.
+
+I think it's very important that it is clear that the main product here is the distribution channel, and that you can literally order and fix anything, anywhere. That's core
+
+---
+
+Prompt from Leon;
+
+
+
+<pasted_content id="be68">
+Task: copy 4 environment variables on the Vercel project astar12/ai-commerce-hack
+from Preview to Production, then redeploy production. Leon’s account isn’t
+allowed to create Production variables; yours (team owner) is.
+
+Variables (already set for Preview and Development):
+  MOSS_PROJECT_ID, MOSS_PROJECT_KEY, CATALOG_SOURCE (=kroger), MOCK_TOOLS (=0)
+
+Steps (from the ai-commerce-hack repo, on main):
+1. npx vercel link --yes --scope astar12 --project ai-commerce-hack   (skip if already linked)
+2. npx vercel env pull .env.preview.tmp --environment=preview --yes
+3. For each NAME in MOSS_PROJECT_ID MOSS_PROJECT_KEY CATALOG_SOURCE MOCK_TOOLS:
+     read its value from .env.preview.tmp (strip surrounding quotes) and run
+     printf ‘%s’ “$VALUE” | npx vercel env add NAME production --force
+   Don’t print MOSS_PROJECT_KEY’s value in logs or chat.
+4. rm .env.preview.tmp
+5. npx vercel env ls   → confirm all 4 now list Production
+6. Redeploy production so it picks them up (Vercel only applies env changes on the
+   next deploy): npx vercel deploy --prod, or redeploy the latest production
+   deployment from the dashboard.
+7. Check the deployment’s function logs: no Moss errors.
+
+Context: these turn on real Kroger product data + Moss semantic search for the
+search_catalog / check_stock tools (lib/tools, see lib/catalog/README.md).
+Two follow-ups for the frontend owner (not part of this task):
+- Call warmSearch() from lib/catalog/search in instrumentation.ts register(),
+  so the first search doesn’t wait ~4 s for the Moss index to load.
+- The UI still renders the stand-in lib/demo-catalog.ts; switch it to
+  search_catalog / check_stock to show the real Kroger products.
+</pasted_content id="be68">
