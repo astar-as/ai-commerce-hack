@@ -46,10 +46,6 @@ export default async function MockCartPage({ searchParams }: PageProps<"/cart/mo
               </li>
             ))}
           </ul>
-<<<<<<< Updated upstream
-          <div className="mt-auto pt-8">
-            <PlaceOrderButton label={`Place order · ${count} ${count === 1 ? "item" : "items"}`} list={typeof list === "string" ? list : undefined} />
-=======
           <div className="mt-auto flex flex-col gap-3 pt-8">
             <a
               href={`/api/kroger/login?list=${list}`}
@@ -58,8 +54,7 @@ export default async function MockCartPage({ searchParams }: PageProps<"/cart/mo
               <ShoppingCart className="size-5" strokeWidth={2} />
               Add to my Kroger cart
             </a>
-            <PlaceOrderButton label={`Place order · ${count} ${count === 1 ? "item" : "items"}`} />
->>>>>>> Stashed changes
+            <PlaceOrderButton label={`Place order · ${count} ${count === 1 ? "item" : "items"}`} list={typeof list === "string" ? list : undefined} />
           </div>
         </>
       )}
