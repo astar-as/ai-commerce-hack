@@ -2,10 +2,10 @@
 import { profileViolations } from "@/lib/profile/guard";
 import { createPickupOrder } from "./create_pickup_order";
 import { orderSummary } from "./order_tools";
-import { instacartInput, sendToInstacart } from "./send_to_instacart";
+import { withCheckoutUrl } from "@/lib/tools/send_to_instacart";
 import { AgentToolError, type ToolContext, type ToolDefinition } from "./types";
 
-async function checkout(input: { title?: string }, ctx: ToolContext) {
+async function checkout(_input: { title?: string }, ctx: ToolContext) {
   const order = ctx.order;
   if (!order.items.length) throw new AgentToolError("invalid_input", "the order is empty");
   if (order.pending) throw new AgentToolError("invalid_input", "a swap is still pending; resolve it first");
@@ -21,9 +21,9 @@ async function checkout(input: { title?: string }, ctx: ToolContext) {
       return { placed: "store_pickup", pickup_code: pickup.pickup_code, slot: pickup.slot, store: pickup.store_name, total: pickup.total, order: orderSummary(ctx.order) };
     }
     case "instacart_delivery": {
-      const out = await sendToInstacart(instacartInput(order, input.title || "Basket order"));
-      ctx.order = { ...order, fulfillment: { ...order.fulfillment, checkout_url: out.url } };
-      return { placed: "instacart_delivery", link_ready: true, mode: out.mode, item_count: out.item_count, order: orderSummary(ctx.order) };
+      // Same Instacart path /api/delegate uses (owner 4): real link with a key, mock cart page otherwise.
+      ctx.order = await withCheckoutUrl(order, process.env.APP_URL ?? "https://ai-commerce-hack.vercel.app");
+      return { placed: "instacart_delivery", link_ready: Boolean(ctx.order.fulfillment.checkout_url), order: orderSummary(ctx.order) };
     }
     case "in_store":
       throw new AgentToolError("invalid_input", "the shopper is shopping in the store; there's nothing to place");

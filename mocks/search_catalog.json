@@ -1,0 +1,106 @@
+{
+  "results": [
+    {
+      "product": {
+        "id": "kr-0001111013269",
+        "name": "Simple Truth Dairy Free Original Coconut Milk Half Gallon",
+        "brand": "Simple Truth",
+        "store_brand": true,
+        "department": "dairy eggs",
+        "aisle": "Dairy Alternatives",
+        "size": "1/2 gal",
+        "price": 3.59,
+        "diet_tags": [
+          "dairy_free",
+          "kosher",
+          "nut_free",
+          "vegan",
+          "vegetarian"
+        ],
+        "allergens": [],
+        "upc": "0001111013269",
+        "image_url": "https://www.kroger.com/product/images/medium/front/0001111013269"
+      },
+      "score": 0.444,
+      "stock": {
+        "store_id": "kroger-01400513",
+        "product_id": "kr-0001111013269",
+        "in_stock": true,
+        "qty": 20,
+        "aisle_number": "100",
+        "price": 3.59
+      },
+      "price_diff": -0.4,
+      "reason": "Store brand · same aisle (100) · vegan · nut-free"
+    },
+    {
+      "product": {
+        "id": "kr-0004410015618",
+        "name": "Planet Oat Dairy Free Original Oat Milk 52 fl oz",
+        "brand": "Planet Oat",
+        "store_brand": false,
+        "department": "dairy eggs",
+        "aisle": "Dairy Alternatives",
+        "size": "52 fl oz",
+        "price": 3.69,
+        "diet_tags": [
+          "dairy_free",
+          "kosher",
+          "nut_free",
+          "vegan",
+          "vegetarian"
+        ],
+        "allergens": [],
+        "upc": "0004410015618",
+        "image_url": "https://www.kroger.com/product/images/medium/front/0004410015618"
+      },
+      "score": 0.556,
+      "stock": {
+        "store_id": "kroger-01400513",
+        "product_id": "kr-0004410015618",
+        "in_stock": true,
+        "qty": 20,
+        "aisle_number": "100",
+        "price": 3.69
+      },
+      "price_diff": -0.3,
+      "reason": "same aisle (100) · vegan · nut-free"
+    },
+    {
+      "product": {
+        "id": "kr-0004410019080",
+        "name": "Planet Oat Dairy Free Unsweeted Original Oat Milk",
+        "brand": "Planet Oat",
+        "store_brand": false,
+        "department": "dairy eggs",
+        "aisle": "Dairy Alternatives",
+        "size": "52 oz",
+        "price": 3.69,
+        "diet_tags": [
+          "dairy_free",
+          "gluten_free",
+          "kosher",
+          "nut_free",
+          "vegan",
+          "vegetarian"
+        ],
+        "allergens": [],
+        "upc": "0004410019080",
+        "image_url": "https://www.kroger.com/product/images/medium/front/0004410019080"
+      },
+      "score": 0.556,
+      "stock": {
+        "store_id": "kroger-01400513",
+        "product_id": "kr-0004410019080",
+        "in_stock": true,
+        "qty": 20,
+        "aisle_number": "100",
+        "price": 3.69
+      },
+      "price_diff": -0.3,
+      "reason": "same aisle (100) · vegan · nut-free"
+    }
+  ],
+  "took_ms": 0.6,
+  "engine": "local"
+}

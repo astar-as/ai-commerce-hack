@@ -2,12 +2,13 @@
 // lib/zoowork/turn.ts with the turn's context (household profile + current order).
 // Catalog tools for the frontend live in lib/tools (data-search, owner 2).
 import { checkoutTool } from "./checkout";
+import { orderHistoryTool } from "./order_history";
 import { ORDER_TOOLS } from "./order_tools";
 import { updateProfileTool } from "./profile_tools";
 import { searchCatalogTool } from "./search_catalog";
 import { AgentToolError, type ToolContext, type ToolDefinition } from "./types";
 
-export const AGENT_TOOLS: ToolDefinition[] = [searchCatalogTool, ...ORDER_TOOLS, checkoutTool, updateProfileTool];
+export const AGENT_TOOLS: ToolDefinition[] = [searchCatalogTool, orderHistoryTool, ...ORDER_TOOLS, checkoutTool, updateProfileTool];
 
 const byName = new Map(AGENT_TOOLS.map((t) => [t.name, t]));
 
