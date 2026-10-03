@@ -1,7 +1,7 @@
 "use client";
 
 import { AnimatePresence, motion } from "motion/react";
-import { Check, RotateCcw } from "lucide-react";
+import { Check, History, RotateCcw } from "lucide-react";
 import { ProductThumb } from "@/components/basket/product-thumb";
 import type { OrderItem, OrderState } from "@/lib/types";
 import { cn } from "@/lib/utils";
@@ -51,6 +51,12 @@ function Row({ item, onTogglePicked, inStore }: { item: OrderItem; onTogglePicke
               Swapped from {item.swapped_from.brand}
               {item.note ? ` · ${item.note}` : ""}
             </span>
+          </span>
+        )}
+        {status !== "swapped" && item.note && (
+          <span className="mt-1.5 inline-flex max-w-full items-center gap-1 rounded-full bg-surface px-2 py-0.5 text-[11.5px] font-medium text-body">
+            <History className="size-3 shrink-0" strokeWidth={2} />
+            <span className="truncate">{item.note}</span>
           </span>
         )}
         {oos && (
