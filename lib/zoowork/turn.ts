@@ -75,40 +75,45 @@ export async function* runTurn({ text, notes = [], sessionId, actorRef, ctx, sig
   const streamSignal = signal ? AbortSignal.any([signal, timeout]) : timeout;
 
   try {
-    for await (const ev of zc.streamEvents(aid, sid, { cursor: state.cursors.get(sid), signal: streamSignal })) {
-      if (ev.cursor) state.cursors.set(sid, ev.cursor);
-      if (ev.seq <= minSeq) continue;
+    // ZooWork closes an idle stream; a long turn can outlast it. Reconnect from the saved cursor
+    // until run.finished arrives or the turn times out.
+    for (let attempt = 0; attempt < 6; attempt++) {
+      for await (const ev of zc.streamEvents(aid, sid, { cursor: state.cursors.get(sid), signal: streamSignal })) {
+        if (ev.cursor) state.cursors.set(sid, ev.cursor);
+        if (ev.seq <= minSeq) continue;
 
-      const said = assistantText(ev);
-      if (said) yield { type: "assistant", text: said };
+        const said = assistantText(ev);
+        if (said) yield { type: "assistant", text: said };
 
-      const call = customToolUse(ev);
-      if (call?.phase === "requested" && call.name && !handledCalls.has(call.callId)) {
-        handledCalls.add(call.callId);
-        yield { type: "tool", phase: "start", callId: call.callId, name: call.name, input: call.input ?? {} };
+        const call = customToolUse(ev);
+        if (call?.phase === "requested" && call.name && !handledCalls.has(call.callId)) {
+          handledCalls.add(call.callId);
+          yield { type: "tool", phase: "start", callId: call.callId, name: call.name, input: call.input ?? {} };
 
-        const started = Date.now();
-        const result = await runAgentTool(call.name, call.input, ctx);
-        const output = result.ok ? result.output : { error: result.error };
-        await zc.resolveCustomToolCall(aid, call.callId, {
-          content: [{ type: "json", value: output }],
-          isError: !result.ok,
-          resolvedBy: "basket-backend",
-        });
-        yield { type: "tool", phase: "end", callId: call.callId, name: call.name, ok: result.ok, output, ms: Date.now() - started };
+          const started = Date.now();
+          const result = await runAgentTool(call.name, call.input, ctx);
+          const output = result.ok ? result.output : { error: result.error };
+          await zc.resolveCustomToolCall(aid, call.callId, {
+            content: [{ type: "json", value: output }],
+            isError: !result.ok,
+            resolvedBy: "basket-backend",
+          });
+          yield { type: "tool", phase: "end", callId: call.callId, name: call.name, ok: result.ok, output, ms: Date.now() - started };
 
-        if (call.name === "update_profile" && result.ok && ctx.profile) {
-          profileSeen.set(sid, ctx.profile.version); // the agent made this change, it already knows
-          yield { type: "profile", profile: ctx.profile };
+          if (call.name === "update_profile" && result.ok && ctx.profile) {
+            profileSeen.set(sid, ctx.profile.version); // the agent made this change, it already knows
+            yield { type: "profile", profile: ctx.profile };
+          }
+        }
+
+        if (isRunFinished(ev)) {
+          const status = runOutcome(ev) ?? "failed";
+          const error = status === "succeeded" ? undefined : String(ev.payload.errorMessage ?? ev.payload.reason ?? "");
+          yield { type: "done", status, ...(error && { error }) };
+          return;
         }
       }
-
-      if (isRunFinished(ev)) {
-        const status = runOutcome(ev) ?? "failed";
-        const error = status === "succeeded" ? undefined : String(ev.payload.errorMessage ?? ev.payload.reason ?? "");
-        yield { type: "done", status, ...(error && { error }) };
-        return;
-      }
+      if (streamSignal.aborted) break;
     }
     yield { type: "done", status: "failed", error: "stream closed before the turn finished" };
   } catch (err) {

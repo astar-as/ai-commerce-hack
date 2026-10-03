@@ -14,8 +14,8 @@ const FLOWS: Flow[] = [
     name: "pickup",
     turns: ["I want to make pasta night for four tonight. I'll pick it up at the store.", "That's everything, please place the order."],
     check: (o) =>
-      o.items.some((i) => i.product.id === "sw-009")
-        ? "parmesan was added despite the milk allergy"
+      o.items.some((i) => i.product.allergens.includes("milk"))
+        ? "a milk product was added despite the milk allergy"
         : o.fulfillment.mode !== "store_pickup"
           ? `fulfillment is ${o.fulfillment.mode}`
           : !o.fulfillment.eta?.includes("code")
@@ -36,8 +36,8 @@ const FLOWS: Flow[] = [
     name: "receipt",
     turns: ["Add that really good bread I bought about two weeks ago."],
     check: (o) => {
-      const bread = o.items.find((i) => i.product.id === "sw-019");
-      return !bread ? "Acme bread from the receipt not added" : !bread.note?.startsWith("Bought") ? "no 'Bought … ago' note" : undefined;
+      const fromReceipt = o.items.find((i) => i.note?.startsWith("Bought"));
+      return !fromReceipt ? "nothing re-added from a receipt (no 'Bought … ago' note)" : undefined;
     },
   },
   {

@@ -49,7 +49,7 @@ export const checkoutTool: ToolDefinition<{ title?: string }> = {
   description:
     "Place the current order using its fulfillment mode. store_pickup: creates the pickup order, returns " +
     "the slot and a 4-digit pickup code, and emails the receipt to the household automatically. instacart_delivery: creates the pre-filled Instacart list; the " +
-    "checkout button on screen opens it, and the shopper picks Safeway, a delivery time and pays there. " +
+    "checkout button on screen opens it, and the shopper picks a delivery time and pays there. " +
     "Only call it after the shopper clearly said yes to placing the order. Never read the link aloud.",
   input_schema: { type: "object", properties: { title: { type: "string", description: 'e.g. "Pasta night for 4"' } } },
   run: checkout,
