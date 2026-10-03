@@ -136,3 +136,37 @@ export type DelegateOutput = {
   order: OrderState;
   actions: OrderAction[];
 };
+
+export type ReceiptChannel = "instacart_delivery" | "store_pickup" | "in_store";
+
+export type Receipt = {
+  id: string;
+  date: string;
+  days_ago: number;
+  store: { id: string; name: string };
+  channel: ReceiptChannel;
+  lines: Array<{ product: Product; qty: number; price_paid: number }>;
+  total: number;
+};
+
+export type SearchOrderHistoryInput = {
+  query?: string;
+  days_ago?: number;
+  window_days?: number;
+  limit?: number;
+};
+
+export type OrderHistoryMatch = {
+  product: Product;
+  qty: number;
+  price_paid: number;
+  receipt: { id: string; date: string; days_ago: number; channel: ReceiptChannel; store_name: string };
+  times_bought: number;
+  last_bought_days_ago: number;
+};
+
+export type SearchOrderHistoryOutput = {
+  matches: OrderHistoryMatch[];
+  recent_receipts?: Array<{ id: string; date: string; days_ago: number; channel: ReceiptChannel; item_count: number; total: number }>;
+  receipts_searched: number;
+};
