@@ -1,5 +1,7 @@
-export type DietTag = "vegan" | "vegetarian" | "gluten_free" | "dairy_free" | "nut_free" | "organic" | "kosher";
-export type Allergen = "milk" | "eggs" | "peanuts" | "tree_nuts" | "soy" | "wheat" | "fish" | "shellfish" | "sesame";
+export const DIET_TAGS = ["vegan", "vegetarian", "gluten_free", "dairy_free", "nut_free", "organic", "kosher"] as const;
+export type DietTag = (typeof DIET_TAGS)[number];
+export const ALLERGENS = ["milk", "eggs", "peanuts", "tree_nuts", "soy", "wheat", "fish", "shellfish", "sesame"] as const;
+export type Allergen = (typeof ALLERGENS)[number];
 
 export type Product = {
   id: string;
@@ -13,7 +15,10 @@ export type Product = {
   diet_tags: DietTag[];
   allergens: Allergen[];
   image_url?: string;
+  upc?: string; // Kroger catalog only — needed by the Kroger Cart API
 };
+
+export type Store = { id: string; name: string; neighborhood: string };
 
 export type StoreStock = {
   store_id: string;
@@ -45,7 +50,7 @@ export type SearchResult = {
   reason?: string;
 };
 
-export type SearchCatalogOutput = { results: SearchResult[]; took_ms: number };
+export type SearchCatalogOutput = { results: SearchResult[]; took_ms: number; engine?: "moss" | "local" };
 
 export type CheckStockInput = { store_id: string; product_ids: string[] };
 export type CheckStockOutput = { store_id: string; items: StoreStock[]; unknown_ids: string[] };
@@ -64,7 +69,12 @@ export type SendToInstacartInput = {
     health_filters?: HealthFilter[];
   }>;
 };
-export type SendToInstacartOutput = { url: string; item_count: number; mode: "instacart" | "mock" };
+export type SendToInstacartOutput = {
+  url: string;
+  item_count: number;
+  mode: "instacart" | "mock";
+  fallback_reason?: string; // why mode = "mock" (no key, MOCK_TOOLS=1, Instacart error) — for logs
+};
 
 export type ReportOosInput = {
   store_id: string;
@@ -125,4 +135,38 @@ export type DelegateOutput = {
   say: string;
   order: OrderState;
   actions: OrderAction[];
+};
+
+export type ReceiptChannel = "instacart_delivery" | "store_pickup" | "in_store";
+
+export type Receipt = {
+  id: string;
+  date: string;
+  days_ago: number;
+  store: { id: string; name: string };
+  channel: ReceiptChannel;
+  lines: Array<{ product: Product; qty: number; price_paid: number }>;
+  total: number;
+};
+
+export type SearchOrderHistoryInput = {
+  query?: string;
+  days_ago?: number;
+  window_days?: number;
+  limit?: number;
+};
+
+export type OrderHistoryMatch = {
+  product: Product;
+  qty: number;
+  price_paid: number;
+  receipt: { id: string; date: string; days_ago: number; channel: ReceiptChannel; store_name: string };
+  times_bought: number;
+  last_bought_days_ago: number;
+};
+
+export type SearchOrderHistoryOutput = {
+  matches: OrderHistoryMatch[];
+  recent_receipts?: Array<{ id: string; date: string; days_ago: number; channel: ReceiptChannel; item_count: number; total: number }>;
+  receipts_searched: number;
 };

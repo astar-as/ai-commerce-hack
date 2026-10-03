@@ -13,6 +13,8 @@ export const KIND: Record<string, string> = {
   "sw-006": "pasta",
   "sw-007": "sauce",
   "sw-008": "sauce",
+  "sw-017": "bread",
+  "sw-019": "bread",
 };
 
 export const CATALOG: Product[] = [
@@ -320,6 +322,77 @@ export const CATALOG: Product[] = [
     ],
     "allergens": [],
     "image_url": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRI_XZpeMKssRyBYxTXwA0IbMfuOJ9cDtiTwxsnKYYLOEF-44m96tDuxufwtnBSKl1MinP6vhSqI4_BSzgJ6jY4gzl1hseYj9LyVKEYLSZgl5PQKEagjaTW"
+  },
+  {
+    "id": "sw-019",
+    "name": "Acme Bread Pain au Levain",
+    "brand": "Acme Bread Co.",
+    "store_brand": false,
+    "department": "Bakery",
+    "aisle": "3",
+    "size": "1.5 lb",
+    "price": 7.49,
+    "diet_tags": [
+      "vegan",
+      "vegetarian"
+    ],
+    "allergens": [
+      "wheat"
+    ],
+    "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQ7gdZxm_rUWZelWw9jc3YRzRgkgrYFk_SfPB5Hqqn85H04Q5eHZ87MmqfdsJtP31YfWknmyXaEUgOeKyP0IOhLoP3sdSkckPHRdDmoFn5f"
+  },
+  {
+    "id": "sw-020",
+    "name": "Strawberries",
+    "brand": "Produce",
+    "store_brand": false,
+    "department": "Produce",
+    "aisle": "1",
+    "size": "1 lb",
+    "price": 4.99,
+    "diet_tags": [
+      "vegan",
+      "vegetarian",
+      "gluten_free"
+    ],
+    "allergens": [],
+    "image_url": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTztW4RlhaHYsZN8R1emUYXGH83K2dPQ45cjsiAMxm6iyQqjc3EuWXjlfNKaWwgKBWIfm1ynvGjQNThjzq1kAz8haoedGosPEU2LwsKf1LH"
+  },
+  {
+    "id": "sw-021",
+    "name": "O Organics Large Brown Eggs",
+    "brand": "O Organics",
+    "store_brand": true,
+    "department": "Dairy",
+    "aisle": "6",
+    "size": "12 ct",
+    "price": 5.99,
+    "diet_tags": [
+      "vegetarian",
+      "gluten_free",
+      "organic"
+    ],
+    "allergens": [
+      "eggs"
+    ],
+    "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcS9FKBv_stYRiEpVkk5DKf6GhhzcChbbL7QkVHVU3KzTREK_qsFDI4PxVZZjD6SD_InMSf8vV8rEXuyss-ck49-wjF5es_NjuRxvqPnSg5xnQV1qCUDqCHx"
+  },
+  {
+    "id": "sw-022",
+    "name": "Philz Coffee Tesora Whole Bean",
+    "brand": "Philz Coffee",
+    "store_brand": false,
+    "department": "Coffee & tea",
+    "aisle": "8",
+    "size": "12 oz",
+    "price": 15.99,
+    "diet_tags": [
+      "vegan",
+      "vegetarian",
+      "gluten_free"
+    ],
+    "allergens": [],
+    "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRD1TfeGdarBdqUP-JXS3SuK-65LBEE6CTPTvVRJmi1KweNITNV0CJ0QbIdJ6HS11S8hrUQSfGBngAO1buUe2HqyCJZFWRweXBhKt8PAjmuz8zfMqM1MBFCwA"
   }
 ];
 

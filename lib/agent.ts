@@ -1,6 +1,7 @@
 import OpenAI from "openai";
 import { CATALOG, OUT_OF_STOCK } from "@/lib/demo-catalog";
 import { applyActions, findSubstitutes } from "@/lib/order";
+import { searchOrderHistoryTool } from "@/lib/tools/search_order_history";
 import type { DelegateInput, DelegateOutput, FulfillmentMode, OrderAction } from "@/lib/types";
 import { zooworkDelegate, zooworkEnabled } from "@/lib/zoowork/delegate";
 
@@ -30,6 +31,7 @@ Rules:
 - Never emit swap_item unless the shopper has just confirmed a pending swap. "Yes", "sure", "do it" picks the first option; naming a product picks that option. A no emits dismiss_swap.
 - Delivery / Instacart → set_fulfillment instacart_delivery. Pickup → store_pickup. "I'm in the store" / shopping now → in_store.
 - If the shopper mentions allergies, never promise an item is safe; tell them to check the label.
+- When the shopper refers to something they bought before ("that bread from two weeks ago", "my usual", "same as last time"), call search_order_history first, then add the matching product by its id and mention when they bought it, e.g. "the Acme Pain au Levain you got two weeks ago". If several match, pick the closest in time or ask.
 - "say" is spoken aloud: one or two short, warm sentences, no lists, no markdown, no ids.`;
 
 const SCHEMA = {
@@ -88,6 +90,29 @@ function toAction(a: RawAction): OrderAction | null {
   }
 }
 
+async function runHistoryTool(name: string, args: string, hits: Map<string, number>) {
+  if (name !== searchOrderHistoryTool.name) return { error: { code: "not_found", message: `Unknown tool ${name}` } };
+  const out = await searchOrderHistoryTool.run(JSON.parse(args || "{}"));
+  for (const m of out.matches) hits.set(m.product.id, m.receipt.days_ago);
+  return {
+    matches: out.matches.map((m) => ({
+      product_id: m.product.id,
+      name: m.product.name,
+      brand: m.product.brand,
+      size: m.product.size,
+      price_now: m.product.price,
+      bought_on: m.receipt.date,
+      days_ago: m.receipt.days_ago,
+      times_bought: m.times_bought,
+      out_of_stock_now: OUT_OF_STOCK.has(m.product.id),
+    })),
+    recent_receipts: out.recent_receipts,
+  };
+}
+
+const ago = (days: number) =>
+  days <= 1 ? "yesterday" : days < 7 ? `${days} days ago` : days < 11 ? "last week" : days < 25 ? `${Math.round(days / 7)} weeks ago` : `${days} days ago`;
+
 // ZooWork is the agent when ZOOWORK_API_KEY + ZOOWORK_AGENT_ID are set (lib/zoowork, owner 1).
 // Otherwise the interim OpenAI agent below keeps the UI working end to end.
 export async function runAgentTurn(input: DelegateInput): Promise<DelegateOutput> {
@@ -112,14 +137,54 @@ async function runInterimTurn(input: DelegateInput): Promise<DelegateOutput> {
     .map((l) => `${l.role === "user" ? "Shopper" : "Voice"}: ${l.text}`)
     .join("\n");
 
-  const response = await client.responses.create({
+  const tools = [
+    {
+      type: "function" as const,
+      name: searchOrderHistoryTool.name,
+      description: searchOrderHistoryTool.description,
+      parameters: searchOrderHistoryTool.input_schema,
+      strict: false,
+    },
+  ];
+  const format = { type: "json_schema" as const, name: "basket_turn", strict: true, schema: SCHEMA };
+
+  let response = await client.responses.create({
     model: MODEL,
     instructions: INSTRUCTIONS,
     input: `CATALOG\n${catalogLines()}\n\nRANKED SUBSTITUTES FOR OUT-OF-STOCK ITEMS (offer the first one)\n${substituteLines()}\n\nORDER (fulfillment: ${order.fulfillment.mode})\n${orderLines}\n\n${pending}\n\nCONVERSATION\n${convo}`,
-    text: { format: { type: "json_schema", name: "basket_turn", strict: true, schema: SCHEMA } },
+    tools,
+    text: { format },
   });
+
+  const historyHits = new Map<string, number>();
+  for (let round = 0; round < 3; round++) {
+    const calls = response.output.filter((o) => o.type === "function_call");
+    if (!calls.length) break;
+    const outputs = await Promise.all(
+      calls.map(async (c) => ({
+        type: "function_call_output" as const,
+        call_id: c.call_id,
+        output: JSON.stringify(await runHistoryTool(c.name, c.arguments, historyHits)),
+      })),
+    );
+    response = await client.responses.create({
+      model: MODEL,
+      instructions: INSTRUCTIONS,
+      previous_response_id: response.id,
+      input: outputs,
+      tools,
+      text: { format },
+    });
+  }
 
   const parsed = JSON.parse(response.output_text) as { say: string; actions: RawAction[] };
   const actions = parsed.actions.map(toAction).filter((a): a is OrderAction => a !== null);
-  return { say: parsed.say, actions, order: applyActions(order, actions) };
+  const next = applyActions(order, actions);
+  const added = new Set(actions.flatMap((a) => (a.type === "add_item" ? [a.product_id] : [])));
+  const items = next.items.map((i) =>
+    added.has(i.product.id) && historyHits.has(i.product.id) && !i.note
+      ? { ...i, note: `Bought ${ago(historyHits.get(i.product.id)!)}` }
+      : i,
+  );
+  return { say: parsed.say, actions, order: { ...next, items } };
 }

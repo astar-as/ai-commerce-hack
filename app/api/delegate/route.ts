@@ -1,4 +1,5 @@
 import { runAgentTurn } from "@/lib/agent";
+import { withCheckoutUrl } from "@/lib/tools/send_to_instacart";
 import type { DelegateInput } from "@/lib/types";
 
 // A ZooWork turn with a few tool calls can take 10–30 s.
@@ -10,7 +11,8 @@ export async function POST(request: Request) {
     return Response.json({ error: { code: "invalid_input", message: "order and transcript are required" } }, { status: 400 });
   }
   try {
-    return Response.json(await runAgentTurn(input));
+    const turn = await runAgentTurn(input);
+    return Response.json({ ...turn, order: await withCheckoutUrl(turn.order, new URL(request.url).origin) });
   } catch (error) {
     const message = error instanceof Error ? error.message : String(error);
     return Response.json(

@@ -35,7 +35,8 @@ Re-run `agent:setup` after editing `lib/zoowork/agent-config.ts`.
 |---|---|
 | `search_catalog` | Searches `lib/demo-catalog.ts`, the same ids the screen renders. Profile allergens and diet are applied automatically, and removed matches are listed in `hidden_by_profile`. With `substitute_for` it uses `findSubstitutes`. |
 | `add_item` `remove_item` `set_qty` `propose_swap` `swap_item` `dismiss_swap` `set_fulfillment` | One per `OrderAction`, applied with `applyAction` from `lib/order.ts`. The actions are returned to the frontend. `add_item` and `swap_item` refuse products the profile blocks. The swap tools log out-of-stock events automatically. |
-| `checkout` | Places the order the screen shows. Pickup: a pickup order with slot and 4-digit code, shown in `fulfillment.eta` and listed at `GET /api/orders`. Delivery: an Instacart shopping-list link in `fulfillment.checkout_url`, which the checkout button opens. Without `INSTACART_API_KEY` it links to Safeway's Instacart storefront. |
+| `search_order_history` | Past receipts ("the bread from two weeks ago"), from `lib/tools/search_order_history`. |
+| `checkout` | Places the order the screen shows. Pickup: a pickup order with slot and 4-digit code, shown in `fulfillment.eta` and listed at `GET /api/orders`. Delivery: uses owner 4's `withCheckoutUrl`, so `fulfillment.checkout_url` holds a real Instacart list with a key, or the mock cart page (`/cart/mock`) without one. |
 | `update_profile` | Saves lasting facts the shopper mentions: allergens, diet, brands, dislikes, pickup or delivery. Removing an allergen needs the shopper's confirmation. |
 
 When data-search merges, point `search_catalog` at `lib/catalog` (Moss). The output shape stays the same.

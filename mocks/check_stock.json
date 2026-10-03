@@ -1,0 +1,30 @@
+{
+  "store_id": "kroger-01400513",
+  "items": [
+    {
+      "store_id": "kroger-01400513",
+      "product_id": "kr-0019064664001",
+      "in_stock": false,
+      "qty": 0,
+      "aisle_number": "4",
+      "price": 3.99
+    },
+    {
+      "store_id": "kroger-01400513",
+      "product_id": "kr-0004410015618",
+      "in_stock": true,
+      "qty": 20,
+      "aisle_number": "100",
+      "price": 3.69
+    },
+    {
+      "store_id": "kroger-01400513",
+      "product_id": "kr-0001111013269",
+      "in_stock": true,
+      "qty": 20,
+      "aisle_number": "100",
+      "price": 3.59
+    }
+  ],
+  "unknown_ids": []
+}
