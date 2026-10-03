@@ -4,7 +4,7 @@
 // and flag pantry staples so the agent can ask instead of adding them.
 
 import { defaultStore, getStore } from "./data";
-import { SearchError, searchCatalog } from "./search";
+import { SearchError, searchCatalog, warmSearch } from "./search";
 import type { MatchIngredientsInput, MatchIngredientsOutput, MatchedIngredient, SearchResult } from "../types";
 
 const MAX_INGREDIENTS = 40;
@@ -69,7 +69,19 @@ export function packagesNeeded(quantity: number | undefined, unit: string | unde
 // --- matching ---
 
 const words = (s: string) => s.toLowerCase().match(/[a-z]{3,}/g) ?? [];
-const stem = (w: string) => w.replace(/(ies)$/, "y").replace(/(es|s)$/, "");
+// Spelling/naming variants between recipes and Kroger product names.
+const SYNONYM: Record<string, string> = { lasagne: "lasagna", noodle: "pasta", scallion: "green onion", cilantro: "cilantro", chile: "chili", chilli: "chili", yoghurt: "yogurt" };
+// Second search query in the store's spelling when the recipe's differs ("lasagna noodles" → "lasagne pasta").
+const ALT_QUERY: Record<string, string> = { lasagna: "lasagne", noodles: "pasta", noodle: "pasta", scallions: "green onions", scallion: "green onion", yoghurt: "yogurt", chilli: "chili" };
+function altQuery(name: string): string | undefined {
+  const alt = name.toLowerCase().split(/\s+/).map((w) => ALT_QUERY[w] ?? w).join(" ");
+  return alt !== name.toLowerCase() ? alt : undefined;
+}
+
+const stem = (w: string) => {
+  const base = w.replace(/(ies)$/, "y").replace(/(es|s)$/, "");
+  return SYNONYM[w] ?? SYNONYM[w.replace(/s$/, "")] ?? SYNONYM[base] ?? base; // "noodles" → "noodle" → pasta
+};
 
 // Lexical sanity check so a weak semantic hit doesn't count as a match: the ingredient's head noun
 // (last word: "ground BEEF", "dragon fruit JAM") must be in the product name, and so must most of
@@ -106,7 +118,10 @@ function fit(ingredient: string, r: SearchResult): number {
   const nameWords = words(r.product.name).map(stem);
   const before = nameWords[nameWords.indexOf(head) - 1];
   const compound = before && !want.has(before) && COMPOUND.has(before) ? 1 : 0;
-  return 1 - 0.06 * extra.length - 0.5 * (modifiers + compound) + (r.product.store_brand ? 0.05 : 0);
+  // English puts the main noun last: "lasagna PASTA" is pasta, "pasta LASAGNA" is a lasagna dish.
+  const headAt = nameWords.lastIndexOf(head);
+  const reversed = [...want].some((w) => w !== head && nameWords.indexOf(w) > headAt) ? 1 : 0;
+  return 1 - 0.06 * extra.length - 0.5 * (modifiers + compound + reversed) + (r.product.store_brand ? 0.05 : 0);
 }
 
 function pick(
@@ -120,6 +135,8 @@ function pick(
     packagesNeeded(ingredient.quantity, ingredient.unit, r.product.size) * (r.stock?.price ?? r.product.price);
   const scored = ok.map((r) => ({ r, fit: fit(ingredient.name, r), cost: cost(r) }));
   const topFit = Math.max(...scored.map((x) => x.fit));
+  // Everything that matched is clearly a different product ("paneer" → a frozen paneer meal): no match.
+  if (topFit < 0.3) return { rest: [] };
   const best = scored.filter((x) => x.fit >= topFit - 0.05).sort((a, b) => a.cost - b.cost)[0].r;
   const rest = scored
     .filter((x) => x.r !== best)
@@ -129,6 +146,7 @@ function pick(
 }
 
 export async function matchIngredients(input: MatchIngredientsInput): Promise<MatchIngredientsOutput> {
+  await warmSearch(); // keep the one-time Moss index load out of took_ms
   const started = performance.now();
   const ingredients = input.ingredients;
   if (!Array.isArray(ingredients) || ingredients.length === 0)
@@ -143,13 +161,18 @@ export async function matchIngredients(input: MatchIngredientsInput): Promise<Ma
       const name = String(ing?.name ?? "").trim();
       const pantry_staple = PANTRY_STAPLE.test(name);
       if (!name || NOT_A_PRODUCT.test(name)) return { ingredient: name, qty: 0, alternatives: [], pantry_staple: true };
-      const { results } = await searchCatalog({
-        query: name,
-        store_id: storeId,
-        diet: input.diet,
-        exclude_allergens: input.exclude_allergens,
-        limit: 12, // a wider net so name fit can beat Moss's ranking on one-word ingredients
-      });
+      const search = (query: string) =>
+        searchCatalog({
+          query,
+          store_id: storeId,
+          diet: input.diet,
+          exclude_allergens: input.exclude_allergens,
+          limit: 12, // a wider net so name fit can beat Moss's ranking on one-word ingredients
+        }).then((r) => r.results);
+      const alt = altQuery(name);
+      const [primary, secondary] = await Promise.all([search(name), alt ? search(alt) : Promise.resolve([])]);
+      const seen = new Set(primary.map((r) => r.product.id));
+      const results = [...primary, ...secondary.filter((r) => !seen.has(r.product.id))];
       const { best, rest } = pick({ ...ing, name }, results);
       if (!best) return { ingredient: name, qty: 0, alternatives: [], pantry_staple, ...(ing.optional && { optional: true }) };
       return {

@@ -47,7 +47,7 @@ npm test
 
 Kroger is the **in-store** data source (real shelf, aisle, stock). Online ordering goes through **Instacart** (`send_to_instacart`, person 4). No Kroger shopper login anywhere.
 
-- **Kroger (default, real):** `data/kroger/*.json` — 3,824 in-store products (≈300 search terms × up to 50 results; Kroger has no "list all products" API) at Kroger On the Rhine, Cincinnati (`kroger-01400513`): real brands, sizes, prices, aisle numbers, stock levels, images, allergens and diet declarations. Refresh with `npm run kroger:import` (needs `KROGER_CLIENT_ID` / `KROGER_CLIENT_SECRET`), then `npm run moss:index`.
+- **Kroger (default, real):** `data/kroger/*.json` — 4,014 in-store products (≈300 search terms × up to 50 results, plus gap fills via `KROGER_TERMS` merge mode; Kroger has no "list all products" API) at Kroger On the Rhine, Cincinnati (`kroger-01400513`): real brands, sizes, prices, aisle numbers, stock levels, images, allergens and diet declarations. Refresh with `npm run kroger:import` (needs `KROGER_CLIENT_ID` / `KROGER_CLIENT_SECRET`), then `npm run moss:index`.
   - **Demo override:** `data/kroger/demo.json` marks Oatly Barista (`kr-0019064664001`) out of stock so the substitute demo always works. Add ids there for more demo cases.
 - **Synthetic (offline fallback):** `data/*.json` — 524 Safeway-style products, 3 made-up SF stores. `CATALOG_SOURCE=synthetic`. Used by the unit tests.
 

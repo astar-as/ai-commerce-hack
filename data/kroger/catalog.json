@@ -76340,5 +76340,3838 @@
   "allergens": [],
   "upc": "0008380404723",
   "image_url": "https://www.kroger.com/product/images/medium/front/0008380404723"
+ },
+ {
+  "id": "kr-0003114200069",
+  "name": "BelGioioso Sliced Fresh Mozzarella Cheese",
+  "brand": "BelGioioso",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "16 oz",
+  "price": 9.99,
+  "diet_tags": [
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0003114200069",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0003114200069"
+ },
+ {
+  "id": "kr-0003114200088",
+  "name": "BelGioioso Fresh Mozzarella Cheese",
+  "brand": "BelGioioso",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "8 oz",
+  "price": 5.49,
+  "diet_tags": [
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0003114200088",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0003114200088"
+ },
+ {
+  "id": "kr-0003114200480",
+  "name": "BelGioioso Fresh Mozzarella Pearls Cheese",
+  "brand": "BelGioioso",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "8 oz",
+  "price": 5.49,
+  "diet_tags": [
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0003114200480",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0003114200480"
+ },
+ {
+  "id": "kr-0001111004375",
+  "name": "Private Selection Fresh Mozzarella Cheese",
+  "brand": "Private Selection",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "8 oz",
+  "price": 3.99,
+  "diet_tags": [
+   "gluten_free",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0001111004375",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0001111004375"
+ },
+ {
+  "id": "kr-0001111004374",
+  "name": "Private Selection Fresh Mozzarella Cheese",
+  "brand": "Private Selection",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "16 oz",
+  "price": 6.99,
+  "diet_tags": [
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0001111004374",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0001111004374"
+ },
+ {
+  "id": "kr-0001111004378",
+  "name": "Private Selection Cherry Size Fresh Mozzarella Cheese",
+  "brand": "Private Selection",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "8 oz",
+  "price": 3.99,
+  "diet_tags": [
+   "gluten_free",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0001111004378",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0001111004378"
+ },
+ {
+  "id": "kr-0003114200034",
+  "name": "BelGioioso Fresh Mozzarella Ciliegine",
+  "brand": "BelGioioso",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "8 oz",
+  "price": 4.99,
+  "diet_tags": [
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0003114200034",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0003114200034"
+ },
+ {
+  "id": "kr-0003114210170",
+  "name": "BelGioioso Fresh Mozzarella Marinated, Ciliegine, Cup 12oz",
+  "brand": "BelGioioso",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "12 oz",
+  "price": 7.99,
+  "diet_tags": [
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0003114210170",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0003114210170"
+ },
+ {
+  "id": "kr-0001111089202",
+  "name": "Kroger Original Cream Cheese Brick",
+  "brand": "Kroger",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "8 oz",
+  "price": 1.99,
+  "diet_tags": [
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0001111089202",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0001111089202"
+ },
+ {
+  "id": "kr-0001111086132",
+  "name": "Kroger Original Cream Cheese",
+  "brand": "Kroger",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "2 ct / 8 oz each",
+  "price": 3.29,
+  "diet_tags": [
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0001111086132",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0001111086132"
+ },
+ {
+  "id": "kr-0002100004024",
+  "name": "Philadelphia Original Cream Cheese Brick",
+  "brand": "Philadelphia",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "2 ct / 8 oz",
+  "price": 5.49,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [],
+  "upc": "0002100004024",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0002100004024"
+ },
+ {
+  "id": "kr-0001111088637",
+  "name": "Simple Truth Organic Cream Cheese",
+  "brand": "Simple Truth Organic",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "8 oz",
+  "price": 2.99,
+  "diet_tags": [
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "organic",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0001111088637",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0001111088637"
+ },
+ {
+  "id": "kr-0002100061223",
+  "name": "Philadelphia Original Cream Cheese Brick",
+  "brand": "Philadelphia",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "8 oz",
+  "price": 3.49,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [],
+  "upc": "0002100061223",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0002100061223"
+ },
+ {
+  "id": "kr-0001111058088",
+  "name": "Kroger Original Whipped Cream Cheese Spread",
+  "brand": "Kroger",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "8 oz",
+  "price": 2.19,
+  "diet_tags": [
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0001111058088",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0001111058088"
+ },
+ {
+  "id": "kr-0002100000014",
+  "name": "Philadelphia Original Cream Cheese Spread",
+  "brand": "Philadelphia",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "8 oz",
+  "price": 3.99,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [],
+  "upc": "0002100000014",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0002100000014"
+ },
+ {
+  "id": "kr-0002100061247",
+  "name": "Philadelphia Original Cream Cheese Low Fat Brick",
+  "brand": "Philadelphia",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "8 oz",
+  "price": 3.49,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [],
+  "upc": "0002100061247",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0002100061247"
+ },
+ {
+  "id": "kr-0002100008726",
+  "name": "Philadelphia Original Cream Cheese Lactose Free Brick",
+  "brand": "Philadelphia",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "8 oz",
+  "price": 3.49,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [],
+  "upc": "0002100008726",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0002100008726"
+ },
+ {
+  "id": "kr-0001111086240",
+  "name": "Kroger Original Cream Cheese Spread",
+  "brand": "Kroger",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "8 oz",
+  "price": 2.19,
+  "diet_tags": [
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0001111086240",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0001111086240"
+ },
+ {
+  "id": "kr-0002100004040",
+  "name": "Philadelphia Original Cream Cheese Low Fat Brick",
+  "brand": "Philadelphia",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "2 ct / 8 oz each",
+  "price": 5.49,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [],
+  "upc": "0002100004040",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0002100004040"
+ },
+ {
+  "id": "kr-0002100000727",
+  "name": "Philadelphia Strawberry Cream Cheese Spread",
+  "brand": "Philadelphia",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "7.5 oz",
+  "price": 3.99,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [],
+  "upc": "0002100000727",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0002100000727"
+ },
+ {
+  "id": "kr-0002100000729",
+  "name": "Philadelphia Honey Pecan Cream Cheese Spread",
+  "brand": "Philadelphia",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "7.5 oz",
+  "price": 3.99,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [],
+  "upc": "0002100000729",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0002100000729"
+ },
+ {
+  "id": "kr-0001111086236",
+  "name": "Kroger Original Cream Cheese Spread",
+  "brand": "Kroger",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "12 oz",
+  "price": 3.19,
+  "diet_tags": [
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0001111086236",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0001111086236"
+ },
+ {
+  "id": "kr-0001111015325",
+  "name": "Kroger Strawberry Cream Cheese Spread",
+  "brand": "Kroger",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "8 oz",
+  "price": 2.19,
+  "diet_tags": [
+   "gluten_free",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0001111015325",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0001111015325"
+ },
+ {
+  "id": "kr-0001111015326",
+  "name": "Kroger Chive and Onion Cream Cheese Spread",
+  "brand": "Kroger",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "8 oz",
+  "price": 2.19,
+  "diet_tags": [
+   "gluten_free",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0001111015326",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0001111015326"
+ },
+ {
+  "id": "kr-0001111083463",
+  "name": "Kroger Original Whipped Cream Cheese Spread",
+  "brand": "Kroger",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "12 oz",
+  "price": 3.19,
+  "diet_tags": [
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0001111083463",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0001111083463"
+ },
+ {
+  "id": "kr-0002100000728",
+  "name": "Philadelphia Chive & Onion Cream Cheese Spread",
+  "brand": "Philadelphia",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "7.5 oz",
+  "price": 3.99,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [],
+  "upc": "0002100000728",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0002100000728"
+ },
+ {
+  "id": "kr-0002100000028",
+  "name": "Philadelphia Original Cream Cheese Low Fat Spread",
+  "brand": "Philadelphia",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "8 oz",
+  "price": 3.99,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [],
+  "upc": "0002100000028",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0002100000028"
+ },
+ {
+  "id": "kr-0002100000730",
+  "name": "Philadelphia Garden Vegetable Cream Cheese Spread",
+  "brand": "Philadelphia",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "7.5 oz",
+  "price": 3.99,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [],
+  "upc": "0002100000730",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0002100000730"
+ },
+ {
+  "id": "kr-0002100000734",
+  "name": "Philadelphia Blueberry Cream Cheese Spread",
+  "brand": "Philadelphia",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "7.5 oz",
+  "price": 3.99,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [],
+  "upc": "0002100000734",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0002100000734"
+ },
+ {
+  "id": "kr-0002100000732",
+  "name": "Philadelphia Spicy Jalapeño Cream Cheese Spread",
+  "brand": "Philadelphia",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "7.5 oz",
+  "price": 3.99,
+  "diet_tags": [
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0002100000732",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0002100000732"
+ },
+ {
+  "id": "kr-0002100000744",
+  "name": "Philadelphia Pumpkin Spice Cream Cheese Spread",
+  "brand": "Philadelphia",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "7.5 oz",
+  "price": 3.99,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [],
+  "upc": "0002100000744",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0002100000744"
+ },
+ {
+  "id": "kr-0007283070222",
+  "name": "Tillamook Seriously Strawberry Cream Cheese Spread",
+  "brand": "Tillamook",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "7 oz",
+  "price": 3.99,
+  "diet_tags": [
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0007283070222",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0007283070222"
+ },
+ {
+  "id": "kr-0007283070220",
+  "name": "Tillamook Original Cream Cheese Spread",
+  "brand": "Tillamook",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "7 oz",
+  "price": 3.99,
+  "diet_tags": [
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0007283070220",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0007283070220"
+ },
+ {
+  "id": "kr-0002100060085",
+  "name": "Philadelphia Original Cream Cheese Whipped Spread",
+  "brand": "Philadelphia",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "12 oz",
+  "price": 6.49,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [],
+  "upc": "0002100060085",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0002100060085"
+ },
+ {
+  "id": "kr-0001111059963",
+  "name": "Kroger Low Fat Neufchatel Cheese",
+  "brand": "Kroger",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "8 oz",
+  "price": 1.99,
+  "diet_tags": [
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0001111059963",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0001111059963"
+ },
+ {
+  "id": "kr-0081093403149",
+  "name": "Violife Just Like Cream Cheese Dairy-Free Vegan Block",
+  "brand": "Violife",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "8 oz",
+  "price": 4.59,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [],
+  "upc": "0081093403149",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0081093403149"
+ },
+ {
+  "id": "kr-0002100008143",
+  "name": "Philadelphia Plant-Based Dairy Free Original Cream Cheese Spread",
+  "brand": "Philadelphia",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "8 oz",
+  "price": 4.99,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [],
+  "upc": "0002100008143",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0002100008143"
+ },
+ {
+  "id": "kr-0070511830005",
+  "name": "Bellwether Farms Creme Fraiche French Cultured Cream Cheese",
+  "brand": "Bellwether Farms",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "5 oz",
+  "price": 6.49,
+  "diet_tags": [
+   "gluten_free",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0070511830005",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0070511830005"
+ },
+ {
+  "id": "kr-0002100008686",
+  "name": "Philadelphia Cinnamon Sugar Whipped Cream Cheese Spread",
+  "brand": "Philadelphia",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "7.5 oz",
+  "price": 4.49,
+  "diet_tags": [
+   "gluten_free",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0002100008686",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0002100008686"
+ },
+ {
+  "id": "kr-0007981308558",
+  "name": "Boursin Caramelized Onion & Herbs Gourmet Cheese Spread",
+  "brand": "Boursin",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "5.3 oz",
+  "price": 6.99,
+  "diet_tags": [
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0007981308558",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0007981308558"
+ },
+ {
+  "id": "kr-0002100000973",
+  "name": "Philadelphia Salted Caramel Cream Cheese Spread, Tub",
+  "brand": "Philadelphia",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "7.5 oz",
+  "price": 3.99,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [],
+  "upc": "0002100000973",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0002100000973"
+ },
+ {
+  "id": "kr-0027258500000",
+  "name": "Fromager D'Affinois Triple Cream Excellence Soft Ripened Cream Cheese",
+  "brand": "Murray's",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "1 lb",
+  "price": 24.99,
+  "diet_tags": [
+   "gluten_free",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0027258500000",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0027258500000"
+ },
+ {
+  "id": "kr-0001111048888",
+  "name": "Kroger Whole Milk Ricotta Cheese",
+  "brand": "Kroger",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "15 oz",
+  "price": 2.99,
+  "diet_tags": [
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0001111048888",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0001111048888"
+ },
+ {
+  "id": "kr-0007403010300",
+  "name": "GALBANI WHOLE MILK RICOTTA CHEESE",
+  "brand": "Galbani",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "15 oz",
+  "price": 3.99,
+  "diet_tags": [
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0007403010300",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0007403010300"
+ },
+ {
+  "id": "kr-0001111048987",
+  "name": "Kroger Whole Milk Ricotta Cheese",
+  "brand": "Kroger",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "30 oz",
+  "price": 5.49,
+  "diet_tags": [
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0001111048987",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0001111048987"
+ },
+ {
+  "id": "kr-0003114200183",
+  "name": "BelGioioso Ricotta Con Latte Whole Milk Cheese",
+  "brand": "BelGioioso",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "16 oz",
+  "price": 5.99,
+  "diet_tags": [
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0003114200183",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0003114200183"
+ },
+ {
+  "id": "kr-0001111011071",
+  "name": "Kroger Part Skim Ricotta Cheese",
+  "brand": "Kroger",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "15 oz",
+  "price": 2.99,
+  "diet_tags": [
+   "gluten_free",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0001111011071",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0001111011071"
+ },
+ {
+  "id": "kr-0081794401249",
+  "name": "Murray's Whole Milk Ricotta Cheese",
+  "brand": "Murray's",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "1 lb",
+  "price": 7.99,
+  "diet_tags": [
+   "gluten_free",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0081794401249",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0081794401249"
+ },
+ {
+  "id": "kr-0007403020300",
+  "name": "Galbani Whole Milk Ricotta Cheese",
+  "brand": "Galbani",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "32 oz",
+  "price": 5.99,
+  "diet_tags": [
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0007403020300",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0007403020300"
+ },
+ {
+  "id": "kr-0001111044760",
+  "name": "Kroger 4% Milkfat Small Curd Cottage Cheese",
+  "brand": "Kroger",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "16 oz",
+  "price": 2.59,
+  "diet_tags": [
+   "gluten_free",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0001111044760",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0001111044760"
+ },
+ {
+  "id": "kr-0001111015582",
+  "name": "Simple Truth Protein 2% Milkfat Small Curd Cottage Cheese",
+  "brand": "Simple Truth",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "16 oz",
+  "price": 3.99,
+  "diet_tags": [
+   "gluten_free",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0001111015582",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0001111015582"
+ },
+ {
+  "id": "kr-0085997700527",
+  "name": "Good Culture Simply Cottage Cheese, 2% Milkfat, 16 oz",
+  "brand": "Good Culture",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "16 oz",
+  "price": 3.99,
+  "diet_tags": [
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0085997700527",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0085997700527"
+ },
+ {
+  "id": "kr-0001111045045",
+  "name": "Kroger 2% Low Fat Small Curd Cottage Cheese",
+  "brand": "Kroger",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "24 oz",
+  "price": 3.19,
+  "diet_tags": [
+   "gluten_free",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0001111045045",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0001111045045"
+ },
+ {
+  "id": "kr-0001111044700",
+  "name": "Kroger 4% Milkfat Large Curd Cottage Cheese",
+  "brand": "Kroger",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "16 oz",
+  "price": 2.59,
+  "diet_tags": [
+   "gluten_free",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0001111044700",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0001111044700"
+ },
+ {
+  "id": "kr-0001111044400",
+  "name": "Kroger 4% Milkfat Small Curd Cottage Cheese",
+  "brand": "Kroger",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "24 oz",
+  "price": 3.19,
+  "diet_tags": [
+   "gluten_free",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0001111044400",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0001111044400"
+ },
+ {
+  "id": "kr-0001111044445",
+  "name": "Kroger Fat Free Small Curd Cottage Cheese Cup",
+  "brand": "Kroger",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "16 oz",
+  "price": 2.59,
+  "diet_tags": [
+   "gluten_free",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0001111044445",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0001111044445"
+ },
+ {
+  "id": "kr-0001111045043",
+  "name": "Kroger 2% Low Fat Small Curd Cottage Cheese",
+  "brand": "Kroger",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "16 oz",
+  "price": 2.59,
+  "diet_tags": [
+   "gluten_free",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0001111045043",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0001111045043"
+ },
+ {
+  "id": "kr-0001111044500",
+  "name": "Kroger 4% Milkfat Large Curd Cottage Cheese",
+  "brand": "Kroger",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "24 oz",
+  "price": 3.19,
+  "diet_tags": [
+   "gluten_free",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0001111044500",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0001111044500"
+ },
+ {
+  "id": "kr-0001111044450",
+  "name": "Kroger Fat Free Small Curd Cottage Cheese",
+  "brand": "Kroger",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "24 oz",
+  "price": 3.19,
+  "diet_tags": [
+   "gluten_free",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0001111044450",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0001111044450"
+ },
+ {
+  "id": "kr-0007342052420",
+  "name": "Daisy Pure and Natural 2% Low Fat Cottage Cheese",
+  "brand": "Daisy",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "24 oz",
+  "price": 5.79,
+  "diet_tags": [
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0007342052420",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0007342052420"
+ },
+ {
+  "id": "kr-0007342052440",
+  "name": "Daisy Pure and Natural 4% Cottage Cheese",
+  "brand": "Daisy",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "24 oz",
+  "price": 5.79,
+  "diet_tags": [
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0007342052440",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0007342052440"
+ },
+ {
+  "id": "kr-0007342051620",
+  "name": "Daisy Pure and Natural 2% Low Fat Cottage Cheese",
+  "brand": "Daisy",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "16 oz",
+  "price": 4.79,
+  "diet_tags": [
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0007342051620",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0007342051620"
+ },
+ {
+  "id": "kr-0007342051640",
+  "name": "Daisy Pure and Natural 4% Cottage Cheese",
+  "brand": "Daisy",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "16 oz",
+  "price": 4.79,
+  "diet_tags": [
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0007342051640",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0007342051640"
+ },
+ {
+  "id": "kr-0001111044217",
+  "name": "Kroger 4% Milkfat Small Curd Cottage Cheese BIG DEAL!",
+  "brand": "Kroger",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "48 oz",
+  "price": 5.79,
+  "diet_tags": [
+   "gluten_free",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0001111044217",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0001111044217"
+ },
+ {
+  "id": "kr-0085997700512",
+  "name": "Good Culture Simply 4% Cottage Cheese",
+  "brand": "Good Culture",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "16 oz",
+  "price": 3.99,
+  "diet_tags": [
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0085997700512",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0085997700512"
+ },
+ {
+  "id": "kr-0085997700514",
+  "name": "Good Culture Simply Cottage Cheese, Low-Fat 2% Classic, 5.3 oz",
+  "brand": "Good Culture",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "5.3 oz",
+  "price": 2.19,
+  "diet_tags": [
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0085997700514",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0085997700514"
+ },
+ {
+  "id": "kr-0007342053064",
+  "name": "Daisy Pure and Natural 4% Cottage Cheese",
+  "brand": "Daisy",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "2 ct / 5.3 oz",
+  "price": 2.79,
+  "diet_tags": [
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0007342053064",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0007342053064"
+ },
+ {
+  "id": "kr-0085997700506",
+  "name": "Good Culture Organic Cottage Cheese, 4% Whole Milk Classic, 16 oz.",
+  "brand": "Good Culture",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "16 oz",
+  "price": 7.99,
+  "diet_tags": [
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "organic",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0085997700506",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0085997700506"
+ },
+ {
+  "id": "kr-0084037120034",
+  "name": "Breakstone's Lowfat Small Curd Cottage Cheese",
+  "brand": "Breakstone's",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "16 oz (1 lb) 453g",
+  "price": 4.39,
+  "diet_tags": [
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0084037120034",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0084037120034"
+ },
+ {
+  "id": "kr-0007342053122",
+  "name": "Daisy 4% Milkfat Minimum with Strawberries Cottage Cheese 6 oz",
+  "brand": "Daisy",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "6 oz",
+  "price": 1.99,
+  "diet_tags": [
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0007342053122",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0007342053122"
+ },
+ {
+  "id": "kr-0084037120023",
+  "name": "Breakstone's Lowfat Small Curd Cottage Cheese",
+  "brand": "Breakstone's",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "16 oz (1 lb) 453g",
+  "price": 4.79,
+  "diet_tags": [
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0084037120023",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0084037120023"
+ },
+ {
+  "id": "kr-0007342053121",
+  "name": "Daisy 4% Cottage Cheese with Pineapple",
+  "brand": "Daisy",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "6 oz",
+  "price": 1.99,
+  "diet_tags": [
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0007342053121",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0007342053121"
+ },
+ {
+  "id": "kr-0007342053124",
+  "name": "Daisy 4% Milkfat Minimum with Peaches Cottage Cheese 6 oz",
+  "brand": "Daisy",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "6 oz",
+  "price": 1.99,
+  "diet_tags": [
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0007342053124",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0007342053124"
+ },
+ {
+  "id": "kr-0084037120013",
+  "name": "Breakstone's Lowfat Pineapple Cottage Doubles",
+  "brand": "Breakstone's",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "4.7 ounce",
+  "price": 1.29,
+  "diet_tags": [
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0084037120013",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0084037120013"
+ },
+ {
+  "id": "kr-0084037120014",
+  "name": "Breakstone's Lowfat Strawberry Cottage Doubles",
+  "brand": "Breakstone's",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "4.7 ounce",
+  "price": 1.29,
+  "diet_tags": [
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0084037120014",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0084037120014"
+ },
+ {
+  "id": "kr-0001380093052",
+  "name": "Lean Cuisine Signature Ricotta Cheese and Spinach Ravioli Frozen Meal",
+  "brand": "Lean Cuisine",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "8 oz",
+  "price": 2.99,
+  "diet_tags": [
+   "gluten_free",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "eggs",
+   "wheat",
+   "milk",
+   "soy"
+  ],
+  "upc": "0001380093052",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0001380093052"
+ },
+ {
+  "id": "kr-0001111009606",
+  "name": "Private Selection Parmesan Cheese Wedge",
+  "brand": "Private Selection",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "8 oz",
+  "price": 5.99,
+  "diet_tags": [
+   "gluten_free",
+   "nut_free"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0001111009606",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0001111009606"
+ },
+ {
+  "id": "kr-0001111063678",
+  "name": "Private Selection Parmesan Wedge Cheese",
+  "brand": "Private Selection",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "8 oz",
+  "price": 5.99,
+  "diet_tags": [
+   "gluten_free",
+   "nut_free"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0001111063678",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0001111063678"
+ },
+ {
+  "id": "kr-0029457710000",
+  "name": "Murray's Parmigiano Reggiano Cheese Wedge",
+  "brand": "Murray's",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "1 lb",
+  "price": 23.99,
+  "diet_tags": [
+   "gluten_free",
+   "nut_free"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0029457710000",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0029457710000"
+ },
+ {
+  "id": "kr-0028647990000",
+  "name": "Sartori SarVecchio Parmesan Wedge Cheese",
+  "brand": "Sartori",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "1 lb",
+  "price": 20.99,
+  "diet_tags": [
+   "gluten_free",
+   "nut_free"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0028647990000",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0028647990000"
+ },
+ {
+  "id": "kr-0001111065002",
+  "name": "Private Selection Original Goat Cheese Log",
+  "brand": "Private Selection",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "4 oz",
+  "price": 4.99,
+  "diet_tags": [
+   "gluten_free",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0001111065002",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0001111065002"
+ },
+ {
+  "id": "kr-0001111065001",
+  "name": "Private Selection Original Goat Cheese Crumbles",
+  "brand": "Private Selection",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "4 oz",
+  "price": 4.99,
+  "diet_tags": [
+   "gluten_free",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0001111065001",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0001111065001"
+ },
+ {
+  "id": "kr-0001182610012",
+  "name": "Vermont Creamery Classic Chevre Goat Cheese Log",
+  "brand": "Vermont Creamery",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "4 oz",
+  "price": 6.99,
+  "diet_tags": [
+   "gluten_free",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0001182610012",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0001182610012"
+ },
+ {
+  "id": "kr-0001111065004",
+  "name": "Private Selection Garlic and Herb Goat Cheese Log",
+  "brand": "Private Selection",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "4 oz",
+  "price": 4.99,
+  "diet_tags": [
+   "gluten_free",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0001111065004",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0001111065004"
+ },
+ {
+  "id": "kr-0001182610200",
+  "name": "Vermont Creamery Classic Crumbled Goat Cheese",
+  "brand": "Vermont Creamery",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "4 oz",
+  "price": 6.99,
+  "diet_tags": [
+   "gluten_free",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0001182610200",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0001182610200"
+ },
+ {
+  "id": "kr-0001182610022",
+  "name": "Vermont Creamery Blueberry Lemon & Thyme Goat Cheese Log",
+  "brand": "Vermont Creamery",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "4 oz",
+  "price": 6.99,
+  "diet_tags": [
+   "gluten_free",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0001182610022",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0001182610022"
+ },
+ {
+  "id": "kr-0001182610010",
+  "name": "Vermont Creamery Herb Goat Cheese Log",
+  "brand": "Vermont Creamery",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "4 oz",
+  "price": 6.99,
+  "diet_tags": [
+   "gluten_free",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0001182610010",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0001182610010"
+ },
+ {
+  "id": "kr-0001182610069",
+  "name": "Vermont Creamery Classic Goat Cheese Log",
+  "brand": "Vermont Creamery",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "8 oz",
+  "price": 9.99,
+  "diet_tags": [
+   "gluten_free",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0001182610069",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0001182610069"
+ },
+ {
+  "id": "kr-0028647770000",
+  "name": "Mitica Drunken Goat Cheese",
+  "brand": "Mitica",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "1 lb",
+  "price": 24.29,
+  "diet_tags": [
+   "gluten_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "tree_nuts",
+   "peanuts",
+   "milk",
+   "eggs",
+   "wheat",
+   "shellfish",
+   "fish",
+   "soy"
+  ],
+  "upc": "0028647770000",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0028647770000"
+ },
+ {
+  "id": "kr-0028600510000",
+  "name": "Mitica The Smokin' Goat Smoked Goat Cheese",
+  "brand": "Mitica",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "1 lb",
+  "price": 24.99,
+  "diet_tags": [
+   "gluten_free",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0028600510000",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0028600510000"
+ },
+ {
+  "id": "kr-0082058111396",
+  "name": "La Bonne Vie Pumpkin Goat Cheese",
+  "brand": "La Bonne Vie",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "4 oz",
+  "price": 5.99,
+  "diet_tags": [
+   "gluten_free",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0082058111396",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0082058111396"
+ },
+ {
+  "id": "kr-0027368770000",
+  "name": "Murray's Honey Goat Gouda Cheese",
+  "brand": "Murray's",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "1 lb",
+  "price": 19.99,
+  "diet_tags": [
+   "gluten_free",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0027368770000",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0027368770000"
+ },
+ {
+  "id": "kr-0001111088905",
+  "name": "Private Selection French Goat Cheese and Marinated Vegetable Thin Crust Frozen Pizza",
+  "brand": "Private Selection",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "19.2 oz",
+  "price": 8.99,
+  "diet_tags": [
+   "gluten_free",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "wheat",
+   "milk",
+   "eggs"
+  ],
+  "upc": "0001111088905",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0001111088905"
+ },
+ {
+  "id": "kr-0089162700918",
+  "name": "Evol Portabella and Goat Cheese Ravioli, 15g Protein",
+  "brand": "evol.",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "8.75 oz",
+  "price": 3.99,
+  "diet_tags": [
+   "gluten_free",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "eggs",
+   "wheat",
+   "milk"
+  ],
+  "upc": "0089162700918",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0089162700918"
+ },
+ {
+  "id": "kr-0001111050202",
+  "name": "Kroger Monterey Jack Shredded Cheese",
+  "brand": "Kroger",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "8 oz",
+  "price": 2,
+  "diet_tags": [
+   "gluten_free",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0001111050202",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0001111050202"
+ },
+ {
+  "id": "kr-0001111058624",
+  "name": "Kroger Monterey Jack Block Cheese",
+  "brand": "Kroger",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "8 oz",
+  "price": 2,
+  "diet_tags": [
+   "gluten_free",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0001111058624",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0001111058624"
+ },
+ {
+  "id": "kr-0028647920000",
+  "name": "Maple Leaf Monterey Jack Cheese",
+  "brand": "Maple Leaf",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "1 lb",
+  "price": 9.99,
+  "diet_tags": [
+   "gluten_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "tree_nuts",
+   "milk",
+   "wheat",
+   "soy",
+   "eggs"
+  ],
+  "upc": "0028647920000",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0028647920000"
+ },
+ {
+  "id": "kr-0084037090256",
+  "name": "Kraft Colby Jack Marbled Colby & Monterey Jack Natural Cheese Block",
+  "brand": "Kraft",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "8 oz",
+  "price": 3.29,
+  "diet_tags": [
+   "gluten_free",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0084037090256",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0084037090256"
+ },
+ {
+  "id": "kr-0001111015134",
+  "name": "Kroger Monterey Jack Shredded Cheese",
+  "brand": "Kroger",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "16 oz",
+  "price": 3.69,
+  "diet_tags": [
+   "gluten_free",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0001111015134",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0001111015134"
+ },
+ {
+  "id": "kr-0001111058754",
+  "name": "Kroger Monterey Jack Block Cheese BIG DEAL!",
+  "brand": "Kroger",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "32 oz",
+  "price": 7.29,
+  "diet_tags": [
+   "gluten_free",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0001111058754",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0001111058754"
+ },
+ {
+  "id": "kr-0022637610000",
+  "name": "Private Selection Hatch Monterey Jack Cheese Fresh Sliced Deli Cheese",
+  "brand": "Private Selection",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "1 lb",
+  "price": 9.99,
+  "diet_tags": [
+   "gluten_free",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0022637610000",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0022637610000"
+ },
+ {
+  "id": "kr-0004610035341",
+  "name": "Sargento Balanced Breaks Monterey Jack and Mild Cheddar Cheese with Mini Wheat Thins Crackers",
+  "brand": "Sargento",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "4.5 oz",
+  "price": 4,
+  "diet_tags": [
+   "gluten_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk",
+   "wheat",
+   "tree_nuts",
+   "soy",
+   "peanuts"
+  ],
+  "upc": "0004610035341",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0004610035341"
+ },
+ {
+  "id": "kr-0001111064153",
+  "name": "Private Selection Monterey Jack and Colby Cubed Cheese",
+  "brand": "Private Selection",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "8 oz",
+  "price": 5.99,
+  "diet_tags": [
+   "gluten_free",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0001111064153",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0001111064153"
+ },
+ {
+  "id": "kr-0001111088639",
+  "name": "Kroger Colby & Monterey Jack Cheese Sticks",
+  "brand": "Kroger",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "12 ct / .75 oz each",
+  "price": 3.59,
+  "diet_tags": [
+   "gluten_free",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0001111088639",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0001111088639"
+ },
+ {
+  "id": "kr-0002100008662",
+  "name": "Kraft Restaurant Edition Mac & Cheese, Monterey Jack Caramelized Onion, Made w/ Real Cheese, 9.5 oz",
+  "brand": "Kraft",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "9.5 oz",
+  "price": 4.99,
+  "diet_tags": [
+   "gluten_free",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "wheat",
+   "milk"
+  ],
+  "upc": "0002100008662",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0002100008662"
+ },
+ {
+  "id": "kr-0004610000968",
+  "name": "Sargento Sweet Balanced Breaks Monterey Jack Cranberries Dark Chocolate & Banana Chips Snack Kit",
+  "brand": "Sargento",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "3 ct / 1.5 oz each",
+  "price": 4,
+  "diet_tags": [
+   "gluten_free",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "soy",
+   "milk"
+  ],
+  "upc": "0004610000968",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0004610000968"
+ },
+ {
+  "id": "kr-0004610035882",
+  "name": "Sargento Balanced Breaks Monterey Jack & Buffalo Ranch Seasoned Snack Mix Packs",
+  "brand": "Sargento",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "3 pk / 1.5 oz",
+  "price": 4,
+  "diet_tags": [
+   "gluten_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "wheat",
+   "milk",
+   "peanuts",
+   "tree_nuts",
+   "soy"
+  ],
+  "upc": "0004610035882",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0004610035882"
+ },
+ {
+  "id": "kr-0001111060728",
+  "name": "Private Selection Pepper Jack Sliced Monterey Cheese",
+  "brand": "Private Selection",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "8 oz",
+  "price": 5.99,
+  "diet_tags": [
+   "gluten_free",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0001111060728",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0001111060728"
+ },
+ {
+  "id": "kr-0004610035862",
+  "name": "Sargento Mighty Bites Oven Roasted Turkey and Monterey Jack Cheese Snack Kit",
+  "brand": "Sargento",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "2.8 oz",
+  "price": 3,
+  "diet_tags": [
+   "gluten_free",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk",
+   "soy",
+   "wheat"
+  ],
+  "upc": "0004610035862",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0004610035862"
+ },
+ {
+  "id": "kr-0078113880715",
+  "name": "On The Border Monterey Jack Queso",
+  "brand": "On the Border",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "15.5 oz",
+  "price": 3.99,
+  "diet_tags": [
+   "gluten_free",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0078113880715",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0078113880715"
+ },
+ {
+  "id": "kr-0001111042707",
+  "name": "Kroger Cultured 1% Lowfat Buttermilk Pint",
+  "brand": "Kroger",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Cream",
+  "size": "1 pt",
+  "price": 1.49,
+  "diet_tags": [
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0001111042707",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0001111042707"
+ },
+ {
+  "id": "kr-0001111042705",
+  "name": "Kroger Cultured 1% Lowfat Buttermilk Quart",
+  "brand": "Kroger",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Cream",
+  "size": "1 qt",
+  "price": 2.49,
+  "diet_tags": [
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0001111042705",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0001111042705"
+ },
+ {
+  "id": "kr-0001800000182",
+  "name": "Pillsbury Grands! Southern Homestyle Buttermilk Biscuits",
+  "brand": "Pillsbury",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cream",
+  "size": "8 biscuits / 16.3 oz",
+  "price": 3.39,
+  "diet_tags": [
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [
+   "wheat",
+   "soy",
+   "milk"
+  ],
+  "upc": "0001800000182",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0001800000182"
+ },
+ {
+  "id": "kr-0001111088641",
+  "name": "Kroger Buttermilk Jumbo Biscuits",
+  "brand": "Kroger",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Cream",
+  "size": "8 ct / 16 oz",
+  "price": 1.99,
+  "diet_tags": [
+   "gluten_free",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "soy",
+   "milk",
+   "wheat"
+  ],
+  "upc": "0001111088641",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0001111088641"
+ },
+ {
+  "id": "kr-0001111088651",
+  "name": "Kroger Flaky Buttermilk Jumbo Biscuits",
+  "brand": "Kroger",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Cream",
+  "size": "8 ct / 16 oz",
+  "price": 1.99,
+  "diet_tags": [
+   "gluten_free",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "soy",
+   "wheat",
+   "milk"
+  ],
+  "upc": "0001111088651",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0001111088651"
+ },
+ {
+  "id": "kr-0003800026066",
+  "name": "Eggo Minis Buttermilk Pancakes",
+  "brand": "Eggo",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cream",
+  "size": "40 ct / 0.35 oz",
+  "price": 3.49,
+  "diet_tags": [
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk",
+   "wheat",
+   "soy",
+   "eggs"
+  ],
+  "upc": "0003800026066",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0003800026066"
+ },
+ {
+  "id": "kr-0001111003632",
+  "name": "Kroger Buttermilk Ranch Salad Dressing",
+  "brand": "Kroger",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Cream",
+  "size": "16 fl oz",
+  "price": 1.99,
+  "diet_tags": [
+   "gluten_free",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk",
+   "soy"
+  ],
+  "upc": "0001111003632",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0001111003632"
+ },
+ {
+  "id": "kr-0004133500054",
+  "name": "Ken's Steak House Buttermilk Ranch Salad Dressing",
+  "brand": "Ken's Steak House",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cream",
+  "size": "16 fl oz",
+  "price": 3.79,
+  "diet_tags": [
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "eggs",
+   "milk",
+   "soy"
+  ],
+  "upc": "0004133500054",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0004133500054"
+ },
+ {
+  "id": "kr-0001800000109",
+  "name": "Pillsbury Flaky Layers Buttermilk Biscuit Dough",
+  "brand": "Pillsbury",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cream",
+  "size": "5 biscuits / 6 oz",
+  "price": 1.99,
+  "diet_tags": [
+   "gluten_free",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "soy",
+   "milk",
+   "wheat"
+  ],
+  "upc": "0001800000109",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0001800000109"
+ },
+ {
+  "id": "kr-0007229001252",
+  "name": "Odom's Tennessee Pride Sausage Buttermilk Biscuits",
+  "brand": "Odom's Tennessee Pride",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cream",
+  "size": "29 oz",
+  "price": 10.49,
+  "diet_tags": [
+   "gluten_free",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "wheat",
+   "milk"
+  ],
+  "upc": "0007229001252",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0007229001252"
+ },
+ {
+  "id": "kr-0001111008481",
+  "name": "Kroger Buttermilk Bread",
+  "brand": "Kroger",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Cream",
+  "size": "20 oz",
+  "price": 2.49,
+  "diet_tags": [
+   "gluten_free",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk",
+   "wheat"
+  ],
+  "upc": "0001111008481",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0001111008481"
+ },
+ {
+  "id": "kr-0001800085516",
+  "name": "Pillsbury Grands! Buttermilk Biscuits Frozen Dough",
+  "brand": "Pillsbury",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cream",
+  "size": "12 ct / 2.08 oz",
+  "price": 4.99,
+  "diet_tags": [
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "wheat",
+   "milk",
+   "soy"
+  ],
+  "upc": "0001800085516",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0001800085516"
+ },
+ {
+  "id": "kr-0007110000308",
+  "name": "Hidden Valley Buttermilk Ranch Salad Dressing",
+  "brand": "Hidden Valley",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cream",
+  "size": "16 fl oz",
+  "price": 4.39,
+  "diet_tags": [
+   "gluten_free",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "soy",
+   "milk",
+   "eggs"
+  ],
+  "upc": "0007110000308",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0007110000308"
+ },
+ {
+  "id": "kr-0002100064346",
+  "name": "Kraft Buttermilk Ranch Salad Dressing",
+  "brand": "Kraft",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cream",
+  "size": "16 fo",
+  "price": 3.49,
+  "diet_tags": [
+   "gluten_free",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk",
+   "eggs"
+  ],
+  "upc": "0002100064346",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0002100064346"
+ },
+ {
+  "id": "kr-0070559901322",
+  "name": "Kodiak Buttermilk Frozen Protein Pancakes",
+  "brand": "Kodiak Cakes",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cream",
+  "size": "15.38 oz",
+  "price": 5.99,
+  "diet_tags": [
+   "gluten_free",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "wheat",
+   "milk",
+   "eggs",
+   "soy"
+  ],
+  "upc": "0070559901322",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0070559901322"
+ },
+ {
+  "id": "kr-0001111012960",
+  "name": "Kroger Buttermilk Fields Ranch Salad Dressing",
+  "brand": "Kroger",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Cream",
+  "size": "16 fl oz",
+  "price": 1.99,
+  "diet_tags": [
+   "gluten_free",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk",
+   "eggs",
+   "soy"
+  ],
+  "upc": "0001111012960",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0001111012960"
+ },
+ {
+  "id": "kr-0003800031167",
+  "name": "Eggo Frozen Protein Pancake Minis Buttermilk Vanilla",
+  "brand": "Kellogg's",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cream",
+  "size": "5 ct / 1.68 oz",
+  "price": 5.99,
+  "diet_tags": [
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "wheat",
+   "milk",
+   "soy",
+   "eggs"
+  ],
+  "upc": "0003800031167",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0003800031167"
+ },
+ {
+  "id": "kr-0029647840000",
+  "name": "Murray's Cave Aged Gruyere Cheese Wedge",
+  "brand": "Murray's",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "1 lb",
+  "price": 28.99,
+  "diet_tags": [
+   "gluten_free",
+   "nut_free"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0029647840000",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0029647840000"
+ },
+ {
+  "id": "kr-0007675304010",
+  "name": "Good Cook Non Stick Bake n Roast Pan",
+  "brand": "GoodCook",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "13in x 9 in / 1 ea",
+  "price": 9.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [],
+  "upc": "0007675304010",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0007675304010"
+ },
+ {
+  "id": "kr-0007675306117",
+  "name": "GoodCook Everyday Nonstick Fry Pan",
+  "brand": "GoodCook",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "7.6 in",
+  "price": 9.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [],
+  "upc": "0007675306117",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0007675306117"
+ },
+ {
+  "id": "kr-0007675306137",
+  "name": "Good Cook Everyday Ceramic Nonstick Sauce Pan",
+  "brand": "Good Cook",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "1 ct",
+  "price": 14.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [],
+  "upc": "0007675306137",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0007675306137"
+ },
+ {
+  "id": "kr-0007553630100",
+  "name": "Lodge Skillet Seasoned Cast Iron With Assist Handle",
+  "brand": "Lodge",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "12 in",
+  "price": 29.99,
+  "diet_tags": [
+   "gluten_free",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0007553630100",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0007553630100"
+ },
+ {
+  "id": "kr-0004227200058",
+  "name": "Amy's Indian Mattar Paneer Frozen Meal",
+  "brand": "Amy's",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "10 oz",
+  "price": 6.49,
+  "diet_tags": [
+   "kosher",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk",
+   "sesame",
+   "wheat",
+   "soy",
+   "tree_nuts"
+  ],
+  "upc": "0004227200058",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0004227200058"
+ },
+ {
+  "id": "kr-0005209220394",
+  "name": "Handi-foil CNC utility pan with lid",
+  "brand": "Handi-foil",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "2 ea",
+  "price": 5.79,
+  "diet_tags": [
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0005209220394",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0005209220394"
+ },
+ {
+  "id": "kr-0005209236705",
+  "name": "Handi Foil Giant Lasagna Pans",
+  "brand": "Handi-foil",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "5 ct",
+  "price": 7.29,
+  "diet_tags": [
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0005209236705",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0005209236705"
+ },
+ {
+  "id": "kr-0005209244002",
+  "name": "Handi-foil Eco-Foil Stuffing Pans",
+  "brand": "Handi-foil",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "4 ea",
+  "price": 5.79,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [],
+  "upc": "0005209244002",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0005209244002"
+ },
+ {
+  "id": "kr-0005209220398",
+  "name": "Handi-foil 2 Lb Loaf Pan w/ Lids",
+  "brand": "Handi-foil",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "3 ea",
+  "price": 5.79,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [],
+  "upc": "0005209220398",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0005209220398"
+ },
+ {
+  "id": "kr-0007173600206",
+  "name": "Libman Precision Angle Broom with Dust Pan",
+  "brand": "Libman",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "1 ct",
+  "price": 14.99,
+  "diet_tags": [
+   "gluten_free",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0007173600206",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0007173600206"
+ },
+ {
+  "id": "kr-0005209272394",
+  "name": "Handi-foil Cook-n-Carry Cake Disposable Pans and Lids -Silver/Blue",
+  "brand": "Handi-foil",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "2 pk / 13 x 9 in",
+  "price": 5.79,
+  "diet_tags": [
+   "gluten_free",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0005209272394",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0005209272394"
+ },
+ {
+  "id": "kr-0005209202080",
+  "name": "Handi-foil Silver Deep Meal Prep Disposable Pans with Board Lids Multipack",
+  "brand": "Handi-foil",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "3 pk",
+  "price": 5.79,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [],
+  "upc": "0005209202080",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0005209202080"
+ },
+ {
+  "id": "kr-0005209224305",
+  "name": "Handi-foil Heavy Duty Smoothwall Pie Pan",
+  "brand": "Handi-foil",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "3 ea",
+  "price": 5.79,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [],
+  "upc": "0005209224305",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0005209224305"
+ },
+ {
+  "id": "kr-0007675304031",
+  "name": "Good Cook Everyday Nonstick Steel Muffin Pan",
+  "brand": "GoodCook",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "12 cup / 1 ea",
+  "price": 7.99,
+  "diet_tags": [
+   "gluten_free",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0007675304031",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0007675304031"
+ },
+ {
+  "id": "kr-0005209202027",
+  "name": "Handi-foil Extra Deep BBQ King Utility Disposable Pan - Silver",
+  "brand": "Handi-foil",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "1 pk / 15.8 x 11.3 in",
+  "price": 6.99,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [],
+  "upc": "0005209202027",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0005209202027"
+ },
+ {
+  "id": "kr-0007675304026",
+  "name": "Good Cook Large Loaf Pan",
+  "brand": "GoodCook",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "1 ea",
+  "price": 6.99,
+  "diet_tags": [
+   "gluten_free",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0007675304026",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0007675304026"
+ },
+ {
+  "id": "kr-0005209222018",
+  "name": "Handi-foil CNC 1 pound loaf pan with lid",
+  "brand": "Handi-foil",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "5 ea",
+  "price": 5.79,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [],
+  "upc": "0005209222018",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0005209222018"
+ },
+ {
+  "id": "kr-0005209224316",
+  "name": "Handi-foil Heavy Duty Loaf Pan",
+  "brand": "Handi-foil",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "3 ea",
+  "price": 7.99,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [],
+  "upc": "0005209224316",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0005209224316"
+ },
+ {
+  "id": "kr-0005209200332",
+  "name": "Handi-foil Meal Prep Pans",
+  "brand": "Handi-foil",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "7 ea",
+  "price": 7.29,
+  "diet_tags": [
+   "gluten_free",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0005209200332",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0005209200332"
+ },
+ {
+  "id": "kr-0007675304017",
+  "name": "GoodCook Everyday Nonstick Steel Square Pan",
+  "brand": "GoodCook",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "8 in x 8 in x 2.25 in",
+  "price": 5.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [],
+  "upc": "0007675304017",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0007675304017"
+ },
+ {
+  "id": "kr-0007675304016",
+  "name": "Good Cook Everyday Nonstick Steel Round Cake Pan",
+  "brand": "GoodCook",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "9in / 1 ea",
+  "price": 5.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [],
+  "upc": "0007675304016",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0007675304016"
+ },
+ {
+  "id": "kr-0007675304036",
+  "name": "Good Cook Nonstick Steel Pizza Pan",
+  "brand": "GoodCook",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "12 in / 1 ct",
+  "price": 7.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [],
+  "upc": "0007675304036",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0007675304036"
+ },
+ {
+  "id": "kr-0007675306181",
+  "name": "GoodCook Stock Pot With Lid Stainless Steel",
+  "brand": "GoodCook",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "12 qt",
+  "price": 17.99,
+  "diet_tags": [
+   "gluten_free",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0007675306181",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0007675306181"
+ },
+ {
+  "id": "kr-0062868970030",
+  "name": "30 Ct Crimp Paper Chef XL Baking Cups",
+  "brand": "Paper Chef",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cheese",
+  "size": "1",
+  "price": 2.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [],
+  "upc": "0062868970030",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0062868970030"
+ },
+ {
+  "id": "kr-0001111080903",
+  "name": "Kroger Extra Creamy Dairy Whipped Cream Topping",
+  "brand": "Kroger",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Cream",
+  "size": "13 oz",
+  "price": 3.49,
+  "diet_tags": [
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0001111080903",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0001111080903"
+ },
+ {
+  "id": "kr-0001111080909",
+  "name": "Kroger Original Dairy Whipped Cream Topping",
+  "brand": "Kroger",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Cream",
+  "size": "13 oz",
+  "price": 3.49,
+  "diet_tags": [
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0001111080909",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0001111080909"
+ },
+ {
+  "id": "kr-0007027223202",
+  "name": "Reddi-wip Original Whipped Topping",
+  "brand": "Reddi Wip",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cream",
+  "size": "6.5 oz",
+  "price": 3.49,
+  "diet_tags": [
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0007027223202",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0007027223202"
+ },
+ {
+  "id": "kr-0004300000953",
+  "name": "Cool Whip Original Whipped Cream Topping",
+  "brand": "Cool Whip",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cream",
+  "size": "8 oz",
+  "price": 2.49,
+  "diet_tags": [
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0004300000953",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0004300000953"
+ },
+ {
+  "id": "kr-0007027223204",
+  "name": "Reddi-wip Original Whipped Topping",
+  "brand": "Reddi Wip",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cream",
+  "size": "13 oz",
+  "price": 5.49,
+  "diet_tags": [
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0007027223204",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0007027223204"
+ },
+ {
+  "id": "kr-0007027223203",
+  "name": "Reddi-wip Extra Creamy Whipped Topping",
+  "brand": "Reddi Wip",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cream",
+  "size": "6.5 oz",
+  "price": 3.49,
+  "diet_tags": [
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0007027223203",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0007027223203"
+ },
+ {
+  "id": "kr-0001111087479",
+  "name": "Kroger Extra Creamy Whipped Topping",
+  "brand": "Kroger",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Cream",
+  "size": "8 oz",
+  "price": 1.29,
+  "diet_tags": [
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0001111087479",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0001111087479"
+ },
+ {
+  "id": "kr-0007027248011",
+  "name": "Reddi-wip Zero Sugar Whipped Topping",
+  "brand": "Reddi Wip",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cream",
+  "size": "6.5 oz",
+  "price": 3.49,
+  "diet_tags": [
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0007027248011",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0007027248011"
+ },
+ {
+  "id": "kr-0007027223208",
+  "name": "Reddi Wip Extra Creamy Whipped Topping",
+  "brand": "Reddi Wip",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cream",
+  "size": "13 oz",
+  "price": 5.49,
+  "diet_tags": [
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0007027223208",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0007027223208"
+ },
+ {
+  "id": "kr-0001111004767",
+  "name": "Kroger Original Whipped Topping",
+  "brand": "Kroger",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Cream",
+  "size": "8 oz",
+  "price": 1.29,
+  "diet_tags": [
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0001111004767",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0001111004767"
+ },
+ {
+  "id": "kr-0007104194528",
+  "name": "Classic Cream Lactose Free Whipped Light Cream 15oz",
+  "brand": "Classic Cream",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cream",
+  "size": "15 oz",
+  "price": 4.99,
+  "diet_tags": [
+   "gluten_free",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0007104194528",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0007104194528"
+ },
+ {
+  "id": "kr-0001111069751",
+  "name": "BFR Pumpkin Pie Tarts w Whipped Cream",
+  "brand": "Bakery Fresh",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cream",
+  "size": "19 oz",
+  "price": 9.99,
+  "diet_tags": [
+   "kosher",
+   "vegetarian"
+  ],
+  "allergens": [
+   "eggs",
+   "wheat",
+   "milk",
+   "tree_nuts",
+   "soy"
+  ],
+  "upc": "0001111069751",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0001111069751"
+ },
+ {
+  "id": "kr-0001111062562",
+  "name": "Private Selection Tiramisu Layer Cake with Real Whipped Cream",
+  "brand": "Private Selection",
+  "store_brand": true,
+  "department": "dairy eggs",
+  "aisle": "Cream",
+  "size": "23.77 oz (8 servings)",
+  "price": 14.99,
+  "diet_tags": [
+   "kosher",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk",
+   "soy",
+   "eggs",
+   "tree_nuts",
+   "wheat",
+   "peanuts"
+  ],
+  "upc": "0001111062562",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0001111062562"
+ },
+ {
+  "id": "kr-0064420940598",
+  "name": "Duncan Hines Whipped Cream Cheese Frosting",
+  "brand": "Duncan Hines",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cream",
+  "size": "14 oz",
+  "price": 2.49,
+  "diet_tags": [
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0064420940598",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0064420940598"
+ },
+ {
+  "id": "kr-0001600032990",
+  "name": "Betty Crocker Whipped Butter Cream Frosting",
+  "brand": "Betty Crocker",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cream",
+  "size": "12 oz",
+  "price": 2.49,
+  "diet_tags": [
+   "gluten_free",
+   "kosher",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0001600032990",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0001600032990"
+ },
+ {
+  "id": "kr-0063912394034",
+  "name": "Fresh Made In Store Strawberry & Whipped Topping",
+  "brand": "Fresh",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cream",
+  "size": "9 oz",
+  "price": 6,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [],
+  "upc": "0063912394034",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0063912394034"
+ },
+ {
+  "id": "kr-0063912394016",
+  "name": "Fresh Made In Store Fruit Whip Topping",
+  "brand": "Fresh",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cream",
+  "size": "8 oz",
+  "price": 3.99,
+  "diet_tags": [
+   "dairy_free",
+   "gluten_free",
+   "nut_free",
+   "vegetarian"
+  ],
+  "allergens": [],
+  "upc": "0063912394016",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0063912394016"
+ },
+ {
+  "id": "kr-0085001011139",
+  "name": "Billie Whipped Shave Cream for Women with Shea Butter & Aloe Lavender & Bergamot Scent",
+  "brand": "Billie",
+  "store_brand": false,
+  "department": "dairy eggs",
+  "aisle": "Cream",
+  "size": "6.5 fl oz",
+  "price": 8.49,
+  "diet_tags": [
+   "dairy_free",
+   "nut_free",
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [],
+  "upc": "0085001011139",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0085001011139"
+ },
+ {
+  "id": "kr-0001380014333",
+  "name": "Stouffer's Classic Lasagna with Meat and Sauce Family Frozen Meal",
+  "brand": "Stouffer's",
+  "store_brand": false,
+  "department": "pantry",
+  "aisle": "Other",
+  "size": "2 lb 6 oz",
+  "price": 10,
+  "diet_tags": [
+   "nut_free"
+  ],
+  "allergens": [
+   "milk",
+   "wheat",
+   "soy"
+  ],
+  "upc": "0001380014333",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0001380014333"
+ },
+ {
+  "id": "kr-0001111068279",
+  "name": "Private Selection Ready to Cook Lasagna with Meat Sauce",
+  "brand": "Private Selection",
+  "store_brand": true,
+  "department": "pantry",
+  "aisle": "Other",
+  "size": "38 oz",
+  "price": 10,
+  "diet_tags": [
+   "nut_free"
+  ],
+  "allergens": [
+   "wheat",
+   "eggs",
+   "milk"
+  ],
+  "upc": "0001111068279",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0001111068279"
+ },
+ {
+  "id": "kr-0001111068276",
+  "name": "Private Selection Ready to Cook Vegetable Lasagna",
+  "brand": "Private Selection",
+  "store_brand": true,
+  "department": "pantry",
+  "aisle": "Other",
+  "size": "34 oz",
+  "price": 10,
+  "diet_tags": [
+   "nut_free"
+  ],
+  "allergens": [
+   "eggs",
+   "milk",
+   "wheat"
+  ],
+  "upc": "0001111068276",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0001111068276"
+ },
+ {
+  "id": "kr-0001111085027",
+  "name": "Kroger Lasagna",
+  "brand": "Kroger",
+  "store_brand": true,
+  "department": "pantry",
+  "aisle": "Other",
+  "size": "16 oz",
+  "price": 1.99,
+  "diet_tags": [
+   "dairy_free",
+   "kosher",
+   "nut_free"
+  ],
+  "allergens": [
+   "wheat"
+  ],
+  "upc": "0001111085027",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0001111085027"
+ },
+ {
+  "id": "kr-0087744800751",
+  "name": "Rana Family Size Meat Lasagna",
+  "brand": "Rana",
+  "store_brand": false,
+  "department": "pantry",
+  "aisle": "Other",
+  "size": "40 oz",
+  "price": 14.49,
+  "diet_tags": [
+   "nut_free"
+  ],
+  "allergens": [
+   "wheat",
+   "milk",
+   "eggs"
+  ],
+  "upc": "0087744800751",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0087744800751"
+ },
+ {
+  "id": "kr-0001380010321",
+  "name": "Stouffer's Classic Lasagna with Meat and Sauce Frozen Meal",
+  "brand": "Stouffer's",
+  "store_brand": false,
+  "department": "pantry",
+  "aisle": "Other",
+  "size": "10.5 oz",
+  "price": 2.99,
+  "diet_tags": [
+   "nut_free"
+  ],
+  "allergens": [
+   "wheat",
+   "soy",
+   "milk"
+  ],
+  "upc": "0001380010321",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0001380010321"
+ },
+ {
+  "id": "kr-0001380055812",
+  "name": "Stouffer's Classic Lasagna with Meat and Sauce Frozen Meal",
+  "brand": "Stouffer's",
+  "store_brand": false,
+  "department": "pantry",
+  "aisle": "Other",
+  "size": "19 oz",
+  "price": 4.99,
+  "diet_tags": [
+   "nut_free"
+  ],
+  "allergens": [
+   "wheat",
+   "soy",
+   "milk"
+  ],
+  "upc": "0001380055812",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0001380055812"
+ },
+ {
+  "id": "kr-0001380079188",
+  "name": "Stouffer's Meat Lovers Lasagna Frozen Meal",
+  "brand": "Stouffer's",
+  "store_brand": false,
+  "department": "pantry",
+  "aisle": "Other",
+  "size": "10 oz",
+  "price": 2.99,
+  "diet_tags": [
+   "nut_free"
+  ],
+  "allergens": [
+   "wheat",
+   "milk",
+   "soy"
+  ],
+  "upc": "0001380079188",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0001380079188"
+ },
+ {
+  "id": "kr-0001380010323",
+  "name": "Stouffer's Vegetable Lasagna Frozen Meal",
+  "brand": "Stouffer's",
+  "store_brand": false,
+  "department": "pantry",
+  "aisle": "Other",
+  "size": "10.5 oz",
+  "price": 2.99,
+  "diet_tags": [
+   "nut_free"
+  ],
+  "allergens": [
+   "milk",
+   "wheat"
+  ],
+  "upc": "0001380010323",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0001380010323"
+ },
+ {
+  "id": "kr-0004227200032",
+  "name": "Amy's Vegetable Lasagna",
+  "brand": "Amy's",
+  "store_brand": false,
+  "department": "pantry",
+  "aisle": "Other",
+  "size": "9.5oz",
+  "price": 6.49,
+  "diet_tags": [
+   "kosher",
+   "nut_free"
+  ],
+  "allergens": [
+   "milk",
+   "wheat"
+  ],
+  "upc": "0004227200032",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0004227200032"
+ },
+ {
+  "id": "kr-0001380016668",
+  "name": "Lean Cuisine Lasagna with Meat Sauce Frozen Meal",
+  "brand": "Lean Cuisine",
+  "store_brand": false,
+  "department": "pantry",
+  "aisle": "Other",
+  "size": "10.5 oz",
+  "price": 2.99,
+  "diet_tags": [
+   "nut_free"
+  ],
+  "allergens": [
+   "wheat",
+   "soy",
+   "milk"
+  ],
+  "upc": "0001380016668",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0001380016668"
+ },
+ {
+  "id": "kr-0065272971083",
+  "name": "Hamburger Helper Pasta Lasagna",
+  "brand": "Hamburger Helper",
+  "store_brand": false,
+  "department": "pantry",
+  "aisle": "Other",
+  "size": "6.9 oz",
+  "price": 1.99,
+  "diet_tags": [
+   "nut_free"
+  ],
+  "allergens": [
+   "soy",
+   "milk",
+   "eggs",
+   "wheat"
+  ],
+  "upc": "0065272971083",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0065272971083"
+ },
+ {
+  "id": "kr-0001330060921",
+  "name": "Chef Boyardee Skillet Meals Meat Lasagna 5.3 oz",
+  "brand": "Chef Boyardee",
+  "store_brand": false,
+  "department": "pantry",
+  "aisle": "Other",
+  "size": "5.3 oz",
+  "price": 1.89,
+  "diet_tags": [
+   "nut_free"
+  ],
+  "allergens": [
+   "milk",
+   "wheat",
+   "soy"
+  ],
+  "upc": "0001330060921",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0001330060921"
+ },
+ {
+  "id": "kr-0001111064596",
+  "name": "Private Selection Traditional Feta Cheese Chunk",
+  "brand": "Private Selection",
+  "store_brand": true,
+  "department": "pantry",
+  "aisle": "Other",
+  "size": "8 oz",
+  "price": 5.99,
+  "diet_tags": [
+   "gluten_free",
+   "nut_free"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0001111064596",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0001111064596"
+ },
+ {
+  "id": "kr-0007790100651",
+  "name": "President Feta Cheese Chunk 8 oz",
+  "brand": "President",
+  "store_brand": false,
+  "department": "pantry",
+  "aisle": "Other",
+  "size": "8 oz",
+  "price": 7.49,
+  "diet_tags": [
+   "kosher",
+   "nut_free"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0007790100651",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0007790100651"
+ },
+ {
+  "id": "kr-0007027729010",
+  "name": "Athenos Traditional Feta Cheese Chunk",
+  "brand": "Athenos",
+  "store_brand": false,
+  "department": "pantry",
+  "aisle": "Other",
+  "size": "8 oz",
+  "price": 7.49,
+  "diet_tags": [
+   "nut_free"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0007027729010",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0007027729010"
+ },
+ {
+  "id": "kr-0064334281522",
+  "name": "Greek Feta in Brine 200g Tub",
+  "brand": "Dodoni",
+  "store_brand": false,
+  "department": "pantry",
+  "aisle": "Other",
+  "size": "200g tub",
+  "price": 9.99,
+  "diet_tags": [
+   "nut_free"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0064334281522",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0064334281522"
+ },
+ {
+  "id": "kr-0081794401285",
+  "name": "Murray's Feta Cheese Stuffed Olives",
+  "brand": "Murray's",
+  "store_brand": true,
+  "department": "pantry",
+  "aisle": "Other",
+  "size": "6.3 oz",
+  "price": 6.99,
+  "diet_tags": [],
+  "allergens": [
+   "milk",
+   "tree_nuts"
+  ],
+  "upc": "0081794401285",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0081794401285"
+ },
+ {
+  "id": "kr-0003114200011",
+  "name": "BelGioioso Mascarpone Cheese",
+  "brand": "BelGioioso",
+  "store_brand": false,
+  "department": "pantry",
+  "aisle": "Other",
+  "size": "8 oz",
+  "price": 5.99,
+  "diet_tags": [
+   "gluten_free",
+   "kosher",
+   "nut_free"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0003114200011",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0003114200011"
+ },
+ {
+  "id": "kr-0081794401054",
+  "name": "Murray's Mascarpone",
+  "brand": "Murray's",
+  "store_brand": true,
+  "department": "pantry",
+  "aisle": "Other",
+  "size": "8.8 oz",
+  "price": 7.99,
+  "diet_tags": [
+   "nut_free"
+  ],
+  "allergens": [
+   "milk"
+  ],
+  "upc": "0081794401054",
+  "image_url": "https://www.kroger.com/product/images/medium/front/0081794401054"
  }
 ]

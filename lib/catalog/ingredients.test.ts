@@ -70,3 +70,10 @@ test("tool wrapper validates input", async () => {
   assert.equal(((await runTool("match_ingredients", { ingredients: [] })) as any).error.code, "invalid_input");
   assert.equal(((await runTool("match_ingredients", { store_id: "x", ingredients: [{ name: "salt" }] })) as any).error.code, "not_found");
 });
+
+test("synonyms and different-product words", async () => {
+  const out = await matchIngredients({ store_id: STORE, ingredients: [{ name: "spaghetti noodles" }, { name: "butter" }] });
+  const by = Object.fromEntries(out.items.map((i) => [i.ingredient, i]));
+  assert.match(by["spaghetti noodles"].product!.name, /Spaghetti/); // noodles ≈ pasta
+  assert.doesNotMatch(by["butter"].product!.name, /Peanut|Plant/); // not peanut butter / plant butter
+});
