@@ -1,0 +1,27 @@
+{
+  "name": "basket",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "agent:setup": "tsx --env-file-if-exists=.env.local scripts/setup-agent.ts",
+    "agent:chat": "tsx --env-file-if-exists=.env.local scripts/chat.ts",
+    "agent:smoke": "tsx --env-file-if-exists=.env.local scripts/smoke.ts"
+  },
+  "dependencies": {
+    "@zoowork-ai/sdk": "^0.10.2",
+    "next": "^16.3.8",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.4",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "tsx": "^4.23.15",
+    "typescript": "^5"
+  }
+}
