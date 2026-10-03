@@ -19,10 +19,11 @@ export async function POST(request: Request) {
 
   const stream = new ReadableStream<Uint8Array>({
     async start(controller) {
-      const beat = setInterval(() => controller.enqueue(encoder.encode(" ")), 2000);
+      const send = (line: unknown) => controller.enqueue(encoder.encode(JSON.stringify(line) + "\n"));
+      const beat = setInterval(() => controller.enqueue(encoder.encode("\n")), 2000);
       let body: unknown;
       try {
-        const turn = await runAgentTurn(input);
+        const turn = await runAgentTurn(input, (text) => send({ type: "progress", text }));
         body = { ...turn, order: await withCheckoutUrl(turn.order, origin) };
         console.log(
           JSON.stringify({
@@ -42,12 +43,12 @@ export async function POST(request: Request) {
       } finally {
         clearInterval(beat);
       }
-      controller.enqueue(encoder.encode(JSON.stringify(body)));
+      send({ type: "result", ...(body as object) });
       controller.close();
     },
   });
 
   return new Response(stream, {
-    headers: { "Content-Type": "application/json", "Cache-Control": "no-store, no-transform", "X-Accel-Buffering": "no" },
+    headers: { "Content-Type": "application/x-ndjson", "Cache-Control": "no-store, no-transform", "X-Accel-Buffering": "no" },
   });
 }
