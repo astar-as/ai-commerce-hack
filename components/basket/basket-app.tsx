@@ -6,6 +6,7 @@ import { CheckoutBar } from "@/components/basket/checkout-bar";
 import { FulfillmentSwitch } from "@/components/basket/fulfillment-switch";
 import { OrderList } from "@/components/basket/order-list";
 import { SwapCard } from "@/components/basket/swap-card";
+import { LiveCaption } from "@/components/basket/live-caption";
 import { VoiceOrb } from "@/components/basket/voice-orb";
 import { useLiveVoice } from "@/hooks/use-live-voice";
 import { readDelegate } from "@/lib/delegate-client";
@@ -146,24 +147,7 @@ export function BasketApp() {
                 {live && <span className="mr-1.5 inline-block size-1.5 -translate-y-px animate-pulse rounded-full bg-navy align-middle" />}
                 {statusText}
               </p>
-              <AnimatePresence mode="wait">
-                {caption && (
-                  <motion.p
-                    key={`${caption.role}-${caption.at}`}
-                    initial={{ opacity: 0, y: 4 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -4 }}
-                    transition={{ duration: 0.22 }}
-                    className={cn(
-                      "mt-1 line-clamp-2 leading-snug",
-                      hasItems ? "text-[15px]" : "text-[17px]",
-                      caption.role === "user" ? "text-subtle" : "text-ink",
-                    )}
-                  >
-                    {caption.role === "user" ? `“${caption.text.trim()}”` : caption.text}
-                  </motion.p>
-                )}
-              </AnimatePresence>
+              <LiveCaption line={caption} compact={hasItems} />
             </motion.div>
           </motion.section>
 

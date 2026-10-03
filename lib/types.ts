@@ -146,7 +146,7 @@ export type OrderAction =
   | { type: "dismiss_swap" }
   | { type: "set_fulfillment"; mode: FulfillmentMode };
 
-export type TranscriptLine = { role: "user" | "assistant"; text: string; at: number };
+export type TranscriptLine = { role: "user" | "assistant"; text: string; at: number; id?: number };
 
 export type DelegateInput = {
   delegation_id: string;

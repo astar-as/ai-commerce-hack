@@ -47,6 +47,8 @@ export function useLiveVoice({
   const outBuf = useRef<Float32Array<ArrayBuffer> | null>(null);
   const pendingRef = useRef(0);
   const lastOutputAt = useRef(0);
+  const lastLoudAt = useRef(0);
+  const lineId = useRef(0);
   const onOrderRef = useRef(onOrder);
 
   useEffect(() => {
@@ -63,8 +65,8 @@ export function useLiveVoice({
     const now = Date.now();
     const next =
       last && last.role === role && now - last.at < 4000
-        ? [...lines.slice(0, -1), { role, text: last.text + delta, at: now }]
-        : [...lines, { role, text: delta.trimStart(), at: now }];
+        ? [...lines.slice(0, -1), { ...last, text: last.text + delta, at: now }]
+        : [...lines, { role, text: delta.trimStart(), at: now, id: ++lineId.current }];
     transcriptRef.current = next.slice(-40);
     setTranscript(transcriptRef.current);
   }, []);
@@ -285,8 +287,9 @@ export function useLiveVoice({
   useEffect(() => {
     if (status !== "live") return;
     const id = setInterval(() => {
-      const out = getOutputVolume();
-      const speaking = out > 0.03 || Date.now() - lastOutputAt.current < 500;
+      const now = Date.now();
+      if (getOutputVolume() > 0.03) lastLoudAt.current = now;
+      const speaking = now - Math.max(lastLoudAt.current, lastOutputAt.current) < 900;
       const next: AgentState = speaking ? "talking" : pendingRef.current > 0 ? "thinking" : "listening";
       setAgentState((prev) => (prev === next ? prev : next));
     }, 120);
