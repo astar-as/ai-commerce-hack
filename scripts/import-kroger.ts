@@ -11,7 +11,7 @@
 import { writeFileSync } from "node:fs";
 import { findLocations, searchProducts, type KrogerProduct } from "../lib/kroger/client";
 import type { Allergen, DietTag, Product, Store, StoreStock } from "../lib/types";
-import { BASES, NON_FOOD_DEPARTMENTS, parseAllergens, parseTags } from "./seeds";
+import { BASES, NON_FOOD_DEPARTMENTS, RECIPE_BASES, parseAllergens, parseTags } from "./seeds";
 
 const PER_TERM = Number(process.env.KROGER_PER_TERM ?? 5);
 // Kroger's own brands → ranked first on substitutes, like Safeway's in the synthetic catalog.
@@ -55,6 +55,18 @@ function krogerDiet(kp: KrogerProduct, baseTags: string, allergens: Allergen[], 
 
 const clean = (s = "") => s.replace(/[®™©]/g, "").replace(/\s+/g, " ").trim();
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
+
+// Kroger's API has short outages (404/503 from its gateway): retry before giving up on a term.
+async function searchWithRetry(term: string, locationId: string, limit: number) {
+  for (let attempt = 1; ; attempt++) {
+    try {
+      return await searchProducts(term, locationId, limit);
+    } catch (err) {
+      if (attempt >= 3) throw err;
+      await sleep(1000 * attempt);
+    }
+  }
+}
 
 async function pickLocation() {
   const zip = process.env.KROGER_ZIP ?? "45202"; // Cincinnati, Kroger HQ
@@ -116,10 +128,12 @@ console.log(`Store: ${store.name} (${store.id}) — ${store.neighborhood}`);
 
 const products = new Map<string, Product>();
 const stock: StoreStock[] = [];
-for (const [i, base] of BASES.entries()) {
+const TERMS = [...BASES, ...RECIPE_BASES];
+let failed = 0;
+for (const [i, base] of TERMS.entries()) {
   const term = base[2];
   try {
-    const found = await searchProducts(term, loc.locationId, PER_TERM);
+    const found = await searchWithRetry(term, loc.locationId, PER_TERM);
     let kept = 0;
     for (const kp of found) {
       const rows = toRows(kp, base, store.id);
@@ -128,11 +142,18 @@ for (const [i, base] of BASES.entries()) {
       stock.push(rows.stock);
       kept++;
     }
-    process.stdout.write(`\r[${i + 1}/${BASES.length}] ${term.padEnd(40)} +${kept}   `);
+    console.log(`[${i + 1}/${TERMS.length}] ${term} +${kept}`);
   } catch (err) {
-    console.warn(`\n  ${term}: ${err instanceof Error ? err.message : err}`);
+    failed++;
+    console.warn(`  ${term}: ${err instanceof Error ? err.message.slice(0, 120) : err}`);
   }
   await sleep(120); // stay well inside the 10k/day Products limit and avoid bursts
+}
+
+// Never overwrite a good catalog with a broken one.
+if (failed > TERMS.length / 4) {
+  console.error(`${failed}/${TERMS.length} searches failed (Kroger outage?) — not writing data/kroger/. Try again later.`);
+  process.exit(1);
 }
 
 const write = (file: string, data: unknown) =>

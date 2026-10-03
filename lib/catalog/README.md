@@ -1,6 +1,6 @@
 # Data + search
 
-Catalog, per-store stock and the `search_catalog` / `check_stock` tools from [PLAN.md](../../PLAN.md#tool-interfaces-draft--confirm-in-the-first-15-minutes).
+Catalog, per-store stock and the `search_catalog` / `check_stock` / `match_ingredients` tools from [PLAN.md](../../PLAN.md#tool-interfaces-draft--confirm-in-the-first-15-minutes).
 
 ## Use it
 
@@ -37,6 +37,7 @@ npm test
 | `lib/types.ts` | Shared types (the contract in PLAN.md, shared with the app) |
 | `lib/catalog/data.ts` | Loads catalog + stock (`CATALOG_SOURCE=kroger` default \| `synthetic`), `defaultStore()`, `markOutOfStock` |
 | `lib/catalog/moss.ts` | Moss index docs, filters, query |
+| `lib/catalog/ingredients.ts` | `match_ingredients`: recipe ingredients → in-stock products, package count, pantry staples, total |
 | `lib/catalog/search.ts` | Retrieval → filters → stock → substitute ranking (store brand, same aisle, price) |
 | `lib/tools/*` | Tool declarations for ZooWork + `runTool` registry, `MOCK_TOOLS=1` returns `mocks/*.json` |
 | `lib/kroger/client.ts` | Kroger API (app keys only, no shopper login): locations, products |
@@ -57,3 +58,17 @@ Kroger is the **in-store** data source (real shelf, aisle, stock). Online orderi
 - **Indexes built** (Moss project "Voice Agent"): `kroger-catalog` (581 docs) and `synthetic-catalog` (524 docs). Rebuild after re-importing: `CATALOG_SOURCE=<source> npm run moss:index`.
 - **Local keyword fallback** otherwise — same output, `engine: "local"`.
 - **Substitutes** (`substitute_for`): same department, keep the original's vegan / vegetarian / gluten-free / dairy-free / nut-free tags, in stock at the store, ranked by relevance + store brand + same aisle − price gap.
+
+## match_ingredients (dish → recipe → list)
+
+The agent picks and scales a recipe, then sends the whole ingredient list in **one** call (one tool round trip instead of one `search_catalog` per ingredient). Per ingredient:
+
+- **Search:** `searchCatalog` (Moss), in stock at the store, household `diet` / `exclude_allergens` applied.
+- **Sanity check:** the ingredient's last word must be in the product name, and so must the other words (≤3 words: all; longer: all but one). So "ground beef" never becomes a ribeye, and it comes back as `unmatched` instead.
+- **Pick:** among the top 3 matches, the cheapest way to cover the recipe amount (packages × store price), store brand gets a 10% edge.
+- **Quantity:** recipe amount ÷ package size (lb/oz/g, cups/tbsp/fl oz/gal, counts; mass↔volume at water density; garlic cloves ≈ 1/10 head; capped at 12). 1 when sizes can't be compared.
+- **Pantry staples** (salt, oil, spices, flour…) are matched but flagged `pantry_staple` and left out of `total`, so the agent asks first. `water` is never a product.
+
+```bash
+npx tsx --env-file=.env -e 'import { runTool } from "./lib/tools/index"; runTool("match_ingredients", { ingredients: [{ name: "boneless skinless chicken thighs", quantity: 2, unit: "lb" }, { name: "heavy cream", quantity: 1, unit: "cup" }, { name: "garam masala" }] }).then((r) => console.log(JSON.stringify(r, null, 1)))'
+```

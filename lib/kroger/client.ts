@@ -44,6 +44,7 @@ async function getAppToken(): Promise<string> {
       "Content-Type": "application/x-www-form-urlencoded",
     },
     body: new URLSearchParams({ grant_type: "client_credentials", scope: "product.compact" }),
+    signal: AbortSignal.timeout(15_000),
   });
   if (!res.ok) throw new Error(`Kroger token ${res.status}: ${await res.text()}`);
   const body = (await res.json()) as { access_token: string; expires_in: number };
@@ -54,6 +55,7 @@ async function getAppToken(): Promise<string> {
 async function get<T>(path: string, params: Record<string, string>): Promise<T> {
   const res = await fetch(`${BASE}${path}?${new URLSearchParams(params)}`, {
     headers: { Authorization: `Bearer ${await getAppToken()}`, Accept: "application/json" },
+    signal: AbortSignal.timeout(15_000), // a hung request must not stall the whole import
   });
   if (!res.ok) throw new Error(`Kroger GET ${path} ${res.status}: ${await res.text()}`);
   return ((await res.json()) as { data: T }).data;

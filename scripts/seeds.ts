@@ -229,3 +229,82 @@ export function deriveDietTags(baseTags: string, allergens: Allergen[], departme
   }
   return [...diet].sort();
 }
+
+// Extra Kroger search terms so common recipes resolve (dish → recipe → list). Same shape as BASES;
+// size/price/brands are unused by the import. Not used by the synthetic generator.
+const R = (department: string, aisle: string, name: string, tags = "v gf k", allergens = ""): Base =>
+  [department, aisle, name, "", 0, tags, allergens, ""];
+export const RECIPE_BASES: Base[] = [
+  // meat & seafood
+  R("meat seafood", "Beef", "Ground Beef", "gf"), R("meat seafood", "Beef", "Beef Stew Meat", "gf"),
+  R("meat seafood", "Beef", "Flank Steak", "gf"), R("meat seafood", "Beef", "Chuck Roast", "gf"),
+  R("meat seafood", "Chicken", "Whole Chicken", "gf"), R("meat seafood", "Chicken", "Chicken Drumsticks", "gf"),
+  R("meat seafood", "Chicken", "Chicken Wings", "gf"), R("meat seafood", "Chicken", "Ground Chicken", "gf"),
+  R("meat seafood", "Pork", "Pork Chops", "gf"), R("meat seafood", "Pork", "Pork Shoulder", "gf"),
+  R("meat seafood", "Pork", "Ground Pork", "gf"), R("meat seafood", "Pork", "Pancetta", "gf"),
+  R("meat seafood", "Pork", "Chorizo", "gf"), R("meat seafood", "Seafood", "Cod Fillet", "gf", "f"),
+  R("meat seafood", "Seafood", "Tilapia Fillet", "gf", "f"), R("meat seafood", "Seafood", "Scallops", "gf", "sh"),
+  // produce
+  R("produce", "Fresh Vegetables", "Ginger Root"), R("produce", "Fresh Vegetables", "Shallots"),
+  R("produce", "Fresh Vegetables", "Red Onion"), R("produce", "Fresh Vegetables", "Green Onions"),
+  R("produce", "Fresh Vegetables", "Jalapeno Peppers"), R("produce", "Fresh Vegetables", "Celery"),
+  R("produce", "Fresh Vegetables", "Mushrooms"), R("produce", "Fresh Vegetables", "Eggplant"),
+  R("produce", "Fresh Vegetables", "Cauliflower"), R("produce", "Fresh Vegetables", "Kale"),
+  R("produce", "Fresh Vegetables", "Cabbage"), R("produce", "Fresh Vegetables", "Cucumber"),
+  R("produce", "Fresh Vegetables", "Green Beans"), R("produce", "Fresh Vegetables", "Asparagus"),
+  R("produce", "Fresh Vegetables", "Butternut Squash"), R("produce", "Fresh Vegetables", "Corn on the Cob"),
+  R("produce", "Fresh Vegetables", "Cherry Tomatoes"), R("produce", "Fresh Vegetables", "Yukon Gold Potatoes"),
+  R("produce", "Fresh Vegetables", "Bean Sprouts"), R("produce", "Fresh Vegetables", "Bok Choy"),
+  R("produce", "Fresh Herbs & Salads", "Fresh Basil"), R("produce", "Fresh Herbs & Salads", "Fresh Parsley"),
+  R("produce", "Fresh Herbs & Salads", "Fresh Mint"), R("produce", "Fresh Herbs & Salads", "Fresh Dill"),
+  R("produce", "Fresh Herbs & Salads", "Fresh Thyme"), R("produce", "Fresh Herbs & Salads", "Fresh Rosemary"),
+  R("produce", "Fresh Fruits", "Oranges"), R("produce", "Fresh Fruits", "Mango"),
+  R("produce", "Fresh Fruits", "Pineapple"), R("produce", "Fresh Fruits", "Grapes"),
+  R("produce", "Fresh Fruits", "Raspberries"), R("produce", "Fresh Fruits", "Peaches"),
+  // dairy & eggs
+  R("dairy eggs", "Cheese", "Fresh Mozzarella", "vg gf", "m"), R("dairy eggs", "Cheese", "Ricotta Cheese", "vg gf", "m"),
+  R("dairy eggs", "Cheese", "Cream Cheese", "vg gf", "m"), R("dairy eggs", "Cheese", "Parmesan Cheese Wedge", "gf", "m"),
+  R("dairy eggs", "Cheese", "Goat Cheese", "vg gf", "m"), R("dairy eggs", "Cheese", "Gruyere Cheese", "gf", "m"),
+  R("dairy eggs", "Cheese", "Monterey Jack Cheese", "vg gf", "m"), R("dairy eggs", "Cheese", "Paneer", "vg gf", "m"),
+  R("dairy eggs", "Cream", "Buttermilk", "vg gf", "m"), R("dairy eggs", "Cream", "Whipped Cream", "vg gf", "m"),
+  R("dairy eggs", "Yogurt", "Plain Whole Milk Yogurt", "vg gf", "m"),
+  // pantry: spices & seasonings
+  R("pantry", "Spices & Seasonings", "Garam Masala"), R("pantry", "Spices & Seasonings", "Curry Powder"),
+  R("pantry", "Spices & Seasonings", "Smoked Paprika"), R("pantry", "Spices & Seasonings", "Ground Turmeric"),
+  R("pantry", "Spices & Seasonings", "Chili Powder"), R("pantry", "Spices & Seasonings", "Ground Cinnamon"),
+  R("pantry", "Spices & Seasonings", "Dried Oregano"), R("pantry", "Spices & Seasonings", "Italian Seasoning"),
+  R("pantry", "Spices & Seasonings", "Garlic Powder"), R("pantry", "Spices & Seasonings", "Onion Powder"),
+  R("pantry", "Spices & Seasonings", "Black Pepper"), R("pantry", "Spices & Seasonings", "Red Pepper Flakes"),
+  R("pantry", "Spices & Seasonings", "Bay Leaves"), R("pantry", "Spices & Seasonings", "Ground Ginger"),
+  R("pantry", "Spices & Seasonings", "Cayenne Pepper"), R("pantry", "Spices & Seasonings", "Ground Coriander"),
+  // pantry: baking, oils, sauces
+  R("pantry", "Baking", "Brown Sugar"), R("pantry", "Baking", "Baking Soda"), R("pantry", "Baking", "Baking Powder"),
+  R("pantry", "Baking", "Vanilla Extract"), R("pantry", "Baking", "Cocoa Powder"), R("pantry", "Baking", "Cornstarch"),
+  R("pantry", "Baking", "Powdered Sugar"), R("pantry", "Baking", "Active Dry Yeast"),
+  R("pantry", "Baking", "Panko Bread Crumbs", "v k", "w"), R("pantry", "Oils & Vinegars", "Vegetable Oil"),
+  R("pantry", "Oils & Vinegars", "Sesame Oil", "v gf", "se"), R("pantry", "Oils & Vinegars", "Red Wine Vinegar"),
+  R("pantry", "Oils & Vinegars", "Rice Vinegar"), R("pantry", "Oils & Vinegars", "Apple Cider Vinegar"),
+  R("pantry", "Condiments", "Fish Sauce", "gf", "f"), R("pantry", "Condiments", "Hoisin Sauce", "v", "s w"),
+  R("pantry", "Condiments", "Oyster Sauce", "", "sh w"), R("pantry", "Condiments", "Worcestershire Sauce", "gf", "f"),
+  R("pantry", "Condiments", "Hot Sauce"), R("pantry", "Condiments", "Barbecue Sauce"),
+  R("pantry", "Condiments", "Tahini", "v gf", "se"), R("pantry", "Condiments", "Red Curry Paste"),
+  R("pantry", "Condiments", "Chipotle Peppers in Adobo"), R("pantry", "Condiments", "Capers"),
+  R("pantry", "Condiments", "Kalamata Olives"), R("pantry", "Condiments", "Dijon Mustard"),
+  R("pantry", "Spreads", "Maple Syrup"),
+  // canned & dry goods
+  R("canned goods", "Canned Tomatoes", "Crushed Tomatoes"), R("canned goods", "Canned Tomatoes", "Tomato Sauce"),
+  R("canned goods", "Canned Beans", "Kidney Beans"), R("canned goods", "Canned Beans", "Cannellini Beans"),
+  R("canned goods", "Canned Beans", "Lentils"), R("canned goods", "Soup & Broth", "Beef Broth", "gf"),
+  R("canned goods", "Canned Vegetables", "Green Chiles"), R("canned goods", "Canned Vegetables", "Artichoke Hearts"),
+  R("dry goods pasta", "Pasta", "Lasagna Noodles", "v k", "w"), R("dry goods pasta", "Pasta", "Fettuccine", "v k", "w"),
+  R("dry goods pasta", "Pasta", "Egg Noodles", "vg k", "w e"), R("dry goods pasta", "Pasta", "Elbow Macaroni", "v k", "w"),
+  R("dry goods pasta", "Pasta", "Orzo", "v k", "w"), R("dry goods pasta", "Rice & Grains", "Basmati Rice"),
+  R("dry goods pasta", "Rice & Grains", "Arborio Rice"), R("dry goods pasta", "Rice & Grains", "Couscous", "v k", "w"),
+  R("dry goods pasta", "Rice & Grains", "Long Grain White Rice"),
+  R("bakery", "Bread", "Naan", "vg", "w m"), R("bakery", "Bread", "Pita Bread", "v", "w"),
+  R("bakery", "Bread", "French Baguette", "v", "w"), R("bakery", "Bread", "Pizza Dough", "v", "w"),
+  R("frozen", "Frozen Vegetables", "Frozen Spinach"), R("frozen", "Frozen Vegetables", "Frozen Mixed Vegetables"),
+  R("frozen", "Frozen Breakfast", "Puff Pastry", "vg", "w m"),
+  R("snacks", "Nuts & Trail Mix", "Cashews", "v gf", "tn"), R("snacks", "Nuts & Trail Mix", "Pine Nuts", "v gf", "tn"),
+  R("snacks", "Nuts & Trail Mix", "Walnuts", "v gf", "tn"), R("beverages", "Wine", "Dry White Wine"),
+];

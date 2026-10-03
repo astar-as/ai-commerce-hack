@@ -10,6 +10,7 @@ import searchCatalogMock from "../../mocks/search_catalog.json";
 import { SearchError } from "../catalog/search";
 import type { ToolError } from "../types";
 import { checkStockTool } from "./check_stock";
+import { matchIngredientsTool } from "./match_ingredients";
 import { searchCatalogTool } from "./search_catalog";
 import { searchOrderHistoryTool } from "./search_order_history";
 import { sendToInstacartTool } from "./send_to_instacart";
@@ -24,6 +25,7 @@ type Tool = {
 const TOOLS: Record<string, Tool> = {
   [searchCatalogTool.name]: searchCatalogTool,
   [checkStockTool.name]: checkStockTool,
+  [matchIngredientsTool.name]: matchIngredientsTool,
   [sendToInstacartTool.name]: sendToInstacartTool, // handles MOCK_TOOLS itself (mock cart)
   [searchOrderHistoryTool.name]: searchOrderHistoryTool,
 };

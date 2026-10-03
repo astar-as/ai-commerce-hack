@@ -52,6 +52,29 @@ export type SearchResult = {
 
 export type SearchCatalogOutput = { results: SearchResult[]; took_ms: number; engine?: "moss" | "local" };
 
+export type MatchIngredientsInput = {
+  store_id?: string; // default: the demo store
+  ingredients: Array<{ name: string; quantity?: number; unit?: string; optional?: boolean }>; // max 40
+  diet?: DietTag[];
+  exclude_allergens?: Allergen[];
+};
+export type MatchedIngredient = {
+  ingredient: string;
+  product?: Product; // best in-stock match (store brand preferred); absent if none
+  stock?: StoreStock;
+  qty: number; // packages to buy (1 when sizes can't be compared; 0 when unmatched)
+  alternatives: Product[];
+  pantry_staple: boolean; // salt, oil, spices… → ask "do you have this?"
+  optional?: boolean;
+};
+export type MatchIngredientsOutput = {
+  store_id: string;
+  items: MatchedIngredient[];
+  unmatched: string[];
+  total: number; // store price × qty, excluding pantry staples and optional items
+  took_ms: number;
+};
+
 export type CheckStockInput = { store_id: string; product_ids: string[] };
 export type CheckStockOutput = { store_id: string; items: StoreStock[]; unknown_ids: string[] };
 
