@@ -56,10 +56,57 @@ Next.js API routes ── ZooWork session (streams the agent's replies to the UI
 |---|---|
 | **1. Agent** | The ZooWork agent (persona docs, remembered preferences, custom tools) and the backend that streams its replies to the app. |
 | **2. Data + search** | Safeway-style catalog with synthetic stock and aisles, the Moss index, the substitute-search endpoint, then in-browser Moss (WASM) if there's time. |
-| **3. Frontend** | The mobile web app: list view, in-store mode with voice input, and the store dashboard. |
+| **3. Frontend — Erik** | One-screen mobile web app on Vercel: GPT-Live voice orb + live order view (items with images, fulfillment mode). See [Frontend](#frontend-owner-3--erik). Status: Next.js + shadcn + ElevenLabs orb scaffolded on `main`; building voice + order view now. |
 | **4. Integrations + pitch** | Instacart dev key and the "Send to Instacart" link, Entire setup, then Band shopper ↔ store agents (from ~2:30), then demo script, slides and backup video. |
 
 **First 15 minutes, all together:** agree on the custom tool interfaces — `search_catalog`, `check_stock`, `send_to_instacart`, `report_oos` — so persons 1–3 can build in parallel against mocks. The draft below is the starting point.
+
+## Frontend (owner: 3 — Erik)
+
+**Hosting: Vercel.** ZooWork's API runs agents, not web apps, and we need server routes for the OpenAI and ZooWork keys anyway.
+
+**One screen, white background.** A voice orb ([ElevenLabs UI `Orb`](https://ui.elevenlabs.io), states `listening` / `thinking` / `talking`, reacts to mic and speaker volume) and under it the **live order**: product images, name, size, qty, price, swap badges ("↺ swapped from Oatly"), and a fulfillment chip (🚚 Instacart delivery · 🛍 Store pickup · 🛒 In store). The store is labeled "Safeway-style demo store" (see [STAKEHOLDERS.md](STAKEHOLDERS.md)).
+
+**Voice: OpenAI GPT-Live (`gpt-live-1`) with client delegation.** GPT-Live only does the talking; ZooWork stays the brain.
+
+```
+browser ⇄ WebRTC ⇄ GPT-Live      (mic/speaker + data channel: transcripts, delegation events)
+   │ POST /api/live      → server creates the session (OPENAI_API_KEY)
+   │ POST /api/delegate  ← on session.delegation.created: { delegation_id, transcript, store_id, order }
+   │                       → runs the ZooWork turn (owner 1) → returns { say, order }
+   └ data channel: session.commentary.append { delegation_id, content: say }  → GPT-Live speaks it
+```
+
+- Cost: $0.05/min voice (billed per second), backend billed separately.
+- `/api/delegate` is the **seam between frontend and agent**. Until the ZooWork agent is wired, it runs a mock agent so the UI works end to end. Person 1 replaces `lib/agent.ts` with the ZooWork session turn.
+
+### `OrderState` — what the screen renders (needs sign-off from 1)
+
+The order must live in **our backend / the request**, not only in ZooWork's `agent_db` — the frontend can't read `agent_db` in production. The agent changes it through order tools; `/api/delegate` returns the new state with each turn.
+
+```ts
+type OrderItem = {
+  product: Product;
+  qty: number;
+  status: "added" | "swapped" | "out_of_stock" | "picked";
+  swapped_from?: Product;
+  note?: string;                  // short reason, e.g. "Store brand · dairy-free · −$1.50"
+};
+
+type OrderState = {
+  fulfillment: {
+    mode: "instacart_delivery" | "store_pickup" | "in_store";
+    store: { id: string; name: string };
+    eta?: string;
+    checkout_url?: string;         // from send_to_instacart
+  };
+  items: OrderItem[];
+  subtotal: number;
+  pending?: { kind: "swap"; missing: Product; options: SearchResult[] };  // waiting for shopper confirmation
+};
+```
+
+Proposed order tools for the agent (owner 1, same wiring as the tools below): `add_item { product_id, qty }`, `remove_item { product_id }`, `swap_item { product_id, substitute_product_id }` (only after the shopper confirms), `set_fulfillment { mode }`. `Product.image_url` is optional — the data owner (2) can fill it from Glasser → Serper `/shopping` (`imageUrl` per listing, $0.0022 per 40 products).
 
 ## Tool interfaces (draft — confirm in the first 15 minutes)
 
