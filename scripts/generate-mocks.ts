@@ -1,6 +1,6 @@
 // Writes mocks/*.json from real tool output on the synthetic catalog (demo case: Oatly Barista out at safeway-sf-01).
 import { writeFileSync } from "node:fs";
-import { runTool } from "../lib/tools/index.ts";
+import { runTool } from "../lib/tools/index";
 
 delete process.env.MOSS_PROJECT_ID;
 const write = (name: string, data: unknown) =>

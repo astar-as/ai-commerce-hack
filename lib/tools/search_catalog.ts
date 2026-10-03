@@ -1,5 +1,5 @@
-import { searchCatalog } from "../catalog/search.ts";
-import { ALLERGENS, DIET_TAGS, type SearchCatalogInput, type SearchCatalogOutput } from "../catalog/types.ts";
+import { searchCatalog } from "../catalog/search";
+import { ALLERGENS, DIET_TAGS, type SearchCatalogInput, type SearchCatalogOutput } from "../types";
 
 export const searchCatalogTool = {
   name: "search_catalog",

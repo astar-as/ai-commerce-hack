@@ -1,8 +1,8 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
-import { runTool } from "../tools/index.ts";
-import { getProduct, markOutOfStock, resetCatalog } from "./data.ts";
-import { searchCatalog } from "./search.ts";
+import { runTool } from "../tools/index";
+import { getProduct, markOutOfStock, resetCatalog } from "./data";
+import { searchCatalog } from "./search";
 
 delete process.env.MOSS_PROJECT_ID; // exercise the local engine deterministically
 const STORE = "safeway-sf-01";

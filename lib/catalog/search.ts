@@ -1,9 +1,9 @@
 // Engine behind search_catalog: candidate retrieval (Moss, or local keyword fallback) →
 // product filters → per-store stock → substitute ranking.
 
-import { allProducts, getProduct, getStock } from "./data.ts";
-import { mossConfigured, mossSearch, type MossFilterSpec } from "./moss.ts";
-import type { DietTag, Product, SearchCatalogInput, SearchCatalogOutput, SearchCatalogResult } from "./types.ts";
+import { allProducts, getProduct, getStock } from "./data";
+import { mossConfigured, mossSearch, type MossFilterSpec } from "./moss";
+import type { DietTag, Product, SearchCatalogInput, SearchCatalogOutput, SearchResult } from "../types";
 
 // Tags a substitute must keep when the missing product had them ("still fits my diet").
 const KEEP_ON_SUBSTITUTE: DietTag[] = ["vegan", "vegetarian", "gluten_free", "dairy_free", "nut_free"];
@@ -98,7 +98,7 @@ export async function searchCatalog(input: SearchCatalogInput): Promise<SearchCa
   };
   candidates.sort((a, b) => rankScore(b) - rankScore(a));
 
-  const results: SearchCatalogResult[] = candidates.slice(0, limit).map((c) => {
+  const results: SearchResult[] = candidates.slice(0, limit).map((c) => {
     const stock = input.store_id ? getStock(input.store_id, c.product.id) : undefined;
     const storePrice = stock?.price ?? c.product.price;
     const originalPrice = original && input.store_id ? (getStock(input.store_id, original.id)?.price ?? original.price) : original?.price;

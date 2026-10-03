@@ -1,5 +1,5 @@
 // Seed list of grocery staples: drives the synthetic catalog and the search terms for the Kroger import.
-import type { Allergen, DietTag } from "../lib/catalog/types.ts";
+import type { Allergen, DietTag } from "../lib/types";
 
 // [department, aisle, name, size, list price, tags, allergens, brands]
 // tags: v=vegan vg=vegetarian gf=gluten_free k=kosher o=organic

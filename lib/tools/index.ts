@@ -7,10 +7,10 @@
 
 import checkStockMock from "../../mocks/check_stock.json";
 import searchCatalogMock from "../../mocks/search_catalog.json";
-import { SearchError } from "../catalog/search.ts";
-import type { ToolError } from "../catalog/types.ts";
-import { checkStockTool } from "./check_stock.ts";
-import { searchCatalogTool } from "./search_catalog.ts";
+import { SearchError } from "../catalog/search";
+import type { ToolError } from "../types";
+import { checkStockTool } from "./check_stock";
+import { searchCatalogTool } from "./search_catalog";
 
 type Tool = {
   name: string;

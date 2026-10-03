@@ -5,7 +5,7 @@ Catalog, per-store stock and the `search_catalog` / `check_stock` tools from [PL
 ## Use it
 
 ```ts
-import { runTool, zooworkCustomTools, isToolError } from "./lib/tools/index.ts";
+import { runTool, zooworkCustomTools, isToolError } from "./lib/tools/index";
 
 // ZooWork agent (person 1)
 createAgent({ resource: { custom_tools: zooworkCustomTools(), ... } });
@@ -17,7 +17,7 @@ await zc.resolveCustomToolCall(agentId, call.callId, { content: [{ type: "json",
 return Response.json(await runTool(params.name, await req.json()));
 
 // report_oos (person 1): trust the shopper over our snapshot
-import { markOutOfStock } from "./lib/catalog/data.ts";
+import { markOutOfStock } from "./lib/catalog/data";
 ```
 
 Try it from the terminal:
@@ -34,7 +34,7 @@ npm test
 
 | File | What |
 |---|---|
-| `lib/catalog/types.ts` | Shared types (the contract in PLAN.md) |
+| `lib/types.ts` | Shared types (the contract in PLAN.md, shared with the app) |
 | `lib/catalog/data.ts` | Loads catalog + stock (`CATALOG_SOURCE=synthetic\|kroger`), `markOutOfStock` |
 | `lib/catalog/moss.ts` | Moss index docs, filters, query |
 | `lib/catalog/search.ts` | Retrieval → filters → stock → substitute ranking (store brand, same aisle, price) |

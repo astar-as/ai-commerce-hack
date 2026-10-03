@@ -3,8 +3,8 @@
 // Moss metadata values are strings, and metadata filters need the index loaded locally (loadIndex).
 
 import { MossClient, type DocumentInfo } from "@moss-js/moss";
-import { ALLERGENS, DIET_TAGS, type Allergen, type DietTag, type Product } from "./types.ts";
-import { catalogSource } from "./data.ts";
+import { ALLERGENS, DIET_TAGS, type Allergen, type DietTag, type Product } from "../types";
+import { catalogSource } from "./data";
 
 export function mossConfigured(): boolean {
   return Boolean(process.env.MOSS_PROJECT_ID && process.env.MOSS_PROJECT_KEY);

@@ -3,8 +3,8 @@
 // Deterministic: same seed → same data. Run: npm run catalog:generate
 
 import { writeFileSync } from "node:fs";
-import type { Product, Store, StoreStock } from "../lib/catalog/types.ts";
-import { BASES, deriveDietTags, parseAllergens } from "./seeds.ts";
+import type { Product, Store, StoreStock } from "../lib/types";
+import { BASES, deriveDietTags, parseAllergens } from "./seeds";
 
 // --- seeded RNG (mulberry32) ---
 function rng(seed: number) {

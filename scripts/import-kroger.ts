@@ -9,9 +9,9 @@
 // "gluten free" in the name) — Kroger's public API doesn't return allergens. Good enough for a demo.
 
 import { writeFileSync } from "node:fs";
-import { findLocations, searchProducts, type KrogerProduct } from "../lib/kroger/client.ts";
-import type { Product, Store, StoreStock } from "../lib/catalog/types.ts";
-import { BASES, deriveDietTags, parseAllergens } from "./seeds.ts";
+import { findLocations, searchProducts, type KrogerProduct } from "../lib/kroger/client";
+import type { Product, Store, StoreStock } from "../lib/types";
+import { BASES, deriveDietTags, parseAllergens } from "./seeds";
 
 const PER_TERM = Number(process.env.KROGER_PER_TERM ?? 5);
 // Kroger's own brands → ranked first on substitutes, like Safeway's in the synthetic catalog.
