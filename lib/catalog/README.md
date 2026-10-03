@@ -25,8 +25,8 @@ Try it from the terminal:
 ```bash
 npm install
 npm run search -- "oat milk barista"
-npm run search -- --sub sw-000069 --store safeway-sf-01      # demo: Oatly Barista is out → substitutes
-npm run search -- "pasta sauce" --diet vegan --store safeway-sf-01
+npm run search -- --sub kr-0019064664001 --store kroger-01400513   # demo: Oatly Barista is out → substitutes
+npm run search -- "pasta sauce" --diet vegan --store kroger-01400513
 npm test
 ```
 
@@ -35,17 +35,20 @@ npm test
 | File | What |
 |---|---|
 | `lib/types.ts` | Shared types (the contract in PLAN.md, shared with the app) |
-| `lib/catalog/data.ts` | Loads catalog + stock (`CATALOG_SOURCE=synthetic\|kroger`), `markOutOfStock` |
+| `lib/catalog/data.ts` | Loads catalog + stock (`CATALOG_SOURCE=kroger` default \| `synthetic`), `defaultStore()`, `markOutOfStock` |
 | `lib/catalog/moss.ts` | Moss index docs, filters, query |
 | `lib/catalog/search.ts` | Retrieval → filters → stock → substitute ranking (store brand, same aisle, price) |
 | `lib/tools/*` | Tool declarations for ZooWork + `runTool` registry, `MOCK_TOOLS=1` returns `mocks/*.json` |
-| `lib/kroger/client.ts` | Kroger API: locations, products, `addToCart` (needs the shopper's OAuth token) |
+| `lib/kroger/client.ts` | Kroger API (app keys only, no shopper login): locations, products |
 | `scripts/seeds.ts` | ~190 grocery staples: seeds the synthetic catalog and the Kroger search terms |
 
 ## Data sources
 
-- **Synthetic (default):** `data/*.json` — 524 Safeway-style products, 3 SF stores, ~10% out of stock. Demo case: at `safeway-sf-01` Oatly Barista (`sw-000069`) is out; Signature Select Barista is in. Regenerate with `npm run catalog:generate`, then `npm run mocks:generate`.
-- **Kroger (real):** `npm run kroger:import` with `KROGER_CLIENT_ID` / `KROGER_CLIENT_SECRET` → `data/kroger/*.json` for one store (real brands, sizes, prices, aisle numbers, stock levels, UPCs for the Cart API). Allergens and diet tags come from Kroger's own `allergens` + `manufacturerDeclarations` (falls back to the seed item when missing). Then `CATALOG_SOURCE=kroger`.
+Kroger is the **in-store** data source (real shelf, aisle, stock). Online ordering goes through **Instacart** (`send_to_instacart`, person 4). No Kroger shopper login anywhere.
+
+- **Kroger (default, real):** `data/kroger/*.json` — 581 in-store products at Kroger On the Rhine, Cincinnati (`kroger-01400513`): real brands, sizes, prices, aisle numbers, stock levels, images, allergens and diet declarations. Refresh with `npm run kroger:import` (needs `KROGER_CLIENT_ID` / `KROGER_CLIENT_SECRET`), then `npm run moss:index`.
+  - **Demo override:** `data/kroger/demo.json` marks Oatly Barista (`kr-0019064664001`) out of stock so the substitute demo always works. Add ids there for more demo cases.
+- **Synthetic (offline fallback):** `data/*.json` — 524 Safeway-style products, 3 made-up SF stores. `CATALOG_SOURCE=synthetic`. Used by the unit tests.
 
 ## Search engine
 

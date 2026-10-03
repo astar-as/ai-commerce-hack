@@ -1,0 +1,4 @@
+{
+  "_comment": "Demo overrides applied on top of the real Kroger snapshot. Oatly Barista is in stock in reality; we mark it out so the in-store substitute demo is guaranteed.",
+  "out_of_stock": ["kr-0019064664001"]
+}
