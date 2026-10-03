@@ -268,6 +268,16 @@ Called when the shopper taps "not on shelf" (or says it), and again when they pi
 `{ revenue_retained: number, substitutions: number, skipped: number, top_oos: Array<{ product: Product, reports: number }> }`.
 `revenue_retained` = sum of the substitute's store price for `substituted` events. Store events in memory or a JSON file — no database needed for the demo.
 
+### 5. `search_order_history` — past receipts, "that bread from two weeks ago" (owner: 3 — Erik, ✅ on `main`)
+
+Registered in `lib/tools/index.ts`, so `zooworkCustomTools()` / `runTool` already expose it. Demo hook: *"Add that really good bread I bought two weeks ago"* → Acme Pain au Levain; *"my usual oat milk"* → Oatly (bought 5×) → it's out → substitute flow.
+
+**Input** `{ query?: string; days_ago?: number; window_days?: number; limit?: number }` — query is product words ("bread", "oat milk"), adjectives are ignored; `days_ago` ≈ when they said they bought it (window defaults to ~35%, min 3 days). No query → lists recent receipts.
+
+**Output** `{ matches: Array<{ product, qty, price_paid, receipt: { id, date, days_ago, channel, store_name }, times_bought, last_bought_days_ago }>, recent_receipts?, receipts_searched }`
+
+Data: 8 synthetic receipts for the demo household in `lib/history/receipts.ts`, dates computed relative to today so "two weeks ago" always lands. ⚠️ Receipts reference the **demo catalog ids** (`lib/demo-catalog.ts`, `sw-001…`); when the app switches to the Kroger catalog, remap the receipt lines to Kroger product ids (same products by name). The interim agent (`lib/agent.ts`) calls it via function calling and tags re-added items "Bought 2 weeks ago" in the UI.
+
 ### What is *not* a tool
 
 - **Household preferences** (diet, allergies, budget, usual brands) live in ZooWork's agent memory and the persona docs (`USER.md`), not in our backend.
