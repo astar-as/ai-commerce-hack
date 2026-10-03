@@ -59,7 +59,7 @@ Next.js API routes ── ZooWork session (streams the agent's replies to the UI
 |---|---|
 | **1. Agent** | The ZooWork agent (persona docs, remembered preferences, custom tools) and the backend that streams its replies to the app. |
 | **2. Data + search** | Safeway-style catalog with synthetic stock and aisles, the Moss index, the substitute-search endpoint, then in-browser Moss (WASM) if there's time. **Status (branch `data-search`):** ✅ synthetic catalog (524 products, 3 SF stores, demo case: Oatly Barista out at `safeway-sf-01`) · ✅ `search_catalog` + `check_stock` with `runTool` / `zooworkCustomTools()` registry, mocks, tests · ✅ Moss index + filtered search with local fallback (needs Moss keys to go live) · ✅ Kroger import + `addToCart` client (needs Kroger app keys) · 🔜 run Kroger import + Moss index once keys exist. Docs: `lib/catalog/README.md`. |
-| **3. Frontend — Erik** | One-screen mobile web app on Vercel: GPT-Live voice orb + live order view (items with images, fulfillment mode). See [Frontend](#frontend-owner-3--erik). Status: Next.js + shadcn + ElevenLabs orb scaffolded on `main`; building voice + order view now. |
+| **3. Frontend — Erik** | One-screen mobile web app on Vercel: GPT-Live voice orb + live order view (items with images, fulfillment mode). See [Frontend](#frontend-owner-3--erik). **Status (`main`):** ✅ voice orb + live order screen (fulfillment switch, swap card, aisle grouping in store) · ✅ `/api/live` (GPT-Live session) + `/api/delegate` · ✅ interim OpenAI agent in `lib/agent.ts` emitting `OrderAction`s · ✅ 18-product stand-in catalog with real images in `lib/demo-catalog.ts` · 🔜 switch to `lib/tools/search_catalog` when `data-search` merges · 🔜 Vercel deploy. |
 | **4. Integrations + pitch** | Instacart dev key and the "Send to Instacart" link, Kroger shopper login (OAuth) + "Add to Kroger cart" using `lib/kroger/client.ts` `addToCart`, Entire setup, then Band shopper ↔ store agents (from ~2:30), then demo script, slides and backup video. |
 
 **First 15 minutes, all together:** agree on the custom tool interfaces — `search_catalog`, `check_stock`, `send_to_instacart`, `report_oos` — so persons 1–3 can build in parallel against mocks. The draft below is the starting point.
@@ -81,7 +81,8 @@ browser ⇄ WebRTC ⇄ GPT-Live      (mic/speaker + data channel: transcripts, d
 ```
 
 - Cost: $0.05/min voice (billed per second), backend billed separately.
-- `/api/delegate` is the **seam between frontend and agent**. Until the ZooWork agent is wired, it runs a mock agent so the UI works end to end. Person 1 replaces `lib/agent.ts` with the ZooWork session turn.
+- `/api/delegate` is the **seam between frontend and agent**: `runAgentTurn({ delegation_id, transcript, order }) → { say, order, actions }` in `lib/agent.ts`. It currently runs an interim OpenAI agent (`OPENAI_AGENT_MODEL`, default `gpt-6-luna`) so the UI works end to end. **Person 1:** replace the body with the ZooWork session turn; the agent's order tools map 1:1 to `OrderAction` in `lib/types.ts` and are applied with `applyActions` from `lib/order.ts`.
+- Typed fallback: the "Type instead" box calls the same `/api/delegate`, so the demo still works if voice or wifi fails.
 
 ### `OrderState` — what the screen renders (needs sign-off from 1)
 
