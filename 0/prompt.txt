@@ -1,0 +1,9 @@
+All right, the presentation is looking kind of nice. We could clean up the pages a bit, make them just cleaner in terms of less information. Also, the step about how it works, we should show the idea that it's one gateway to all the different stores. It doesn't matter if you're ordering food at Uber Eats, DoorDash, Instacart, going to pick it up in the store.
+
+The goal here is you will get your fucking food and your fucking recipes, and that is going to be solved. It doesn't matter where it comes from. We're integrating all the different providers of food and orders that is possible in the US, and soon we're also expanding to other countries as well
+
+---
+
+All right, we need to after the presentations. First of all, you need to ensure that it looks pretty good at 16 by 9 on a normal desktop, which I'm at. That is very important, extremely important, actually.
+
+Also, on the front page, there's just too much information. You can have "basket" and then the app that's showing. We will fucking have a pitch and do that live, so you don't have to write everything down
