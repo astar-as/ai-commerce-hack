@@ -3,12 +3,14 @@
 // with real brand, size, price, aisle number and stock level.
 //
 // Needs KROGER_CLIENT_ID / KROGER_CLIENT_SECRET. Store: KROGER_LOCATION_ID, or the nearest to KROGER_ZIP.
-// Run: npm run kroger:import   (then CATALOG_SOURCE=kroger npm run moss:index)
+// Run: npm run kroger:import   (then npm run moss:index)
+// Merge mode: KROGER_TERMS="Cream Cheese,Ricotta Cheese" npm run kroger:import
+//   fetches only those terms (seed names, or any free text) and adds them to the existing catalog.
 //
 // Allergens and diet tags come from Kroger's own data (allergens + manufacturerDeclarations) when the
 // product has it; otherwise we fall back to the seed item we searched for.
 
-import { writeFileSync } from "node:fs";
+import { readFileSync, writeFileSync } from "node:fs";
 import { findLocations, searchProducts, type KrogerProduct } from "../lib/kroger/client";
 import type { Allergen, DietTag, Product, Store, StoreStock } from "../lib/types";
 import { BASES, NON_FOOD_DEPARTMENTS, RECIPE_BASES, parseAllergens, parseTags } from "./seeds";
@@ -128,7 +130,21 @@ console.log(`Store: ${store.name} (${store.id}) — ${store.neighborhood}`);
 
 const products = new Map<string, Product>();
 const stock: StoreStock[] = [];
-const TERMS = [...BASES, ...RECIPE_BASES];
+const ALL_TERMS = [...BASES, ...RECIPE_BASES];
+const ONLY = process.env.KROGER_TERMS?.split(",").map((t) => t.trim()).filter(Boolean);
+const MERGE = Boolean(ONLY?.length);
+// Free-text terms that aren't seeds get a neutral pantry seed (diet/allergens then come from Kroger's data).
+const TERMS = MERGE
+  ? ONLY!.map((t) => ALL_TERMS.find((b) => b[2].toLowerCase() === t.toLowerCase()) ?? (["pantry", "Other", t, "", 0, "", "", ""] as (typeof BASES)[number]))
+  : ALL_TERMS;
+
+if (MERGE) {
+  const read = (file: string) => JSON.parse(readFileSync(new URL(`../data/kroger/${file}`, import.meta.url), "utf8"));
+  for (const p of read("catalog.json") as Product[]) products.set(p.id, p);
+  stock.push(...(read("stock.json") as StoreStock[]));
+  console.log(`Merge mode: ${products.size} existing products, fetching ${TERMS.length} terms`);
+}
+const before = products.size;
 const CONCURRENCY = Number(process.env.KROGER_CONCURRENCY ?? 5);
 let failed = 0;
 let done = 0;
@@ -170,6 +186,7 @@ if (failed > TERMS.length / 4) {
 
 const write = (file: string, data: unknown) =>
   writeFileSync(new URL(`../data/kroger/${file}`, import.meta.url), JSON.stringify(data, null, 1) + "\n");
+if (MERGE) console.log(`+${products.size - before} new products`);
 write("catalog.json", [...products.values()]);
 write("stock.json", stock);
 write("stores.json", [store]);

@@ -30590,5 +30590,1525 @@
   "qty": 20,
   "aisle_number": "12",
   "price": 9.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0003114200069",
+  "in_stock": false,
+  "qty": 0,
+  "aisle_number": "445",
+  "price": 9.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0003114200088",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "445",
+  "price": 5.49
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0003114200480",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "445",
+  "price": 5.49
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0001111004375",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "445",
+  "price": 3.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0001111004374",
+  "in_stock": true,
+  "qty": 3,
+  "aisle_number": "445",
+  "price": 6.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0001111004378",
+  "in_stock": false,
+  "qty": 0,
+  "aisle_number": "445",
+  "price": 3.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0003114200034",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "445",
+  "price": 4.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0003114210170",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "445",
+  "price": 7.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0001111089202",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "1",
+  "price": 1.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0001111086132",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "1",
+  "price": 3.29
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0002100004024",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "1",
+  "price": 5.49
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0001111088637",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "1",
+  "price": 2.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0002100061223",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "1",
+  "price": 3.49
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0001111058088",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "1",
+  "price": 2.19
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0002100000014",
+  "in_stock": false,
+  "qty": 0,
+  "aisle_number": "1",
+  "price": 3.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0002100061247",
+  "in_stock": true,
+  "qty": 3,
+  "aisle_number": "1",
+  "price": 3.49
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0002100008726",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "1",
+  "price": 3.49
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0001111086240",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "1",
+  "price": 2.19
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0002100004040",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "1",
+  "price": 5.49
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0002100000727",
+  "in_stock": true,
+  "qty": 3,
+  "aisle_number": "1",
+  "price": 3.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0002100000729",
+  "in_stock": true,
+  "qty": 3,
+  "aisle_number": "1",
+  "price": 3.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0001111086236",
+  "in_stock": false,
+  "qty": 0,
+  "aisle_number": "1",
+  "price": 3.19
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0001111015325",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "1",
+  "price": 2.19
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0001111015326",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "1",
+  "price": 2.19
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0001111083463",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "1",
+  "price": 3.19
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0002100000728",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "1",
+  "price": 3.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0002100000028",
+  "in_stock": true,
+  "qty": 3,
+  "aisle_number": "1",
+  "price": 3.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0002100000730",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "1",
+  "price": 3.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0002100000734",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "1",
+  "price": 3.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0002100000732",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "1",
+  "price": 3.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0002100000744",
+  "in_stock": true,
+  "qty": 3,
+  "aisle_number": "1",
+  "price": 3.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0007283070222",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "1",
+  "price": 3.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0007283070220",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "1",
+  "price": 3.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0002100060085",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "1",
+  "price": 6.49
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0001111059963",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "1",
+  "price": 1.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0081093403149",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "1",
+  "price": 4.59
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0002100008143",
+  "in_stock": false,
+  "qty": 0,
+  "aisle_number": "1",
+  "price": 4.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0070511830005",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "445",
+  "price": 6.49
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0002100008686",
+  "in_stock": true,
+  "qty": 3,
+  "aisle_number": "1",
+  "price": 4.49
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0007981308558",
+  "in_stock": true,
+  "qty": 3,
+  "aisle_number": "445",
+  "price": 6.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0002100000973",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "1",
+  "price": 3.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0027258500000",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "0",
+  "price": 24.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0001111048888",
+  "in_stock": true,
+  "qty": 3,
+  "aisle_number": "1",
+  "price": 2.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0007403010300",
+  "in_stock": true,
+  "qty": 3,
+  "aisle_number": "1",
+  "price": 3.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0001111048987",
+  "in_stock": false,
+  "qty": 0,
+  "aisle_number": "1",
+  "price": 5.49
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0003114200183",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "445",
+  "price": 5.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0001111011071",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "1",
+  "price": 2.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0081794401249",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "445",
+  "price": 7.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0007403020300",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "1",
+  "price": 5.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0001111044760",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "1",
+  "price": 2.59
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0001111015582",
+  "in_stock": true,
+  "qty": 3,
+  "aisle_number": "1",
+  "price": 3.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0085997700527",
+  "in_stock": false,
+  "qty": 0,
+  "aisle_number": "1",
+  "price": 3.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0001111045045",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "1",
+  "price": 3.19
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0001111044700",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "1",
+  "price": 2.59
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0001111044400",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "1",
+  "price": 3.19
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0001111044445",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "1",
+  "price": 2.59
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0001111045043",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "1",
+  "price": 2.59
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0001111044500",
+  "in_stock": true,
+  "qty": 3,
+  "aisle_number": "1",
+  "price": 3.19
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0001111044450",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "1",
+  "price": 3.19
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0007342052420",
+  "in_stock": false,
+  "qty": 0,
+  "aisle_number": "1",
+  "price": 5.79
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0007342052440",
+  "in_stock": false,
+  "qty": 0,
+  "aisle_number": "1",
+  "price": 5.79
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0007342051620",
+  "in_stock": true,
+  "qty": 3,
+  "aisle_number": "1",
+  "price": 4.79
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0007342051640",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "1",
+  "price": 4.79
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0001111044217",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "1",
+  "price": 5.79
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0085997700512",
+  "in_stock": false,
+  "qty": 0,
+  "aisle_number": "1",
+  "price": 3.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0085997700514",
+  "in_stock": false,
+  "qty": 0,
+  "aisle_number": "1",
+  "price": 2.19
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0007342053064",
+  "in_stock": true,
+  "qty": 3,
+  "aisle_number": "1",
+  "price": 2.79
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0085997700506",
+  "in_stock": false,
+  "qty": 0,
+  "aisle_number": "1",
+  "price": 7.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0084037120034",
+  "in_stock": false,
+  "qty": 0,
+  "aisle_number": "1",
+  "price": 4.39
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0007342053122",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "1",
+  "price": 1.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0084037120023",
+  "in_stock": false,
+  "qty": 0,
+  "aisle_number": "1",
+  "price": 4.79
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0007342053121",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "1",
+  "price": 1.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0007342053124",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "1",
+  "price": 1.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0084037120013",
+  "in_stock": true,
+  "qty": 3,
+  "aisle_number": "1",
+  "price": 1.29
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0084037120014",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "1",
+  "price": 1.29
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0001380093052",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "8",
+  "price": 2.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0001111009606",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "1",
+  "price": 5.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0001111063678",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "445",
+  "price": 5.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0029457710000",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "0",
+  "price": 23.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0028647990000",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "0",
+  "price": 20.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0001111065002",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "445",
+  "price": 4.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0001111065001",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "445",
+  "price": 4.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0001182610012",
+  "in_stock": false,
+  "qty": 0,
+  "aisle_number": "445",
+  "price": 6.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0001111065004",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "445",
+  "price": 4.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0001182610200",
+  "in_stock": true,
+  "qty": 3,
+  "aisle_number": "445",
+  "price": 6.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0001182610022",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "445",
+  "price": 6.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0001182610010",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "445",
+  "price": 6.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0001182610069",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "445",
+  "price": 9.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0028647770000",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "0",
+  "price": 24.29
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0028600510000",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "",
+  "price": 24.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0082058111396",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "0",
+  "price": 5.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0027368770000",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "0",
+  "price": 19.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0001111088905",
+  "in_stock": false,
+  "qty": 0,
+  "aisle_number": "0",
+  "price": 8.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0089162700918",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "8",
+  "price": 3.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0001111050202",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "1",
+  "price": 2
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0001111058624",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "1",
+  "price": 2
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0028647920000",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "0",
+  "price": 9.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0084037090256",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "1",
+  "price": 3.29
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0001111015134",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "1",
+  "price": 3.69
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0001111058754",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "1",
+  "price": 7.29
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0022637610000",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "",
+  "price": 9.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0004610035341",
+  "in_stock": false,
+  "qty": 0,
+  "aisle_number": "1",
+  "price": 4
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0001111064153",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "445",
+  "price": 5.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0001111088639",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "1",
+  "price": 3.59
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0002100008662",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "2",
+  "price": 4.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0004610000968",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "1",
+  "price": 4
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0004610035882",
+  "in_stock": false,
+  "qty": 0,
+  "aisle_number": "1",
+  "price": 4
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0001111060728",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "441",
+  "price": 5.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0004610035862",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "101",
+  "price": 3
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0078113880715",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "5",
+  "price": 3.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0001111042707",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "100",
+  "price": 1.49
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0001111042705",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "100",
+  "price": 2.49
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0001800000182",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "1",
+  "price": 3.39
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0001111088641",
+  "in_stock": true,
+  "qty": 3,
+  "aisle_number": "1",
+  "price": 1.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0001111088651",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "1",
+  "price": 1.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0003800026066",
+  "in_stock": true,
+  "qty": 3,
+  "aisle_number": "8",
+  "price": 3.49
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0001111003632",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "2",
+  "price": 1.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0004133500054",
+  "in_stock": true,
+  "qty": 3,
+  "aisle_number": "2",
+  "price": 3.79
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0001800000109",
+  "in_stock": true,
+  "qty": 3,
+  "aisle_number": "1",
+  "price": 1.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0007229001252",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "8",
+  "price": 10.49
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0001111008481",
+  "in_stock": false,
+  "qty": 0,
+  "aisle_number": "0",
+  "price": 2.49
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0001800085516",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "8",
+  "price": 4.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0007110000308",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "2",
+  "price": 4.39
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0002100064346",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "2",
+  "price": 3.49
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0070559901322",
+  "in_stock": false,
+  "qty": 0,
+  "aisle_number": "0",
+  "price": 5.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0001111012960",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "2",
+  "price": 1.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0003800031167",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "8",
+  "price": 5.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0029647840000",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "0",
+  "price": 28.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0007675304010",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "3",
+  "price": 9.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0007675306117",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "3",
+  "price": 9.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0007675306137",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "3",
+  "price": 14.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0007553630100",
+  "in_stock": true,
+  "qty": 3,
+  "aisle_number": "3",
+  "price": 29.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0004227200058",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "8",
+  "price": 6.49
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0005209220394",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "3",
+  "price": 5.79
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0005209236705",
+  "in_stock": false,
+  "qty": 0,
+  "aisle_number": "3",
+  "price": 7.29
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0005209244002",
+  "in_stock": false,
+  "qty": 0,
+  "aisle_number": "3",
+  "price": 5.79
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0005209220398",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "3",
+  "price": 5.79
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0007173600206",
+  "in_stock": true,
+  "qty": 3,
+  "aisle_number": "7",
+  "price": 14.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0005209272394",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "3",
+  "price": 5.79
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0005209202080",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "3",
+  "price": 5.79
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0005209224305",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "3",
+  "price": 5.79
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0007675304031",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "3",
+  "price": 7.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0005209202027",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "3",
+  "price": 6.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0007675304026",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "3",
+  "price": 6.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0005209222018",
+  "in_stock": false,
+  "qty": 0,
+  "aisle_number": "0",
+  "price": 5.79
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0005209224316",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "3",
+  "price": 7.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0005209200332",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "3",
+  "price": 7.29
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0007675304017",
+  "in_stock": true,
+  "qty": 3,
+  "aisle_number": "3",
+  "price": 5.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0007675304016",
+  "in_stock": false,
+  "qty": 0,
+  "aisle_number": "",
+  "price": 5.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0007675304036",
+  "in_stock": true,
+  "qty": 3,
+  "aisle_number": "3",
+  "price": 7.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0007675306181",
+  "in_stock": true,
+  "qty": 3,
+  "aisle_number": "3",
+  "price": 17.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0062868970030",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "3",
+  "price": 2.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0001111080903",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "100",
+  "price": 3.49
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0001111080909",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "100",
+  "price": 3.49
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0007027223202",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "100",
+  "price": 3.49
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0004300000953",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "8",
+  "price": 2.49
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0007027223204",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "100",
+  "price": 5.49
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0007027223203",
+  "in_stock": true,
+  "qty": 3,
+  "aisle_number": "100",
+  "price": 3.49
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0001111087479",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "8",
+  "price": 1.29
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0007027248011",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "100",
+  "price": 3.49
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0007027223208",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "100",
+  "price": 5.49
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0001111004767",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "8",
+  "price": 1.29
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0007104194528",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "100",
+  "price": 4.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0001111069751",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "",
+  "price": 9.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0001111062562",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "461",
+  "price": 14.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0064420940598",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "3",
+  "price": 2.49
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0001600032990",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "3",
+  "price": 2.49
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0063912394034",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "0",
+  "price": 6
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0063912394016",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "0",
+  "price": 3.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0085001011139",
+  "in_stock": true,
+  "qty": 3,
+  "aisle_number": "7",
+  "price": 8.49
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0001380014333",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "8",
+  "price": 10
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0001111068279",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "440",
+  "price": 10
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0001111068276",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "440",
+  "price": 10
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0001111085027",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "2",
+  "price": 1.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0087744800751",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "1",
+  "price": 14.49
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0001380010321",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "8",
+  "price": 2.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0001380055812",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "8",
+  "price": 4.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0001380079188",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "8",
+  "price": 2.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0001380010323",
+  "in_stock": false,
+  "qty": 0,
+  "aisle_number": "8",
+  "price": 2.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0004227200032",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "8",
+  "price": 6.49
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0001380016668",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "8",
+  "price": 2.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0065272971083",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "2",
+  "price": 1.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0001330060921",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "2",
+  "price": 1.89
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0001111064596",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "445",
+  "price": 5.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0007790100651",
+  "in_stock": true,
+  "qty": 3,
+  "aisle_number": "445",
+  "price": 7.49
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0007027729010",
+  "in_stock": true,
+  "qty": 3,
+  "aisle_number": "445",
+  "price": 7.49
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0064334281522",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "0",
+  "price": 9.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0081794401285",
+  "in_stock": false,
+  "qty": 0,
+  "aisle_number": "445",
+  "price": 6.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0003114200011",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "445",
+  "price": 5.99
+ },
+ {
+  "store_id": "kroger-01400513",
+  "product_id": "kr-0081794401054",
+  "in_stock": true,
+  "qty": 20,
+  "aisle_number": "445",
+  "price": 7.99
  }
 ]
