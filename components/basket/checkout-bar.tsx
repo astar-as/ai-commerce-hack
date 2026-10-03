@@ -1,20 +1,17 @@
 "use client";
 
 import { motion } from "motion/react";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 import type { OrderState } from "@/lib/types";
 
 export function CheckoutBar({ order }: { order: OrderState }) {
-  const { mode, eta, checkout_url } = order.fulfillment;
+  const { mode, checkout_url } = order.fulfillment;
   const count = order.items.reduce((n, i) => n + i.qty, 0);
   const picked = order.items.filter((i) => i.status === "picked").length;
 
   const label =
-    mode === "instacart_delivery"
-      ? "Checkout on Instacart"
-      : mode === "store_pickup"
-        ? "Place pickup order"
-        : `${picked} of ${order.items.length} picked`;
+    mode === "instacart_delivery" ? "Checkout on Instacart" : mode === "store_pickup" ? "Place pickup order" : "Finish shopping";
+  const sub = mode === "in_store" ? `${picked} of ${order.items.length} picked` : `${count} ${count === 1 ? "item" : "items"}`;
 
   return (
     <motion.div
@@ -22,22 +19,26 @@ export function CheckoutBar({ order }: { order: OrderState }) {
       animate={{ y: 0, opacity: 1 }}
       exit={{ y: 80, opacity: 0 }}
       transition={{ type: "spring", stiffness: 300, damping: 32 }}
-      className="pointer-events-auto mx-auto w-full max-w-[440px] px-5 pb-[max(env(safe-area-inset-bottom),16px)]"
+      className="pointer-events-auto mx-auto w-full max-w-[480px] px-5 pb-[max(env(safe-area-inset-bottom),20px)]"
     >
       <a
         href={mode === "instacart_delivery" ? (checkout_url ?? "#") : undefined}
         target="_blank"
         rel="noreferrer"
-        className="flex h-14 items-center justify-between rounded-full bg-ink pr-2 pl-6 text-white shadow-[0_12px_32px_-8px_rgba(0,0,0,0.35)] transition-transform active:scale-[0.98]"
+        className="flex h-[68px] items-center justify-between rounded-full border border-[#c9ced8] bg-white/95 pr-2.5 pl-7 shadow-[0_18px_40px_-18px_rgba(11,31,91,0.35)] backdrop-blur-xl transition-transform active:scale-[0.985]"
       >
         <span className="flex flex-col leading-tight">
-          <span className="text-[15px] font-medium">{label}</span>
-          {eta && mode !== "in_store" && <span className="text-[12px] text-white/60">{eta}</span>}
+          <span className="text-[16px] font-medium text-ink">{label}</span>
+          <span className="text-[13px] text-subtle tabular">
+            ${order.subtotal.toFixed(2)} · {sub}
+          </span>
         </span>
-        <span className="flex h-10 items-center gap-2 rounded-full bg-white/10 px-4 font-mono text-[14px] tabular">
-          ${order.subtotal.toFixed(2)}
-          <span className="text-white/50">· {count}</span>
-          {mode === "instacart_delivery" && <ArrowUpRight className="size-4" strokeWidth={2} />}
+        <span className="flex size-12 items-center justify-center rounded-full bg-navy text-white">
+          {mode === "instacart_delivery" ? (
+            <ArrowUpRight className="size-5" strokeWidth={2} />
+          ) : (
+            <ArrowRight className="size-5" strokeWidth={2} />
+          )}
         </span>
       </a>
     </motion.div>

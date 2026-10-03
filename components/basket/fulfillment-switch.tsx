@@ -1,14 +1,13 @@
 "use client";
 
 import { motion } from "motion/react";
-import { ShoppingBag, Store, Truck } from "lucide-react";
 import type { FulfillmentMode } from "@/lib/types";
 import { cn } from "@/lib/utils";
 
-const OPTIONS: Array<{ mode: FulfillmentMode; label: string; Icon: typeof Truck }> = [
-  { mode: "instacart_delivery", label: "Delivery", Icon: Truck },
-  { mode: "store_pickup", label: "Pickup", Icon: ShoppingBag },
-  { mode: "in_store", label: "In store", Icon: Store },
+const OPTIONS: Array<{ mode: FulfillmentMode; label: string }> = [
+  { mode: "instacart_delivery", label: "Delivery" },
+  { mode: "store_pickup", label: "Pickup" },
+  { mode: "in_store", label: "In store" },
 ];
 
 export function FulfillmentSwitch({
@@ -20,7 +19,7 @@ export function FulfillmentSwitch({
 }) {
   return (
     <div role="radiogroup" className="grid grid-cols-3 rounded-full bg-surface p-1">
-      {OPTIONS.map(({ mode: m, label, Icon }) => {
+      {OPTIONS.map(({ mode: m, label }) => {
         const active = m === mode;
         return (
           <button
@@ -29,18 +28,17 @@ export function FulfillmentSwitch({
             aria-checked={active}
             onClick={() => onChange(m)}
             className={cn(
-              "relative flex h-9 items-center justify-center gap-1.5 rounded-full text-[13px] font-medium transition-colors",
-              active ? "text-ink" : "text-subtle hover:text-ink",
+              "relative flex h-11 items-center justify-center rounded-full text-[15px] font-medium transition-colors duration-200",
+              active ? "text-white" : "text-body hover:text-ink",
             )}
           >
             {active && (
               <motion.span
                 layoutId="fulfillment-pill"
-                className="absolute inset-0 rounded-full bg-white shadow-[0_1px_2px_rgba(0,0,0,0.06),0_2px_8px_rgba(0,0,0,0.04)]"
-                transition={{ type: "spring", stiffness: 420, damping: 34 }}
+                className="absolute inset-0 rounded-full bg-navy"
+                transition={{ type: "spring", stiffness: 420, damping: 36 }}
               />
             )}
-            <Icon className="relative size-[15px]" strokeWidth={1.75} />
             <span className="relative">{label}</span>
           </button>
         );

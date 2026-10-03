@@ -1,17 +1,15 @@
 "use client";
 
-import { useCallback, useMemo, useState } from "react";
+import { useCallback, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
-import { ArrowUp, Keyboard } from "lucide-react";
 import { CheckoutBar } from "@/components/basket/checkout-bar";
 import { FulfillmentSwitch } from "@/components/basket/fulfillment-switch";
 import { OrderList } from "@/components/basket/order-list";
 import { SwapCard } from "@/components/basket/swap-card";
 import { VoiceOrb } from "@/components/basket/voice-orb";
 import { useLiveVoice } from "@/hooks/use-live-voice";
-import { DEMO_STORE } from "@/lib/demo-catalog";
 import { applyAction, emptyOrder } from "@/lib/order";
-import type { DelegateOutput, FulfillmentMode, OrderState, SearchResult, TranscriptLine } from "@/lib/types";
+import type { FulfillmentMode, OrderState, SearchResult } from "@/lib/types";
 import { cn } from "@/lib/utils";
 
 const MODE_LABEL: Record<FulfillmentMode, string> = {
@@ -20,61 +18,35 @@ const MODE_LABEL: Record<FulfillmentMode, string> = {
   in_store: "shopping in store",
 };
 
+const MODE_LINE: Record<FulfillmentMode, [string, string]> = {
+  instacart_delivery: ["Delivery today.", "Through Instacart, arriving 5–6 PM."],
+  store_pickup: ["Pickup today.", "Ready at the Market St store at 5:30 PM."],
+  in_store: ["Shopping in store.", "Sorted by aisle. Say it if something’s not on the shelf."],
+};
+
+const spring = { type: "spring" as const, stiffness: 220, damping: 30 };
+
 export function BasketApp() {
   const [order, setOrder] = useState<OrderState>(emptyOrder);
-  const [typed, setTyped] = useState<TranscriptLine[]>([]);
-  const [composerOpen, setComposerOpen] = useState(false);
-  const [draft, setDraft] = useState("");
-  const [busy, setBusy] = useState(false);
-
   const voice = useLiveVoice({ order, onOrder: setOrder });
   const live = voice.status === "live";
   const connecting = voice.status === "connecting";
   const hasItems = order.items.length > 0;
-
-  const lines = useMemo(
-    () => [...voice.transcript, ...typed].sort((a, b) => a.at - b.at),
-    [voice.transcript, typed],
-  );
-  const caption = lines[lines.length - 1];
+  const caption = voice.transcript[voice.transcript.length - 1];
 
   const statusText = voice.error
     ? voice.error
     : connecting
       ? "Connecting…"
-      : busy || voice.agentState === "thinking"
+      : voice.agentState === "thinking"
         ? "Checking the shelves…"
         : live
           ? voice.agentState === "talking"
             ? "Speaking"
             : "Listening"
-          : "Tap the orb to talk";
+          : "Tap the orb to start talking";
 
   const toggleVoice = () => (live || connecting ? voice.stop() : voice.start());
-
-  const sendText = async (text: string) => {
-    const line: TranscriptLine = { role: "user", text, at: Date.now() };
-    const next = [...typed, line];
-    setTyped(next);
-    setBusy(true);
-    try {
-      const res = await fetch("/api/delegate", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          delegation_id: `typed_${line.at}`,
-          transcript: [...voice.transcript, ...next].sort((a, b) => a.at - b.at),
-          order,
-        }),
-      });
-      const out = (await res.json()) as DelegateOutput;
-      setOrder(out.order);
-      if (live) voice.say(out.say);
-      else setTyped((t) => [...t, { role: "assistant", text: out.say, at: Date.now() }]);
-    } finally {
-      setBusy(false);
-    }
-  };
 
   const pickSwap = (option: SearchResult) => {
     if (!order.pending) return;
@@ -102,161 +74,117 @@ export function BasketApp() {
     }));
   }, []);
 
-  return (
-    <main className="relative mx-auto flex min-h-dvh w-full max-w-[440px] flex-col px-5">
-      <header className="flex items-center justify-between pt-[max(env(safe-area-inset-top),18px)] pb-2">
-        <span className="font-display text-[26px] leading-none italic">basket</span>
-        <span className="flex items-center gap-1.5 rounded-full bg-surface px-3 py-1.5 text-[12px] text-subtle">
-          <span className={cn("size-1.5 rounded-full", live ? "bg-emerald-500" : "bg-hairline")} />
-          {DEMO_STORE.name.split(" · ")[1] ?? DEMO_STORE.name}
-        </span>
-      </header>
+  const [lead, rest] = MODE_LINE[order.fulfillment.mode];
 
-      <motion.section
-        layout
-        transition={{ type: "spring", stiffness: 220, damping: 30 }}
-        className={cn(
-          "flex",
-          hasItems ? "sticky top-0 z-10 items-center gap-4 bg-white/85 py-3 backdrop-blur-xl" : "flex-1 flex-col items-center justify-center pb-24",
-        )}
-      >
-        <VoiceOrb
-          size={hasItems ? 72 : 248}
-          agentState={voice.agentState}
-          live={live}
-          connecting={connecting}
-          onToggle={toggleVoice}
-          getInputVolume={voice.getInputVolume}
-          getOutputVolume={voice.getOutputVolume}
-        />
-        <motion.div layout className={cn("min-w-0", hasItems ? "flex-1" : "mt-10 text-center")}>
-          {!hasItems && !caption && (
-            <h1 className="font-display text-[40px] leading-[1.05] tracking-[-0.01em]">
-              What are we
-              <br />
-              <span className="italic">cooking</span> today?
-            </h1>
-          )}
-          <p
+  return (
+    <div className="min-h-dvh bg-white p-2 sm:p-3">
+      <main className="relative mx-auto min-h-[calc(100dvh-1rem)] w-full max-w-[1200px] overflow-hidden rounded-[36px] bg-[linear-gradient(180deg,#edf1f7_0%,#f3f5f8_45%,#f5f5f6_100%)] sm:min-h-[calc(100dvh-1.5rem)] sm:rounded-[48px]">
+        <div className="mx-auto flex min-h-[inherit] w-full max-w-[480px] flex-col px-5">
+          <motion.section
+            layout
+            transition={spring}
             className={cn(
-              "text-[12px] font-medium tracking-[0.12em] uppercase transition-colors",
-              hasItems ? "" : "mt-4",
-              voice.error ? "text-oos-ink" : live ? "text-swap-ink" : "text-subtle",
+              "flex",
+              hasItems
+                ? "sticky top-0 z-10 -mx-5 items-center gap-4 bg-[#eef2f7]/80 px-5 pt-[max(env(safe-area-inset-top),20px)] pb-4 backdrop-blur-xl"
+                : "flex-1 flex-col items-center justify-center pt-[max(env(safe-area-inset-top),28px)] pb-16 text-center",
             )}
           >
-            {statusText}
-          </p>
-          <AnimatePresence mode="wait">
-            {caption && (
-              <motion.p
-                key={`${caption.role}-${caption.at}`}
-                initial={{ opacity: 0, y: 6 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -6 }}
-                transition={{ duration: 0.25 }}
+            {!hasItems && (
+              <motion.div layout initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
+                <h1 className="font-display text-[52px] leading-[0.95] font-medium tracking-[-0.035em] text-ink sm:text-[64px]">
+                  What’s for
+                  <br />
+                  dinner?
+                </h1>
+                <p className="mt-4 text-[17px] text-body">Just say it. Your order builds itself.</p>
+              </motion.div>
+            )}
+
+            <div className={cn("relative", !hasItems && "mt-12")}>
+              <VoiceOrb
+                size={hasItems ? 64 : 224}
+                agentState={voice.agentState}
+                live={live}
+                connecting={connecting}
+                onToggle={toggleVoice}
+                getInputVolume={voice.getInputVolume}
+                getOutputVolume={voice.getOutputVolume}
+              />
+            </div>
+
+            <motion.div layout className={cn("min-w-0", hasItems ? "flex-1" : "mt-8 min-h-[72px] max-w-[340px]")}>
+              <p
                 className={cn(
-                  "mt-1.5 line-clamp-3 leading-snug",
-                  hasItems ? "text-[15px]" : "mx-auto max-w-[320px] font-display text-[26px] leading-tight",
-                  caption.role === "user" ? "text-subtle" : "text-ink",
+                  "text-[14px] font-medium transition-colors",
+                  voice.error ? "text-oos-ink" : live ? "text-navy" : "text-subtle",
                 )}
               >
-                {caption.role === "user" ? `“${caption.text.trim()}”` : caption.text}
-              </motion.p>
-            )}
-          </AnimatePresence>
-        </motion.div>
-      </motion.section>
-
-      <AnimatePresence>
-        {hasItems && (
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ type: "spring", stiffness: 260, damping: 30, delay: 0.1 }}
-            className="flex flex-col gap-5 pt-3 pb-44"
-          >
-            <div className="flex flex-col gap-2">
-              <FulfillmentSwitch mode={order.fulfillment.mode} onChange={setMode} />
-              <p className="px-1 text-[12.5px] text-subtle">
-                {order.fulfillment.mode === "instacart_delivery" && `Instacart · ${order.fulfillment.eta}`}
-                {order.fulfillment.mode === "store_pickup" && `Pickup at ${DEMO_STORE.name.split(" · ")[1]} · ${order.fulfillment.eta}`}
-                {order.fulfillment.mode === "in_store" && "Sorted by aisle · tap “not on shelf” by voice"}
+                {live && <span className="mr-1.5 inline-block size-1.5 -translate-y-px animate-pulse rounded-full bg-navy align-middle" />}
+                {statusText}
               </p>
-            </div>
+              <AnimatePresence mode="wait">
+                {caption && (
+                  <motion.p
+                    key={`${caption.role}-${caption.at}`}
+                    initial={{ opacity: 0, y: 4 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -4 }}
+                    transition={{ duration: 0.22 }}
+                    className={cn(
+                      "mt-1 line-clamp-2 leading-snug",
+                      hasItems ? "text-[15px]" : "text-[17px]",
+                      caption.role === "user" ? "text-subtle" : "text-ink",
+                    )}
+                  >
+                    {caption.role === "user" ? `“${caption.text.trim()}”` : caption.text}
+                  </motion.p>
+                )}
+              </AnimatePresence>
+            </motion.div>
+          </motion.section>
 
-            <AnimatePresence>
-              {order.pending && <SwapCard pending={order.pending} onPick={pickSwap} onDismiss={dismissSwap} />}
-            </AnimatePresence>
-
-            <div>
-              <div className="flex items-baseline justify-between px-1">
-                <h2 className="font-display text-[28px] leading-none">Your order</h2>
-                <span className="font-mono text-[13px] text-subtle tabular">
-                  {order.items.length} items · ${order.subtotal.toFixed(2)}
-                </span>
-              </div>
-              <OrderList order={order} onTogglePicked={togglePicked} />
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-
-      <div className="pointer-events-none fixed inset-x-0 bottom-0 z-20 flex flex-col items-center gap-3">
-        <div className="pointer-events-auto w-full max-w-[440px] px-5">
-          <AnimatePresence mode="wait" initial={false}>
-            {composerOpen ? (
-              <motion.form
-                key="composer"
-                initial={{ opacity: 0, y: 8 }}
+          <AnimatePresence>
+            {hasItems && (
+              <motion.div
+                initial={{ opacity: 0, y: 24 }}
                 animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: 8 }}
-                onSubmit={(e) => {
-                  e.preventDefault();
-                  const text = draft.trim();
-                  if (!text || busy) return;
-                  setDraft("");
-                  void sendText(text);
-                }}
-                className="flex h-12 items-center gap-2 rounded-full border border-hairline bg-white/90 pr-1.5 pl-5 shadow-[0_8px_24px_-12px_rgba(0,0,0,0.18)] backdrop-blur-xl"
+                transition={{ ...spring, delay: 0.08 }}
+                className="flex flex-col gap-4 pt-2 pb-36"
               >
-                <input
-                  autoFocus
-                  value={draft}
-                  onChange={(e) => setDraft(e.target.value)}
-                  onBlur={() => !draft && setComposerOpen(false)}
-                  placeholder="Add penne and parmesan…"
-                  className="min-w-0 flex-1 bg-transparent text-[15px] outline-none placeholder:text-subtle"
-                />
-                <button
-                  type="submit"
-                  disabled={!draft.trim() || busy}
-                  className="flex size-9 items-center justify-center rounded-full bg-ink text-white transition-opacity disabled:opacity-25"
-                >
-                  <ArrowUp className="size-4" strokeWidth={2.25} />
-                </button>
-              </motion.form>
-            ) : (
-              <motion.button
-                key="type"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                onClick={() => setComposerOpen(true)}
-                className="mx-auto flex items-center gap-1.5 rounded-full px-3 py-1.5 text-[12.5px] text-subtle hover:text-ink"
-              >
-                <Keyboard className="size-3.5" strokeWidth={1.75} />
-                Type instead
-              </motion.button>
+                <section className="rounded-[32px] border border-hairline bg-white p-2">
+                  <FulfillmentSwitch mode={order.fulfillment.mode} onChange={setMode} />
+                  <p className="px-4 pt-3 pb-2 text-[15px] leading-snug text-body">
+                    <span className="text-ink">{lead}</span> {rest}
+                  </p>
+                </section>
+
+                <AnimatePresence>
+                  {order.pending && <SwapCard pending={order.pending} onPick={pickSwap} onDismiss={dismissSwap} />}
+                </AnimatePresence>
+
+                <section className="rounded-[32px] border border-hairline bg-white px-5 pt-5 pb-2">
+                  <div className="flex items-baseline justify-between">
+                    <h2 className="font-display text-[28px] leading-none font-medium tracking-[-0.02em] text-ink">Your order</h2>
+                    <span className="text-[14px] text-subtle tabular">
+                      {order.items.length} {order.items.length === 1 ? "item" : "items"}
+                    </span>
+                  </div>
+                  <OrderList order={order} onTogglePicked={togglePicked} />
+                </section>
+              </motion.div>
             )}
           </AnimatePresence>
         </div>
-        <AnimatePresence>{hasItems && <CheckoutBar order={order} />}</AnimatePresence>
-        {!hasItems && (
-          <p className="pb-[max(env(safe-area-inset-bottom),14px)] text-[11px] text-subtle/80">
-            Safeway-style demo store · prices and stock are simulated
-          </p>
-        )}
-      </div>
-    </main>
+
+        <AnimatePresence>
+          {hasItems && (
+            <div className="pointer-events-none fixed inset-x-0 bottom-0 z-20">
+              <CheckoutBar order={order} />
+            </div>
+          )}
+        </AnimatePresence>
+      </main>
+    </div>
   );
 }
