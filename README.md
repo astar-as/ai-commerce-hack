@@ -5,6 +5,7 @@ Team repo for **The AI Commerce Gallery** hackathon — Oct 3, 2026, San Francis
 - [HACKATHON.md](HACKATHON.md) — schedule, deadline, rules & judging, prizes, credit codes and sponsor tool setup.
 - [PLAN.md](PLAN.md) — what we're building, how each sponsor tool fits, timeline and demo script.
 - [ENDPOINTS.md](ENDPOINTS.md) — API endpoints for ZooWork, Moss, Band, Tavily, Entire, plus Instacart, DoorDash Drive and Stripe.
+- [DATA-SOURCES.md](DATA-SOURCES.md) — researched data APIs, no-auth MCP servers for ZooWork, delivery, agentic-commerce protocols and sponsor assets.
 - [STAKEHOLDERS.md](STAKEHOLDERS.md) — stakeholder research, fit assessment, evidence limits and demo priorities.
 
 **Submission deadline: 5:00 PM PST.**
