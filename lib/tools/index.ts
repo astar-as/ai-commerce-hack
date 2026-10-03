@@ -11,6 +11,7 @@ import { SearchError } from "../catalog/search";
 import type { ToolError } from "../types";
 import { checkStockTool } from "./check_stock";
 import { searchCatalogTool } from "./search_catalog";
+import { searchOrderHistoryTool } from "./search_order_history";
 import { sendToInstacartTool } from "./send_to_instacart";
 
 type Tool = {
@@ -24,6 +25,7 @@ const TOOLS: Record<string, Tool> = {
   [searchCatalogTool.name]: searchCatalogTool,
   [checkStockTool.name]: checkStockTool,
   [sendToInstacartTool.name]: sendToInstacartTool, // handles MOCK_TOOLS itself (mock cart)
+  [searchOrderHistoryTool.name]: searchOrderHistoryTool,
 };
 
 const MOCKS: Record<string, unknown> = {
